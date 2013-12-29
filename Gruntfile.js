@@ -25,6 +25,9 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
+    // Project metadata
+    pkg: grunt.file.readJSON('package.json'),
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
@@ -48,6 +51,10 @@ module.exports = function (grunt) {
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
+      },
+      replace: {
+        files: ['<%= yeoman.app %>/{,*/}*.html', '<%= yeoman.app %>/{,*/}*.txt'],
+        tasks: ['replace:dist']
       },
       livereload: {
         options: {
@@ -82,7 +89,9 @@ module.exports = function (grunt) {
         options: {
           port: 9001,
           base: [
-            '.tmp',
+            // don't look in .tmp for the test runner, you'll find the
+            // app's index.html file and tests will not run
+            //'.tmp',
             'test',
             '<%= yeoman.app %>'
           ]
@@ -308,6 +317,18 @@ module.exports = function (grunt) {
           ]
         }]
       },
+      replaced: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '.tmp',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '{,*/}*.html',
+            '{,*/}*.txt'
+          ]
+        }]
+      },
       styles: {
         expand: true,
         dot: true,
@@ -335,17 +356,66 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'compass:server',
-        'copy:styles'
+        'copy:styles',
+        'replace:dist'
       ],
       test: [
-        'copy:styles'
+        'copy:styles',
+        'replace:dist'
       ],
       dist: [
         'compass',
         'copy:styles',
         'imagemin',
-        'svgmin'
+        'svgmin',
+        'replace:dist'
       ]
+    },
+
+    // Replace text patterns with a given string
+    replace: {
+      options: {
+        patterns: [{
+          match: 'isoDateTime',
+          replacement: '<%= grunt.template.today("isoDateTime") %>'
+        }, {
+          match: 'version',
+          replacement: '<%= pkg.version %>'
+        }, {
+          match: 'author',
+          replacement: 'Andy Stanford-Bluntish'
+        }, {
+          match: 'url',
+          replacement: 'http://andy.bluntish.net'
+        }, {
+          match: 'email',
+          replacement: 'andy@bluntish.net',
+        }, {
+          match: 'copyright',
+          replacement: function() {
+            var initial = '2013',
+                current = grunt.template.today('yyyy');
+
+            if (initial === current) {
+              return initial;
+            } else {
+              return initial + '&ndash;' + current;
+            }
+          }
+        }]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          flatten: true,
+          cwd: '<%= yeoman.app %>',
+          src: [
+            '{,*/}*.html',
+            '{,*/}*.txt'
+          ],
+          dest: '.tmp'
+        }]
+      }
     }
   });
 
@@ -394,6 +464,7 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
+    'copy:replaced',
     'rev',
     'usemin',
     'htmlmin'
