@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Andy Stanford-Bluntish &#9733; web developer &amp; designer</title>
+  <title>Andy Stanford-Bluntish &#9733; @@tagline</title>
   <meta name="description" content="My name is Andy. I design and build attractive, functional websites with a strong focus on web standards. I love what I do.">
   <meta name="author" content="@@author" />
   <meta name="copyright" content="(c) @@copyright @@author" />
@@ -29,14 +29,28 @@
   <![endif]-->
 
 
-  <div class="hero-unit">
-    <h1>'Allo, 'Allo!</h1>
-    <p>You now have</p>
-    <ul>
-      <li>HTML5 Boilerplate</li>
-      <li>Modernizr</li>
+  <header role="banner">
+    <h1 class="title">
+      <a href="/"><b>Andy</b> Stanford-Bluntish</a>
+    </h1>
+    <p class="tagline visuallyhidden">@@tagline</p>
+  </header>
+
+  <main role="main">
+    <p>Hello, my name is <b>Andy</b>. I’m a web developer and designer based in Melbourne, Australia. I focus on producing clean, attractive designs that are accessible and easy to use &ndash; striking a balance between aesthetics and functionality. I’m a strong proponent of a <a href="http://futurefriend.ly">future friendly</a>, <a href="http://webstandards.org" title="The Web Standards Project">standards compliant</a> web, and believe in an <a href="http://www.w3.org/WAI" title="Web Accessibility Initiative">accessible</a> experience for everyone.</p>
+  </main>
+
+  <footer role="contentinfo">
+    <ul class="contact">
+      <li><a href="https://github.com/andybluntish?tab=repositories">Github</a></li>
+      <li><a href="http://codepen.io/andybluntish">CodePen</a></li>
+      <li><a href="http://dribbble.com/andybluntish">Dribbble</a></li>
+      <li><a href="http://twitter.com/andybluntish">Twitter</a></li>
+      <li><a href="mailto:andy@bluntish.net">E-mail</a></li>
     </ul>
-  </div>
+
+    <small class="copyright">&copy; @@html-copyright <a href="mailto:@@email">@@author</a>. <span class="disclaimer">All rights reserved.</span> <span class="location">Handcrafted in Melbourne, Australia.</span></small>
+  </footer>
 
 
   <!-- build:js scripts/vendor.js -->

@@ -391,15 +391,34 @@ module.exports = function (grunt) {
           match: 'email',
           replacement: 'andy@bluntish.net',
         }, {
+          match: 'tagline',
+          replacement: 'web developer &amp; designer'
+        }, {
           match: 'copyright',
           replacement: function() {
-            var initial = '2013',
-                current = grunt.template.today('yyyy');
+            var initialISO = '2013-12-29T17:27:55',
+                initialYear = initialISO.split('-')[0],
+                currentISO = grunt.template.today('isoDateTime'),
+                currentYear = currentISO.split('-')[0];
 
-            if (initial === current) {
-              return initial;
+            if (initialYear === currentYear) {
+              return initialYear;
             } else {
-              return initial + '&ndash;' + current;
+              return initialYear + '&ndash;' + currentYear;
+            }
+          }
+        }, {
+          match: 'html-copyright',
+          replacement: function() {
+            var initialISO = '2013-12-29T17:27:55',
+                initialYear = initialISO.split('-')[0],
+                currentISO = grunt.template.today('isoDateTime'),
+                currentYear = currentISO.split('-')[0];
+
+            if (initialYear === currentYear) {
+              return '<time datetime="' + initialISO + '">' + initialYear + '</time>';
+            } else {
+              return '<time datetime="' + initialISO + '">' + initialYear + '</time>&ndash;<time datetime="' + currentISO + '">' + currentYear + '</time>';
             }
           }
         }]
