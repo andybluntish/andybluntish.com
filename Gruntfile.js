@@ -435,6 +435,22 @@ module.exports = function (grunt) {
           dest: '.tmp'
         }]
       }
+    },
+
+    // Deploy dist directory to remote server
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:andybluntish/andy.bluntish.net.git',
+          branch: 'gh-pages'
+        }
+      }
     }
   });
 
@@ -487,6 +503,11 @@ module.exports = function (grunt) {
     'rev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    'buildcontrol:pages'
   ]);
 
   grunt.registerTask('default', [
