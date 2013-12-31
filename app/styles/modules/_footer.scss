@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+[role="contentinfo"] {
+
+}
+
+/* Copyright Information */
+.copyright {
+  display: block;
+  margin-top: $spacing;
+  padding-top: $spacing;
+  text-align: center;
+  border-top: 1px solid $lighter-grey;
+
+  .disclaimer,
+  .location {
+    display: block;
+  }
+}
+
+
+
+/* Small Page */
+@media only screen and (min-width: $sm-page) {
+  .copyright .disclaimer {
+    display: inline;
+  }
+}
+
+/* Medium Page */
+@media only screen and (min-width: $md-page) {
+  .copyright .location {
+    display: inline;
+  }
+}

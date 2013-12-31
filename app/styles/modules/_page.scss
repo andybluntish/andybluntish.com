@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Page
+   ========================================================================== */
+
+body {
+  margin: auto;
+  padding: 0 $half-spacing;
+  max-width: $md-page;
+}
+
+[role="main"] {
+  margin-top: $spacing;
+  border-top: 1px solid $lighter-grey;
+}
+
+
+
+/* Small Page */
+@media only screen and (min-width: $sm-page) {
+  body {
+    padding: 0 $spacing;
+  }
+}
+
+/* Medium Page */
+@media only screen and (min-width: $md-page) {
+  body {
+    padding: 0 $double-spacing;
+  }
+}
