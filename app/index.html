@@ -37,17 +37,36 @@
   </header>
 
   <main role="main">
-    <p>Hello, my name is <b>Andy</b>. I’m a web developer and designer based in Melbourne, Australia. I focus on producing clean, attractive designs that are accessible and easy to use &ndash; striking a balance between aesthetics and functionality. I’m a strong proponent of a <a href="http://futurefriend.ly">future friendly</a>, <a href="http://webstandards.org" title="The Web Standards Project">standards compliant</a> web, and believe in an <a href="http://www.w3.org/WAI" title="Web Accessibility Initiative">accessible</a> experience for everyone.</p>
+    <div id="about">
+      <h2 class="visuallyhidden">About me</h2>
+      <p>Hello, my name is <b>Andy</b>. I’m a web developer and designer based in Melbourne, Australia. I focus on producing clean, attractive designs that are accessible and easy to use &ndash; striking a balance between aesthetics and functionality. I’m a strong proponent of a <a href="http://futurefriend.ly">future friendly</a>, <a href="http://webstandards.org" title="The Web Standards Project">standards compliant</a> web, and believe in an <a href="http://www.w3.org/WAI" title="Web Accessibility Initiative">accessible</a> experience for everyone.</p>
+    </div>
   </main>
 
   <footer role="contentinfo">
-    <ul class="contact">
-      <li><a href="https://github.com/andybluntish?tab=repositories">Github</a></li>
-      <li><a href="http://codepen.io/andybluntish">CodePen</a></li>
-      <li><a href="http://dribbble.com/andybluntish">Dribbble</a></li>
-      <li><a href="http://twitter.com/andybluntish">Twitter</a></li>
-      <li><a href="mailto:andy@bluntish.net">E-mail</a></li>
-    </ul>
+    <div id="contact">
+      <h2 class="visuallyhidden">Contact</h2>
+
+      <div id="hcard" class="vcard visuallyhidden">
+        <a class="url fn" href="http://andy.bluntish.net">Andy Stanford-Bluntish</a>
+        <a class="email" href="mailto:andy@bluntish.net?subject=foo%20bar">andy@bluntish.net</a>
+        <div class="adr">
+          <span class="locality">Melbourne</span>,
+          <span class="region">VIC</span>
+          <span class="country-name">Australia</span>
+        </div>
+      </div>
+
+      <ul class="services">
+        <li><a class="github" href="https://github.com/andybluntish?tab=repositories">Github</a></li>
+        <li><a class="codepen" href="http://codepen.io/andybluntish">CodePen</a></li>
+        <li><a class="dribbble" href="http://dribbble.com/andybluntish">Dribbble</a></li>
+        <li><a class="twitter" href="http://twitter.com/andybluntish">Twitter</a></li>
+        <li><a class="email" href="mailto:andy@bluntish.net">E-mail</a></li>
+      </ul>
+    </div>
+
+    <hr>
 
     <small class="copyright">&copy; @@html-copyright <a href="mailto:@@email">@@author</a>. <span class="disclaimer">All rights reserved.</span> <span class="location">Handcrafted in Melbourne, Australia.</span></small>
   </footer>
