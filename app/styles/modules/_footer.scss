@@ -3,13 +3,23 @@
    ========================================================================== */
 
 [role="contentinfo"] {
-
+  color: $grey;
 }
 
 /* Copyright Information */
 .copyright {
   display: block;
   text-align: center;
+
+  a {
+    font-weight: bold;
+    color: $darker-grey;
+  }
+  a:hover,
+  a:focus,
+  a.active {
+    text-decoration: underline;
+  }
 
   .disclaimer,
   .location {

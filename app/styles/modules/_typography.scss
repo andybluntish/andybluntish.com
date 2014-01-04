@@ -1,15 +1,7 @@
 /* ==========================================================================
-   Header
+   Typography
    ========================================================================== */
 
-[role="banner"] {
-  text-align: center;
-}
-
-.title {
-  font-size: $font-size-xl;
-
-  a {
-    color: $text-colour;
-  }
+b, strong {
+  font-weight: 600;
 }

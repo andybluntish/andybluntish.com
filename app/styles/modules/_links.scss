@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+  text-decoration: none;
+  color: $link-colour;
+  transition: color $fade-speed $transition-timing-function;
+}
+
+a:hover,
+a:focus,
+a.active {
+  color: $link-focus-colour;
+}

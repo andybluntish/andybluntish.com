@@ -15,7 +15,8 @@ button,
 input,
 select,
 textarea {
-  color: $dark-grey;
+  font-family: $body-font-family;
+  color: $text-colour;
 }
 
 html {

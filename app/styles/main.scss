@@ -9,9 +9,23 @@ $grey:         lighten(#000, 33.5%); // #555
 $light-grey:   lighten(#000, 60%);   // #999
 $lighter-grey: lighten(#000, 93.5%); // #eee
 
+$red: #C04545;
+
+$text-colour: #454C54;
+$link-colour: $red;
+$link-focus-colour: darken($link-colour, 12);
+
 /* Typography */
-$font-size: 100%;
+$heading-font-family: 'Roboto Slab', serif;
+$heading-bold: 700;
+$body-font-family: 'Open Sans', sans-serif;
+
 $line-height: 1.4;
+
+$font-size: 100%;
+$font-size-sm: $font-size * 0.8;
+$font-size-lg: $font-size * 1.25;
+$font-size-xl: $font-size * 1.5;
 
 /* Metrics */
 $_size: $line-height;
@@ -20,6 +34,10 @@ $spacing:        $_size + 0em;
 $quater-spacing: $spacing * 0.25;
 $half-spacing:   $spacing * 0.5;
 $double-spacing: $spacing * 2;
+
+/* Transitions */
+$fade-speed: 0.3s;
+$transition-timing-function: ease;
 
 /* Media Query Sizes */
 $sm-page: 480px;
@@ -34,6 +52,10 @@ $xl-page: 1280px;
 
 @import 'modules/base';
 @import 'modules/box-sizing';
+
+@import 'modules/typography';
+@import 'modules/links';
+@import 'modules/headings';
 
 @import 'modules/header';
 @import 'modules/page';
