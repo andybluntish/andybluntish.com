@@ -28,6 +28,13 @@ module.exports = function (grunt) {
     // Project metadata
     pkg: grunt.file.readJSON('package.json'),
 
+    // Custom metadata
+    meta: {
+
+      // created date (website, not project)
+      est: '2006-01-30 23:05:25'
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
@@ -396,7 +403,7 @@ module.exports = function (grunt) {
         }, {
           match: 'copyright',
           replacement: function() {
-            var initialISO = '2013-12-29T17:27:55',
+            var initialISO = grunt.config.get('meta.est'),
                 initialYear = initialISO.split('-')[0],
                 currentISO = grunt.template.today('isoDateTime'),
                 currentYear = currentISO.split('-')[0];
@@ -410,7 +417,7 @@ module.exports = function (grunt) {
         }, {
           match: 'html-copyright',
           replacement: function() {
-            var initialISO = '2013-12-29T17:27:55',
+            var initialISO = grunt.config.get('meta.est'),
                 initialYear = initialISO.split('-')[0],
                 currentISO = grunt.template.today('isoDateTime'),
                 currentYear = currentISO.split('-')[0];
