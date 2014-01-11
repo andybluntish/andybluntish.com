@@ -3,7 +3,10 @@
    ========================================================================== */
 
 [role="banner"] {
+  margin-bottom: $spacing;
+  padding: $spacing 0;
   text-align: center;
+  border-bottom: $divider;
 }
 
 .title {

@@ -8,8 +8,11 @@ $dark-grey:    lighten(#000, 20%);   // #333
 $grey:         lighten(#000, 33.5%); // #555
 $light-grey:   lighten(#000, 60%);   // #999
 $lighter-grey: lighten(#000, 93.5%); // #eee
+$off-white:    lighten(#000, 97%);   // #f7f7f7
 
 $red: #C04545;
+
+$background-colour: $off-white;
 
 $text-colour: #454C54;
 $link-colour: $red;
@@ -20,12 +23,12 @@ $heading-font-family: 'Roboto Slab', serif;
 $heading-bold: 700;
 $body-font-family: 'Open Sans', sans-serif;
 
-$line-height: 1.4;
+$line-height: 1.5;
 
 $font-size: 100%;
 $font-size-sm: $font-size * 0.8;
 $font-size-lg: $font-size * 1.25;
-$font-size-xl: $font-size * 1.5;
+$font-size-xl: $font-size * 1.75;
 
 /* Metrics */
 $_size: $line-height;
@@ -46,6 +49,16 @@ $l-page: 1024px;
 $xl-page: 1280px;
 
 
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+$divider: 2px solid #e7e7e7;
+
+
+
+
 /* ==========================================================================
    Styles
    ========================================================================== */
@@ -56,6 +69,7 @@ $xl-page: 1280px;
 @import 'modules/typography';
 @import 'modules/links';
 @import 'modules/headings';
+@import 'modules/lists';
 
 @import 'modules/header';
 @import 'modules/page';
