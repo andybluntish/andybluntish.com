@@ -342,6 +342,17 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      icons: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '.tmp',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            'styles/icons/{,*/}*.{css,png}'
+          ]
+        }]
       }
     },
 
@@ -364,7 +375,8 @@ module.exports = function (grunt) {
       server: [
         'compass:server',
         'copy:styles',
-        'replace:dist'
+        'replace:dist',
+        'grunticon:dist'
       ],
       test: [
         'copy:styles',
@@ -375,7 +387,8 @@ module.exports = function (grunt) {
         'copy:styles',
         'imagemin',
         'svgmin',
-        'replace:dist'
+        'replace:dist',
+        'grunticon:dist'
       ]
     },
 
@@ -458,6 +471,24 @@ module.exports = function (grunt) {
           branch: 'gh-pages'
         }
       }
+    },
+
+    // SVG icons
+    grunticon: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles/icons',
+          src: [
+            '{,*/}*.svg',
+            '{,*/}*.png'
+          ],
+          dest: '.tmp/styles/icons'
+        }],
+        options: {
+
+        }
+      }
     }
   });
 
@@ -505,8 +536,9 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'modernizr',
     'copy:replaced',
+    'copy:icons',
+    'modernizr',
     'rev',
     'usemin',
     'htmlmin'
