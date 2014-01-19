@@ -7,6 +7,34 @@
   padding-bottom: $spacing;
 }
 
+/* Services */
+.services {
+  @extend .plain-list;
+  text-align: center;
+
+  li {
+    margin: $half-spacing;
+  }
+}
+
+.services [class^="icon-"] {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+
+  text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+
+  background-position: 50%;
+  opacity: 0.6;
+  transition: opacity $fade-speed;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 /* Copyright Information */
 .copyright {
   display: block;
@@ -32,6 +60,9 @@
 
 /* Small Page */
 @media only screen and (min-width: $sm-page) {
+  .services li {
+    display: inline-block;
+  }
   .copyright .disclaimer {
     display: inline;
   }

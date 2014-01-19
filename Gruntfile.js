@@ -63,6 +63,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/{,*/}*.html', '<%= yeoman.app %>/{,*/}*.txt'],
         tasks: ['replace:dist']
       },
+      icons: {
+        files: ['<%= yeoman.app %>/styles/icons{,*/}*.svg'],
+        tasks: ['grunticon:dist']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -70,6 +74,7 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
+          '.tmp/styles/icons/{,*/}*.svg',
           '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
         ]
       }

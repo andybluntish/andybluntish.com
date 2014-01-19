@@ -6,3 +6,17 @@ ul,
 ol {
   margin: 0 0 $spacing;
 }
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inline-list {
+  @extend .plain-list;
+
+  li {
+    display: inline-block;
+  }
+}
