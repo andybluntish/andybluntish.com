@@ -13,6 +13,7 @@
   text-align: center;
 
   li {
+    display: inline-block;
     margin: $half-spacing;
   }
 }
@@ -60,9 +61,6 @@
 
 /* Small Page */
 @media only screen and (min-width: $sm-page) {
-  .services li {
-    display: inline-block;
-  }
   .copyright .disclaimer {
     display: inline;
   }

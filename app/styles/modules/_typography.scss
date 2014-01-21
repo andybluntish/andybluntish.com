@@ -10,6 +10,9 @@ b, strong {
   font-weight: 600;
 }
 
-.intro {
-  font-size: $font-size-lg;
+/* Small Page */
+@media only screen and (min-width: $sm-page) {
+  .intro {
+    font-size: $font-size-lg;
+  }
 }

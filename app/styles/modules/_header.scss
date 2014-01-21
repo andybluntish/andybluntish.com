@@ -5,23 +5,40 @@
 [role="banner"] {
   margin-bottom: $spacing;
   padding: $spacing 0;
-  text-align: center;
   border-bottom: $divider;
 }
 
 .title {
-  font-size: $font-size-xl;
+  font-size: $font-size-lg;
+  line-height: 1.2;
 
-  a {
+  .icon-pandy {
+    display: block;
+    padding: 4px 0 4px 60px;
     color: $text-colour;
+    background-position: 0 50%;
+    background-size: auto 50px;
+  }
+
+  b {
+    display: block;
   }
 }
 
-.title {
-  padding-top: 90px;
+/* Small Page */
+@media only screen and (min-width: $sm-page) {
+  .title {
+    font-size: $font-size-xl;
+    text-align: center;
 
-  .icon-pandy {
-    padding-top: 75px;
-    background-position: 50% 0;
+    .icon-pandy {
+      padding: 75px 0 0;
+      background-position: 50% 0;
+      background-size: auto;
+    }
+
+    b {
+      display: inline;
+    }
   }
 }

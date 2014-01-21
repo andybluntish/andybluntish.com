@@ -17,11 +17,11 @@ body {
 /* Small Page */
 @media only screen and (min-width: $sm-page) {
   body {
-    padding: 0 $spacing;
+    padding: 0 $half-spacing;
   }
 }
 
-/* Medium Page */
+/* Large Page */
 @media only screen and (min-width: $md-page) {
   body {
     padding: 0 $double-spacing;
