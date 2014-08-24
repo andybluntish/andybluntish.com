@@ -1,9 +1,0 @@
-{
-  "name": "andy-bluntish-net",
-  "private": true,
-  "dependencies": {
-    "modernizr": "~2.6.2",
-    "normalize-css": "~2.1.3"
-  },
-  "devDependencies": {}
-}
