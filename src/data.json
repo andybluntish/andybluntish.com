@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Andy Stanford-Bluntish",
+    "email": "andy@bluntish.net",
+    "twitter": "@andybluntish",
+    "location": {
+      "country": "Australia",
+      "region": "VIC",
+      "city": "Melbourne"
+    }
+  },
+  "site": {
+    "url": "http://andy.bluntish.net",
+    "est": "2006",
+    "title": "web developer & designer"
+  },
+  "meta": {
+    "title": "Andy Stanford-Bluntish",
+    "description": "I build things on the web. I love what I do."
+  }
+}

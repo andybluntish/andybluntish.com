@@ -1,0 +1,15 @@
+build
+node_modules
+npm-debug.log
+bower_components
+.tmp
+*.sass-cache
+*~
+._*
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN

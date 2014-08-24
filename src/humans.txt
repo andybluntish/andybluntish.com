@@ -1,0 +1,19 @@
+@@url
+v@@version
+
+@@metaDescription
+
+
+/* TEAM */
+Developer: @@authorName
+Site: @@url
+Email: @@authorEmail
+Twitter: @@authorTwitter
+Location: @@authorCity, @@authorCountry
+
+/* SITE */
+Last update: @@isoDate
+Language: English
+Standards: HTML5, CSS3, SVG, robotstxt.org, humanstxt.org
+Components: Gulp, Node.js
+Software: MacVim, Adobe Illustrator
