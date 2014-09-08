@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+$inline-list-spacing-sm: $half-size;
+$inline-list-spacing-lg: $size;
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inline-list {
+  @extend .plain-list;
+
+  li {
+    display: inline-block;
+    margin-right: $inline-list-spacing-sm;
+    &:last-child {
+      margin: 0;
+    }
+
+    @media only screen and (min-width: $break-md) {
+      margin-right: $inline-list-spacing-lg;
+    }
+  }
+}

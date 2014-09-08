@@ -2,7 +2,8 @@
   "name": "andy-bluntish-net",
   "private": true,
   "dependencies": {
-    "typographic-styles": "https://github.com/andybluntish/typographic-styles.git"
+    "typographic-styles": "https://github.com/andybluntish/typographic-styles.git",
+    "svg4everybody": "*"
   },
   "devDependencies": {}
 }

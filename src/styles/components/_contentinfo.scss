@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Contentinfo
+   ========================================================================== */
+
+.about {
+  margin: $size 0;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+}
+
+.info {
+  margin: $size 0 0 0;
+}
+
+.avatar {
+  float: right;
+  margin: $size 0 $half-size $half-size;
+  background: #bbb;
+  border-radius: 100%;
+  box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.15);
+}
+
+.services {
+  @extend .inline-list;
+
+  margin: $half-size 0 $size;
+  line-height: 1;
+
+  a[class^=icon-] {
+    display: inline-block;
+    opacity: $translucent;
+    transform: translateZ(0);
+    transition: opacity $fade-speed;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: $dark-grey;
+    }
+  }
+}
+
+.copyright {
+  display: block;
+  margin: $size 0;
+  text-align: center;
+
+  .url {
+    display: block;
+    @media only screen and (min-width: $break-md) {
+      display: inline;
+    }
+  }
+}

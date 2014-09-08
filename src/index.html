@@ -2,6 +2,7 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>@@metaTitle 🚲 @@title</title>
   <meta name="description" content="@@metaDescription">
   <meta name="copyright" content="Copyright (c) @@est–@@year @@authorName">
@@ -30,20 +31,38 @@
   </main>
 
   <footer role="contentinfo" class="vcard">
-    <div class="me">
-      <p>Hello, my name is <b>Andy</b>. I’m a web developer and designer based in <span class="adr"><span class="locality">@@authorCity</span>, <span class="country-name">@@authorCountry</span>.</span></p>
+    <div class="about">
+      <img class="avatar" src="/images/avatar.png">
+      <p class="info">Hello, my name is <b>Andy</b>. I’m a web developer and designer based in <span class="adr"><span class="locality">@@authorCity</span>, <span class="country-name">@@authorCountry</span>.</span></p>
 
       <ul class="services">
-        <li><a class="icon-github" title="GitHub" href="https://github.com/andybluntish">Github</a></li>
-        <li><a class="icon-twitter" title="Twitter" href="http://twitter.com/andybluntish">Twitter</a></li>
-        <li><a class="icon-instagram" title="Instagram" href="http://instagram.com/andybluntish">Instagram</a></li>
-        <li><a class="icon-email email" title="Email" href="mailto:@@authorEmail?subject=Hello%20from%20@@url">@@authorEmail</a></li>
+        <li>
+          <a class="icon-github" href="https://github.com/andybluntish">
+            <svg role="img" title="Github"><use xlink:href="/images/icons.svg#github"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a class="icon-twitter" href="http://twitter.com/andybluntish">
+            <svg role="img" title="Twitter"><use xlink:href="/images/icons.svg#twitter"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a class="icon-instagram" href="http://instagram.com/andybluntish">
+            <svg role="img" title="Instagram"><use xlink:href="/images/icons.svg#instagram"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a class="icon-email email" href="mailto:@@authorEmail?subject=Hello%20from%20@@url">
+            <span style="display: none">@@authorEmail</span>
+            <svg role="img" title="Email"><use xlink:href="/images/icons.svg#email"></use></svg>
+          </a>
+        </li>
       </ul>
     </div>
 
     <small class="copyright">
       &copy; <time datetime="2006-01-30 23:05:25">2006</time>–<time datetime="@@isoDate">@@year</time>
-      <a class="url fn" href="@@url">@@authorName</a>.
+      <a class="url fn" href="@@url">@@authorName</a>
     </small>
   </footer>
 

@@ -14,18 +14,18 @@ gulp.task('clean', require('del').bind(null, ['build']));
 
 // Styles
 gulp.task('styles', function () {
-  var scss = gulp.src('src/styles/main.scss')
+  var styles = gulp.src('src/styles/main.scss')
     .pipe($.rubySass({
       style: 'expanded',
       precision: 10
     }));
 
-  var css = gulp.src([
+  var bower = gulp.src([
     'bower_components/normalize-css/normalize.css',
     'bower_components/normalize-opentype.css/normalize-opentype.css'
   ]);
 
-  var stream = merge(css, scss)
+  var stream = merge(bower, styles)
     .pipe($.concat('main.css'))
     .pipe($.autoprefixer());
 
@@ -44,9 +44,15 @@ gulp.task('styles', function () {
 
 // Scripts
 gulp.task('scripts', function () {
-  var stream = gulp.src('src/scripts/**/*.js')
+  var scripts = gulp.src('src/scripts/**/*.js')
     .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.jshint.reporter('jshint-stylish'));
+
+  var bower = gulp.src([
+    'bower_components/svg4everybody/svg4everybody.js'
+  ]);
+
+  var stream = merge(bower, scripts)
     .pipe($.concat('main.js'));
 
   if (ENV === 'production') {
@@ -59,13 +65,14 @@ gulp.task('scripts', function () {
 // Images
 gulp.task('images', function () {
   return gulp.src('src/images/**/*')
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true,
-      svgoPlugins: [{
-        removeViewBox: false
-      }]
-    })))
+    // .pipe($.cache($.imagemin({
+    //   progressive: true,
+    //   interlaced: true,
+    //   svgoPlugins: [
+    //     { removeViewBox: false },
+    //     { cleanupIDs: false }
+    //   ]
+    // })))
     .pipe(gulp.dest('build/images'));
 });
 
