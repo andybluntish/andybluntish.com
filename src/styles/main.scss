@@ -3,24 +3,28 @@
    ========================================================================== */
 
 @import '../../bower_components/typographic-styles/src/typography';
-@import '../../bower_components/typographic-styles/src/layout';
 
 $primary: #C83D3D;
+$dark-primary: darken($primary, 10);
+$light-grey: #ddd;
+$mid-grey: #444;
 $dark-grey: #585858;
 
 $size: $typography-size;
 $half-size: $size/2;
-
-$translucent: 0.5;
-$fade-speed: 0.2s;
+$double-size: $size*2;
 
 $break-md: $typography-document-min-width-md;
 $break-lg: $typography-document-min-width-lg;
 $break-lx: $typography-document-min-width-xl;
 
+@import 'components/effects';
+
+@import 'components/links';
 @import 'components/lists';
 
 @import 'components/document';
+@import 'components/banner';
 @import 'components/contentinfo';
 
 @import 'components/helpers';

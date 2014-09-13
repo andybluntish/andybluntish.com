@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Document
+   Box-sizing
    ========================================================================== */
 
 /**
@@ -7,20 +7,9 @@
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw
  * http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
  */
-
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-body {
-  @extend .clearfix;
-}
-
-[role="banner"],
-[role="main"],
-[role="contentinfo"]{
-  @include typography-main-container;
 }

@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+$link-color: $primary;
+$link-hover-color: $dark-primary;
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include simple-transition(color);
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}

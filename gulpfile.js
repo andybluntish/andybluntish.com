@@ -65,14 +65,14 @@ gulp.task('scripts', function () {
 // Images
 gulp.task('images', function () {
   return gulp.src('src/images/**/*')
-    // .pipe($.cache($.imagemin({
-    //   progressive: true,
-    //   interlaced: true,
-    //   svgoPlugins: [
-    //     { removeViewBox: false },
-    //     { cleanupIDs: false }
-    //   ]
-    // })))
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [
+        { removeViewBox: false },
+        { cleanupIDs: false }
+      ]
+    })))
     .pipe(gulp.dest('build/images'));
 });
 
