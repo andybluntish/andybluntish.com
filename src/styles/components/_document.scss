@@ -23,4 +23,5 @@ body {
 [role="main"],
 [role="contentinfo"]{
   @include typography-main-container;
+  @extend .clearfix;
 }

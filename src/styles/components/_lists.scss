@@ -12,10 +12,11 @@ $inline-list-spacing-lg: $size;
 }
 
 .inline-list {
+  @include clearfix();
   @extend .plain-list;
 
   li {
-    display: inline-block;
+    float: left;
     margin-right: $inline-list-spacing-sm;
     &:last-child {
       margin: 0;

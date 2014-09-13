@@ -2,49 +2,49 @@
    Contentinfo
    ========================================================================== */
 
+$contentinfo-font-size: $typography-font-size;
+$contentinfo-color: $mid-grey;
+
 [role="contentinfo"] {
-  @extend .clearfix;
+  font-size: $contentinfo-font-size;
+  color: $contentinfo-color;
+
+  a {
+    color: $contentinfo-color;
+  }
 }
 
 .about {
-  margin: $size 0;
-  border: 1px solid $light-grey;
-  border-left: none;
-  border-right: none;
-}
-
-.info {
-  margin: $size 0 0 0;
+  @include content-box();
 }
 
 .avatar {
   float: right;
-  margin: $size 0 $half-size $half-size;
+  margin: $size 0 0 $half-size;
   background: #bbb;
   border-radius: 100%;
   @include dropshdow();
 }
 
+.info {
+  margin-bottom: 0;
+}
+
 .services {
   @extend .inline-list;
-
   margin: $half-size 0 $size;
-  line-height: 1;
 
   a[class^=icon-] {
-    display: inline-block;
-    opacity: 0.5;
-    transform: translateZ(0);
-    @include simple-transition(opacity);
-
-    &:hover {
-      opacity: 1;
-    }
+    display: block;
+    width: (32/16) + rem;
+    height: (32/16) + rem;
+    @include opaque-on-focus();
 
     svg {
-      width: (32/16) + rem;
-      height: (32/16) + rem;
-      fill: $dark-grey;
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: $contentinfo-color;
     }
   }
 }

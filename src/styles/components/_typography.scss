@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Effects
+   Typography
    ========================================================================== */
 
-@mixin dropshdow() {
-  box-shadow: 0 0 3px 1px hsla(0, 0%, 0%, 0.15);
+html {
+  font-weight: $font-weight-normal;
 }
 
-@mixin simple-transition($property) {
-  transition: $property 0.2s ease;
+b, strong {
+  font-weight: $font-weight-bold;
 }
