@@ -176,8 +176,16 @@ gulp.task('replace', ['html', 'txt'], function() {
     .pipe(gulp.dest('build'));
 });
 
+// Extras
+gulp.task('extras', function () {
+  return gulp.src([
+    'src/apple-touch-icon-precomposed.png',
+    'src/favicon.ico'
+  ]).pipe(gulp.dest('build'));
+});
+
 gulp.task('rev',function() {
-  var assets = $.filter(['**/*.css', '**/*.js', '**/*.jpg', '**/*.png', '**/*.svg']);
+  var assets = $.filter(['**/*.css', '**/*.js', '**/*.jpg', 'images/*.png', '**/*.svg']);
 
   return gulp.src('./build/**/*')
     .pipe(assets)
@@ -203,7 +211,7 @@ gulp.task('cleanup', ['rev'], function() {
 });
 
 // Assets
-gulp.task('assets', ['styles', 'scripts', 'images', 'replace'], function() {
+gulp.task('assets', ['styles', 'scripts', 'images', 'replace', 'extras'], function() {
   if (ENV === 'production') {
     gulp.start(['cleanup']);
   }
