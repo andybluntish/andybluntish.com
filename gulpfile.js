@@ -52,7 +52,8 @@ gulp.task('scripts', function() {
     .pipe($.jshint.reporter('jshint-stylish'));
 
   var bower = gulp.src([
-    'bower_components/svg4everybody/svg4everybody.js'
+    'bower_components/svg4everybody/svg4everybody.js',
+    'bower_components/picturefill/dist/picturefill.js'
   ]);
 
   var stream = merge(bower, scripts)

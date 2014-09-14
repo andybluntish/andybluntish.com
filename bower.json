@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "typographic-styles": "https://github.com/andybluntish/typographic-styles.git",
-    "svg4everybody": "*"
+    "svg4everybody": "*",
+    "picturefill": "~2.1.0"
   },
   "devDependencies": {}
 }
