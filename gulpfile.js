@@ -249,5 +249,11 @@ gulp.task('serve', function() {
   return gulp.start(['build', 'watch']);
 });
 
+// Deploy
+gulp.task('deploy', function () {
+  return gulp.src("./build/**/*")
+    .pipe($.ghPages());
+});
+
 // Default
 gulp.task('default', ['build']);

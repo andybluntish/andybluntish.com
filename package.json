@@ -23,6 +23,7 @@
     "gulp-concat": "^2.3.5",
     "gulp-csso": "^0.2.9",
     "gulp-filter": "^1.0.1",
+    "gulp-gh-pages": "^0.3.4",
     "gulp-htmlmin": "^0.2.0",
     "gulp-imagemin": "^1.0.1",
     "gulp-jshint": "^1.8.4",
