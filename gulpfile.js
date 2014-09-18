@@ -184,7 +184,8 @@ gulp.task('replace', ['html', 'txt'], function() {
 gulp.task('extras', function() {
   return gulp.src([
     'src/apple-touch-icon-precomposed.png',
-    'src/favicon.ico'
+    'src/favicon.ico',
+    'src/CNAME'
   ]).pipe(gulp.dest('build'));
 });
 
