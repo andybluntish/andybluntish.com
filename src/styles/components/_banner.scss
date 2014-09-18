@@ -34,8 +34,18 @@ $logo-focus-color: $dark-primary;
     fill: $logo-color;
     @include simple-transition(fill);
   }
+
+  .logo.hover {
+    display: none;
+  }
+
   a:hover .logo,
   a:focus .logo {
     fill: $logo-focus-color;
+    display: none;
+
+    &.hover {
+      display: block;
+    }
   }
 }
