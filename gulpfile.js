@@ -124,6 +124,10 @@ gulp.task('replace', ['html', 'txt'], function() {
           replacement: function() { return data.site.url; }
         },
         {
+          match: 'ga',
+          replacement: function() { return data.site.ga; }
+        },
+        {
           match: 'est',
           replacement: function() { return data.site.est; }
         },

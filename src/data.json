@@ -12,7 +12,8 @@
   "site": {
     "url": "http://andy.bluntish.net",
     "est": "2006",
-    "title": "web developer & designer"
+    "title": "web developer & designer",
+    "ga": "UA-26537336-1"
   },
   "meta": {
     "title": "Andy Stanford-Bluntish",
