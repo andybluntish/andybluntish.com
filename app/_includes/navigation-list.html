@@ -1,0 +1,12 @@
+{% assign current_url = page.url | remove: 'index.html' %}
+{% assign page_list = site.pages | sort: 'order' %}
+
+<ul class="navigation-list">
+  {% for page in page_list %}
+    {% if page.title %}
+      <li class="navigation-list__item{% if current_url == page.url %}--active{% endif %}">
+        <a class="navigation-list__link{% if current_url == page.url %}--active{% endif %}" href="{{page.url | prepend: site.baseurl}}"{% if page.rel %} rel="{{page.rel}}"{% endif %}>{{page.title | liquify | markdownify | strip_html | strip_newlines}}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

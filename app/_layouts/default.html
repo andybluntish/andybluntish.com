@@ -16,18 +16,22 @@
   <meta name="copyright" content="Copyright (c) {{site.est}}–{{site.time | date: '%Y'}} {{site.author.name}}">
   <meta name="author" content="{{site.author.name}}">
 
-  <link rel="author" href="/humans.txt">
+  <link rel="author" href="{{'/humans.txt' | prepend: site.baseurl}}">
   <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url}}">
-  <link rel="alternate" type="application/rss+xml" title="{{site.title | liquify | markdownify | strip_html | strip_newlines}}" href="{{"/feed.xml" | prepend: site.baseurl | prepend: site.url}}">
+  <link rel="alternate" type="application/rss+xml" title="{{site.title | liquify | markdownify | strip_html | strip_newlines}}" href="{{'/feed.xml' | prepend: site.baseurl | prepend: site.url}}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{'/css/main.css' | prepend: site.baseurl}}">
 </head>
 <body>
+
+  {% include header.html %}
 
   <main role="main">
     {{content | abbr}}
   </main>
 
-  <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+  {% include footer.html %}
+
+  <script src="{{'/js/main.js' | prepend: site.baseurl}}"></script>
 </body>
 </html>
