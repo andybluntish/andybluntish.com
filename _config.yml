@@ -3,7 +3,7 @@ destination: dist
 
 encoding: utf-8
 permalink: pretty
-paginate: 5
+paginate: 10
 paginate_path: page/:num
 
 markdown: kramdown
@@ -13,13 +13,22 @@ kramdown:
 include:
   - CNAME
 
-include:
-  - CNAME
-
 exclude:
-  - styles
-  - scripts
-  - images
+  - css
+  - js
+  - img
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+      type: post
+  - scope:
+      type: pages
+    values:
+      layout: page
+      type: page
 
 timezone: Australia/Melbourne
 
@@ -40,15 +49,3 @@ author:
       name: Victoria
       abbr: VIC
     city: Melbourne
-
-defaults:
-  - scope:
-      type: posts
-    values:
-      layout: post
-      type: post
-  - scope:
-      type: pages
-    values:
-      layout: page
-      type: page
