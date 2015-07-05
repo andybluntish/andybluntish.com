@@ -13,6 +13,7 @@ var $ = require('gulp-load-plugins')();
 var path = require('path');
 var glob = require('glob');
 
+// Styles
 gulp.task('styles', function() {
   return gulp.src(path.join(paths.src, 'css', 'main.scss'))
     .pipe($.sass({
@@ -29,6 +30,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(path.join(paths.dest, 'css')));
 });
 
+// Scripts
 gulp.task('scripts', function() {
   return gulp.src(path.join(paths.src, 'js', '**', '*.js'))
     .pipe($.jshint())
@@ -38,3 +40,6 @@ gulp.task('scripts', function() {
     .pipe($.if(env === 'production', $.uglify()))
     .pipe(gulp.dest(path.join(paths.dest, 'js')));
 });
+
+// Default
+gulp.task('default', ['styles', 'scripts']);
