@@ -14,7 +14,7 @@
     "url": "https://github.com/andybluntish/andybluntish.com/issues"
   },
   "scripts": {
-    "start": "gulp serve",
+    "start": "jekyll build; gulp serve",
     "build": "jekyll build; NODE_ENV=production gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
