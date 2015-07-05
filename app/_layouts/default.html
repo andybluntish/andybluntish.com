@@ -12,7 +12,7 @@
     {{ site.title | liquify | markdownify | strip_html | strip_newlines }}
   </title>
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | liquify | markdownify | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | liquify | markdownify | strip_html | strip_newlines }}{% endif %}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | liquify | markdownify | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description | liquify | markdownify | strip_html | strip_newlines }}{% else %}{{ site.description | liquify | markdownify | strip_html | strip_newlines }}{% endif %}">
   <meta name="copyright" content="Copyright (c) {{ site.est }}–{{ site.time | date: '%Y' }} {{ site.author.name }}">
   <meta name="author" content="{{ site.author.name }}">
 
