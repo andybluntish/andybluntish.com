@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="article{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">
+<article class="article{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}{% if page.classes %}{{ page.classes | join: ' ' | prepend: ' ' }}{% endif %}">
   <header class="article__header{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">
     <h1 class="article__title{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">{{ page.title | liquify | markdownify | strip_html | strip_newlines }}</h1>
 
