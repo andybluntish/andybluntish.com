@@ -1,6 +1,13 @@
 /* node: true */
 'use strict';
 
+var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
+var browserSync = require('browser-sync').create();
+var path = require('path');
+var glob = require('glob');
+var cp = require('child_process');
+var pkg = require(path.join(__dirname, 'package.json'));
 var env = (process.env.NODE_ENV || 'development').toLowerCase();
 var paths = {
   src: 'app',
@@ -8,16 +15,33 @@ var paths = {
   vendor: 'vendor'
 };
 
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
-var path = require('path');
-var glob = require('glob');
-var browserSync = require('browser-sync').create();
-var cp = require('child_process');
-
 // Content (process dist files, after Jekyll has run)
 gulp.task('content', function() {
-  return gulp.src(path.join(paths.dest, '**', '*.{html,txt,xml}'))
+
+  // Create filter to operate only on HTML files
+  var html = $.filter('**/*.html');
+
+  return gulp.src(path.join(paths.dest, '**', '*.{html,txt}'))
+    .pipe(html)
+    .pipe($.if(env === 'production', $.htmlmin({
+      collapseBooleanAttributes: true,
+      collapseWhitespace: true,
+      removeAttributeQuotes: true,
+      removeCommentsFromCDATA: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+      useShortDoctype: true,
+      removeStyleLinkTypeAttributes: true,
+      minifyCSS: true,
+      minifyJS: true
+    })))
+    .pipe(html.restore())
+    .pipe($.replaceTask({
+      patterns: [{
+        match: 'version',
+        replacement: function() { return pkg.version; }
+      }]
+    }))
     .pipe(gulp.dest(paths.dest));
 });
 
@@ -67,15 +91,15 @@ gulp.task('serve', ['build'], function() {
     reloadOnRestart: true
   });
 
+  // Watch for changes to built content files (rebuilt by Jekyll server),
+  //   do some extra processing, then reload the browser.
+  gulp.watch(path.join(paths.dest, '**', '*.{html,txt,xml}'), ['content', browserSync.reload]);
+
   // Watch SASS files, then recompile and inject new styles.
   gulp.watch(path.join(paths.src, 'css', '**', '*.scss'), ['styles']);
 
   // Watch JS files, then recompile and reload the browser.
   gulp.watch(path.join(paths.src, 'js', '**', '*.js'), ['scripts', browserSync.reload]);
-
-  // Watch for changes to built content files (rebuilt by Jekyll server),
-  //   do some extra processing, then reload the browser.
-  gulp.watch(path.join(paths.dest, '**', '*.{html,txt,xml}'), ['content', browserSync.reload]);
 });
 
 // Default
