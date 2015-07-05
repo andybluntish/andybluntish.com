@@ -13,7 +13,14 @@ kramdown:
 include:
   - CNAME
 
+# Assets compilation is handled by Gulp
 exclude:
+  - css
+  - js
+  - img
+
+# Don't clobber asset files during rebuild
+keep_files:
   - css
   - js
   - img
