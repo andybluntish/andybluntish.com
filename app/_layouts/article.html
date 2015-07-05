@@ -2,20 +2,20 @@
 layout: default
 ---
 
-<article class="article{% if page.type %}{{page.type | prepend: '--'}}{% endif %}">
-  <header class="article__header{% if page.type %}{{page.type | prepend: '--'}}{% endif %}">
-    <h1 class="article__title{% if page.type %}{{page.type | prepend: '--'}}{% endif %}">{{page.title | liquify | markdownify | strip_html | strip_newlines}}</h1>
+<article class="article{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">
+  <header class="article__header{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">
+    <h1 class="article__title{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">{{ page.title | liquify | markdownify | strip_html | strip_newlines }}</h1>
 
     {% if page.subtitle %}
-      <p class="article__subtitle{% if page.type %}{{page.type | prepend: '--'}}{% endif %}">{{page.subtitle | liquify | markdownify | strip_html | strip_newlines}}</p>
+      <p class="article__subtitle{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">{{ page.subtitle | liquify | markdownify | strip_html | strip_newlines }}</p>
     {% endif %}
 
     {% if page.date %}
-      <p class="article__date{% if page.type %}{{page.type | prepend: '--'}}{% endif %}"><time class="dt-published" datetime="{{page.date | date_to_xmlschema}}">{{page.date | date_to_string}}</time></p>
+      <p class="article__date{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}"><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></p>
     {% endif %}
   </header>
 
-  <div class="article__content{% if page.type %}{{page.type | prepend: '--'}}{% endif %}">
-    {{content}}
+  <div class="article__content{% if page.type %}{{ page.type | prepend: '--' }}{% endif %}">
+    {{ content }}
   </div>
 </article>
