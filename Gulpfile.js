@@ -28,3 +28,13 @@ gulp.task('styles', function() {
     .pipe($.if(env === 'production', $.minifyCss()))
     .pipe(gulp.dest(path.join(paths.dest, 'css')));
 });
+
+gulp.task('scripts', function() {
+  return gulp.src(path.join(paths.src, 'js', '**', '*.js'))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.concat('main.js'))
+    .pipe($.babel())
+    .pipe($.if(env === 'production', $.uglify()))
+    .pipe(gulp.dest(path.join(paths.dest, 'js')));
+});
