@@ -18,12 +18,16 @@ exclude:
   - css
   - js
   - img
+  - apple-touch-icon-precomposed.png
+  - favicon.ico
 
 # Don't clobber asset files during rebuild
 keep_files:
   - css
   - js
   - img
+  - apple-touch-icon-precomposed.png
+  - favicon.ico
 
 defaults:
   - scope:

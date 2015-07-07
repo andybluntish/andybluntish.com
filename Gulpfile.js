@@ -7,6 +7,7 @@ var browserSync = require('browser-sync').create();
 var path = require('path');
 var glob = require('glob');
 var cp = require('child_process');
+var merge = require('merge-stream');
 var pkg = require(path.join(__dirname, 'package.json'));
 var env = (process.env.NODE_ENV || 'development').toLowerCase();
 var paths = {
@@ -74,8 +75,37 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(path.join(paths.dest, 'js')));
 });
 
+// Images
+gulp.task('images', function() {
+  var icons = gulp.src(path.join(paths.src, 'img', 'icons', '*.svg'))
+    .pipe($.svgstore())
+    .pipe($.rename(path.join('img', 'icons.svg')))
+    .pipe($.cheerio({
+      run: function($) {
+        $('[fill]').removeAttr('fill');
+        $('symbol').attr('fill', 'currentColor');
+        $('symbol').attr('preserveAspectRatio', 'xMinYMin meet');
+      },
+      parserOptions: { xmlMode: true }
+    }));
+
+  var favicons = gulp.src(path.join(paths.src, '*.{png,ico}'));
+  var images = gulp.src(path.join(paths.src, '+(img)', '!(icons)', '*.{svg,png,jpg,gif}'));
+
+  return merge(icons, favicons, images)
+    .pipe($.if(env === 'production', $.imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [
+        { removeViewBox: false },
+        { cleanupIDs: false }
+      ]
+    })))
+    .pipe(gulp.dest(paths.dest));
+});
+
 // Build
-gulp.task('build', ['content', 'styles', 'scripts']);
+gulp.task('build', ['content', 'styles', 'scripts', 'images']);
 
 // Serve
 gulp.task('serve', ['build'], function() {
@@ -100,6 +130,9 @@ gulp.task('serve', ['build'], function() {
 
   // Watch JS files, then recompile and reload the browser.
   gulp.watch(path.join(paths.src, 'js', '**', '*.js'), ['scripts', browserSync.reload]);
+
+  // Watch image files, do some extra processing, then reload the browser.
+  gulp.watch(path.join(paths.src, '**', '*.{svg,png,jpg,gif,ico}'), ['images', browserSync.reload]);
 });
 
 // Default
