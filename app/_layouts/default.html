@@ -27,7 +27,9 @@
   {% include header.html %}
 
   <main role="main">
-    {{ content | abbr }}
+    <div class="container">
+      {{ content | abbr }}
+    </div>
   </main>
 
   {% include footer.html %}

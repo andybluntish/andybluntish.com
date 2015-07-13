@@ -1,12 +1,14 @@
 <header role="banner">
-  <h1 class="site-title">
-    <a class="site-title__link" href="{{ site.baseurl }}/" rel="home">
-      <span class="site-title__first">{{ site.author.name | split: ' ' | first }}</span>
-      <span class="site-title__last">{{ site.author.name | split: ' ' | last }}</span>
-    </a>
-  </h1>
+  <div class="container">
+    <h1 class="site-title">
+      <a class="site-title__link" href="{{ site.baseurl }}/" rel="home">
+        <span class="site-title__first">{{ site.author.name | split: ' ' | first }}</span>
+        <span class="site-title__last">{{ site.author.name | split: ' ' | last }}</span>
+      </a>
+    </h1>
 
-  <nav role="navigation">
-    {% include navigation-list.html %}
-  </nav>
+    <nav role="navigation">
+      {% include navigation-list.html %}
+    </nav>
+  </div>
 </header>
