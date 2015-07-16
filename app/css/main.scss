@@ -1,4 +1,70 @@
 @charset 'utf-8';
 
-@import '../../node_modules/normalize.css/normalize';
-@import '../../node_modules/normalize-opentype.css/normalize-opentype';
+// Colour Definitions
+$red:          #C0392B;
+$dark-red:     darken($red, 8);
+
+$lighter-grey: #F2F3F5;
+$light-grey:   #707684;
+$grey:         #424752;
+$dark-grey:    #2B303B;
+
+// Typography Settings
+$simple-typography-font-family:      'Avenir Next', 'Avenir', 'Open Sans', 'Helvetica Neue', sans-serif;
+$simple-typography-font-weight-bold: 600;
+
+@import 'node_modules/simple-typography/src/simple-typography.scss';
+@import 'node_modules/simple-typography/src/simple-typography-layout.scss';
+@import 'node_modules/simple-grids/src/simple-grids.scss';
+
+// Metrics
+$size:          $simple-typography-size;
+$double-size:   $simple-typography-double-size;
+$triple-size:   $simple-typography-size * 3;
+$half-size:     $simple-typography-half-size;
+$quarter-size:  $simple-typography-quarter-size;
+
+// Fonts
+$font-weight-light:  $simple-typography-font-weight-light;
+$font-weight-normal: $simple-typography-font-weight-normal;
+$font-weight-bold:   $simple-typography-font-weight-bold;
+
+$font-size:       $simple-typography-font-size;
+$font-size-h1:    $simple-typography-font-size-h1;
+$font-size-h2:    $simple-typography-font-size-h2;
+$font-size-h3:    $simple-typography-font-size-h3;
+$font-size-h4:    $simple-typography-font-size-h4;
+$font-size-h5:    $simple-typography-font-size-h5;
+$font-size-h6:    $simple-typography-font-size-h6;
+$font-size-small: $simple-typography-font-size-small;
+
+// Colour Assignment
+$accent:       $red;
+$accent-dark:  $dark-red;
+$lighter-grey: $simple-typography-lighter-grey;
+$light-grey:   darken($simple-typography-light-grey, 3.5); // #6e6e6e
+$grey:         $simple-typography-grey;
+$dark-grey:    $simple-typography-dark-grey;
+
+// Effects
+$border-radius: 2px;
+$box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+// Transitions
+$fade-duration: 0.3s;
+$fade-timing-function: ease;
+
+// Break points
+$break-xs: $simple-typography-break-xs; // 320
+$break-sm: $simple-typography-break-sm; // 480
+$break-md: $simple-typography-break-md; // 640
+$break-lg: $simple-typography-break-lg; // 720
+$break-xl: $simple-typography-break-xl; // 1024
+
+@import 'mixins/simple-transition';
+
+@import 'components/typography';
+@import 'components/links';
+@import 'components/lists';
+
+@import 'components/helpers';

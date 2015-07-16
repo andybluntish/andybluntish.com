@@ -1,0 +1,7 @@
+/* ==========================================================================
+   Simple Transition
+   ========================================================================== */
+
+@mixin simple-transition($property, $duration: $fade-duration, $timing-function: $fade-timing-function) {
+  transition: $property $duration $timing-function;
+}
