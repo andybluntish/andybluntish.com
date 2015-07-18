@@ -62,6 +62,7 @@ $break-lg: $simple-typography-break-lg; // 720
 $break-xl: $simple-typography-break-xl; // 1024
 
 @import 'mixins/simple-transition';
+@import 'mixins/clearfix';
 
 @import 'components/typography';
 @import 'components/links';
