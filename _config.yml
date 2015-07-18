@@ -63,3 +63,23 @@ author:
       name: Victoria
       abbr: VIC
     city: Melbourne
+
+contact_links:
+  - id: github
+    title: GitHub
+    url: https://github.com/{{site.author.username}}
+  - id: npm
+    title: npm
+    url: https://www.npmjs.com/~{{site.author.username}}
+  - id: codepen
+    title: CodePen
+    url: http://codepen.io/{{site.author.username}}/public-list/
+  - id: twitter
+    title: Twitter
+    url: http://twitter.com/{{site.author.username}}
+  - id: instagram
+    title: Instagram
+    url: http://instagram.com/{{site.author.username}}
+  - id: email
+    title: Email
+    url: mailto:{{site.author.email}}

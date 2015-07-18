@@ -16,3 +16,5 @@ As a *developer*, I love writing code that makes peoples lives easier. I'm excit
 I want the web to work. I'm a strong proponent of a [future friendly](http://futurefriend.ly), [standards compliant](http://webstandards.org "The Web Standards Project") web, and believe in an [accessible](http://www.w3.org/WAI "Web Accessibility Initiative") experience for everyone.
 
 I also like _fun_ things, such as riding my bike and brewing my own beer. I spend my days building tools that help people learn, and *I love it*.
+
+{% include contact-links.html %}
