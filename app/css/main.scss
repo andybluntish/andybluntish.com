@@ -68,4 +68,14 @@ $break-xl: $simple-typography-break-xl; // 1024
 @import 'components/links';
 @import 'components/lists';
 
+@import 'components/banner';
+@import 'components/site-title';
+@import 'components/navigation';
+
+@import 'components/main';
+@import 'components/article';
+
+@import 'components/contentinfo';
+@import 'components/copyright';
+
 @import 'components/helpers';
