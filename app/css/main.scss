@@ -67,6 +67,7 @@ $break-xl: $simple-typography-break-xl; // 1024
 @import 'components/typography';
 @import 'components/links';
 @import 'components/lists';
+@import 'components/code';
 
 @import 'components/banner';
 @import 'components/site-title';
@@ -77,5 +78,7 @@ $break-xl: $simple-typography-break-xl; // 1024
 
 @import 'components/contentinfo';
 @import 'components/copyright';
+
+@import 'syntax';
 
 @import 'components/helpers';

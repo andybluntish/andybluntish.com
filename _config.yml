@@ -9,6 +9,7 @@ paginate_path: page/:num
 markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
 
 gems:
   - jekyll-sitemap
