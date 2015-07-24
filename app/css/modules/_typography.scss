@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+b, strong, th {
+  font-weight: $font-weight-bold;
+}
+
+small {
+  font-size: $font-size-small;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+
+/**
+ * Headings
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: $double-size 0 $half-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.1;
+  color: $dark-grey;
+}
+
+h1 {
+  margin: $double-size 0;
+  font-size: $font-size-h1;
+}
+
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+
+/**
+ * Blocks
+ */
+
+p, blockquote, figure,
+ol, ul, dl,
+table, pre, .vcard {
+  margin: 0 0 $size;
+}
+
+
+/**
+ * Horizontal Rule
+ */
+
+hr {
+  margin: $double-size 0;
+  border: 0;
+  height: $thin-line-weight;
+  background: $lighter-grey;
+}
+
+
+/**
+ * Blockquote
+ */
+
+blockquote {
+  margin: $size;
+  padding-left: $half-size;
+  padding-right: $size;
+  border-left: $thin-line-weight solid $lighter-grey;
+  font-style: italic;
+}
+
+
+/**
+ * vCard
+ */
+
+.vcard {
+  margin: 0;
+
+  .org {
+    font-weight: $font-weight-bold;
+  }
+}

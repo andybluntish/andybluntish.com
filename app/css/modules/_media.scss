@@ -1,15 +1,17 @@
 /* ==========================================================================
-   Typography
+   Media
    ========================================================================== */
 
-hr {
-  margin: $double-size 0;
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
 }
 
-.vcard {
-  margin: 0;
-
-  .fn {
-    font-weight: $font-weight-normal;
-  }
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }

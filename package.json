@@ -41,7 +41,9 @@
     "gulp-uncss": "^1.0.2",
     "jshint-stylish": "^2.0.1",
     "merge-stream": "^0.1.8",
-    "simple-grids": "^2.0.0",
-    "simple-typography": "^2.1.2"
+    "modularscale-sass": "^2.1.1",
+    "normalize-opentype.css": "^0.2.4",
+    "normalize.css": "^3.0.3",
+    "simple-grids": "^2.0.0"
   }
 }
