@@ -27,14 +27,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: $double-size 0;
+  margin: $triple-size 0;
   font-size: $font-size-h1;
 }
 
 h2 { font-size: $font-size-h2; }
-h3 { font-size: $font-size-h3; }
-h4 { font-size: $font-size-h4; }
-h5 { font-size: $font-size-h5; }
+h3 {
+  font-size: $font-size-h3;
+  text-transform: uppercase;
+  color: $accent-dark;
+}
+h4 {
+  font-size: $font-size-h4;
+}
+h5 {
+  font-size: $font-size-h5;
+  font-style: italic;
+}
 h6 { font-size: $font-size-h6; }
 
 
