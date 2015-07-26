@@ -60,10 +60,10 @@ dd {
 
 
 /**
- * Inline lists
+ * Blank lists
  */
 
-.inline-list {
+.blank-list {
   padding: 0;
   list-style: none;
 
@@ -71,6 +71,18 @@ dd {
     &:before {
       display: none;
     }
+  }
+}
+
+
+/**
+ * Inline lists
+ */
+
+.inline-list {
+  @extend .blank-list;
+
+  li {
     display: inline-block;
   }
 }

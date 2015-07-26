@@ -21,12 +21,15 @@
 @import 'modules/tables';
 
 // Components
+@import 'components/article';
+@import 'components/resource-list';
+
+// Layout components
 @import 'components/document';
 @import 'components/banner';
 @import 'components/site-title';
 @import 'components/navigation';
 @import 'components/main';
-@import 'components/article';
 @import 'components/contentinfo';
 @import 'components/copyright';
 
