@@ -15,7 +15,6 @@
 .resource-list__header {
   @include clearfix;
   margin-bottom: $quarter-size;
-  padding-bottom: $quarter-size;
   border-bottom: 1px solid darken($lighter-grey, 6);
 }
 
@@ -36,11 +35,15 @@
 .resource-list__links-item {
   font-size: $font-size-small;
 
+  .resource-list__link {
+    padding: $quarter-size;
+  }
 }
 
 [class^=resource-list__icon] {
   width: $half-size;
   height: $half-size;
+  vertical-align: text-top;
 }
 
 .resource-list__body {

@@ -22,13 +22,13 @@ resources:
   - title: simple-typography
     description: Simple CSS styles for nice typography - a nice place to start.
     links:
-      link: https://github.com/andybluntish/simple-typography
       demo: http://codepen.io/andybluntish/pen/ogBgBQ?editors=010
+      link: https://github.com/andybluntish/simple-typography
   - title: simple-grids
     description: A simple fluid grids implementation for modern browsers, including column and block list variants.
     links:
-      link: https://github.com/andybluntish/simple-grids
       demo: http://codepen.io/andybluntish/pen/RNzyZM?editors=010
+      link: https://github.com/andybluntish/simple-grids
   - title: Dotfiles
     description: Dotfiles and configuration for Vim, Git, tmux and Bash.
     links:
@@ -52,7 +52,7 @@ resources:
             <li class="resource-list__links-item">
               <a href="{{link[1]}}" class="resource-list__link">
                 <svg xmlns="http://www.w3.org/2000/svg" class="resource-list__icon--{{link[0]}}" role="presentation">
-                  <use xlink:href="/img/icons.svg#icon--{{link[0]}}"></use>
+                  <use xlink:href="/img/icons.svg#{{link[0]}}"></use>
                 </svg>
                 {{link[0]}}
               </a>
