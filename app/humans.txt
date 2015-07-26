@@ -4,18 +4,8 @@ layout: null
 {{ site.baseurl | prepend: site.url }}
 v@@version
 
-{{ site.description }}
+"{{ site.description }}"
 
-/* TEAM */
-Developer: {{ site.author.name }}
-Site: {{ site.baseurl | prepend: site.url }}
-Email: {{ site.author.email }}
-Twitter: @{{ site.author.username }}
-Location: {{ site.author.location.city }}, {{ site.author.location.country }}
-
-/* SITE */
 Last update: {{ site.time | date_to_xmlschema }}
-Language: English
-Standards: HTML5, CSS3, SVG, robotstxt.org, humanstxt.org, sitemaps.org
-Components: Jekyll, Gulp, SASS, Babel
-Software: Vim, iTerm2, tmux, Adobe Illustrator
+
+Icons by http://www.entypo.com/
