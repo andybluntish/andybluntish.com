@@ -1,14 +1,22 @@
 <footer role="contentinfo">
-  <div class="container">
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon--pandy" role="presentation">
+  <div class="footer-logo" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo__icon" role="presentation">
       <use xlink:href="/img/icons.svg#pandy"></use>
     </svg>
-
-    <small class="copyright">
-      &copy;
-      <time class="copyright__date" datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-      <a class="copyright__link" href="{{ site.baseurl | prepend: site.url }}" rel="me">{{ site.author.name }}</a>.
-      All rights reserved.
-    </small>
   </div>
+
+  <form id="search" class="search" role="search" action="https://www.google.com.au/search" method="get">
+    <input type="hidden" name="as_sitesearch" value="{{site.url | replace:'http://', ''}}">
+
+    <label class="search__label" for="q">Search:</label>
+    <input id="search-field" class="search__field" type="search" name="q" value="">
+    <input id="search-btn" class="search__btn" type="submit" value="search">
+  </form>
+
+  <small class="copyright">
+    &copy;
+    <time class="copyright__date" datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+    <a class="copyright__link" href="{{ site.baseurl | prepend: site.url }}" rel="me">{{ site.author.name }}</a>.
+    All rights reserved.
+  </small>
 </footer>
