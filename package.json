@@ -14,8 +14,8 @@
     "url": "https://github.com/andybluntish/andybluntish.com/issues"
   },
   "scripts": {
-    "start": "jekyll build; gulp serve",
-    "build": "jekyll build; NODE_ENV=production gulp",
+    "start": "gulp serve",
+    "build": "NODE_ENV=production gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -44,6 +44,7 @@
     "modularscale-sass": "^2.1.1",
     "normalize-opentype.css": "^0.2.4",
     "normalize.css": "^3.0.3",
+    "run-sequence": "^1.1.2",
     "simple-grids": "^2.0.0"
   }
 }

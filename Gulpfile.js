@@ -8,6 +8,7 @@ var path = require('path');
 var glob = require('glob');
 var cp = require('child_process');
 var merge = require('merge-stream');
+var runSequence = require('run-sequence');
 var pkg = require(path.join(__dirname, 'package.json'));
 var env = (process.env.NODE_ENV || 'development').toLowerCase();
 var paths = {
@@ -16,8 +17,14 @@ var paths = {
   vendor: 'vendor'
 };
 
+// Jekyll
+gulp.task('jekyll', function(done) {
+  return cp.spawn('jekyll', ['build'], { stdio: 'inherit' })
+    .on('close', done);
+});
+
 // Content (process dist files, after Jekyll has run)
-gulp.task('content', function() {
+gulp.task('content', ['jekyll'], function() {
 
   // Create filter to operate only on HTML files
   var html = $.filter('**/*.html');
@@ -111,33 +118,39 @@ gulp.task('images', function() {
 });
 
 // Build
-gulp.task('build', ['content', 'styles', 'scripts', 'images']);
+gulp.task('build', function(done) {
+  return runSequence('content', ['styles', 'scripts', 'images'], done);
+});
 
 // Serve
 gulp.task('serve', ['build'], function() {
 
-  // Start Jekyll server
-  cp.spawn('jekyll', ['serve'], { stdio: 'inherit' });
-
-  // Start BrowserSync server to proxy the Jekyll server
+  // Start BrowserSync server
   browserSync.init({
-    proxy: '0.0.0.0:4000',
     open: false,
     notify: false,
-    reloadOnRestart: true
+    reloadOnRestart: true,
+    server: {
+      baseDir: paths.dest
+    }
   });
 
-  // Watch for changes to built content files (rebuilt by Jekyll server),
-  //   do some extra processing, then reload the browser.
-  gulp.watch(path.join(paths.dest, '**', '*.{html,txt,xml}'), ['content', browserSync.reload]);
+  // Watch for changes to content files,
+  //   rebuild with Jekyll,
+  //   do some extra processing,
+  //   then reload the browser.
+  gulp.watch([
+    path.join(paths.src, '**', '*.{html,md,txt,json,xml,yml}'),
+    path.join(__dirname, '**', '*.yml'),
+  ], ['content', browserSync.reload]);
 
-  // Watch SASS files, then recompile and inject new styles.
+  // Watch src SASS files, recompile, and inject new styles.
   gulp.watch(path.join(paths.src, 'css', '**', '*.scss'), ['styles']);
 
-  // Watch JS files, then recompile and reload the browser.
+  // Watch src JS files, recompile, and reload the browser.
   gulp.watch(path.join(paths.src, 'js', '**', '*.js'), ['scripts', browserSync.reload]);
 
-  // Watch image files, do some extra processing, then reload the browser.
+  // Watch src image files, do some extra processing, then reload the browser.
   gulp.watch(path.join(paths.src, '**', '*.{svg,png,jpg,gif,ico}'), ['images', browserSync.reload]);
 });
 
