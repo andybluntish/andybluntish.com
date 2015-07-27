@@ -83,8 +83,14 @@ gulp.task('images', function() {
     .pipe($.cheerio({
       run: function($) {
         $('[fill]').removeAttr('fill');
-        $('symbol').attr('fill', 'currentColor');
-        $('symbol').attr('preserveAspectRatio', 'xMinYMin meet');
+        $('symbol').each(function() {
+          var title = $(this).attr('id').replace('-', ' ');
+
+          $(this)
+            .attr('fill', 'currentColor')
+            .attr('preserveAspectRatio', 'xMinYMin meet')
+            .prepend('<title>' + title + '</title>');
+        });
       },
       parserOptions: { xmlMode: true }
     }));
