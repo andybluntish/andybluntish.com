@@ -3,13 +3,11 @@
    ========================================================================== */
 
 .resource-list {
-  margin: 0;
-  padding: 0;
+
 }
 
 .resource-list__item {
-  @include clearfix;
-  margin-bottom: $size;
+
 }
 
 .resource-list__header {
@@ -20,30 +18,29 @@
 
 .resource-list__title {
   float: left;
-  margin: 0;
+  margin: 0 0 0 ($quarter-size * -1);
+  font-size: $font-size;
 }
 
 .resource-list__link {
+  display: inline-block;
+  padding: $quarter-size;
   color: inherit;
 }
 
 .resource-list__links {
   @extend .inline-list;
   text-align: right;
+  line-height: 1.1;
 }
 
 .resource-list__links-item {
-  font-size: $font-size-small;
 
-  .resource-list__link {
-    padding: $quarter-size;
-  }
 }
 
 [class^=resource-list__icon] {
   width: $half-size;
   height: $half-size;
-  vertical-align: text-top;
 }
 
 .resource-list__body {
