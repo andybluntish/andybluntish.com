@@ -14,7 +14,10 @@
 .article__subtitle {
 }
 
-.article__date {
+.article__time {
+  font-style: italic;
+  font-weight: $font-weight-light;
+  color: $light-grey;
 }
 
 .article__content {

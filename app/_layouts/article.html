@@ -11,7 +11,9 @@ layout: default
     {% endif %}
 
     {% if page.date %}
-      <p class="article__date"><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></p>
+      <p class="article__time">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+      </p>
     {% endif %}
   </header>
 
