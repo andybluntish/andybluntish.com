@@ -1,8 +1,8 @@
-<ul class="contact-links block-grid-sm-3 compact-grid">
+<ul class="contact-links block-grid-xs-2 block-grid-sm-3 compact-grid">
   {% for link in site.contact_links %}
     <li class="contact-links__item">
       <a class="contact-links__link" href="{{link.url | liquify}}" rel="me">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon--{{link.id}}" role="img" title="{{link.title}}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact-links__icon" role="img" title="{{link.title}}">
           <use xlink:href="/img/icons.svg#{{link.id}}"></use>
         </svg>
       </a>
