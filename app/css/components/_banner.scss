@@ -3,4 +3,8 @@
    ========================================================================== */
 
 [role="banner"] {
+  @include clearfix;
+
+  margin-bottom: $size;
+  background: $lighter-grey;
 }

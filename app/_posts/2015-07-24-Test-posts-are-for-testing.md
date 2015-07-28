@@ -1,7 +1,6 @@
 ---
-
+title: Radioactive Man
 ---
-# Radioactive Man
 
 Uh, no, they're saying "Boo-urns, Boo-urns." Oh, so they have Internet on computers now! Your guilty consciences may make you vote Democratic, but secretly you all yearn for a Republican president to lower taxes, brutalize criminals, and rule you like a king! Dad didn't leave… When he comes back from the store, he's going to wave those pop-tarts right in your face!
 
