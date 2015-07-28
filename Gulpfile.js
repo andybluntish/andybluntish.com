@@ -73,13 +73,13 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src(path.join(paths.src, 'js', '**', '*.js'))
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.concat('main.js'))
-    .pipe($.babel())
-    .pipe($.if(env === 'production', $.uglify()))
-    .pipe(gulp.dest(path.join(paths.dest, 'js')));
+  // return gulp.src(path.join(paths.src, 'js', '**', '*.js'))
+  //   .pipe($.jshint())
+  //   .pipe($.jshint.reporter('jshint-stylish'))
+  //   .pipe($.concat('main.js'))
+  //   .pipe($.babel())
+  //   .pipe($.if(env === 'production', $.uglify()))
+  //   .pipe(gulp.dest(path.join(paths.dest, 'js')));
 });
 
 // Images
