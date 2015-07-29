@@ -21,4 +21,42 @@
 }
 
 .article__content {
+
+  /**
+   * Custom bullet/number list styles in article content only
+   */
+
+  li {
+    list-style: none;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: -2.5rem; //-40px;
+      width: 1.5625rem; //25px;
+      text-align: right;
+      color: $accent-dark;
+    }
+  }
+
+  ul li:before {
+    content: '\2022';
+  }
+
+  ol {
+    counter-reset: list-number;
+
+    li:before {
+      counter-increment: list-number;
+      content: counter(list-number) '.';
+    }
+  }
+
+  // Override custom bullets for blank lists and block grids
+  .blank-list,
+  [class*="block-grid-"] {
+    li:before {
+      display: none;
+    }
+  }
 }
