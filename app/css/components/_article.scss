@@ -6,15 +6,24 @@
 }
 
 .article__header {
+  @include clearfix;
+  position: relative;
 }
 
 .article__title {
+  margin: $double-size 0;
+}
+
+.article__link {
 }
 
 .article__subtitle {
 }
 
 .article__time {
+  position: absolute;
+  top: $size;
+  font-size: $font-size-small;
   font-style: italic;
   font-weight: $font-weight-light;
   color: $light-grey;
