@@ -35,15 +35,9 @@ keep_files:
 
 defaults:
   - scope:
-      type: posts
+      path: ""
     values:
-      layout: post
-      type: post
-  - scope:
-      type: pages
-    values:
-      layout: page
-      type: page
+      layout: article
 
 timezone: Australia/Melbourne
 
