@@ -1,0 +1,23 @@
+<article class="h-entry article{% if include.article.classes %}{{ include.article.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+  <header class="article__header">
+    <h1 class="p-name article__title">
+      <a class="u-url u-uid article__link" href="{{ include.article.url | prepend: site.baseurl }}">
+        {{ include.article.title | liquify | markdownify | strip_html | strip_newlines }}
+      </a>
+    </h1>
+
+    {% if include.article.subtitle %}
+      <p class="article__subtitle">{{ include.article.subtitle | liquify | markdownify | strip_html | strip_newlines }}</p>
+    {% endif %}
+
+    {% if include.article.date %}
+      <p class="article__time">
+        <time class="dt-published" datetime="{{ include.article.date | date_to_xmlschema }}">{{ include.article.date | date_to_string }}</time>
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="e-content article__content">
+    {{ include.content }}
+  </div>
+</article>

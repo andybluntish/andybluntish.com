@@ -2,22 +2,4 @@
 layout: document
 ---
 
-<article class="article{% if page.classes %}{{ page.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-  <header class="article__header">
-    <h1 class="article__title">{{ page.title | liquify | markdownify | strip_html | strip_newlines }}</h1>
-
-    {% if page.subtitle %}
-      <p class="article__subtitle">{{ page.subtitle | liquify | markdownify | strip_html | strip_newlines }}</p>
-    {% endif %}
-
-    {% if page.date %}
-      <p class="article__time">
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
-      </p>
-    {% endif %}
-  </header>
-
-  <div class="article__content">
-    {{ content }}
-  </div>
-</article>
+{% include article.html article=page content=content %}
