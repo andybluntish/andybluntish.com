@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.pagination {
+  @include clearfix;
+  margin-top: $double-size;
+  padding-top: $half-size;
+  text-transform: lowercase;
+  border-top: 2px solid $lighter-grey;
+}
+
+.pagination__link {
+  display: block;
+  padding: $half-size;
+}
+
+.pagination__link--newer {
+  @extend .pagination__link;
+  margin-left: $half-size * -1;
+  float: left;
+
+  &:before {
+    content: '←';
+    padding: 0 $quarter-size;
+  }
+}
+
+.pagination__link--older {
+  @extend .pagination__link;
+  margin-right: $half-size * -1;
+  float: right;
+
+  &:after {
+    @extend .pagination__link--newer:before;
+    content: '→';
+  }
+}

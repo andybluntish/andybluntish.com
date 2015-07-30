@@ -6,9 +6,19 @@ order: 0
 ---
 
 <section class="post-list">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     {% include article.html article=post content=post.content %}
   {% endfor %}
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 </section>
+
+<nav class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="pagination__link--newer">Newer</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="pagination__link--older">Older</a>
+  {% endif %}
+</nav>
+
+<!-- <p class="subscribe">subscribe <a class="subscribe__link" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
