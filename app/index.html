@@ -8,12 +8,14 @@ layout: document
   {% endfor %}
 </section>
 
-<nav class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="pagination__link--newer">Newer</a>
-  {% endif %}
+{% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="pagination__link--newer">Newer</a>
+    {% endif %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="pagination__link--older">Older</a>
-  {% endif %}
-</nav>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="pagination__link--older">Older</a>
+    {% endif %}
+  </nav>
+{% endif %}

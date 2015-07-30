@@ -3,7 +3,7 @@ destination: dist
 
 encoding: utf-8
 permalink: pretty
-paginate: 1
+paginate: 10
 paginate_path: page/:num
 
 markdown: kramdown
