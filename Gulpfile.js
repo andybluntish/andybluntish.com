@@ -154,5 +154,13 @@ gulp.task('serve', ['build'], function() {
   gulp.watch(path.join(paths.src, '**', '*.{svg,png,jpg,gif,ico}'), ['images', browserSync.reload]);
 });
 
+// Deploy
+gulp.task('deploy', ['build'], function() {
+  if (env === 'production') {
+    return gulp.src(path.join(paths.src, '**', '*'))
+      .pipe($.ghPages());
+  }
+});
+
 // Default
 gulp.task('default', ['build']);
