@@ -1,3 +1,5 @@
+# Process input as a Liquid templates
+
 module Jekyll
   module LiquifyFilter
     def liquify(input)
