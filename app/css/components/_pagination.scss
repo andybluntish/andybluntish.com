@@ -4,8 +4,8 @@
 
 .pagination {
   @include clearfix;
-  margin-top: $double-size;
-  padding-top: $half-size;
+  margin-top: $triple-size;
+  padding: $half-size 0;
   text-transform: lowercase;
   border-top: 2px solid $lighter-grey;
 }
