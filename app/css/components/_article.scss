@@ -5,6 +5,19 @@
 .article {
 }
 
+// Articles when they appear in a paginated list
+.post-list .article {
+  margin: $triple-size 0;
+  padding-top: $double-size;
+  border-top: 2px solid $lighter-grey;
+
+  &:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border: none;
+  }
+}
+
 .article__header {
   @include clearfix;
   position: relative;
