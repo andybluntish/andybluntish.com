@@ -11,6 +11,7 @@ html {
   font-weight: $font-weight-normal;
   line-height: $line-height;
   color: $grey;
+  background: $dark-grey;
 
   /* Scale the root font size at different breakpoints */
   font-size: $font-scale-xxs;
@@ -34,6 +35,10 @@ html {
   @media only screen and (min-width: $break-xl) {
     font-size: $font-scale-xl;
   }
+}
+
+body {
+  background: white;
 }
 
 
