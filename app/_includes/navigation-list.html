@@ -1,8 +1,20 @@
+{% comment %}
+  Display a list of site navigation links.
+
+  Loops over a list of link objects stored in the _config.yml file. The list
+  item and link will be given the "active" modifier when its link is the
+  current page, or one of its children (nested URL hierarchy). Also,
+  paginated pages (/page/2) and article pages (/2015/07/19/my-post) will
+  cause the index link to be made active.
+{% endcomment %}
+
 {% assign current_url_base = {{page.url | replace: 'index.html', '' | remove_first: '/' | split: '/' | first | prepend: '/' }} %}
 
 <ul class="navigation-list">
   {% for nav_link in site.navigation %}
-    {% if nav_link.url == current_url_base or (nav_link.url == '/' and current_url_base == '/page') %}
+    {% assign current_is_article = current_url_base | match: '/(?:page|20\d{2})' %}
+
+    {% if nav_link.url == current_url_base or (nav_link.url == '/' and current_is_article) %}
       {% assign current = true %}
     {% else %}
       {% assign current = false %}
