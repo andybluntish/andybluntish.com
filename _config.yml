@@ -59,6 +59,15 @@ author:
       abbr: VIC
     city: Melbourne
 
+navigation:
+  - title: words
+    url: /
+    rel: home
+  - title: Code
+    url: /code
+  - title: About
+    url: /about
+
 contact_links:
   - id: github
     title: GitHub

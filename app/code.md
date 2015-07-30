@@ -1,7 +1,6 @@
 ---
 title: Code
 description: Links to code written, and contributed to, by {{site.author.name}}.
-order: 1
 resources:
   - title: grunt-xsltproc
     description: Apply XSLT stylesheets to XML and HTML documents from Grunt.

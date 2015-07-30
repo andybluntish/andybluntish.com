@@ -4,7 +4,6 @@ description: Information about {{site.author.name}}, a web developer living in {
 classes:
   - vcard
   - h-card
-order: 2
 ---
 
 G'day, my name is <a href="{{ site.baseurl }}/" class="fn p-name url u-url">{{site.author.name}}</a>.
