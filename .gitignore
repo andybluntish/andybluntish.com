@@ -1,8 +1,9 @@
-build
+dist
 node_modules
-npm-debug.log
 bower_components
 .tmp
+tmp
+*.log
 *.sass-cache
 *~
 ._*

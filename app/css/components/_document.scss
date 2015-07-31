@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Document
+   ========================================================================== */
+
+/**
+ * HTML
+ */
+
+html {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  line-height: $line-height;
+  color: $grey;
+  background: $dark-grey;
+
+  /* Scale the root font size at different breakpoints */
+  font-size: $font-scale-xxs;
+
+  @media only screen and (min-width: $break-xs) {
+    font-size: $font-scale-xs;
+  }
+
+  @media only screen and (min-width: $break-sm) {
+    font-size: $font-scale-sm;
+  }
+
+  @media only screen and (min-width: $break-md) {
+    font-size: $font-scale-md;
+  }
+
+  @media only screen and (min-width: $break-lg) {
+    font-size: $font-scale-lg;
+  }
+
+  @media only screen and (min-width: $break-xl) {
+    font-size: $font-scale-xl;
+  }
+}
+
+body {
+  background: white;
+}
+
+
+/**
+ * Container
+ */
+
+.container {
+  max-width: $break-md;
+  margin: auto;
+  padding: 0 $half-size;
+}

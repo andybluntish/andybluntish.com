@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Resource List
+   ========================================================================== */
+
+.resource-list {
+
+}
+
+.resource-list__item {
+
+}
+
+.resource-list__header {
+  @include clearfix;
+  margin-bottom: $quarter-size;
+  border-bottom: 1px solid darken($lighter-grey, 6);
+}
+
+.resource-list__title {
+  float: left;
+  margin: 0 0 0 ($quarter-size * -1);
+  font-size: $font-size;
+}
+
+.resource-list__link {
+  display: inline-block;
+  padding: $quarter-size;
+  color: inherit;
+}
+
+.resource-list__links {
+  @extend .inline-list;
+  text-align: right;
+  line-height: 1.1;
+}
+
+.resource-list__links-item {
+
+}
+
+[class^=resource-list__icon] {
+  width: $half-size;
+  height: $half-size;
+}
+
+.resource-list__body {
+
+}

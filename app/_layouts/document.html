@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {% if page.title %}
+      {{ page.title | liquify | markdownify | strip_html | strip_newlines | append:' | ' }}
+    {% endif %}
+    {{ site.title | liquify | markdownify | strip_html | strip_newlines }}
+  </title>
+
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | liquify | markdownify | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description | liquify | markdownify | strip_html | strip_newlines }}{% else %}{{ site.description | liquify | markdownify | strip_html | strip_newlines }}{% endif %}">
+  <meta name="copyright" content="Copyright (c) {{ site.est }}–{{ site.time | date: '%Y' }} {{ site.author.name }}">
+  <meta name="author" content="{{ site.author.name }}">
+
+  <link rel="author" href="{{ '/humans.txt' | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | liquify | markdownify | strip_html | strip_newlines }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+</head>
+<body>
+
+  {% include header.html %}
+
+  <main role="main">
+    <div class="container">
+      {{ content | abbr }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  {% comment %}<script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>{% endcomment %}
+</body>
+</html>

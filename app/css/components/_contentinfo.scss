@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Contentinfo
+   ========================================================================== */
+
+[role="contentinfo"] {
+  @include clearfix;
+
+  margin-top: $double-size;
+  text-align: center;
+  line-height: 1;
+
+  color: $lighter-grey;
+  background: $dark-grey;
+
+  a {
+    color: $lighter-blue;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.footer-logo {
+  margin-bottom: $size;
+  padding: $half-size 0;
+  background: $grey;
+}
+
+.footer-logo__icon {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  opacity: 0.4;
+}

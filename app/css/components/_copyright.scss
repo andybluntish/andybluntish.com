@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Copyright
+   ========================================================================== */
+
+.copyright {
+  display: block;
+  margin-bottom: $size;
+}
+
+.copyright__link {
+}
+
+.copyright__date {
+}
+
+.copyright__date--est {
+  @extend .copyright__date;
+}
+
+.copyright__date--current {
+  @extend .copyright__date;
+}

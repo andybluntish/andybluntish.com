@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Code
+   ========================================================================== */
+
+pre, code, kdb, samp, var {
+  font-family: $font-family-monospace;
+}
+
+pre {
+  background: $lighter-grey;
+  margin: $size 0;
+  padding: $half-size;
+}
+
+.highlighter-rouge {
+  font-size: 85%;
+}

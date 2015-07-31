@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+/**
+ * Nested lists
+ */
+
+ol ol, ol ul,
+ul ul, ul ol {
+  margin-bottom: 0;
+}
+
+
+/**
+ * Definition lists
+ */
+
+dt {
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color: $light-grey;
+}
+
+dd {
+  margin: 0 0 $size;
+}
+
+
+/**
+ * Blank lists
+ */
+
+.blank-list {
+  padding: 0;
+  list-style: none;
+}
+
+
+/**
+ * Inline lists
+ */
+
+.inline-list {
+  @extend .blank-list;
+
+  li {
+    display: inline-block;
+  }
+}
