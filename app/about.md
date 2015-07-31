@@ -6,9 +6,9 @@ classes:
   - h-card
 ---
 
-G'day, my name is <a href="{{ site.baseurl }}/" class="fn p-name url u-url">{{site.author.name}}</a>.
+G'day, my name is <a href="{{ site.baseurl }}/" class="fn p-name url u-url">{{ site.author.name | split: ' ' | first }}</a>.
 
-I’m a <span class="title p-title">{{site.author.role}}</span> based in <a href="https://www.google.com.au/maps/place/Melbourne+VIC"><span class="locality p-locality">{{site.author.location.city}}</span>, <span class="country-name p-country-name">{{site.author.location.country}}</span></a>. I'm a fan of the Open Web, and love using technology to help solve problems.
+I’m a <span class="title p-title">{{site.author.role}}</span> based in <a href="https://www.google.com.au/maps/place/{{site.author.location.city}}+{{site.author.location.region.abbr}}+{{site.author.location.country}}"><span class="locality p-locality">{{site.author.location.city}}</span>, <span class="country-name p-country-name">{{site.author.location.country}}</span></a>. I'm a huge fan of the web, and love using technology to help solve problems.
 
 As a *developer*, I love writing code that makes peoples lives easier. I'm excited about pushing the web forward, and the possibilities offered by the latest tools and technology. As a *designer*, my focus is on producing simple, intuitive products that allow people to get work done. I love building pragmatic, accessible interfaces that are attractive and easy to use.
 
