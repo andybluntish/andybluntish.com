@@ -157,7 +157,7 @@ gulp.task('serve', ['build'], function() {
 // Deploy
 gulp.task('deploy', ['build'], function() {
   if (env === 'production') {
-    return gulp.src(path.join(paths.src, '**', '*'))
+    return gulp.src(path.join(paths.dest, '**', '*'))
       .pipe($.ghPages());
   }
 });
