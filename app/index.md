@@ -1,6 +1,4 @@
 ---
-title: About
-description: Information about {{site.author.name}}, a web developer living in {{site.author.location.city}}, {{site.author.location.country}}.
 classes:
   - vcard
   - h-card
