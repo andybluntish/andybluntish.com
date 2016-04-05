@@ -2,15 +2,17 @@
 'use strict';
 
 const isProduction = process.env.NODE_ENV === 'production';
-const paths = {};
-paths.src = 'src';
-paths.dest = 'dist';
-paths.assets = `${paths.dest}/assets`;
+
+const paths = {
+  src: 'src',
+  dest: 'dist'
+};
 
 const gulp = require('gulp');
 const rimraf = require('rimraf');
 const cp = require('child_process');
 const runSequence = require('run-sequence');
+const autoprefixer = require('gulp-autoprefixer');
 
 
 /* ==========================================================================
@@ -34,11 +36,25 @@ gulp.task('content', (done) => {
 
 
 /* ==========================================================================
+   Styles
+   ========================================================================== */
+
+gulp.task('styles', () => {
+  const input  = `${paths.dest}/**/*.css`;
+  const output = paths.dest;
+
+  return gulp.src(input)
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(output));
+});
+
+
+/* ==========================================================================
    Build
    ========================================================================== */
 
 gulp.task('build', (done) => {
-  return runSequence('clean', ['content'], done);
+  return runSequence('clean', 'content', ['styles'], done);
 });
 
 
