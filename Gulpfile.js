@@ -134,7 +134,7 @@ gulp.task('images:compress', () => {
 
 gulp.task('icons', () => {
   const input  = `${paths.src}/_icons/**/*.svg`;
-  const output = `img/icons.svg`;
+  const output = 'img/icons.svg';
 
   return gulp.src(input)
     .pipe(svgstore())
@@ -156,6 +156,25 @@ gulp.task('icons', () => {
     .pipe(gulp.dest(paths.dest));
 });
 
+gulp.task('icons:inject', () => {
+  const input  = `${paths.dest}/**/*.html`;
+  const output = paths.dest;
+  const iconsPath = `${paths.dest}/img/icons.svg`;
+  const icons = fs.readFileSync(iconsPath);
+
+  return gulp.src(input, { base: output })
+    .pipe(cheerio({
+      run: ($) => {
+        $('body').prepend(`<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">${String(icons)}</svg>`);
+      }
+    }))
+    .pipe(gulp.dest(output));
+});
+
+gulp.task('icons:cleanup', () => {
+  fs.unlinkSync(`${paths.dest}/img/icons.svg`);
+});
+
 
 /* ==========================================================================
    Compress
@@ -167,7 +186,7 @@ gulp.task('compress', (done) => {
       'content:compress',
       'styles:compress',
       'images:compress'
-    ], 'compress:fingerprint', done);
+    ], 'icons:inject', 'icons:cleanup', 'compress:fingerprint', done);
   } else {
     done();
   }
