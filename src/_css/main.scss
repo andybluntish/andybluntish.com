@@ -1,6 +1,47 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "node_modules/normalize.css/normalize";
-@import "node_modules/normalize-opentype.css/normalize-opentype.scss";
 
-@import 'box-sizing';
+/* ==========================================================================
+   Style Dependencies
+   ========================================================================== */
+
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/normalize-opentype.css/normalize-opentype.scss';
+
+
+/* ==========================================================================
+   Variables
+
+   Site-wide style configuration variables and settings.
+   ========================================================================== */
+
+@import "variables";
+
+
+/* ==========================================================================
+   Mixins
+
+   Generic, reusable styles that can be included in other classes.
+   ========================================================================== */
+
+@import "mixins/helpers";
+
+
+/* ==========================================================================
+   Modules
+
+   A style module applies globally, effecting all content in the application,
+   e.g. typography, box-sizing, selection colour, etc.
+
+   Note: global layout and application-wide UI elements should be implemented
+   as a component (see below) not a module.
+   ========================================================================== */
+
+@import 'modules/box-sizing';
+@import 'modules/document';
+@import 'modules/typography';
+@import 'modules/links';
+@import 'modules/lists';
+@import 'modules/media';
+@import 'modules/tables';
+@import 'modules/syntax-highlighting';

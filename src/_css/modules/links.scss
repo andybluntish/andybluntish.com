@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color $fade-duration $fade-timing-function;
+
+  &:focus,
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+a:not([href]) {
+  &,
+  &:focus,
+  &:hover {
+    color: inherit;
+  }
+}

@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Helper classes
+   These classes implement the mixins in mixins/helpers. You should prefer
+   using the mixin versions, and use these classes for dynamically changing
+   the state of an element through JavaScript (using `el.classList.add()`
+   or similar.
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+  @include hidden();
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+  @include visuallyhidden();
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  @include visuallyhidden_focusable_active();
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  @include invisible();
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *  `contenteditable` attribute is included anywhere else in the document.
+ *  Otherwise it causes space to appear at the top and bottom of elements
+ *  that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *  `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix {
+  @include clearfix();
+}
