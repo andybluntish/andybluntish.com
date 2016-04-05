@@ -19,6 +19,7 @@ const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
+const imagemin = require('gulp-imagemin');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 
@@ -107,6 +108,22 @@ gulp.task('images', () => {
     .pipe(gulp.dest(output));
 });
 
+gulp.task('images:compress', () => {
+  const input = `${paths.dest}/**/*.{svg,png,jpg,gif,ico}`;
+  const output = paths.dest;
+
+  return gulp.src(input)
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [
+        { removeViewBox: false },
+        { cleanupIDs: false }
+      ]
+    }))
+    .pipe(gulp.dest(output));
+});
+
 
 /* ==========================================================================
    Icons
@@ -145,7 +162,8 @@ gulp.task('compress', (done) => {
   if (isProduction) {
     return runSequence([
       'content:compress',
-      'styles:compress'
+      'styles:compress',
+      'images:compress'
     ], done);
   } else {
     done();
