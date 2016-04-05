@@ -20,7 +20,7 @@
     <h1>{{ site.title | liquify | markdownify | strip_html | strip_newlines }}</h1>
   </header>
 
-  <main role="main">
+  <main role="main"{% if page.classNames%} class="{{ page.classNames | join: ' ' }}"{% endif %}>
     {{ content | abbr }}
   </main>
 
