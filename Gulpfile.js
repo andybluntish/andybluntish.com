@@ -13,6 +13,9 @@ const rimraf = require('rimraf');
 const cp = require('child_process');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const svgstore = require('gulp-svgstore');
+const cheerio = require('gulp-cheerio');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 
@@ -71,11 +74,40 @@ gulp.task('images', () => {
 
 
 /* ==========================================================================
+   Icons
+   ========================================================================== */
+
+gulp.task('icons', () => {
+  const input = `${paths.src}/_icons/**/*.svg`;
+  const output = `img/icons.svg`;
+
+  return gulp.src(input)
+    .pipe(svgstore())
+    .pipe(rename(output))
+    .pipe(cheerio({
+      run: ($) => {
+        $('[fill]').removeAttr('fill');
+        $('symbol').each((i, el) => {
+          const title = $(el).attr('id').replace('-', ' ');
+
+          $(el)
+            .attr('fill', 'currentColor')
+            .attr('preserveAspectRatio', 'xMinYMin meet')
+            .prepend(`<title>${title}</title>`);
+        });
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(gulp.dest(paths.dest));
+});
+
+
+/* ==========================================================================
    Build
    ========================================================================== */
 
 gulp.task('build', (done) => {
-  return runSequence('clean', 'content', ['styles', 'images'], done);
+  return runSequence('clean', 'content', ['styles', 'images', 'icons'], done);
 });
 
 
@@ -99,6 +131,7 @@ gulp.task('serve', ['build'], () => {
   gulp.watch(`${paths.src}/**/*.{html,md,txt,json,xml,yml}`, ['content', browserSync.reload]);
   gulp.watch(`${paths.src}/**/*.scss`, ['styles']);
   gulp.watch(`${paths.src}/_img/**/*.{svg,jpg,png,gif}`, ['images', browserSync.reload]);
+  gulp.watch(`${paths.src}/_icons/**/*.svg`, ['icons', browserSync.reload]);
 });
 
 
