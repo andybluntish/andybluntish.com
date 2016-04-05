@@ -13,6 +13,8 @@ const rimraf = require('rimraf');
 const cp = require('child_process');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
+const uncss = require('gulp-uncss');
+const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
@@ -59,6 +61,18 @@ gulp.task('styles', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('styles:compress', () => {
+  const input  = `${paths.dest}/**/*.css`;
+  const output = paths.dest;
+  const html   = `${paths.dest}/**/*.html`;
+
+  return gulp.src(input)
+    .pipe(uncss({ html: html }))
+    .pipe(cleanCss())
+    .pipe(gulp.dest(output))
+    .pipe(browserSync.stream());
+});
+
 
 /* ==========================================================================
    Images
@@ -78,7 +92,7 @@ gulp.task('images', () => {
    ========================================================================== */
 
 gulp.task('icons', () => {
-  const input = `${paths.src}/_icons/**/*.svg`;
+  const input  = `${paths.src}/_icons/**/*.svg`;
   const output = `img/icons.svg`;
 
   return gulp.src(input)
@@ -103,11 +117,24 @@ gulp.task('icons', () => {
 
 
 /* ==========================================================================
+   Compress
+   ========================================================================== */
+
+gulp.task('compress', (done) => {
+  if (isProduction) {
+    return runSequence('styles:compress', done);
+  } else {
+    done();
+  }
+});
+
+
+/* ==========================================================================
    Build
    ========================================================================== */
 
 gulp.task('build', (done) => {
-  return runSequence('clean', 'content', ['styles', 'images', 'icons'], done);
+  return runSequence('clean', ['content', 'styles', 'images', 'icons'], 'compress', done);
 });
 
 
