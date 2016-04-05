@@ -21,6 +21,7 @@ const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
 const imagemin = require('gulp-imagemin');
+const replace = require('gulp-replace');
 const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 const fs = require('fs');
@@ -165,9 +166,11 @@ gulp.task('icons:inject', () => {
   return gulp.src(input, { base: output })
     .pipe(cheerio({
       run: ($) => {
-        $('body').prepend(`<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">${String(icons)}</svg>`);
+        $('body').prepend(String(icons));
+        $('svg').first().attr('style', 'display: none');
       }
     }))
+    .pipe(replace(/\/img\/icons.svg#/g, '#'))
     .pipe(gulp.dest(output));
 });
 
