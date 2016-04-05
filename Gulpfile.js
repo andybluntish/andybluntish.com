@@ -9,9 +9,10 @@ const paths = {
 };
 
 const gulp = require('gulp');
+const runSequence = require('run-sequence');
 const rimraf = require('rimraf');
 const cp = require('child_process');
-const runSequence = require('run-sequence');
+const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
 const uncss = require('gulp-uncss');
 const cleanCss = require('gulp-clean-css');
@@ -39,6 +40,26 @@ gulp.task('content', (done) => {
   const cmd = 'bundle exec jekyll build'.split(' ');
 
   return cp.spawn(cmd.shift(), cmd, { stdio: 'inherit' }).on('close', done);
+});
+
+gulp.task('content:compress', () => {
+  const input  = `${paths.dest}/**/*.html`;
+  const output = paths.dest;
+
+  return gulp.src(input)
+    .pipe(htmlmin({
+      collapseBooleanAttributes: true,
+      collapseWhitespace: true,
+      removeAttributeQuotes: true,
+      removeCommentsFromCDATA: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+      useShortDoctype: true,
+      removeStyleLinkTypeAttributes: true,
+      minifyCSS: true,
+      minifyJS: true
+    }))
+    .pipe(gulp.dest(output));
 });
 
 
@@ -122,7 +143,10 @@ gulp.task('icons', () => {
 
 gulp.task('compress', (done) => {
   if (isProduction) {
-    return runSequence('styles:compress', done);
+    return runSequence([
+      'content:compress',
+      'styles:compress'
+    ], done);
   } else {
     done();
   }
