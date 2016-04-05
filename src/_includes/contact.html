@@ -1,0 +1,16 @@
+<ul {% if include.id %}id="{{ include.id }}" {% endif %}class="contact">
+  {% for link in site.data.contact %}
+    {% assign id = link[0] %}
+    {% assign title = link[1].title %}
+    {% assign url = link[1].url | liquify %}
+    {% assign imgURL = site.baseurl | append: '/img/icons.svg#' | append: id %}
+
+    <li class="contact__item">
+      <a class="contact__link" href="{{ url }}" rel="me">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact__icon" role="img" title="{{ title }}">
+          <use xlink:href="{{ imgURL }}"></use>
+        </svg>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
