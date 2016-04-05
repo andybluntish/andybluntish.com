@@ -14,13 +14,16 @@ const rimraf = require('rimraf');
 const cp = require('child_process');
 const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const uncss = require('gulp-uncss');
 const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
 const imagemin = require('gulp-imagemin');
-const autoprefixer = require('gulp-autoprefixer');
+const rev = require('gulp-rev');
+const revReplace = require('gulp-rev-replace');
+const fs = require('fs');
 const browserSync = require('browser-sync').create();
 
 
@@ -164,10 +167,54 @@ gulp.task('compress', (done) => {
       'content:compress',
       'styles:compress',
       'images:compress'
-    ], done);
+    ], 'compress:fingerprint', done);
   } else {
     done();
   }
+});
+
+gulp.task('compress:fingerprint', (done) => {
+  return runSequence('compress:rev', 'compress:revreplace', 'compress:revcleanup', done);
+});
+
+gulp.task('compress:rev', () => {
+  const input  = [
+    `${paths.dest}/css/**/*`,
+    `${paths.dest}/img/**/*`,
+  ];
+  const output = paths.dest;
+
+  return gulp.src(input, { base: output })
+    .pipe(rev())
+    .pipe(gulp.dest(output))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest(output));
+});
+
+gulp.task('compress:revreplace', () => {
+  const input    = `${paths.dest}/**/*.html`;
+  const output   = paths.dest;
+  const manifest = gulp.src(`${paths.dest}/rev-manifest.json`);
+
+  return gulp.src([input, `!${manifest}`])
+    .pipe(revReplace({
+      manifest: manifest,
+      replaceInExtensions: ['.js', '.css', '.html', '.xml', '.json', '.txt']
+    }))
+    .pipe(gulp.dest(output));
+});
+
+gulp.task('compress:revcleanup', (done) => {
+  const manifestPath = `${paths.dest}/rev-manifest.json`;
+  const manifest     = require(`${__dirname}/${manifestPath}`);
+
+  Object.keys(manifest).map((file) => {
+    return `${paths.dest}/${file}`;
+  }).concat(manifestPath).forEach((file) => {
+    fs.unlinkSync(file);
+  });
+
+  done();
 });
 
 
