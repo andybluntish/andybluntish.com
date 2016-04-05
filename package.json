@@ -18,6 +18,8 @@
     "url": "https://github.com/andybluntish/andybluntish.com/issues"
   },
   "scripts": {
+    "start": "gulp serve",
+    "build": "NODE_ENV=production gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
