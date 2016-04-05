@@ -12,7 +12,9 @@ const gulp = require('gulp');
 const rimraf = require('rimraf');
 const cp = require('child_process');
 const runSequence = require('run-sequence');
+const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
 
 
 /* ==========================================================================
@@ -40,12 +42,18 @@ gulp.task('content', (done) => {
    ========================================================================== */
 
 gulp.task('styles', () => {
-  const input  = `${paths.dest}/**/*.css`;
-  const output = paths.dest;
+  const input  = `${paths.src}/_css/main.scss`;
+  const output = `${paths.dest}/css`;
 
   return gulp.src(input)
+    .pipe(sass({
+      style: 'expanded',
+      precision: 10,
+      errLogToConsole: true
+    }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(output));
+    .pipe(gulp.dest(output))
+    .pipe(browserSync.stream());
 });
 
 
@@ -55,6 +63,28 @@ gulp.task('styles', () => {
 
 gulp.task('build', (done) => {
   return runSequence('clean', 'content', ['styles'], done);
+});
+
+
+/* ==========================================================================
+   Server
+   ========================================================================== */
+
+gulp.task('serve', ['build'], () => {
+
+  // Start BrowserSync server
+  browserSync.init({
+    open: false,
+    notify: false,
+    reloadOnRestart: true,
+    server: {
+      baseDir: paths.dest
+    }
+  });
+
+  // Watch files, re-run the appropriate tasks, and reload the browser
+  gulp.watch(`${paths.src}/**/*.{html,md,txt,json,xml,yml}`, ['content', browserSync.reload]);
+  gulp.watch(`${paths.src}/**/*.scss`, ['styles']);
 });
 
 
