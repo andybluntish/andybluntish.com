@@ -2,6 +2,7 @@ source: src
 destination: dist
 keep_files:
   - css
+  - img
 timezone: Australia/Melbourne
 permalink: pretty
 markdown: kramdown
