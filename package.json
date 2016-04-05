@@ -1,0 +1,28 @@
+{
+  "name": "andybluntish.com",
+  "version": "12.0.0",
+  "description": "The personal website of Andy Stanford-Bluntish",
+  "homepage": "https://andybluntish.com",
+  "author": {
+    "name": "Andy Stanford-Bluntish",
+    "email": "andy@bluntish.net",
+    "url": "https://andybluntish.com"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andybluntish/andybluntish.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andybluntish/andybluntish.com/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.1.5"
+  }
+}

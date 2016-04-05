@@ -1,0 +1,26 @@
+source: src
+destination: dist
+keep_files:
+  - assets
+timezone: Australia/Melbourne
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+incremental: true
+gems:
+  - jekyll-sitemap
+
+# Site settings
+title: Andy Stanford-Bluntish
+description: I build things on the web. I love what I do.
+baseurl: ""
+url: "https://andybluntish.com"
+est: 2006-11-03
+
+# Frontmatter defaults
+defaults:
+  - scope:
+      scope: ""
+    values:
+      layout: default
