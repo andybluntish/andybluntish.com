@@ -6,6 +6,11 @@ main {
   @include clearfix;
 
   max-width: $break-md;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
   margin: auto;
   padding: $double-size $half-size 0;
 
