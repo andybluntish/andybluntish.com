@@ -9,7 +9,7 @@
   <title>{{ title | liquify | markdownify | strip_html | strip_newlines }}</title>
   <meta name="description" content="{{ metaDescription  | liquify | markdownify | strip_html | strip_newlines }}">
 
-  <meta name="copyright" content="Copyright (c) {{ site.time | date: '%Y' }} {{ site.data.author.name }}">
+  <meta name="copyright" content="Copyright (c) {{ site.est | date: '%Y' }}-{{ site.time | date: '%Y' }} {{ site.data.author.name }}">
   <meta name="author" content="{{ site.data.author.name }}">
   <link rel="author" href="{{ '/humans.txt' | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
@@ -25,11 +25,10 @@
   </main>
 
   <footer role="contentinfo">
-    <small>
-      &copy;
-      <time datetime="{{ site.est | date_to_xmlschema }}">{{ site.est | date: '%Y' }}</time>&ndash;<time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-      <a href="{{ site.baseurl | append: '/about' }}" rel="me">{{ site.data.author.name }}</a>.
-    </small>
+    <svg xmlns="http://www.w3.org/2000/svg" role="presentation" class="icon icon--sm">
+      <use xlink:href="/img/icons.svg#pandy"></use>
+    </svg>
+    <small class="copyright">&copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time></small>
   </footer>
 </body>
 </html>
