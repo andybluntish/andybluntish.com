@@ -93,7 +93,7 @@ gulp.task('styles:compress', () => {
   const html   = `${paths.dest}/**/*.html`;
 
   return gulp.src(input)
-    .pipe(uncss({ html: html }))
+    .pipe(uncss({ html: [html] }))
     .pipe(cleanCss())
     .pipe(gulp.dest(output))
     .pipe(browserSync.stream());
