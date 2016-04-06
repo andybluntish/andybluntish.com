@@ -16,7 +16,4 @@ I want the web to work. I'm a strong proponent of a [future friendly](http://fut
 I also like _fun_ things, such as riding my bike and brewing my own beer. I spend my days building tools that help people learn, and *I love it*.
 
 {% include contact.html id="contact" %}
-
-<div class="portrait">
-  <img src="/img/me.jpg" srcset="/img/me-lg.jpg 2x" alt="{{ site.data.author.name }}">
-</div>
+{% include portrait.html %}
