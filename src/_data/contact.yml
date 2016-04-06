@@ -1,14 +1,14 @@
-github:
-  title: GitHub
-  url: https://github.com/{{ site.data.author.username }}
+twitter:
+  title: Twitter
+  url: https://twitter.com/{{ site.data.author.username }}
 
 codepen:
   title: CodePen
   url: https://codepen.io/{{ site.data.author.username }}
 
-twitter:
-  title: Twitter
-  url: https://twitter.com/{{ site.data.author.username }}
+github:
+  title: GitHub
+  url: https://github.com/{{ site.data.author.username }}
 
 instagram:
   title: Instagram
