@@ -267,7 +267,7 @@ gulp.task('serve', ['build'], () => {
 
   // Watch files, re-run the appropriate tasks, and reload the browser
   gulp.watch(`${paths.src}/**/*.{html,md,txt,json,xml,yml}`, ['content', browserSync.reload]);
-  gulp.watch(`${paths.src}/**/*.scss`, ['styles']);
+  gulp.watch(`${paths.src}/_css/**/*.scss`, ['styles']);
   gulp.watch(`${paths.src}/_img/**/*.{svg,jpg,png,gif}`, ['images', browserSync.reload]);
   gulp.watch(`${paths.src}/_icons/**/*.svg`, ['icons', browserSync.reload]);
 });
