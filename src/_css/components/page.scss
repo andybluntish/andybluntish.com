@@ -7,5 +7,13 @@ main {
 
   max-width: $break-md;
   margin: auto;
-  padding: 0 $half-size;
+  padding: $size $half-size 0;
+
+  @media only screen and (min-width: $break-md) {
+    padding-top: $double-size;
+  }
+
+  @media only screen and (min-width: $break-lg) {
+    padding-top: $triple-size;
+  }
 }
