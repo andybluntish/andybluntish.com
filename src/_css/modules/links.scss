@@ -21,3 +21,15 @@ a:not([href]) {
     color: inherit;
   }
 }
+
+.link--zoom {
+  display: inline-block;
+  transition-property: color, transform;
+  transition-duration: $fade-duration;
+  transition-timing-function: $fade-timing-function;
+
+  &:focus,
+  &:hover {
+    transform: scale(1.3);
+  }
+}
