@@ -5,7 +5,3 @@ This is my personal website, built with [Jekyll](https://jekyllrb.com/) and [Gul
 ## License
 
 See `LICENSE.md`.
-
-## Icons
-
-Entypo pictograms by Daniel Bruce — www.entypo.com
