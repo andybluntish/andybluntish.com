@@ -1,12 +1,11 @@
-@charset 'utf-8';
-
+@charset "utf-8";
 
 /* ==========================================================================
    Style Dependencies
    ========================================================================== */
 
-@import 'node_modules/normalize.css/normalize';
-@import 'node_modules/normalize-opentype.css/normalize-opentype.scss';
+@import "node_modules/normalize.css/normalize";
+@import "node_modules/normalize-opentype.css/normalize-opentype.scss";
 
 
 /* ==========================================================================
@@ -37,11 +36,40 @@
    as a component (see below) not a module.
    ========================================================================== */
 
-@import 'modules/box-sizing';
-@import 'modules/document';
-@import 'modules/typography';
-@import 'modules/links';
-@import 'modules/lists';
-@import 'modules/media';
-@import 'modules/tables';
-@import 'modules/syntax-highlighting';
+@import "modules/box-sizing";
+@import "modules/document";
+@import "modules/typography";
+@import "modules/links";
+@import "modules/lists";
+@import "modules/media";
+@import "modules/tables";
+@import "modules/syntax-highlighting";
+
+
+/* ==========================================================================
+   Components
+
+   A style component is responsible for styling a single HTML/JavaScript
+   component. These styles are scoped to class name of the component, and
+   should not affect other components or elements in the application.
+   Avoid using element selectors here, and stick to the BEM methodology.
+
+   BEM resources:
+   http://getbem.com/introduction
+   http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax
+   https://css-tricks.com/bem-101
+   ========================================================================== */
+
+@import "components/icon";
+
+
+/* ==========================================================================
+   Helper
+
+   Helper classes for achieving common tasks (e.g. clearfix, visuallyhidden).
+   These classes have been extracted from HTML5 Boilerplate, and are also
+   available as SASS mixins (see above). Use the class form for dynamically
+   changing state in JavaScript.
+   ========================================================================== */
+
+@import "helpers/helpers";
