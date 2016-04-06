@@ -1,4 +1,4 @@
-<ul {% if include.id %}id="{{ include.id }}" {% endif %}class="contact">
+<ul {% if include.id %}id="{{ include.id }}" {% endif %}class="contact inline-list">
   {% for link in site.data.contact %}
     {% assign id = link[0] %}
     {% assign title = link[1].title %}
@@ -6,8 +6,8 @@
     {% assign imgURL = site.baseurl | append: '/img/icons.svg#' | append: id %}
 
     <li class="contact__item">
-      <a class="contact__link link--inconspicuous" href="{{ url }}" rel="me">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" role="img" title="{{ title }}">
+      <a class="contact__link link--inconspicuous link--zoom" href="{{ url }}" rel="me" title="{{ title }}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--lg" role="img" title="{{ title }}">
           <use xlink:href="{{ imgURL }}"></use>
         </svg>
       </a>
