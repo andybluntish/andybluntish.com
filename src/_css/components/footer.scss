@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+$_footerElementSpacing: (1rem / 16) * 4;
+
+[role="contentinfo"] {
+  @include visuallyhidden;
+
+  position: relative;
+  line-height: 1;
+  vertical-align: bottom;
+  color: $grey;
+
+  .icon,
+  .copyright {
+    position: absolute;
+    bottom: $_footerElementSpacing;
+  }
+
+  .icon {
+    left: $_footerElementSpacing;
+  }
+  .copyright {
+    right: $_footerElementSpacing;
+  }
+}

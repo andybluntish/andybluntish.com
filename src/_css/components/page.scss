@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Page
+   ========================================================================== */
+
+main {
+  @include clearfix;
+
+  max-width: $break-md;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: auto;
+  padding: $double-size $half-size 0;
+
+  @media only screen and (min-width: $break-md) {
+    padding-top: $triple-size;
+  }
+}

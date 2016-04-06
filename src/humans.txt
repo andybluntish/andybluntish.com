@@ -1,0 +1,12 @@
+---
+layout: null
+---
+{{ site.baseurl | prepend: site.url }} (v{{ site.data.package.version }})
+
+G'day, my name is {{ site.data.author.name }}. Thanks for stopping by!
+
+---
+
+Last update: {{ site.time | date_to_xmlschema }}
+
+Entypo pictograms by Daniel Bruce — www.entypo.com

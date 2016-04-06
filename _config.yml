@@ -1,89 +1,27 @@
-source: app
+source: src
 destination: dist
-
-encoding: utf-8
+keep_files:
+  - css
+  - img
+timezone: Australia/Melbourne
 permalink: pretty
-paginate: 10
-paginate_path: page/:num
-
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-
+incremental: true
 gems:
   - jekyll-sitemap
 
-include:
-  - CNAME
-
-# Assets compilation is handled by Gulp
-exclude:
-  - css
-  - js
-  - img
-  - apple-touch-icon-precomposed.png
-  - favicon.ico
-
-# Don't clobber asset files during rebuild
-keep_files:
-  - css
-  - js
-  - img
-  - apple-touch-icon-precomposed.png
-  - favicon.ico
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: article
-
-timezone: Australia/Melbourne
-
+# Site settings
 title: Andy Stanford-Bluntish
 description: I build things on the web. I love what I do.
-url: https://andybluntish.com
-est: 2006
-ga: UA-26537336-1
+baseurl: ""
+url: "https://andybluntish.com"
+est: 2006-11-03
 
-author:
-  name: Andy Stanford-Bluntish
-  email: andy@bluntish.net
-  role: web developer and designer
-  username: andybluntish
-  location:
-    country: Australia
-    region:
-      name: Victoria
-      abbr: VIC
-    city: Melbourne
-
-navigation:
-  - title: words
-    url: /
-    rel: home
-  - title: Code
-    url: /code
-  - title: About
-    url: /about
-
-contact_links:
-  - id: github
-    title: GitHub
-    url: https://github.com/{{site.author.username}}
-  - id: npm
-    title: npm
-    url: https://www.npmjs.com/~{{site.author.username}}
-  - id: codepen
-    title: CodePen
-    url: http://codepen.io/{{site.author.username}}/public-list/
-  - id: twitter
-    title: Twitter
-    url: https://twitter.com/{{site.author.username}}
-  - id: instagram
-    title: Instagram
-    url: https://instagram.com/{{site.author.username}}
-  - id: email
-    title: Email
-    url: mailto:{{site.author.email}}
+# Frontmatter defaults
+defaults:
+  - scope:
+      scope: ""
+    values:
+      layout: default

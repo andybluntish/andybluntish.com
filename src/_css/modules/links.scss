@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color $fade-duration $fade-timing-function;
+
+  &:focus,
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+.link--inconspicuous,
+a:not([href]) {
+  &,
+  &:focus,
+  &:hover {
+    color: inherit;
+  }
+}
+
+.link--zoom {
+  display: inline-block;
+  transition-property: color, transform;
+  transition-duration: $fade-duration;
+  transition-timing-function: $fade-timing-function;
+
+  &:focus,
+  &:hover {
+    transform: scale(1.3);
+  }
+}
