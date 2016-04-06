@@ -26,6 +26,7 @@ const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 const fs = require('fs');
 const browserSync = require('browser-sync').create();
+const deploy = require('gulp-gh-pages');
 
 
 /* ==========================================================================
@@ -270,6 +271,20 @@ gulp.task('serve', ['build'], () => {
   gulp.watch(`${paths.src}/_css/**/*.scss`, ['styles']);
   gulp.watch(`${paths.src}/_img/**/*.{svg,jpg,png,gif}`, ['images', browserSync.reload]);
   gulp.watch(`${paths.src}/_icons/**/*.svg`, ['icons', browserSync.reload]);
+});
+
+
+/* ==========================================================================
+   Deploy
+   ========================================================================== */
+
+gulp.task('deploy', ['build'], () => {
+  if (isProduction) {
+    const input = `${paths.dest}/**/*`;
+
+    return gulp.src(input)
+      .pipe(deploy());
+  }
 });
 
 
