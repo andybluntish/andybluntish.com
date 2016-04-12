@@ -143,6 +143,7 @@ gulp.task('icons', () => {
     .pipe(rename(output))
     .pipe(cheerio({
       run: ($) => {
+        $('svg').prepend('<defs></defs>');
         $('[fill]').removeAttr('fill');
         $('symbol').each((i, el) => {
           const title = $(el).attr('id').replace('-', ' ');
@@ -150,7 +151,8 @@ gulp.task('icons', () => {
           $(el)
             .attr('fill', 'currentColor')
             .attr('preserveAspectRatio', 'xMinYMin meet')
-            .prepend(`<title>${title}</title>`);
+            .prepend(`<title>${title}</title>`)
+            .appendTo('defs');
         });
       },
       parserOptions: { xmlMode: true }
