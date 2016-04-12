@@ -146,12 +146,9 @@ gulp.task('icons', () => {
         $('svg').prepend('<defs></defs>');
         $('[fill]').removeAttr('fill');
         $('symbol').each((i, el) => {
-          const title = $(el).attr('id').replace('-', ' ');
-
           $(el)
             .attr('fill', 'currentColor')
             .attr('preserveAspectRatio', 'xMinYMin meet')
-            .prepend(`<title>${title}</title>`)
             .appendTo('defs');
         });
       },
