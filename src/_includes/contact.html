@@ -6,8 +6,8 @@
     {% assign imgURL = site.baseurl | append: '/img/icons.svg#' | append: id %}
 
     <li class="contact__item">
-      <a class="contact__link link--inconspicuous link--zoom" href="{{ url }}" rel="me" title="{{ title }}">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--lg" role="img" title="{{ title }}">
+      <a class="contact__link link--inconspicuous link--zoom" href="{{ url }}" rel="me">
+        <svg role="img" title="{{ title }}" class="icon icon--lg">
           <use xlink:href="{{ imgURL }}"></use>
         </svg>
       </a>
