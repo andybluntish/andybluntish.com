@@ -161,21 +161,32 @@ gulp.task('icons:inject', () => {
   const input  = `${paths.dest}/**/*.html`;
   const output = paths.dest;
   const iconsPath = `${paths.dest}/img/icons.svg`;
-  const icons = fs.readFileSync(iconsPath);
 
-  return gulp.src(input, { base: output })
-    .pipe(cheerio({
-      run: ($) => {
-        $('body').prepend(String(icons));
-        $('svg').first().attr('style', 'display: none');
-      }
-    }))
-    .pipe(replace(/\/img\/icons.svg#/g, '#'))
-    .pipe(gulp.dest(output));
+  try {
+    const icons = fs.readFileSync(iconsPath);
+
+    return gulp.src(input, { base: output })
+      .pipe(cheerio({
+        run: ($) => {
+          $('body').prepend(String(icons));
+          $('svg').first().attr('style', 'display: none');
+        }
+      }))
+      .pipe(replace(/\/img\/icons.svg#/g, '#'))
+      .pipe(gulp.dest(output));
+  } catch(e) {
+    console.error(e);
+  }
 });
 
 gulp.task('icons:cleanup', () => {
-  fs.unlinkSync(`${paths.dest}/img/icons.svg`);
+  const iconsPath = `${paths.dest}/img/icons.svg`;
+
+  try {
+    fs.unlinkSync(iconsPath);
+  } catch (e) {
+    console.error(e);
+  }
 });
 
 
@@ -233,7 +244,11 @@ gulp.task('compress:revcleanup', (done) => {
   Object.keys(manifest).map((file) => {
     return `${paths.dest}/${file}`;
   }).concat(manifestPath).forEach((file) => {
-    fs.unlinkSync(file);
+    try {
+      fs.unlinkSync(file);
+    } catch (e) {
+      console.error(e);
+    }
   });
 
   done();
