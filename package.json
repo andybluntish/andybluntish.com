@@ -40,7 +40,7 @@
     "gulp-svgstore": "^6.0.0",
     "gulp-uncss": "^1.0.5",
     "normalize-opentype.css": "^0.2.4",
-    "normalize.css": "^4.0.0",
+    "normalize.css": "^4.1.1",
     "rimraf": "^2.5.2",
     "run-sequence": "^1.1.5"
   }
