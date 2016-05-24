@@ -1,19 +1,27 @@
 twitter:
   title: Twitter
   url: https://twitter.com/{{ site.data.author.username }}
+  rel: me
 
 codepen:
   title: CodePen
   url: https://codepen.io/{{ site.data.author.username }}
+  rel: me
 
 github:
   title: GitHub
   url: https://github.com/{{ site.data.author.username }}
+  rel: me
 
 instagram:
   title: Instagram
   url: https://instagram.com/{{ site.data.author.username }}
+  rel: me
 
 email:
   title: Email
   url: mailto:{{ site.data.author.email }}
+  rel: me
+  classNames:
+    - u-email
+    - email

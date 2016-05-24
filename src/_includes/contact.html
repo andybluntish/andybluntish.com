@@ -4,9 +4,11 @@
     {% assign title = link[1].title %}
     {% assign url = link[1].url | liquify %}
     {% assign imgURL = site.baseurl | append: '/img/icons.svg#' | append: id %}
+    {% assign rel = link[1].rel %}
+    {% assign classNames = link[1].classNames | join: ' ' %}
 
     <li class="contact__item">
-      <a class="contact__link link--inconspicuous link--zoom" href="{{ url }}" rel="me">
+      <a href="{{ url }}"{% if rel %} rel="{{ rel }}"{% endif %}{% if classNames%} class="{{ classNames }}"{% endif %}>
         <svg role="img" title="{{ title }}" class="icon icon--lg">
           <use xlink:href="{{ imgURL }}"></use>
         </svg>
