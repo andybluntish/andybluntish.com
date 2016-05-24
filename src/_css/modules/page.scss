@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Page
+   ========================================================================== */
+
+/**
+ * Body
+ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+  padding: $double-size $half-size 0;
+  max-width: $break-md;
+  min-height: 100vh;
+
+  color: $dark-grey;
+  background: white;
+
+  @media only screen and (min-width: $break-md) {
+    padding-top: $triple-size;
+  }
+}
+
+
+/**
+ * vCard
+ */
+
+.p-family-name {
+  @include visuallyhidden;
+}
+
+
+/**
+ * Contact links
+ */
+
+.contact {
+  margin: $size auto $double-size;
+  text-align: center;
+
+  li {
+    @media only screen and (min-width: $break-sm) {
+      &:nth-child(1) { transform: translate(-85px, 170px); }
+      &:nth-child(2) { transform: translate(-95px, 45px); }
+      &:nth-child(3) { transform: translate(0px, 0px); }
+      &:nth-child(4) { transform: translate(95px, 45px); }
+      &:nth-child(5) { transform: translate(85px, 170px); }
+    }
+  }
+
+  a {
+    @extend a:not([href]);
+
+    display: inline-block;
+    padding: $half-size;
+    transition-property: color, transform;
+    transition-duration: $fade-duration;
+    transition-timing-function: $fade-timing-function;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  svg {
+    width: $size * 1.3;
+    height: $size * 1.3;
+  }
+}
+
+
+/**
+ * Portrait
+ */
+
+.portrait {
+  img {
+    display: block;
+    margin: auto;
+  }
+}

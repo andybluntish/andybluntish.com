@@ -7,9 +7,9 @@
     {% assign rel = link[1].rel %}
     {% assign classNames = link[1].classNames | join: ' ' %}
 
-    <li class="contact__item">
+    <li>
       <a href="{{ url }}"{% if rel %} rel="{{ rel }}"{% endif %}{% if classNames%} class="{{ classNames }}"{% endif %}>
-        <svg role="img" title="{{ title }}" class="icon icon--lg">
+        <svg role="img" title="{{ title }}">
           <use xlink:href="{{ imgURL }}"></use>
         </svg>
       </a>

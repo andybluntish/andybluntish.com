@@ -37,35 +37,13 @@
    ========================================================================== */
 
 @import "modules/box-sizing";
-@import "modules/document";
 @import "modules/typography";
 @import "modules/links";
 @import "modules/lists";
 @import "modules/media";
 @import "modules/tables";
 @import "modules/syntax-highlighting";
-
-
-/* ==========================================================================
-   Components
-
-   A style component is responsible for styling a single HTML/JavaScript
-   component. These styles are scoped to class name of the component, and
-   should not affect other components or elements in the application.
-   Avoid using element selectors here, and stick to the BEM methodology.
-
-   BEM resources:
-   http://getbem.com/introduction
-   http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax
-   https://css-tricks.com/bem-101
-   ========================================================================== */
-
-@import "components/icon";
-
-@import "components/page";
-@import "components/vcard";
-@import "components/contact";
-@import "components/portrait";
+@import "modules/page";
 
 
 /* ==========================================================================
