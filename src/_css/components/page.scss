@@ -2,9 +2,7 @@
    Page
    ========================================================================== */
 
-main {
-  @include clearfix;
-
+body {
   max-width: $break-md;
   min-height: 100vh;
   display: flex;

@@ -2,33 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% capture title %}{% if page.title %}{{ page.title }} • {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
   {% capture metaDescription %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
-  <title>{{ title | liquify | markdownify | strip_html | strip_newlines }}</title>
+  <title>{{ site.title | liquify | markdownify | strip_html | strip_newlines }}</title>
   <meta name="description" content="{{ metaDescription  | liquify | markdownify | strip_html | strip_newlines }}">
-
   <meta name="copyright" content="Copyright (c) {{ site.est | date: '%Y' }}-{{ site.time | date: '%Y' }} {{ site.data.author.name }}">
   <meta name="author" content="{{ site.data.author.name }}">
   <link rel="author" href="{{ '/humans.txt' | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
 </head>
-<body>
-  <header role="banner">
-    <h1>{{ site.title | liquify | markdownify | strip_html | strip_newlines }}</h1>
-  </header>
-
-  <main role="main"{% if page.classNames%} class="{{ page.classNames | join: ' ' }}"{% endif %}>
-    {{ content | abbr }}
-  </main>
-
-  <footer role="contentinfo">
-    <svg xmlns="http://www.w3.org/2000/svg" role="presentation" class="icon icon--sm">
-      <use xlink:href="/img/icons.svg#pandy"></use>
-    </svg>
-    <small class="copyright">&copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time></small>
-  </footer>
+<body role="main"{% if page.classNames%} class="{{ page.classNames | join: ' ' }}"{% endif %}>
+  {{ content | abbr }}
 </body>
 </html>
