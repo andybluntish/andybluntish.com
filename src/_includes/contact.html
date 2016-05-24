@@ -1,4 +1,4 @@
-<ul {% if include.id %}id="{{ include.id }}" {% endif %}class="contact inline-list">
+<div {% if include.id %}id="{{ include.id }}" {% endif %}class="contact">
   {% for link in site.data.contact %}
     {% assign id = link[0] %}
     {% assign title = link[1].title %}
@@ -7,12 +7,10 @@
     {% assign rel = link[1].rel %}
     {% assign classNames = link[1].classNames | join: ' ' %}
 
-    <li>
-      <a href="{{ url }}"{% if rel %} rel="{{ rel }}"{% endif %}{% if classNames%} class="{{ classNames }}"{% endif %}>
-        <svg role="img" title="{{ title }}">
-          <use xlink:href="{{ imgURL }}"></use>
-        </svg>
-      </a>
-    </li>
+    <a href="{{ url }}"{% if rel %} rel="{{ rel }}"{% endif %}{% if classNames%} class="{{ classNames }}"{% endif %}>
+      <svg role="img" title="{{ title }}">
+        <use xlink:href="{{ imgURL }}"></use>
+      </svg>
+    </a>
   {% endfor %}
-</ul>
+</div>
