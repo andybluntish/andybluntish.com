@@ -39,6 +39,8 @@ body {
 
 .contact {
   margin: $size auto $double-size;
+  padding: 0;
+  list-style: none;
   text-align: center;
 
   /* Allow icons to fill the available space once they can all fit on one line */
@@ -52,11 +54,10 @@ body {
     display: block;
   }
 
-  a {
-    @extend a:not([href]);
-
+  li {
     display: inline-block;
 
+    /* position list items in a fan around portrait image */
     @media only screen and (min-width: $break-md) {
       &:nth-child(1) { transform: translate(-85px, 170px); }
       &:nth-child(2) { transform: translate(-95px, 45px); }
@@ -66,9 +67,10 @@ body {
     }
   }
 
-  svg {
-    width: ($size * 1.3) + $size;
-    height: ($size * 1.3) + $size;
+  a {
+    @extend a:not([href]);
+
+    display: inline-block;
     padding: $half-size;
     transition: transform $fade-duration $fade-timing-function;
 
@@ -76,6 +78,11 @@ body {
     &:hover {
       transform: scale(1.3);
     }
+  }
+
+  svg {
+    width: $size * 1.3;
+    height: $size * 1.3;
   }
 }
 
