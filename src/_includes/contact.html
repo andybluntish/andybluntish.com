@@ -8,8 +8,8 @@
     {% assign classNames = link[1].classNames | join: ' ' %}
 
     <li>
-      <a href="{{ url }}"{% if rel %} rel="{{ rel }}"{% endif %}{% if classNames%} class="{{ classNames }}"{% endif %}>
-        <svg role="img" title="{{ title }}">
+      <a href="{{ url }}"{% if rel %} rel="{{ rel }}"{% endif %}{% if classNames%} class="{{ classNames }}"{% endif %} title="{{ title }}">
+        <svg role="img" aria-labelledby="title">
           <use xlink:href="{{ imgURL }}"></use>
         </svg>
       </a>
