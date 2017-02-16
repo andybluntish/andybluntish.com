@@ -3,22 +3,40 @@
    ========================================================================== */
 
 /**
+ * HTML
+ */
+
+html {
+  color: white;
+  background: $dark-grey;
+}
+
+
+/**
  * Body
  */
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: auto;
-  padding: $double-size $half-size 0;
-  max-width: $break-md;
-  min-height: 100vh;
-
+  padding-top: $quarter-size;
   color: $dark-grey;
   background: white;
+}
+
+
+/**
+ * Main
+ */
+
+main {
+  margin: auto;
+  padding: $size $half-size 0;
+  max-width: $break-md;
 
   @media only screen and (min-width: $break-md) {
+    padding-top: $double-size;
+  }
+
+  @media only screen and (min-width: $break-lg) {
     padding-top: $triple-size;
   }
 }
@@ -38,7 +56,7 @@ body {
  */
 
 .contact {
-  margin: $size auto $double-size;
+  margin: $double-size auto $double-size;
   padding: 0;
   list-style: none;
   text-align: center;

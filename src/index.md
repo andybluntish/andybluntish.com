@@ -15,7 +15,7 @@ I want the web to work. I'm a strong proponent of a [future friendly](http://fut
 
 I also like _fun_ things, such as riding my bike, and brewing my own beer. I spend my days building tools that help people learn, and *I love it*.
 
-<div style="overflow: hidden; margin-top: auto">
+<div>
   {% include contact.html id="contact" %}
   {% include portrait.html %}
 </div>

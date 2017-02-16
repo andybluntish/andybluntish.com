@@ -13,7 +13,9 @@
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
 </head>
-<body role="main"{% if page.classNames%} class="{{ page.classNames | join: ' ' }}"{% endif %}>
-  {{ content | abbr }}
+<body{% if page.classNames%} class="{{ page.classNames | join: ' ' }}"{% endif %}>
+  <main>
+    {{ content | abbr }}
+  </main>
 </body>
 </html>
