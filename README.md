@@ -1,7 +1,9 @@
 # andybluntish.com
 
-This is my personal website, built with [Jekyll](https://jekyllrb.com/) and [Gulp](http://gulpjs.com/), hosted on [GitHub Pages](https://pages.github.com/).
+This is my personal website, built with good old fashioned HTML and CSS for your enjoyment.
+
+v13.0
 
 ## License
 
-See `LICENSE.md`.
+See [`LICENSE.md`](LICENSE.md).
