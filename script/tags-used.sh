@@ -2,4 +2,6 @@
 set -euo pipefail
 [[ ${DEBUG:-} ]] && set -x
 
-grep -o --color=never -E "<\w+(>|\s)" site/*.html | sort | uniq | sed -e "s/[<>]//g"
+dir=${1:-site}
+
+grep -o --color=never -E "<\w+(>|\s)" $dir/*.html | sort | uniq | sed -e "s/[<>]//g"
