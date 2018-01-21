@@ -44,4 +44,4 @@ printf "Deploying $(string_wrap_warn $dir) to $(string_wrap_warn $branch)...\n\n
 
 git subtree push --prefix $dir origin $branch
 
-printf_ok "All done, time to grab a beer and relax! 🍺\n"
+printf_ok "\nAll done, time to grab a beer and relax! 🍺\n"
