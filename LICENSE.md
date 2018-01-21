@@ -1,9 +1,7 @@
 # License
 
-The contents of the site (articles, blog posts, page content, images) and
-visual design are copyright Andy Stanford-Bluntish. You may not reuse this
-content without my permission and attribution.
+All of the content, writing, images, and design of this site are copyright
+Andy Stanford-Bluntish. You may not reuse this content without my permission.
 
-Build scripts, templates, stylesheet files, and the general project structure
-are here to learn from. Feel free to poke around and use any snippets or
-techniques you find useful.
+All of the code, scripts, templates, style sheets, and everything else is here
+to learn from. Feel free to poke around, and make use of anything you find.
