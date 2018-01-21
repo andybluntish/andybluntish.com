@@ -1,5 +1,5 @@
 :root {
-  --size: 1.618rem;
+  --size: 1.618em;
   --colour-grey: #2b303b;
   --colour-primary: #c0392b;
   --colour-primary-dark: #962d22;
@@ -136,8 +136,8 @@ svg:not(:root) {
 }
 
 .contact-links svg {
-  width: 2.1034rem;
-  height: 2.1034rem;
+  width: 2.2em;
+  height: 2.2em;
 }
 
 @media only screen and (min-width: 40em) {
