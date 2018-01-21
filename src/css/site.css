@@ -1,6 +1,6 @@
 :root {
   --size: 1.618rem;
-  --colour-grey: #151515;
+  --colour-grey: #2b303b;
   --colour-primary: #c0392b;
   --colour-primary-dark: #962d22;
   --transition-duration: 0.3s;
@@ -44,12 +44,18 @@ html {
 
 html, body {
   margin: 0;
-  color: var(--colour-grey);
-  background: #fff;
+  color: #fff;
+  background: var(--colour-grey);
   font-family: "Avenir Next", "Avenir", "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.618;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: var(--colour-grey);
+  background: #fff;
+  padding-top: calc(var(--size) / 4);
 }
 
 main {
@@ -102,7 +108,7 @@ svg:not(:root) {
 }
 
 .contact {
-  margin: calc(var(--size) * 2) 0;
+  margin: calc(var(--size) * 2) 0 calc(var(--size) * 1.75);
   padding: 0;
   list-style: none;
   text-align: center;
@@ -128,20 +134,15 @@ svg:not(:root) {
 }
 
 .contact svg {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.1034rem;
+  height: 2.1034rem;
 }
 
 @media only screen and (min-width: 40em) {
-  .contact {
-    display: block;
-  }
-
-  .contact li:nth-child(1) { transform: translate(-85px, 170px); }
-  .contact li:nth-child(2) { transform: translate(-95px, 45px); }
-  .contact li:nth-child(3) { transform: translate(0px, 0px); }
-  .contact li:nth-child(4) { transform: translate(95px, 45px); }
-  .contact li:nth-child(5) { transform: translate(85px, 170px); }
+  .contact li:nth-child(1) { transform: translate(50px, 190px); }
+  .contact li:nth-child(2) { transform: translate(-30px, 55px); }
+  .contact li:nth-child(4) { transform: translate(30px, 55px); }
+  .contact li:nth-child(5) { transform: translate(-50px, 190px); }
 }
 
 .u-photo {
