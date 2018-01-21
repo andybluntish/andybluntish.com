@@ -61,6 +61,10 @@ main {
   padding: 0 calc(var(--size) * 0.5);
 }
 
+section {
+  display: block;
+}
+
 p {
   margin: 0 0 var(--size);
 }
