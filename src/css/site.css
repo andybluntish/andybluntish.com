@@ -55,26 +55,13 @@ html, body {
 body {
   color: var(--colour-grey);
   background: #fff;
-  padding-top: calc(var(--size) / 4);
 }
 
 main {
   display: block;
   max-width: 40em;
   margin: auto;
-  padding: var(--size) calc(var(--size) / 2) 0;
-}
-
-@media only screen and (min-width: 40em) {
-  main {
-    padding-top: calc(var(--size) * 2);
-  }
-}
-
-@media only screen and (min-width: 48em) {
-  main {
-    padding-top: calc(var(--size) * 3);
-  }
+  padding: 0 calc(var(--size) * 0.5);
 }
 
 p {
@@ -107,8 +94,28 @@ svg:not(:root) {
   display: none;
 }
 
+.about {
+  padding-top: calc(var(--size) * 1.25);
+}
+
+@media only screen and (min-width: 40em) {
+  .about {
+    padding-top: calc(var(--size) * 2.25);
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .about {
+    padding-top: calc(var(--size) * 3.25);
+  }
+}
+
 .contact {
-  margin: calc(var(--size) * 2) 0 calc(var(--size) * 1.75);
+  padding-top: var(--size);
+}
+
+.contact-links {
+  margin: 0 0 calc(var(--size) * 1.75);
   padding: 0;
   list-style: none;
   text-align: center;
@@ -117,32 +124,32 @@ svg:not(:root) {
   justify-content: space-around;
 }
 
-.contact li,
-.contact a {
+.contact-links li,
+.contact-links a {
   display: inline-block;
   line-height: 1;
 }
 
-.contact a {
+.contact-links a {
   padding: calc(var(--size) / 2);
   color: inherit;
   transition: transform var(--transition-duration) var(--transition-function);
 }
-.contact a:focus,
-.contact a:hover {
+.contact-links a:focus,
+.contact-links a:hover {
   transform: scale(1.3);
 }
 
-.contact svg {
+.contact-links svg {
   width: 2.1034rem;
   height: 2.1034rem;
 }
 
 @media only screen and (min-width: 40em) {
-  .contact li:nth-child(1) { transform: translate(50px, 190px); }
-  .contact li:nth-child(2) { transform: translate(-30px, 55px); }
-  .contact li:nth-child(4) { transform: translate(30px, 55px); }
-  .contact li:nth-child(5) { transform: translate(-50px, 190px); }
+  .contact-links li:nth-child(1) { transform: translate(50px, 190px); }
+  .contact-links li:nth-child(2) { transform: translate(-30px, 55px); }
+  .contact-links li:nth-child(4) { transform: translate(30px, 55px); }
+  .contact-links li:nth-child(5) { transform: translate(-50px, 190px); }
 }
 
 .u-photo {
