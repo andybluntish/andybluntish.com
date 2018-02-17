@@ -108,7 +108,7 @@ svg:not(:root) {
 }
 
 .contact-links {
-  margin: calc(var(--size) * 1.75) 0;
+  margin: var(--size) 0 calc(var(--size) * 1.75) 0;
   padding: 0;
   list-style: none;
   text-align: center;
