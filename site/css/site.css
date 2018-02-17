@@ -117,9 +117,6 @@ svg:not(:root) {
   padding: 0;
   list-style: none;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .contact-links li,
@@ -143,11 +140,19 @@ svg:not(:root) {
   height: 2.2em;
 }
 
-@media only screen and (min-width: 40em) {
-  .contact-links li:nth-child(1) { transform: translate(50px, 190px); }
-  .contact-links li:nth-child(2) { transform: translate(-30px, 55px); }
-  .contact-links li:nth-child(4) { transform: translate(30px, 55px); }
-  .contact-links li:nth-child(5) { transform: translate(-50px, 190px); }
+@supports (display: flex) {
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media only screen and (min-width: 40em) {
+    .contact-links li:nth-child(1) { transform: translate(50px, 190px); }
+    .contact-links li:nth-child(2) { transform: translate(-30px, 55px); }
+    .contact-links li:nth-child(4) { transform: translate(30px, 55px); }
+    .contact-links li:nth-child(5) { transform: translate(-50px, 190px); }
+  }
 }
 
 .u-photo {
