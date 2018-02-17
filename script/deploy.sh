@@ -21,7 +21,7 @@ dir=${1:-site}
 # The location to deploy to.
 # This is the name of the script in the ./script/deploy directory
 # that will be used to do the deploy.
-target=${2:-surge}
+target=${2:-gh-pages}
 
 while true; do
   log "You are about to deploy the $(inline_warn $dir) directory using $(inline_warn $target).\n"
