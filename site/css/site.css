@@ -52,8 +52,6 @@ html, body {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   max-width: 40em;
   margin: auto;
@@ -100,13 +98,6 @@ svg:not(:root) {
   display: none;
 }
 
-.about {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .contact-links {
   margin: var(--size) 0 calc(var(--size) * 1.75) 0;
   padding: 0;
@@ -135,6 +126,11 @@ svg:not(:root) {
   height: 2.2em;
 }
 
+.u-photo {
+  display: block;
+  margin: auto;
+}
+
 @supports (display: flex) {
   .contact-links {
     display: flex;
@@ -150,7 +146,18 @@ svg:not(:root) {
   }
 }
 
-.u-photo {
-  display: block;
-  margin: auto;
+@supports (display: grid) {
+  main {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .about {
+    align-self: center;
+  }
+
+  .contact {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
