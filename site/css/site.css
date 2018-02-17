@@ -18,7 +18,6 @@ html {
 }
 
 html {
-  padding-top: calc(var(--size) / 2)
   font-size: 85%;
 }
 
