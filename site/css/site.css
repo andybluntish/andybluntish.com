@@ -107,10 +107,6 @@ svg:not(:root) {
   justify-content: center;
 }
 
-.contact {
-  padding-top: var(--size);
-}
-
 .contact-links {
   margin: calc(var(--size) * 1.75) 0;
   padding: 0;
