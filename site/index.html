@@ -11,10 +11,12 @@
   <link rel="canonical" href="https://andybluntish.com/">
   <style>
     :root {
-      --size: 1.618em;
-      --colour-grey: #2b303b;
-      --colour-primary: #c0392b;
-      --colour-primary-dark: #962d22;
+      --line-height: 1.618;
+      --size: calc(var(--line-height) * 1em);
+      --size-half: calc(var(--size) / 2);
+      --size-double: calc(var(--size) * 2);
+      --grey: #2b303b;
+      --primary: #c0392b;
       --transition-duration: 0.3s;
       --transition-function: ease;
     }
@@ -55,29 +57,17 @@
 
     html, body {
       margin: 0;
-      color: var(--colour-grey);
-      background: #fff;
+      color: var(--grey);
+      line-height: var(--line-height);
       font-family: "Avenir Next", "Avenir", "Open Sans", "Helvetica Neue", sans-serif;
-      line-height: 1.618;
-      -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
     }
 
     main {
-      min-height: 100vh;
-      max-width: 40em;
       margin: auto;
-      padding: calc(var(--size) * 1.25) calc(var(--size) * 0.5) 0;
-    }
-
-    @media only screen and (min-width: 40em) {
-      main {
-        padding-top: calc(var(--size) * 2.25);
-      }
-    }
-
-    section {
-      display: block;
+      padding: var(--size-double) var(--size-half) 0;
+      max-width: 40em;
+      min-height: 100vh;
     }
 
     p {
@@ -85,16 +75,14 @@
     }
 
     a {
-      color: var(--colour-primary);
+      color: var(--primary);
       transition: color var(--transition-duration) var(--transition-function);
       text-decoration: none;
-      background-color: transparent;
-      -webkit-text-decoration-skip: objects;
     }
 
     a:focus,
     a:hover {
-      color: var(--colour-primary-dark);
+      filter: brightness(.7);
     }
 
     img {
@@ -102,38 +90,34 @@
       height: auto;
     }
 
-    svg:not(:root) {
-      overflow: hidden;
-    }
-
     [hidden] {
       display: none;
     }
 
-    .contact-links {
-      margin: var(--size) 0 calc(var(--size) * 1.75) 0;
+    ul {
+      margin: var(--size) 0 var(--size-double) 0;
       padding: 0;
       list-style: none;
       text-align: center;
     }
 
-    .contact-links li,
-    .contact-links a {
+    li,
+    li a {
       display: inline-block;
       line-height: 1;
-    }
-
-    .contact-links a {
-      padding: calc(var(--size) / 2);
       color: inherit;
       transition: transform var(--transition-duration) var(--transition-function);
     }
-    .contact-links a:focus,
-    .contact-links a:hover {
+
+    li a {
+      padding: var(--size-half);
+    }
+    li a:focus,
+    li a:hover {
       transform: scale(1.3);
     }
 
-    .contact-links svg {
+    li svg {
       width: 2.2em;
       height: 2.2em;
     }
@@ -144,17 +128,17 @@
     }
 
     @supports (display: flex) {
-      .contact-links {
+      ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
       }
 
       @media only screen and (min-width: 40em) {
-        .contact-links li:nth-child(1) { transform: translate(50px, 190px); }
-        .contact-links li:nth-child(2) { transform: translate(-30px, 55px); }
-        .contact-links li:nth-child(4) { transform: translate(30px, 55px); }
-        .contact-links li:nth-child(5) { transform: translate(-50px, 190px); }
+        li:nth-child(1) { transform: translate( 3.1em, 12.3em); }
+        li:nth-child(2) { transform: translate(-1.9em,  3.8em); }
+        li:nth-child(4) { transform: translate( 1.9em,  3.8em); }
+        li:nth-child(5) { transform: translate(-3.1em, 12.3em); }
       }
     }
 
@@ -164,11 +148,11 @@
         grid-template-rows: 1fr auto;
       }
 
-      .about {
+      #about {
         align-self: center;
       }
 
-      .contact {
+      #contact {
         grid-row-start: 2;
         grid-row-end: 3;
       }
@@ -177,7 +161,7 @@
 </head>
 <body>
   <main class="h-card">
-    <section id="about" class="about">
+    <section id="about">
       <p>G’day, my name is <a href="https://andybluntish.com/" rel="me" class="u-url p-name"><span class="p-given-name">Andy</span> <span class="p-family-name" hidden>Stanford-Bluntish</span></a> 👋</p>
       <p>I’m a <span class="p-role">web developer and designer</span> based in <a href="https://www.google.com.au/maps/place/Melbourne+VIC+Australia" class="p-adr h-adr"><span class="p-locality">Melbourne</span>, <span class="p-country-name">Australia</span></a>. I’m a huge fan of the web, and love using technology to help solve problems.</p>
       <p>As a <em>developer</em>, I love writing code that makes people’s lives easier. I’m excited about pushing the web forward, and the possibilities offered by the latest tools and technology. As a <em>designer</em>, my focus is on producing simple, intuitive products that allow people to get work done. I love building pragmatic, accessible interfaces that are attractive and easy to use.</p>
@@ -185,8 +169,8 @@
       <p>I also like <em>fun</em> things, such as riding my bike, and brewing my own beer. I spend my days building tools that help people learn, and <em>I love it</em>.</p>
     </section>
 
-    <section id="contact" class="contact">
-      <ul class="contact-links">
+    <section id="contact">
+      <ul>
         <li>
           <a href="https://twitter.com/andybluntish/" rel="me" title="Twitter">
             <svg role="img" aria-labelledby="t-twitter"><use xlink:href="#i-twitter"></use></svg>
