@@ -27,10 +27,11 @@
       --size: calc(var(--line-height) * 1em);
       --size-half: calc(var(--size) / 2);
       --size-double: calc(var(--size) * 2);
-      --grey: #2b303b;
-      --primary: #c0392b;
       --transition-duration: 0.3s;
       --transition-function: ease;
+      --foreground: #2b303b;
+      --background: #fff;
+      --highlight: #c0392b;
     }
 
     html { box-sizing: border-box; }
@@ -41,8 +42,8 @@
 
     html, body {
       margin: 0;
-      color: var(--grey);
-      background: #fff;
+      color: var(--foreground);
+      background: var(--background);
       line-height: var(--line-height);
       font-family: "Avenir Next", "Avenir", "Open Sans", "Helvetica Neue", sans-serif;
       -webkit-text-size-adjust: 100%;
@@ -60,7 +61,7 @@
     }
 
     a {
-      color: var(--primary);
+      color: var(--highlight);
       transition: filter var(--transition-duration) var(--transition-function);
       text-decoration: none;
     }
