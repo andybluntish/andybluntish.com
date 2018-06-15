@@ -62,12 +62,14 @@
 
     a {
       color: var(--highlight);
-      transition: filter var(--transition-duration) var(--transition-function);
       text-decoration: none;
+      transition: border-bottom-color var(--transition-duration) var(--transition-function);
+      border-bottom: 1px solid transparent;
     }
 
     a:focus, a:hover {
-      filter: brightness(.7);
+      outline: none;
+      border-bottom-color: var(--highlight);
     }
 
     img {
@@ -91,7 +93,8 @@
       display: inline-block;
       line-height: 1;
       color: inherit;
-      transition: transform var(--transition-duration) var(--transition-function);
+      transition: transform var(--transition-duration) var(--transition-function),
+                  color var(--transition-duration) var(--transition-function)
     }
 
     li a {
@@ -99,6 +102,8 @@
     }
     li a:focus,
     li a:hover {
+      border: none;
+      color: var(--highlight);
       transform: scale(1.3);
     }
 
