@@ -123,6 +123,23 @@
       margin: auto;
     }
 
+    .toggle-theme {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border: none;
+      padding: .25em .6em;
+      font-size: 1.3rem;
+      color: inherit;
+      background: transparent;
+      opacity: 0.3;
+      transition: opacity var(--transition-duration) var(--transition-function);
+    }
+    .toggle-theme:focus, .toggle-theme:hover {
+      outline: none;
+      opacity: 1;
+    }
+
     @supports (display: flex) {
       ul {
         display: flex;
@@ -207,14 +224,23 @@
     const lightSrcset = photo.getAttribute('srcset')
     const darkSrc = lightSrc.replace('.jpg', '-dark.jpg')
     const darkSrcset = lightSrcset.replace('.jpg', '-dark.jpg')
+    const btn = document.createElement('button')
+    btn.className = 'toggle-theme'
+    btn.onclick = toggleTheme
+    document.body.appendChild(btn)
+    setTheme(!!(parseInt(window.localStorage.getItem('dark'), 10) || 0))
 
     function setTheme(isDark) {
       document.body.classList.toggle('dark', isDark)
       if (isDark) {
+        btn.textContent = '☼'
+        btn.title = 'Use light mode'
         photo.setAttribute('src', darkSrc)
         photo.setAttribute('srcset', darkSrcset)
         window.localStorage.setItem('dark', 1)
       } else {
+        btn.textContent = '☾'
+        btn.title = 'Use dark mode'
         photo.setAttribute('src', lightSrc)
         photo.setAttribute('srcset', lightSrcset)
         window.localStorage.setItem('dark', 0)
@@ -224,9 +250,6 @@
     function toggleTheme() {
       setTheme(!document.body.classList.contains('dark'))
     }
-
-    const saved = parseInt(window.localStorage.getItem('dark'), 10) || 0
-    setTheme(!!saved)
   </script>
 </body>
 </html>
