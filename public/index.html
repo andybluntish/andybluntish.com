@@ -200,5 +200,33 @@
     <symbol id="i-instagram" viewBox="0 0 20 20" fill="currentColor"><title id="t-instagram">Instagram</title><path d="M16.924 19H3.076A2.077 2.077 0 0 1 1 16.922V3.077C1 1.93 1.93 1 3.076 1h13.848C18.07 1 19 1.93 19 3.077v13.845C19 18.07 18.07 19 16.924 19zM10 6.539a3.461 3.461 0 1 0 0 6.922 3.462 3.462 0 0 0 0-6.922zm6.924-2.769a.694.694 0 0 0-.693-.693h-2.076a.692.692 0 0 0-.691.693v2.077c0 .382.309.692.691.692h2.076a.693.693 0 0 0 .693-.692V3.77zm0 4.845h-1.567c.114.444.182.906.182 1.385a5.538 5.538 0 1 1-11.076 0c0-.479.067-.941.182-1.385H3.076v7.616c0 .383.311.691.693.691H16.23a.692.692 0 0 0 .693-.691V8.615z"/></symbol>
     <symbol id="i-twitter" viewBox="0 0 20 20" fill="currentColor"><title id="t-twitter">Twitter</title><path d="M6.661 17.314c-2.086 0-4.026-.611-5.661-1.66a7.414 7.414 0 0 0 5.468-1.529 3.695 3.695 0 0 1-3.45-2.564 3.695 3.695 0 0 0 1.668-.064 3.694 3.694 0 0 1-2.963-3.621V7.83a3.69 3.69 0 0 0 1.673.462 3.691 3.691 0 0 1-1.143-4.93A10.478 10.478 0 0 0 9.865 7.22a3.692 3.692 0 0 1 3.597-4.535c1.062 0 2.021.449 2.696 1.166a7.408 7.408 0 0 0 2.344-.896 3.698 3.698 0 0 1-1.623 2.043A7.34 7.34 0 0 0 19 4.417a7.513 7.513 0 0 1-1.843 1.912c.007.159.011.318.011.478 0 4.881-3.714 10.507-10.507 10.507"/></symbol>
   </svg>
+
+  <script>
+    const photo = document.querySelector('.u-photo')
+    const lightSrc = photo.getAttribute('src')
+    const lightSrcset = photo.getAttribute('srcset')
+    const darkSrc = lightSrc.replace('.jpg', '-dark.jpg')
+    const darkSrcset = lightSrcset.replace('.jpg', '-dark.jpg')
+
+    function setTheme(isDark) {
+      document.body.classList.toggle('dark', isDark)
+      if (isDark) {
+        photo.setAttribute('src', darkSrc)
+        photo.setAttribute('srcset', darkSrcset)
+        window.localStorage.setItem('dark', 1)
+      } else {
+        photo.setAttribute('src', lightSrc)
+        photo.setAttribute('srcset', lightSrcset)
+        window.localStorage.setItem('dark', 0)
+      }
+    }
+
+    function toggleTheme() {
+      setTheme(!document.body.classList.contains('dark'))
+    }
+
+    const saved = parseInt(window.localStorage.getItem('dark'), 10) || 0
+    setTheme(!!saved)
+  </script>
 </body>
 </html>
