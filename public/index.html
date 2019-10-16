@@ -98,12 +98,12 @@
       display: inline-block;
       line-height: 1;
       color: inherit;
-      transition: transform var(--transition-duration) var(--transition-function),
-                  color var(--transition-duration) var(--transition-function)
     }
 
     li a {
       padding: var(--size-half);
+      transition: transform var(--transition-duration) var(--transition-function),
+                  color var(--transition-duration) var(--transition-function)
     }
     li a:focus,
     li a:hover {
@@ -120,30 +120,6 @@
     .u-photo {
       display: block;
       margin: auto;
-    }
-
-    .toggle-theme {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      border: none;
-      padding: .8em;
-      color: inherit;
-      background: transparent;
-      opacity: 0.3;
-      transition: opacity var(--transition-duration) var(--transition-function);
-    }
-    .toggle-theme svg {
-      width: 2em;
-      height: 2em;
-    }
-    .toggle-theme svg:nth-child(1) { display: none; }
-    .dark .toggle-theme svg:nth-child(1) { display: initial; }
-    .dark .toggle-theme svg:nth-child(2) { display: none; }
-    .toggle-theme:focus, .toggle-theme:hover {
-      outline: none;
-      opacity: 1;
-      color: var(--highlight);
     }
 
     @supports (display: flex) {
