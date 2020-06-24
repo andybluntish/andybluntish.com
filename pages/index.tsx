@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '@/layouts/Base'
+import Layout from '@/layouts/Home'
 
 export default function Home() {
   return (
