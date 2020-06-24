@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 import Head from 'next/head'
 import config from 'config'
-import styles from '@/layouts/Blank.module.css'
+import styles from '@/layouts/Base.module.css'
 
 export interface BlankLayoutProps {
   title?: string

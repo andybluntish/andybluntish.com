@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '@/layouts/Blank'
+import Layout from '@/layouts/Base'
 
 export default function Home() {
   const classNames = ['container']
