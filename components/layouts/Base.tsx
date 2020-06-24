@@ -3,18 +3,18 @@ import Head from 'next/head'
 import config from 'config'
 import styles from '@/layouts/Base.module.css'
 
-export interface BlankLayoutProps {
+export interface BaseLayoutProps {
   title?: string
   description?: string
   classNames?: string[]
 }
 
-export default function BlankLayout({
+export default function BaseLayout({
   title,
   description,
   classNames = [],
   children,
-}: PropsWithChildren<BlankLayoutProps>) {
+}: PropsWithChildren<BaseLayoutProps>) {
   const pageTitle = (title && `${config.title} | ${title}`) || config.title
   const pageDescription = description || config.description
   const pageClassNames = [styles.root, ...classNames].filter(Boolean).join(' ')
