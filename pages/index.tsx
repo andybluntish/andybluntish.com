@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Layout from '@/layouts/Home'
 
-export default function Home() {
+export default function Home(): ReactElement {
   return (
     <Layout>
       <p>Hello world</p>

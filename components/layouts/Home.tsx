@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react'
 import Layout, { BaseLayoutProps as LayoutProps } from '@/layouts/Base'
 import styles from '@/layouts/Home.module.css'
 
@@ -8,7 +8,7 @@ export default function HomeLayout({
   classNames = [],
   children,
   ...props
-}: PropsWithChildren<HomeLayoutProps>) {
+}: PropsWithChildren<HomeLayoutProps>): ReactElement {
   return (
     <Layout classNames={[styles.root, ...classNames]} {...props}>
       {children}

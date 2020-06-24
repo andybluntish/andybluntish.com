@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react'
 import Head from 'next/head'
 import config from 'config'
 import styles from '@/layouts/Base.module.css'
@@ -14,7 +14,7 @@ export default function BaseLayout({
   description,
   classNames = [],
   children,
-}: PropsWithChildren<BaseLayoutProps>) {
+}: PropsWithChildren<BaseLayoutProps>): ReactElement {
   const pageTitle = (title && `${config.title} | ${title}`) || config.title
   const pageDescription = description || config.description
   const pageClassNames = [styles.root, ...classNames].filter(Boolean).join(' ')
