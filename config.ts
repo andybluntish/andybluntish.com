@@ -9,4 +9,7 @@ export default {
     end: new Date().getFullYear(),
   },
   baseURL: 'https://andybluntish.com/',
+  contact: {
+    email: 'hello@bluntish.net',
+  },
 }

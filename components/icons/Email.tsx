@@ -1,17 +1,11 @@
-import React, { PropsWithChildren, ReactElement } from 'react'
-// import styles from '@/layouts/Home.module.css'
+import React, { ReactElement } from 'react'
+import Icon from '@/icons/Base'
+import config from 'config'
 
-export interface EmailIconProps {
-  name: string
-  title: string
-  href?: string
-}
-
-export default function EmailIcon({
-  name,
-  title,
-  href,
-  children,
-}: PropsWithChildren<EmailIconProps>): ReactElement {
-  return <svg role="img" aria-labelledby={`t-${name}`}></svg>
+export default function EmailIcon(): ReactElement {
+  return (
+    <Icon name="email" title="Email" href={`mailto:${config.contact.email}`} rel="me">
+      <path d="M0 2.5V5l10 5 10-5V2.5H0zm0 5v10h20v-10l-10 5-10-5z" />
+    </Icon>
+  )
 }
