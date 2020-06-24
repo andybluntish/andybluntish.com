@@ -2,9 +2,8 @@ import React from 'react'
 import Layout from '@/layouts/Base'
 
 export default function Home() {
-  const classNames = ['container']
   return (
-    <Layout classNames={classNames}>
+    <Layout>
       <p>Hello world</p>
     </Layout>
   )
