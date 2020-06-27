@@ -16,8 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/layouts/*": ["components/layouts/*"],
-      "@/icons/*": ["components/icons/*"]
+      "@/layouts/*": ["components/layouts/*"]
     }
   },
   "exclude": ["node_modules"],
