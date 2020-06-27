@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react'
 import Layout from '@/layouts/Home'
-import Footer from '@/components/Footer'
 
 export default function Home(): ReactElement {
   return (
