@@ -1,2 +1,16 @@
 .root {
+  margin: auto;
+  padding: var(--size-double) var(--size-half) 0;
+  max-width: 40em;
+}
+
+@supports (display: grid) {
+  .root {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .root main {
+    align-self: center;
+  }
 }

@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, ReactElement } from 'react'
-import Layout, { BaseLayoutProps as LayoutProps } from '@/layouts/Base'
 import styles from '@/layouts/Home.module.css'
+import Layout, { BaseLayoutProps as LayoutProps } from '@/layouts/Base'
+import Footer from '@/components/Footer'
 
 export interface HomeLayoutProps extends LayoutProps {}
 
@@ -11,7 +12,9 @@ export default function HomeLayout({
 }: PropsWithChildren<HomeLayoutProps>): ReactElement {
   return (
     <Layout classNames={[styles.root, ...classNames]} {...props}>
-      {children}
+      <main className="h-card">{children}</main>
+
+      <Footer />
     </Layout>
   )
 }
