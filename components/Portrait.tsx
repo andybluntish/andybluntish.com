@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import styles from './Portrait.module.css'
 import config from 'config'
 
 const {
@@ -7,7 +8,7 @@ const {
 
 export default function Portrait(): ReactElement {
   return (
-    <picture>
+    <picture className={styles.root}>
       <source
         media="(prefers-color-scheme: dark)"
         srcSet="/img/me-dark.jpg 1x, /img/me-lg-dark.jpg 2x"
