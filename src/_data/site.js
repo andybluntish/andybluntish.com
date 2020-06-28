@@ -11,17 +11,5 @@ module.exports = function () {
     date: {
       year: now.getFullYear(),
     },
-    theme: {
-      light: {
-        primary: '#d93f00',
-        foreground: '#363d49',
-        background: '#fff',
-      },
-      dark: {
-        primary: '#ff9e66',
-        foreground: '#d1d6e0',
-        background: '#1b1d22',
-      },
-    },
   }
 }

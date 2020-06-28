@@ -7,6 +7,8 @@ module.exports = (config) => {
 
   return {
     dir: { input: 'src', output: 'dist' },
+    templateFormats: ['html', 'njk', 'md'],
+    dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
   }
