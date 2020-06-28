@@ -1,0 +1,13 @@
+{
+  "name": "andybluntish.com",
+  "version": "14.0.0",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andybluntish/andybluntish.com.git"
+  },
+  "author": "Andy Stanford-Bluntish <andy@bluntish.net>",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://andybluntish.com"
+}
