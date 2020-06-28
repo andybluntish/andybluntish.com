@@ -2,7 +2,9 @@
   "name": "andybluntish.com",
   "version": "14.0.0",
   "scripts": {
-    "lint": "eslint .",
+    "build": "yarn run eleventy .",
+    "dev": "yarn run eleventy . --serve",
+    "lint": "yarn run eslint .",
     "format": "yarn run format:eslint; yarn run format:prettier",
     "format:eslint": "yarn run eslint --fix './**/*.js'",
     "format:prettier": "yarn run prettier --write './**/*.{js,json}'"
