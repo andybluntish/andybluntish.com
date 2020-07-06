@@ -4,6 +4,7 @@ module.exports = (config) => {
 
   config.addPassthroughCopy('src/*.css')
   config.addPassthroughCopy('src/img')
+  config.addPassthroughCopy('src/manifest.json')
 
   return {
     dir: { input: 'src', output: 'dist' },
