@@ -11,6 +11,10 @@
     {% set documentDescription = description %}
   {%- else -%}
     {% set documentDescription = siteDescription %}
+  {%- endif -%}
+
+  {%- if classNames -%}
+    {% set bodyClassNames = classNames | join(' ') | trim %}
   {%- endif %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,8 +34,7 @@
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
   <link rel="stylesheet" type="text/css" href="/styles.css" />
 </head>
-<body class="{{ classNames | join(' ')}}">
-
-{{ content | safe }}
+<body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
+{{ content | safe -}}
 </body>
 </html>
