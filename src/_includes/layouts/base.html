@@ -38,7 +38,7 @@
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
   <link rel="stylesheet" type="text/css" href="/styles.css" />
   <style>
-    {{ css | cssmin | safe }}
+    {{ css | safe }}
   </style>
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>

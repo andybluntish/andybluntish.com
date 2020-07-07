@@ -1,11 +1,6 @@
-const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 
 module.exports = (config) => {
-  config.addFilter('cssmin', function (content, outputPath) {
-    return new CleanCSS().minify(content).styles
-  })
-
   config.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
