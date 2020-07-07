@@ -104,16 +104,20 @@ main {
   display: inline-block;
 }
 
-.contact-list li a {
+.contact-list a {
   display: block;
   padding: var(--size-half);
-  transition: transform var(--transition-duration) var(--transition-function),
-    color var(--transition-duration) var(--transition-function);
   color: inherit;
 }
 
-.contact-list li a:focus,
-.contact-list li a:hover {
+.contact-list li,
+.contact-list a {
+  transition: transform var(--transition-duration) var(--transition-function),
+    color var(--transition-duration) var(--transition-function);
+}
+
+.contact-list a:focus,
+.contact-list a:hover {
   border: none;
   color: var(--primary);
   transform: scale(1.3);
@@ -138,16 +142,16 @@ main {
   }
 
   @media (min-width: 40em) {
-    .contact-list li:nth-child(1) a {
+    .contact-list li:nth-child(1) {
       transform: translate(2.5em, 12.3em);
     }
-    .contact-list li:nth-child(2) a {
+    .contact-list li:nth-child(2) {
       transform: translate(-1.9em, 3.8em);
     }
-    .contact-list li:nth-child(4) a {
+    .contact-list li:nth-child(4) {
       transform: translate(1.9em, 3.8em);
     }
-    .contact-list li:nth-child(5) a {
+    .contact-list li:nth-child(5) {
       transform: translate(-2.5em, 12.3em);
     }
   }
