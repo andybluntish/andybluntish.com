@@ -88,10 +88,12 @@ main {
 }
 
 .contact-list {
+  position: relative;
   margin: 0 0 var(--size-double);
   padding: 0;
   text-align: center;
   line-height: 0;
+  z-index: 1;
 }
 
 .contact-list li {
