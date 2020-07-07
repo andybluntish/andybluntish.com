@@ -68,12 +68,6 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 48em) {
-  body {
-    font-size: 110%;
-  }
-}
-
 @supports (display: grid) {
   body {
     display: grid;
