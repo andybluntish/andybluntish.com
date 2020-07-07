@@ -1,6 +1,11 @@
+const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 
 module.exports = (config) => {
+  config.addFilter('cssmin', function (content, outputPath) {
+    return new CleanCSS().minify(content).styles
+  })
+
   config.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
@@ -19,7 +24,6 @@ module.exports = (config) => {
   config.addLayoutAlias('base', 'layouts/base.html')
   config.addLayoutAlias('home', 'layouts/home.html')
 
-  config.addPassthroughCopy('src/*.css')
   config.addPassthroughCopy('src/img')
   config.addPassthroughCopy('src/manifest.json')
   config.addPassthroughCopy('src/_redirects')

@@ -19,6 +19,7 @@
   "homepage": "https://andybluntish.com",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "clean-css": "^4.2.3",
     "eslint": "^7.4.0",
     "html-minifier": "^4.0.0",
     "prettier": "^2.0.5"
