@@ -89,6 +89,10 @@ main,
   max-width: 40em;
 }
 
+main {
+  padding-top: var(--size);
+}
+
 .contact-list {
   margin: 0 0 var(--size-double);
   padding: 0;
