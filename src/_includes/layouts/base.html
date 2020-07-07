@@ -1,25 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-  {%- if title -%}
+  {% if title %}
     {% set documentTitle = [site.title, title] | join(' | ') %}
-  {%- else -%}
+  {% else %}
     {% set documentTitle = site.title %}
-  {%- endif -%}
+  {% endif %}
 
-  {%- if description -%}
+  {% if description %}
     {% set documentDescription = description %}
-  {%- else -%}
+  {% else %}
     {% set documentDescription = siteDescription %}
-  {%- endif -%}
+  {% endif %}
 
-  {%- if classNames -%}
+  {% if classNames %}
     {% set bodyClassNames = classNames | join(' ') | trim %}
-  {%- endif -%}
+  {% endif %}
 
-  {%- set css -%}
+  {% set css %}
     {% include 'styles.css' %}
-  {%- endset %}
+  {% endset %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,9 +37,11 @@
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png" >
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
   <link rel="stylesheet" type="text/css" href="/styles.css" />
-  <style>{{ css | cssmin | safe }}</style>
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
-{{ content | safe -}}
+  {{ content | safe }}
 </body>
 </html>
