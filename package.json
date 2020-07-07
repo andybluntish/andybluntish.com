@@ -1,0 +1,25 @@
+{
+  "name": "andybluntish.com",
+  "version": "14.0.0",
+  "scripts": {
+    "build": "yarn run eleventy .",
+    "dev": "yarn run eleventy . --serve",
+    "lint": "yarn run eslint .",
+    "format": "yarn run format:eslint; yarn run format:prettier",
+    "format:eslint": "yarn run eslint --fix './**/*.js'",
+    "format:prettier": "yarn run prettier --write './**/*.{js,json}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andybluntish/andybluntish.com.git"
+  },
+  "author": "Andy Stanford-Bluntish <andy@bluntish.net>",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://andybluntish.com",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "eslint": "^7.4.0",
+    "prettier": "^2.0.5"
+  }
+}

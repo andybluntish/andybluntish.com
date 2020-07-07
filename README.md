@@ -1,9 +1,3 @@
 # andybluntish.com
 
-This is my personal website, built with good old fashioned HTML and CSS for your enjoyment.
-
-v13.1
-
-## License
-
-See [`LICENSE.md`](LICENSE.md).
+This is my personal website, for your enjoyment.
