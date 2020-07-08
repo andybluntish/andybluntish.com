@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: base
 ---
 G’day, my name is [Andy]({{site.url}}) 👋
 
