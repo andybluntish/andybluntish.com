@@ -36,11 +36,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png" >
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
-  <style>
-    {{ css | safe }}
-  </style>
+  <style>{{ css | safe }}</style>
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
-  {{ content | safe }}
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include 'footer.html' %}
 </body>
 </html>
