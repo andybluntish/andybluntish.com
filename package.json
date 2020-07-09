@@ -7,7 +7,8 @@
     "lint": "yarn run eslint .",
     "format": "yarn run format:eslint; yarn run format:prettier",
     "format:eslint": "yarn run eslint --fix './**/*.js'",
-    "format:prettier": "yarn run prettier --write './**/*.{js,json}'"
+    "format:prettier": "yarn run prettier --write './**/*.{js,json}'",
+    "post:new": "./scripts/new-post.js"
   },
   "repository": {
     "type": "git",
