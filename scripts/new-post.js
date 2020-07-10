@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
-const now = new Date()
+
+let now = new Date()
+if (process.argv[2]) {
+  now = new Date(process.argv[2])
+}
+
 const timestamp = Math.floor(now.valueOf() / 1e3)
 const outputPath = `./src/posts/${timestamp}.md`
 const content = `
