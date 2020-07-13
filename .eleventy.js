@@ -16,6 +16,25 @@ module.exports = (config) => {
     return content
   })
 
+  config.addFilter('machineDate', function (date) {
+    return date.toISOString()
+  })
+
+  config.addFilter('humanDate', function (date) {
+    const formattedDate = new Intl.DateTimeFormat('en-AU', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }).format(date)
+
+    const formattedTime = new Intl.DateTimeFormat('en-AU', {
+      hour: 'numeric',
+      minute: 'numeric',
+    }).format(date)
+
+    return `${formattedDate} at ${formattedTime}`
+  })
+
   config.addLayoutAlias('base', 'layouts/base.html')
   config.addLayoutAlias('home', 'layouts/home.html')
 
