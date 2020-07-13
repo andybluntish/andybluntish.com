@@ -4,8 +4,18 @@
   list-style: none;
 }
 
-.post-item {
+.post {
+  /* outline: 1px solid purple; */
+  margin-bottom: 5rem;
 }
 
-.post {
+.post > footer {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  font-size: 80%;
+  opacity: 0.9;
+}
+
+.post > footer a {
+  color: inherit;
 }
