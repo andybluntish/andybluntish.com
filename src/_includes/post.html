@@ -1,8 +1,8 @@
-<article class="post">
-  {{ content | safe }}
+<article id="post-{{ post.fileSlug }}" class="post">
   <footer>
     <a href="{{ post.url | url }}">
       <time datetime="{{ post.date | machineDate }}">{{ post.date | humanDate }}</time>
     </a>
   </footer>
+  {{ content | safe }}
 </article>
