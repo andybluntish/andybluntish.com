@@ -20,6 +20,12 @@
   {% set css %}
     {% include 'styles/main.css' %}
   {% endset %}
+
+  {% if stylesheet %}
+    {% set pageStyles %}
+      {% include 'styles/' + stylesheet + '.css' %}
+    {% endset %}
+  {% endif %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +43,9 @@
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png" >
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
   <style>{{ css | safe }}</style>
+  {% if pageStyles %}
+    <style>{{ pageStyles | safe }}</style>
+  {% endif %}
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
   <main>
