@@ -5,8 +5,12 @@
 }
 
 .post {
-  /* outline: 1px solid purple; */
   margin-bottom: 5rem;
+}
+
+.post img {
+  display: block;
+  margin: auto;
 }
 
 .post > footer {
