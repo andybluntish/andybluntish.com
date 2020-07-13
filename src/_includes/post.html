@@ -1,0 +1,8 @@
+<article class="post">
+  {{ content | safe }}
+  <footer>
+    <a href="{{ post.url | url }}">
+      <time datetime="{{ post.date | machineDate }}">{{ post.date | humanDate }}</time>
+    </a>
+  </footer>
+</article>
