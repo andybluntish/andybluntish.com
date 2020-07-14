@@ -1,6 +1,16 @@
+const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
 
 module.exports = (config) => {
+  config.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      linkify: true,
+      typographer: true,
+    })
+  )
+
   config.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
