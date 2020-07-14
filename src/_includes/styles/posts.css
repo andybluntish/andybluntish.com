@@ -10,8 +10,6 @@
 
 .post img {
   display: block;
-  margin: auto;
-  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.08);
 }
 
 .post > footer {
