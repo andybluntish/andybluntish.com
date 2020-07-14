@@ -1,15 +1,5 @@
-.posts {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.post {
+.post-list .post {
   margin-bottom: 5rem;
-}
-
-.post img {
-  display: block;
 }
 
 .post > footer {

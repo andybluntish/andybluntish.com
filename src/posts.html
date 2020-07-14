@@ -2,13 +2,11 @@
 layout: base
 title: Things I wrote
 description: Words have meanings, though these have little value.
+classNames:
+  - post-list
 stylesheet: posts
 ---
-<ol class="posts">
-  {%- for post in collections.post | reverse -%}
-    <li class="post-item">
-      {% set content = post.templateContent %}
-      {% include 'post.html' %}
-    </li>
-  {%- endfor -%}
-</ol>
+{%- for post in collections.post | reverse -%}
+  {% set content = post.templateContent %}
+  {% include 'post.html' %}
+{%- endfor -%}
