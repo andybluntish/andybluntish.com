@@ -16,9 +16,18 @@
   margin-bottom: 0.5rem;
   font-style: italic;
   font-size: 80%;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .post > footer a {
   color: inherit;
+}
+
+pre {
+  overflow: auto;
+}
+
+code {
+  font-size: 1rem;
+  color: var(--primary);
 }
