@@ -40,11 +40,23 @@ p {
 }
 
 blockquote {
-  font-style: italic;
-  opacity: 80%;
-  border-left: 4px solid #ccc;
-  padding-left: var(--size);
+  position: relative;
   margin: var(--size);
+  padding-left: var(--size);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+blockquote::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--foreground);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  opacity: 0.25;
 }
 
 a {
