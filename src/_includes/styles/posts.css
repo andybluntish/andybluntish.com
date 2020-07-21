@@ -2,15 +2,27 @@
   margin-bottom: 5rem;
 }
 
-.post > footer {
+.post header {
+  margin-bottom: var(--size);
+}
+
+.post--micro header {
   margin-bottom: 0.5rem;
+}
+
+.post h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.post header a {
+  color: inherit;
+}
+
+.post header time {
   font-style: italic;
   font-size: 80%;
   opacity: 0.8;
-}
-
-.post > footer a {
-  color: inherit;
 }
 
 pre {
