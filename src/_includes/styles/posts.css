@@ -1,5 +1,5 @@
 .post-list .post {
-  margin-bottom: 5rem;
+  margin-bottom: calc(var(--size) * 4);
 }
 
 .post header {
