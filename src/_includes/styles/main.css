@@ -39,6 +39,14 @@ p {
   margin: 0 0 var(--size);
 }
 
+blockquote {
+  font-style: italic;
+  opacity: 80%;
+  border-left: 4px solid #ccc;
+  padding-left: var(--size);
+  margin: var(--size);
+}
+
 a {
   color: var(--primary);
   text-decoration: none;
