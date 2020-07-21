@@ -1,5 +1,6 @@
 const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 
 module.exports = (config) => {
   config.setLibrary(
@@ -10,6 +11,8 @@ module.exports = (config) => {
       typographer: true,
     })
   )
+
+  config.addPlugin(pluginRss)
 
   config.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.endsWith('.html')) {

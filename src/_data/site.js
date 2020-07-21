@@ -6,6 +6,7 @@ module.exports = function () {
     description: 'I build things on the web. I love what I do.',
     author: {
       name: 'Andy Stanford-Bluntish',
+      email: 'hello@bluntish.net',
     },
     url: 'https://andybluntish.com',
     date: {

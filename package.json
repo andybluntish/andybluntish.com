@@ -20,6 +20,7 @@
   "homepage": "https://andybluntish.com",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
     "eslint": "^7.4.0",
     "html-minifier": "^4.0.0",
     "markdown-it": "^11.0.0",
