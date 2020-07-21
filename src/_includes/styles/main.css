@@ -1,5 +1,5 @@
 :root {
-  --line-height: 1.5;
+  --line-height: 1.4;
   --size: calc(var(--line-height) * 1em);
   --size-half: calc(var(--size) / 2);
   --size-double: calc(var(--size) * 2);
