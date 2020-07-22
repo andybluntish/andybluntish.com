@@ -7,6 +7,10 @@
   --size: calc(var(--line-height) * 1em);
   --size-half: calc(var(--size) / 2);
   --size-double: calc(var(--size) * 2);
+  --size-quadruple: calc(var(--size) * 4);
+  --font-size-sm: 80%;
+  --opacity-light: 0.8;
+  --opacity-xlight: 0.25;
   --transition-duration: 0.3s;
   --transition-function: ease;
   --foreground: #363d49;
@@ -104,7 +108,7 @@ blockquote {
   margin: var(--size);
   padding-left: var(--size);
   font-style: italic;
-  opacity: 0.8;
+  opacity: var(--opacity-light);
 }
 
 blockquote::before {
@@ -116,7 +120,7 @@ blockquote::before {
   left: 0;
   bottom: 0;
   width: 4px;
-  opacity: 0.25;
+  opacity: var(--opacity-xlight);
 }
 
 pre {
@@ -218,7 +222,7 @@ code {
  ******************************************************************************/
 
 .post-list .post {
-  margin-bottom: calc(var(--size) * 4);
+  margin-bottom: var(--size-quadruple);
 }
 
 .post header {
@@ -236,8 +240,8 @@ code {
 
 .post header time {
   font-style: italic;
-  font-size: 80%;
-  opacity: 0.8;
+  font-size: var(--font-size-sm);
+  opacity: var(--opacity-light);
 }
 
 .post header a {
