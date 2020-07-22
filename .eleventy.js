@@ -51,6 +51,7 @@ module.exports = (config) => {
   config.addLayoutAlias('base', 'layouts/base.html')
   config.addLayoutAlias('post', 'layouts/post.html')
 
+  config.addPassthroughCopy('src/*.css')
   config.addPassthroughCopy('src/img')
   config.addPassthroughCopy('src/manifest.json')
   config.addPassthroughCopy('src/_redirects')
