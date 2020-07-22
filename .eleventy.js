@@ -57,7 +57,6 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/_redirects')
 
   return {
-    dir: { input: 'src', output: 'dist' },
     templateFormats: ['html', 'njk', 'md'],
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
