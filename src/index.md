@@ -1,5 +1,8 @@
 ---
 layout: base
+tags:
+  - page
+navTitle: About
 ---
 G’day, my name is [Andy]({{ site.url }}/) 👋
 
