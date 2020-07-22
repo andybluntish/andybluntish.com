@@ -1,3 +1,7 @@
+/*******************************************************************************
+ * Theme
+ ******************************************************************************/
+
 :root {
   --line-height: 1.4;
   --size: calc(var(--line-height) * 1em);
@@ -26,6 +30,10 @@
   }
 }
 
+/*******************************************************************************
+ * Page
+ ******************************************************************************/
+
 html {
   box-sizing: border-box;
 }
@@ -33,46 +41,6 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-p {
-  margin: 0 0 var(--size);
-}
-
-blockquote {
-  position: relative;
-  margin: var(--size);
-  padding-left: var(--size);
-  font-style: italic;
-  opacity: 0.8;
-}
-
-blockquote::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: var(--foreground);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 4px;
-  opacity: 0.25;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  outline: none;
-  text-decoration: underline;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
 }
 
 body {
@@ -107,6 +75,63 @@ main {
   padding-top: var(--size);
 }
 
+/*******************************************************************************
+ * Elements
+ ******************************************************************************/
+
+p {
+  margin: 0 0 var(--size);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  outline: none;
+  text-decoration: underline;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+blockquote {
+  position: relative;
+  margin: var(--size);
+  padding-left: var(--size);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+blockquote::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--foreground);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  opacity: 0.25;
+}
+
+pre {
+  overflow: auto;
+}
+
+code {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+/*******************************************************************************
+ * Contact List
+ ******************************************************************************/
+
 .contact-list {
   position: relative;
   margin: 0 0 var(--size-double);
@@ -139,28 +164,6 @@ main {
   transform: scale(1.2);
 }
 
-@media (prefers-reduced-motion) {
-  .contact-list li,
-  .contact-list a {
-    transition: color var(--transition-duration) var(--transition-function);
-  }
-  .contact-list a:focus,
-  .contact-list a:hover {
-    transform: none;
-  }
-}
-
-.contact-list li svg {
-  display: block;
-  width: 2.2em;
-  height: 2.2em;
-}
-
-[role='contentinfo'] .u-photo {
-  display: block;
-  margin: auto;
-}
-
 @supports (display: flex) {
   .contact-list {
     display: flex;
@@ -182,4 +185,61 @@ main {
       transform: translate(-2.5em, 12.3em);
     }
   }
+}
+
+@media (prefers-reduced-motion) {
+  .contact-list li,
+  .contact-list a {
+    transition: color var(--transition-duration) var(--transition-function);
+  }
+  .contact-list a:focus,
+  .contact-list a:hover {
+    transform: none;
+  }
+}
+
+.contact-list li svg {
+  display: block;
+  width: 2.2em;
+  height: 2.2em;
+}
+
+/*******************************************************************************
+ * Photo
+ ******************************************************************************/
+
+[role='contentinfo'] .u-photo {
+  display: block;
+  margin: auto;
+}
+
+/*******************************************************************************
+ * Posts
+ ******************************************************************************/
+
+.post-list .post {
+  margin-bottom: calc(var(--size) * 4);
+}
+
+.post header {
+  margin-bottom: var(--size);
+}
+
+.post--micro header {
+  margin-bottom: var(--size-half);
+}
+
+.post header h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.post header time {
+  font-style: italic;
+  font-size: 80%;
+  opacity: 0.8;
+}
+
+.post header a {
+  color: inherit;
 }
