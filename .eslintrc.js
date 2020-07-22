@@ -14,7 +14,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ['.eslintrc.js', '.eleventy.js', 'ember-cli-build.js', 'scripts/*.js'],
+      files: ['.eslintrc.js', '.eleventy.js', 'gulpfile.js', 'scripts/*.js'],
       parserOptions: {
         sourceType: 'script',
       },
