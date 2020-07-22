@@ -2,9 +2,8 @@
   "name": "andybluntish.com",
   "version": "14.0.0",
   "scripts": {
-    "build": "yarn clean && yarn run eleventy .",
-    "dev": "yarn clean && yarn run eleventy . --serve",
-    "clean": "rm -rf dist",
+    "build": "yarn gulp build",
+    "dev": "yarn gulp serve",
     "lint": "yarn run eslint .",
     "format": "yarn run format:prettier; yarn run format:eslint",
     "format:eslint": "yarn run eslint --fix './**/*.js'",
