@@ -5,8 +5,16 @@ description: Words have meanings, though these have little value.
 classNames:
   - post-list
 ---
+<header class="end-cap rule-below">
+  <p>{{ description }}</p>
+</header>
+
 {%- for post in collections.post | reverse -%}
   {% set postTitle = post.data.title %}
   {% set content = post.templateContent %}
   {% include 'post.html' %}
 {%- endfor -%}
+
+<footer class="end-cap rule-above">
+  <p>Prior ramblings have been archived (you're not missing out on much).</p>
+</footer>

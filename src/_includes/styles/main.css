@@ -133,6 +133,35 @@ code {
 }
 
 /*******************************************************************************
+ * Utility
+ ******************************************************************************/
+
+.rule-above {
+  position: relative;
+  padding-top: var(--size-double);
+}
+.rule-below {
+  position: relative;
+  padding-bottom: var(--size-double);
+}
+.rule-above:before,
+.rule-below:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--foreground);
+  width: 100%;
+  height: 1px;
+  opacity: var(--opacity-xlight);
+}
+.rule-above:before {
+  top: 0;
+}
+.rule-below:after {
+  bottom: 0;
+}
+
+/*******************************************************************************
  * Contact List
  ******************************************************************************/
 
@@ -246,4 +275,15 @@ code {
 
 .post header a {
   color: inherit;
+}
+
+.post-list .end-cap {
+  margin: var(--size-quadruple) 0;
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  opacity: var(--opacity-light);
+  text-align: center;
+}
+.post-list .end-cap p {
+  margin: 0;
 }
