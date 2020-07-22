@@ -2,12 +2,12 @@
   "name": "andybluntish.com",
   "version": "14.0.0",
   "scripts": {
-    "build": "yarn gulp build",
-    "dev": "yarn gulp serve",
+    "build": "./scripts/build.js",
+    "dev": "./scripts/serve.js",
     "lint": "yarn run eslint .",
     "format": "yarn run format:prettier; yarn run format:eslint",
-    "format:eslint": "yarn run eslint --fix './**/*.js'",
     "format:prettier": "yarn run prettier --write './**/*.{js,json}'",
+    "format:eslint": "yarn run eslint --fix './**/*.js'",
     "post:new": "./scripts/new-post.js"
   },
   "repository": {
