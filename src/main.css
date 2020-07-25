@@ -73,7 +73,7 @@ main,
   margin: var(--size) auto 0;
   width: 100%;
   min-width: 0;
-  max-width: 40em;
+  max-width: 38.5em;
 }
 
 nav ul {
