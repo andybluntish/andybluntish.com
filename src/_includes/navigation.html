@@ -1,7 +1,15 @@
 <nav>
   <ul>
     {%- for item in collections.page -%}
-      <li><a href="{{ item.url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.data.navTitle }}</a></li></li>
+      {% set href = item.url %}
+      {% if item.url == '/' %}
+        {% set active = page.url == item.url %}
+      {% else %}
+        {% set active = page.url.startsWith(item.url) %}
+      {% endif %}
+
+      {% set navTitle = item.data.navTitle %}
+      <li><a href="{{ href }}"{% if active %} class="active"{% endif %}>{{ navTitle }}</a></li></li>
     {%- endfor -%}
   </ul>
 </nav>
