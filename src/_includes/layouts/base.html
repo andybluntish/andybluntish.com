@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="/main.css" />
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
-  {# {% include 'navigation.html' %} #}
+  {% include 'navigation.html' %}
 
   <main>
     {{ content | safe }}
