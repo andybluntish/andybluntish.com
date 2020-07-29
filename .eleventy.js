@@ -2,8 +2,8 @@ const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 
-module.exports = (config) => {
-  config.setLibrary(
+module.exports = (eleventyConfig) => {
+  eleventyConfig.setLibrary(
     'md',
     markdownIt({
       html: true,
@@ -12,9 +12,9 @@ module.exports = (config) => {
     })
   )
 
-  config.addPlugin(pluginRss)
+  eleventyConfig.addPlugin(pluginRss)
 
-  config.addTransform('htmlmin', function (content, outputPath) {
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
         useShortDoctype: true,
@@ -29,11 +29,11 @@ module.exports = (config) => {
     return content
   })
 
-  config.addFilter('machineDate', function (date) {
+  eleventyConfig.addFilter('machineDate', function (date) {
     return date.toISOString()
   })
 
-  config.addFilter('humanDate', function (date) {
+  eleventyConfig.addFilter('humanDate', function (date) {
     const formattedDate = new Intl.DateTimeFormat('en-AU', {
       year: 'numeric',
       month: 'short',
@@ -48,13 +48,13 @@ module.exports = (config) => {
     return `${formattedDate} at ${formattedTime}`
   })
 
-  config.addLayoutAlias('base', 'layouts/base.html')
-  config.addLayoutAlias('post', 'layouts/post.html')
+  eleventyConfig.addLayoutAlias('base', 'layouts/base.html')
+  eleventyConfig.addLayoutAlias('post', 'layouts/post.html')
 
-  config.addPassthroughCopy('src/*.css')
-  config.addPassthroughCopy('src/img')
-  config.addPassthroughCopy('src/manifest.json')
-  config.addPassthroughCopy('src/_redirects')
+  eleventyConfig.addPassthroughCopy('src/*.css')
+  eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/manifest.json')
+  eleventyConfig.addPassthroughCopy('src/_redirects')
 
   return {
     dir: { input: 'src', output: 'dist' },
