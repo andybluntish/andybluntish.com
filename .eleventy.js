@@ -3,6 +3,8 @@ const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.setDataDeepMerge(true)
+
   eleventyConfig.setLibrary(
     'md',
     markdownIt({
