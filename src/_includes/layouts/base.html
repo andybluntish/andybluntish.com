@@ -16,10 +16,6 @@
   {% if classNames %}
     {% set bodyClassNames = classNames | join(' ') | trim %}
   {% endif %}
-
-  {% set css %}
-    {% include 'styles.css' %}
-  {% endset %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,17 +26,22 @@
   <meta name="copyright" content="Copyright (c) 2006–{{ site.date.year }} {{ site.author.name }}">
   <meta name="author" content="{{ site.author.name }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml">
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" href="/img/icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png" >
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
-  <style>
-    {{ css | safe }}
-  </style>
+  <link rel="stylesheet" href="/main.css" />
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
-  {{ content | safe }}
+  {% include 'components/navigation.html' %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include 'components/footer.html' %}
 </body>
 </html>

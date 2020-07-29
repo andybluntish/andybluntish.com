@@ -1,0 +1,304 @@
+/*******************************************************************************
+ * Theme
+ ******************************************************************************/
+
+:root {
+  --line-height: 1.4;
+  --size: calc(var(--line-height) * 1em);
+  --size-half: calc(var(--size) / 2);
+  --size-double: calc(var(--size) * 2);
+  --size-quadruple: calc(var(--size) * 4);
+  --font-size-sm: 80%;
+  --opacity-light: 0.8;
+  --opacity-xlight: 0.15;
+  --transition-duration: 0.3s;
+  --transition-function: ease;
+  --foreground: #363d49;
+  --background: #fff;
+  --primary: #d93f00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #d1d6e0;
+    --background: #1b1d22;
+    --primary: #ff9e66;
+  }
+
+  svg {
+    filter: brightness(0.8) contrast(1.2);
+  }
+
+  img:not([src*='.svg']) {
+    filter: grayscale(40%);
+  }
+}
+
+/*******************************************************************************
+ * Page
+ ******************************************************************************/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background: var(--background);
+  line-height: var(--line-height);
+  font-size: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  -webkit-text-size-adjust: 100%;
+}
+
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: 0 var(--size-half);
+  }
+}
+
+nav,
+main,
+[role='contentinfo'] {
+  margin: var(--size) auto 0;
+  width: 100%;
+  min-width: 0;
+  max-width: 38.5em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: lowercase;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: var(--size);
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+main {
+  align-self: center;
+}
+
+/*******************************************************************************
+ * Elements
+ ******************************************************************************/
+
+p {
+  margin: 0 0 var(--size);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  outline: none;
+  text-decoration: underline;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+blockquote {
+  position: relative;
+  margin: var(--size);
+  padding-left: var(--size);
+  font-style: italic;
+  opacity: var(--opacity-light);
+}
+
+blockquote::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--foreground);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  opacity: var(--opacity-xlight);
+}
+
+pre {
+  overflow: auto;
+}
+
+code {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+/*******************************************************************************
+ * Utility
+ ******************************************************************************/
+
+.rule-above {
+  position: relative;
+  padding-top: var(--size);
+}
+.rule-below {
+  position: relative;
+  padding-bottom: var(--size);
+}
+.rule-above:before,
+.rule-below:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--foreground);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: var(--opacity-xlight);
+}
+.rule-above:before {
+  top: 0;
+}
+.rule-below:after {
+  bottom: 0;
+}
+
+/*******************************************************************************
+ * Contact List
+ ******************************************************************************/
+
+.contact-list {
+  position: relative;
+  margin: 0 0 var(--size-double);
+  padding: 0;
+  text-align: center;
+  line-height: 0;
+  z-index: 1;
+}
+
+.contact-list li {
+  display: inline-block;
+}
+
+.contact-list a {
+  display: block;
+  padding: var(--size-half);
+  color: inherit;
+}
+
+.contact-list li,
+.contact-list a {
+  transition: transform var(--transition-duration) var(--transition-function),
+    color var(--transition-duration) var(--transition-function);
+}
+
+.contact-list a:focus,
+.contact-list a:hover {
+  border: none;
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+@supports (display: flex) {
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: 40em) {
+    .contact-list li:nth-child(1) {
+      transform: translate(2.5em, 12.3em);
+    }
+    .contact-list li:nth-child(2) {
+      transform: translate(-1.9em, 3.8em);
+    }
+    .contact-list li:nth-child(4) {
+      transform: translate(1.9em, 3.8em);
+    }
+    .contact-list li:nth-child(5) {
+      transform: translate(-2.5em, 12.3em);
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .contact-list li,
+  .contact-list a {
+    transition: color var(--transition-duration) var(--transition-function);
+  }
+  .contact-list a:focus,
+  .contact-list a:hover {
+    transform: none;
+  }
+}
+
+.contact-list li svg {
+  display: block;
+  width: 2.2em;
+  height: 2.2em;
+}
+
+/*******************************************************************************
+ * Photo
+ ******************************************************************************/
+
+[role='contentinfo'] .u-photo {
+  display: block;
+  margin: auto;
+}
+
+/*******************************************************************************
+ * Posts
+ ******************************************************************************/
+
+.post-list main footer p {
+  margin-bottom: var(--size-double);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  text-align: center;
+  opacity: var(--opacity-light);
+}
+
+.post-list .post {
+  margin-bottom: var(--size-quadruple);
+}
+
+.post header {
+  margin-bottom: var(--size);
+}
+
+.post--micro header {
+  margin-bottom: var(--size-half);
+}
+
+.post header h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.post header time {
+  font-style: italic;
+  font-size: var(--font-size-sm);
+  opacity: var(--opacity-light);
+}
+
+.post header a {
+  color: inherit;
+}

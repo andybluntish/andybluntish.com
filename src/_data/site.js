@@ -2,10 +2,11 @@ module.exports = function () {
   const now = new Date()
 
   return {
-    title: 'Andy Stanford-Bluntish',
+    title: 'Andy Stanford-Bluntish’s website',
     description: 'I build things on the web. I love what I do.',
     author: {
       name: 'Andy Stanford-Bluntish',
+      email: 'hello@bluntish.net',
     },
     url: 'https://andybluntish.com',
     date: {

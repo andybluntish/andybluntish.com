@@ -1,0 +1,19 @@
+---
+layout: base
+title: Things I wrote
+description: Words have meanings, though these have little value.
+classNames:
+  - post-list
+tags:
+  - page
+navTitle: Words
+---
+{%- for post in collections.post | reverse -%}
+  {% set postTitle = post.data.title %}
+  {% set content = post.templateContent %}
+  {% include 'components/post.html' %}
+{%- endfor -%}
+
+<footer class="rule-above">
+  <p>Prior ramblings have been archived (you're not missing much).</p>
+</footer>

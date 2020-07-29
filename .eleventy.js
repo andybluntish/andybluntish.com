@@ -1,7 +1,23 @@
+const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 
-module.exports = (config) => {
-  config.addTransform('htmlmin', function (content, outputPath) {
+module.exports = (eleventyConfig) => {
+  eleventyConfig.setDataDeepMerge(true)
+
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+      typographer: true,
+    })
+  )
+
+  eleventyConfig.addPlugin(pluginRss)
+
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
         useShortDoctype: true,
@@ -16,12 +32,32 @@ module.exports = (config) => {
     return content
   })
 
-  config.addLayoutAlias('base', 'layouts/base.html')
-  config.addLayoutAlias('home', 'layouts/home.html')
+  eleventyConfig.addFilter('machineDate', function (date) {
+    return date.toISOString()
+  })
 
-  config.addPassthroughCopy('src/img')
-  config.addPassthroughCopy('src/manifest.json')
-  config.addPassthroughCopy('src/_redirects')
+  eleventyConfig.addFilter('humanDate', function (date) {
+    const formattedDate = new Intl.DateTimeFormat('en-AU', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }).format(date)
+
+    const formattedTime = new Intl.DateTimeFormat('en-AU', {
+      hour: 'numeric',
+      minute: 'numeric',
+    }).format(date)
+
+    return `${formattedDate} at ${formattedTime}`
+  })
+
+  eleventyConfig.addLayoutAlias('base', 'layouts/base.html')
+  eleventyConfig.addLayoutAlias('post', 'layouts/post.html')
+
+  eleventyConfig.addPassthroughCopy('src/*.css')
+  eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/manifest.json')
+  eleventyConfig.addPassthroughCopy('src/_redirects')
 
   return {
     dir: { input: 'src', output: 'dist' },

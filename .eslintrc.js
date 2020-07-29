@@ -11,4 +11,18 @@ module.exports = {
   rules: {
     'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
   },
+
+  overrides: [
+    {
+      files: ['.eslintrc.js', '.eleventy.js', 'scripts/*.js'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+      env: {
+        browser: false,
+        node: true,
+      },
+      plugins: ['node'],
+    },
+  ],
 }
