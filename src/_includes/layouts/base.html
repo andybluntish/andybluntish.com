@@ -16,6 +16,10 @@
   {% if classNames %}
     {% set bodyClassNames = classNames | join(' ') | trim %}
   {% endif %}
+
+  {% set css %}
+    {% include 'styles/main.css' %}
+  {% endset %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +37,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
-  <link rel="stylesheet" href="/main.css" />
+  <style>{{ css | safe }}</style>
+  {%- for stylesheet in stylesheets -%}
+    {% set pageStyles %}
+      {% include 'styles/' + stylesheet + '.css' %}
+    {% endset %}
+    <style>{{ pageStyles | safe }}</style>
+  {%- endfor -%}
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
   {% include 'components/navigation.html' %}
