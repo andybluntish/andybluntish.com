@@ -63,6 +63,8 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    max-width: 38.5em;
+    margin: 0 auto;
     padding: 0 var(--size-half);
   }
 }
@@ -70,10 +72,8 @@ body {
 nav,
 main,
 [role='contentinfo'] {
-  margin: var(--size) auto 0;
-  width: 100%;
   min-width: 0;
-  max-width: 38.5em;
+  margin-top: var(--size);
 }
 
 nav ul {
