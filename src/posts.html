@@ -11,7 +11,7 @@ navTitle: Words
 {%- for post in collections.post | reverse -%}
   {% set postTitle = post.data.title %}
   {% set content = post.templateContent %}
-  {% include 'post.html' %}
+  {% include 'components/post.html' %}
 {%- endfor -%}
 
 <footer class="rule-above">

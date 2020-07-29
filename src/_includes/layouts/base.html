@@ -36,12 +36,12 @@
   <link rel="stylesheet" href="/main.css" />
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
-  {% include 'navigation.html' %}
+  {% include 'components/navigation.html' %}
 
   <main>
     {{ content | safe }}
   </main>
 
-  {% include 'footer.html' %}
+  {% include 'components/footer.html' %}
 </body>
 </html>
