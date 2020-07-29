@@ -9,6 +9,7 @@ module.exports = (eleventyConfig) => {
     'md',
     markdownIt({
       html: true,
+      breaks: true,
       linkify: true,
       typographer: true,
     })
