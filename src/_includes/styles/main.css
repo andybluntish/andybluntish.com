@@ -5,6 +5,7 @@
 :root {
   --line-height: 1.4;
   --size: calc(var(--line-height) * 1em);
+  --size-quarter: calc(var(--size) / 4);
   --size-half: calc(var(--size) / 2);
   --size-double: calc(var(--size) * 2);
   --size-quadruple: calc(var(--size) * 4);
