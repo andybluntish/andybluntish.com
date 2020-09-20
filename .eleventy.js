@@ -1,5 +1,6 @@
 const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 
 module.exports = (eleventyConfig) => {
@@ -15,6 +16,7 @@ module.exports = (eleventyConfig) => {
     })
   )
 
+  eleventyConfig.addPlugin(eleventyNavigationPlugin)
   eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
