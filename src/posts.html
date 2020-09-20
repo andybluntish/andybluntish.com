@@ -15,7 +15,7 @@ navTitle: Blog
   <p>{{ description }}</p>
 </header>
 
-{%- for post in collections.post | reverse -%}
+{%- for post in collections.posts | reverse -%}
   {% set postTitle = post.data.title %}
   {% set content = post.templateContent %}
   {% include 'components/post.html' %}

@@ -10,13 +10,13 @@ subtitle: Words have meanings, though these have little value.
   <subtitle>{{ subtitle }}</subtitle>
   <link href="{{ feedUrl }}" rel="self"/>
   <link href="{{ site.url }}/"/>
-  <updated>{{ collections.post | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <id>{{ site.url }}/</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {%- for post in collections.post | reverse %}
+  {%- for post in collections.posts | reverse %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
   {%- set title %}
     {%- if post.data.title -%}
