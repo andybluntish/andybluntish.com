@@ -51,9 +51,6 @@ module.exports = (eleventyConfig) => {
     return `${formattedDate} at ${formattedTime}`
   })
 
-  eleventyConfig.addLayoutAlias('base', 'layouts/base.html')
-  eleventyConfig.addLayoutAlias('post', 'layouts/post.html')
-
   eleventyConfig.addPassthroughCopy('src/*.css')
   eleventyConfig.addPassthroughCopy('src/img')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
