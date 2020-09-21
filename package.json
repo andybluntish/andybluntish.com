@@ -30,5 +30,8 @@
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.6"
+  },
+  "resolutions": {
+    "nunjucks": "^3.2.2"
   }
 }
