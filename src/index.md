@@ -1,8 +1,7 @@
 ---
-layout: base
-tags:
-  - page
-navTitle: About
+eleventyNavigation:
+  key: About
+  order: 1
 ---
 G’day, my name is [Andy]({{ site.url }}/) 👋
 

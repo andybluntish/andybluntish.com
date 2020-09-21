@@ -27,5 +27,11 @@
     "html-minifier": "^4.0.0",
     "markdown-it": "^11.0.0",
     "prettier": "^2.1.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^0.1.6"
+  },
+  "resolutions": {
+    "nunjucks": "^3.2.2"
   }
 }

@@ -1,14 +1,14 @@
 ---
-layout: base
-title: Blog
-description: Words have meanings, though these have little value.
 stylesheets:
   - post
 classNames:
   - post-list
-tags:
-  - page
-navTitle: Blog
+eleventyNavigation:
+  key: Blog
+  order: 2
+eleventyComputed:
+  title: "{{ blog.title }}"
+  description: "{{ blog.description }}"
 ---
 
 <header>
@@ -16,12 +16,12 @@ navTitle: Blog
   <p>{{ description }}</p>
 </header>
 
-{%- for post in collections.post | reverse -%}
+{%- for post in collections.posts | reverse -%}
   {% set postTitle = post.data.title %}
   {% set content = post.templateContent %}
   {% include 'components/post.html' %}
 {%- endfor -%}
 
 <footer class="rule-above">
-  <p>Prior ramblings have been archived (you're not missing much).</p>
+  <p>{{ blog.footer }}</p>
 </footer>

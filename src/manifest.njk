@@ -1,7 +1,12 @@
+---
+layout:
+permalink: manifest.json
+eleventyExcludeFromCollections: true
+---
 {
-  "name": "Andy Stanford-Bluntish’s website",
-  "short_name": "andybluntish",
-  "description": "",
+  "name": "{{ site.author.name }}’s website",
+  "short_name": "{{ site.shortName }}",
+  "description": "{{ site.description }}",
   "lang": "en",
   "dir": "ltr",
   "start_url": "/",
