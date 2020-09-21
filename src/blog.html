@@ -1,6 +1,4 @@
 ---
-title: Blog
-description: Words have meanings, though these have little value.
 stylesheets:
   - post
 classNames:
@@ -8,6 +6,9 @@ classNames:
 eleventyNavigation:
   key: Blog
   order: 2
+eleventyComputed:
+  title: "{{ blog.title }}"
+  description: "{{ blog.description }}"
 ---
 
 <header>
@@ -22,5 +23,5 @@ eleventyNavigation:
 {%- endfor -%}
 
 <footer class="rule-above">
-  <p>Prior ramblings have been archived (you're not missing much).</p>
+  <p>{{ blog.footer }}</p>
 </footer>
