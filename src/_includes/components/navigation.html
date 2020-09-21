@@ -1,0 +1,19 @@
+<nav>
+  <ul>
+    {%- for entry in collections.all | eleventyNavigation %}
+      {% if entry.url == '/' %}
+        {% set active = entry.url == page.url %}
+      {% elif entry.url == '/blog/' %}
+        {% set active = entry.url == page.url or page.url.startsWith('/posts') %}
+      {% else %}
+        {% set active = page.url.startsWith(entry.url) %}
+      {% endif %}
+
+      <li>
+        <a href="{{ entry.url | url }}"{% if active %} class="active"{% endif %}>
+          {{ entry.title }}
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>
