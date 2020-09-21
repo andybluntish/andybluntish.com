@@ -19,17 +19,17 @@
   "license": "UNLICENSED",
   "private": true,
   "homepage": "https://andybluntish.com",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^11.0.0"
+  },
+  "devDependencies": {
     "eslint": "^7.7.0",
     "eslint-plugin-node": "^11.1.0",
-    "html-minifier": "^4.0.0",
-    "markdown-it": "^11.0.0",
     "prettier": "^2.1.1"
-  },
-  "dependencies": {
-    "@11ty/eleventy-navigation": "^0.1.6"
   },
   "resolutions": {
     "nunjucks": "^3.2.2"
