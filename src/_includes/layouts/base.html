@@ -1,26 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  {% if description %}
-    {% set documentDescription = description %}
-  {% else %}
-    {% set documentDescription = site.description %}
-  {% endif %}
-
-  {% if classNames %}
-    {% set bodyClassNames = classNames | join(' ') | trim %}
-  {% endif %}
-
-  {% set css %}
-    {% include 'styles/main.css' %}
-  {% endset %}
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#fff">
   <title>{{ [site.title, title] | select() | join(' | ') }}</title>
-  <meta name="description" content="{{ documentDescription }}">
+  <meta name="description" content="{{ default(description, site.description, true) }}">
   <meta name="copyright" content="Copyright (c) 2006–{{ site.date.year }} {{ site.author.name }}">
   <meta name="author" content="{{ site.author.name }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -31,6 +18,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
   <link rel="mask-icon" color="#d93f00" href="/img/icons/safari-pinned-tab.svg">
+  {% set css %}
+    {% include 'styles/main.css' %}
+  {% endset %}
   <style>{{ css | safe }}</style>
   {%- for stylesheet in stylesheets -%}
     {% set pageStyles %}
@@ -39,7 +29,7 @@
     <style>{{ pageStyles | safe }}</style>
   {%- endfor -%}
 </head>
-<body{% if bodyClassNames %} class="{{ bodyClassNames }}"{% endif %}>
+<body{% if classNames %} class="{{ classNames | join(' ') | trim }}"{% endif %}>
   <nav>
     <ul>
       {%- for entry in collections.all | eleventyNavigation %}
