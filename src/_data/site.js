@@ -10,8 +10,9 @@ module.exports = function () {
       email: 'hello@bluntish.net',
     },
     url: 'https://andybluntish.com',
-    date: {
-      year: now.getFullYear(),
+    copyright: {
+      start: 2006,
+      end: now.getFullYear(),
     },
   }
 }

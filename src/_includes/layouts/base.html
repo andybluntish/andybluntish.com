@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#fff">
   <title>{{ [site.title, title] | select() | join(' | ') }}</title>
   <meta name="description" content="{{ [description, site.description] | select() | first }}">
-  <meta name="copyright" content="Copyright (c) 2006–{{ site.date.year }} {{ site.author.name }}">
   <meta name="author" content="{{ site.author.name }}">
+  <meta name="copyright" content="Copyright (c) {{ site.copyright.start }}–{{ site.copyright.end }} {{ site.author.name }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml">
   <link rel="manifest" href="/manifest.json">
