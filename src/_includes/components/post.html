@@ -2,13 +2,13 @@
   <header>
     {% if postTitle %}
       <h2>
-        <a href="{{ post.url | url }}">
+        <a href="{{ post.url }}">
           {{ postTitle }}
         </a>
       </h2>
     {% endif %}
 
-    <a href="{{ post.url | url }}">
+    <a href="{{ post.url }}">
       <time datetime="{{ post.date | machineDate }}">{{ post.date | humanDate }}</time>
     </a>
   </header>
