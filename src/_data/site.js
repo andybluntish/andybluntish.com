@@ -14,5 +14,29 @@ module.exports = function () {
       start: 2006,
       end: now.getFullYear(),
     },
+    footer: {
+      links: [
+        {
+          title: 'Twitter',
+          href: 'https://twitter.com/andybluntish/',
+        },
+        {
+          title: 'CodePen',
+          href: 'https://codepen.io/andybluntish/',
+        },
+        {
+          title: 'GitHub',
+          href: 'https://github.com/andybluntish/',
+        },
+        {
+          title: 'Instagram',
+          href: 'https://instagram.com/andybluntish/',
+        },
+        {
+          title: 'Email',
+          href: 'mailto:hello@bluntish.net',
+        },
+      ],
+    },
   }
 }
