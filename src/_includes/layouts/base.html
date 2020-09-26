@@ -27,7 +27,7 @@
   {%- endfor -%}
 </head>
 <body{% if classNames %} class="{{ classNames | join(' ') | trim }}"{% endif %}>
-  {% include 'components/navigation.html' %}
+  {% include 'components/header.html' %}
 
   <main>
     {{ content | safe }}
