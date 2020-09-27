@@ -17,7 +17,7 @@
   --foreground: #363d49;
   --background: #fff;
   --primary: #d93f00;
-  --layout-max: 38.5rem;
+  --layout-max: 40rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,14 +65,12 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    max-width: 38.5em;
-    margin: 0 auto;
     padding: 0 var(--size-half);
   }
 }
 
 main,
-[role='navigation'],
+[role='banner'],
 [role='contentinfo'] {
   min-width: 0;
   margin-top: var(--size);
@@ -83,7 +81,7 @@ main {
 }
 
 /*******************************************************************************
- * Navigation
+ * Header
  ******************************************************************************/
 
 [role='navigation'] {
@@ -209,30 +207,26 @@ code {
 }
 
 /*******************************************************************************
- * Contact List
+ * Footer
  ******************************************************************************/
 
 .contact-list {
   position: relative;
-  margin: 0 0 var(--size-double);
+  margin: 0 auto var(--size-double);
   padding: 0;
-  text-align: center;
-  line-height: 0;
   z-index: 1;
-}
-
-.contact-list li {
-  display: inline-block;
+  text-align: center;
+  max-width: var(--layout-max);
 }
 
 .contact-list a {
-  display: block;
   padding: var(--size-half);
   color: inherit;
 }
 
 .contact-list li,
 .contact-list a {
+  display: inline-block;
   transition: transform var(--transition-duration) var(--transition-function),
     color var(--transition-duration) var(--transition-function);
 }
@@ -283,10 +277,6 @@ code {
   width: 2.2em;
   height: 2.2em;
 }
-
-/*******************************************************************************
- * Photo
- ******************************************************************************/
 
 [role='contentinfo'] .u-photo {
   display: block;
