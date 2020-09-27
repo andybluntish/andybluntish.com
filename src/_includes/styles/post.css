@@ -10,10 +10,6 @@
   opacity: var(--opacity-light);
 }
 
-.post-list main > header h1 {
-  margin-bottom: var(--size-quarter);
-}
-
 .post-list main > header p {
   font-style: italic;
   margin-bottom: var(--size-double);

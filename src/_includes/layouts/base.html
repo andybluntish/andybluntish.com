@@ -13,8 +13,8 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml">
   <link rel="manifest" href="/manifest.json">
-  <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32.png">
-  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/icon-180.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icons/favicon.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
   {% set css %}
     {% include 'styles/main.css' %}
   {% endset %}
@@ -27,7 +27,7 @@
   {%- endfor -%}
 </head>
 <body{% if classNames %} class="{{ classNames | join(' ') | trim }}"{% endif %}>
-  {% include 'components/navigation.html' %}
+  {% include 'components/header.html' %}
 
   <main>
     {{ content | safe }}
