@@ -17,6 +17,7 @@
   --foreground: #363d49;
   --background: #fff;
   --primary: #d93f00;
+  --layout-max: 38.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
