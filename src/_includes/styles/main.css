@@ -162,9 +162,16 @@ code {
 }
 
 #logo {
-  display: block;
+  display: flex;
   width: 2rem;
   color: var(--foreground);
+  opacity: 0.8;
+  transition: color var(--transition-duration) var(--transition-function);
+}
+
+#logo:focus,
+#logo:hover {
+  color: var(--primary);
 }
 
 .nav-list {
