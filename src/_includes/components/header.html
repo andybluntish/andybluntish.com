@@ -15,8 +15,8 @@
       {%- for entry in collections.all | eleventyNavigation %}
         {% if entry.url == '/' %}
           {% set active = entry.url == page.url %}
-        {% elif entry.url == '/blog/' %}
-          {% set active = entry.url == page.url or page.url.startsWith('/posts') %}
+        {% elif entry.url == '/notes/' %}
+          {% set active = entry.url == page.url or page.url.startsWith('/notes') %}
         {% else %}
           {% set active = page.url.startsWith(entry.url) %}
         {% endif %}

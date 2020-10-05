@@ -1,0 +1,27 @@
+---
+stylesheets:
+  - note
+classNames:
+  - note-list
+eleventyComputed:
+  title: "{{ notes.title }}"
+  description: "{{ notes.description }}"
+  eleventyNavigation:
+    key: "{{ notes.title }}"
+    order: 2
+---
+
+<header>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</header>
+
+{%- for note in collections.notes | reverse -%}
+  {% set noteTitle = note.data.title %}
+  {% set content = note.templateContent %}
+  {% include 'components/note.html' %}
+{%- endfor -%}
+
+<footer class="rule-above">
+  <p>{{ notes.footer }}</p>
+</footer>

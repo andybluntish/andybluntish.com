@@ -1,0 +1,10 @@
+---
+layout: layouts/base.html
+stylesheets:
+  - note
+eleventyComputed:
+  title: "{{ notes.title }}"
+  description: "{{ notes.description }}"
+---
+{% set note = page %}
+{% include 'components/note.html' %}

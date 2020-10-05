@@ -1,8 +1,8 @@
 /*******************************************************************************
- * Posts
+ * Notes
  ******************************************************************************/
 
-.post-list main footer p {
+.note-list main footer p {
   margin-bottom: var(--size-double);
   font-size: var(--font-size-sm);
   font-style: italic;
@@ -10,34 +10,25 @@
   opacity: var(--opacity-light);
 }
 
-.post-list main > header p {
+.note-list main > header p {
   font-style: italic;
   margin-bottom: var(--size-double);
 }
 
-.post-list .post {
+.note-list .note {
   margin-bottom: var(--size-quadruple);
 }
 
-.post header {
-  margin-bottom: var(--size);
-}
-
-.post--micro header {
+.note header {
   margin-bottom: var(--size-half);
 }
 
-.post header h2 {
-  margin-bottom: 0;
-  font-size: 1.5rem;
-}
-
-.post header time {
+.note header time {
   font-style: italic;
   font-size: var(--font-size-sm);
   opacity: var(--opacity-light);
 }
 
-.post header a {
+.note header a {
   color: inherit;
 }

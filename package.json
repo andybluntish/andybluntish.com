@@ -9,7 +9,7 @@
     "format": "yarn run format:prettier; yarn run format:eslint",
     "format:prettier": "yarn run prettier --write './**/*.{js,json}'",
     "format:eslint": "yarn run eslint --fix './**/*.js'",
-    "post:new": "./scripts/new-post.js"
+    "note:new": "./scripts/new-note.js"
   },
   "repository": {
     "type": "git",
