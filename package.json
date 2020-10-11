@@ -2,9 +2,11 @@
   "name": "andybluntish.com",
   "version": "14.0.0",
   "scripts": {
-    "build": "yarn clean && NODE_ENV=production yarn run eleventy .",
-    "dev": "yarn clean && yarn run eleventy . --serve",
+    "build": "yarn clean && NODE_ENV=production yarn html && NODE_ENV=production yarn styles",
+    "dev": "yarn clean && yarn html --serve & yarn styles --watch",
     "clean": "rm -rf dist",
+    "html": "eleventy .",
+    "styles": "postcss ./src/styles.css -d ./dist",
     "lint": "yarn run eslint .",
     "format": "yarn run format:prettier; yarn run format:eslint",
     "format:prettier": "yarn run prettier --write './**/*.{js,json}'",
