@@ -1,7 +1,10 @@
 const markdownIt = require('markdown-it')
+const postcss = require('postcss')
 const htmlmin = require('html-minifier')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
+
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
@@ -18,6 +21,20 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
   eleventyConfig.addPlugin(pluginRss)
+
+  eleventyConfig.addTransform('postcss', async function (content, outputPath) {
+    if (outputPath.endsWith('.css')) {
+      const plugins = [require('tailwindcss')]
+
+      if (isProd) {
+        plugins.push(require('autoprefixer'), require('cssnano'))
+      }
+
+      return await postcss(plugins).process(content)
+    }
+
+    return content
+  })
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.endsWith('.html')) {
@@ -53,7 +70,6 @@ module.exports = (eleventyConfig) => {
     return `${formattedDate} at ${formattedTime}`
   })
 
-  eleventyConfig.addPassthroughCopy('src/*.css')
   eleventyConfig.addPassthroughCopy('src/img')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
   eleventyConfig.addPassthroughCopy('src/_redirects')
