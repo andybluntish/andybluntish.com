@@ -16,14 +16,14 @@
   --transition-function: ease;
   --foreground: #363d49;
   --background: #fff;
-  --primary: #d93f00;
+  --accent: #d93f00;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground: #d1d6e0;
     --background: #1b1d22;
-    --primary: #ff9e66;
+    --accent: #ff9e66;
   }
 
   svg {
@@ -103,7 +103,7 @@ p {
 }
 
 a {
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -144,7 +144,7 @@ pre {
 
 code {
   font-size: 1rem;
-  color: var(--primary);
+  color: var(--accent);
 }
 
 [hidden] {
@@ -174,7 +174,7 @@ code {
 
 #logo:focus,
 #logo:hover {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .nav-list {
@@ -229,7 +229,7 @@ code {
 .contact-list a:focus,
 .contact-list a:hover {
   border: none;
-  color: var(--primary);
+  color: var(--accent);
   transform: scale(1.2);
 }
 
