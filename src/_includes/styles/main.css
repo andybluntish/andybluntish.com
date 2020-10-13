@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 :root {
-  --line-height: 1.4;
+  /* --line-height: 1.4; */
   --size: calc(var(--line-height) * 1em);
   --size-quarter: calc(var(--size) / 4);
   --size-half: calc(var(--size) / 2);
@@ -63,7 +63,7 @@ body {
 
   color: var(--foreground);
   background: var(--background);
-  line-height: var(--line-height);
+  /* line-height: var(--line-height); */
   font-size: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -98,9 +98,9 @@ h3 {
   margin: 0 0 var(--size-quarter);
 }
 
-p {
-  margin: 0 0 var(--size);
-}
+/* p { */
+/* margin: 0 0 var(--size); */
+/* } */
 
 /* a { */
 /* color: var(--accent); */
@@ -147,9 +147,9 @@ code {
   color: var(--accent);
 }
 
-[hidden] {
-  display: none;
-}
+/* [hidden] { */
+/* display: none; */
+/* } */
 
 /*******************************************************************************
  * Header
