@@ -1,7 +1,7 @@
-<header role="banner">
-  <nav role="navigation">
-    <a href="/" id="logo">
-      <svg fill="currentColor" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<header role="banner" class="px-2 pt-4">
+  <nav role="navigation" class="flex items-center justify-between">
+    <a href="/" id="logo" class="w-8 outline-none text-primary transition-colors hover:text-accent focus:text-accent duration-300">
+      <svg fill="currentColor" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="block">
         <title>{{ site.name }}</title>
         <path d="m61.71 29.33c-1.32-4.48-3.22-8.41-5.58-11.75 1.76-1.64 2.87-3.98 2.87-6.58 0-4.97-4.03-9-9-9-3.41 0-6.38 1.9-7.91 4.7-3.12-1.11-6.49-1.7-10.05-1.7-3.87 0-7.54.74-10.93 2.11-1.45-3.02-4.53-5.11-8.11-5.11-4.97 0-9 4.03-9 9 0 2.92 1.4 5.51 3.56 7.16-2.23 3.23-4.03 6.97-5.27 11.18-2.41 8.21-1.43 15.83 2.78 21.44 3.49 4.66 11 10.22 26.93 10.22 8.79 0 20.61-1.77 26.93-10.22 4.2-5.62 5.19-13.23 2.78-21.45zm-29.71 28.67c-24.86 0-30.92-13.89-26.83-27.82 4.01-13.65 14.04-22.18 26.87-22.18s22.78 8.53 26.79 22.18c4.09 13.93-1.97 27.82-26.83 27.82z" />
         <path d="m32 39c-6.22 0-7.73 2.58-6.71 5.49 1 2.86 3.5 4.51 6.71 4.51s5.7-1.65 6.71-4.51c1.02-2.91-.49-5.49-6.71-5.49z" />
@@ -11,7 +11,7 @@
       </svg>
     </a>
 
-    <ul class="nav-list">
+    <ul class="flex p-0 m-0 text-sm font-bold uppercase">
       {%- for entry in collections.all | eleventyNavigation %}
         {% if entry.url == '/' %}
           {% set active = entry.url == page.url %}
@@ -21,8 +21,8 @@
           {% set active = page.url.startsWith(entry.url) %}
         {% endif %}
 
-        <li>
-          <a href="{{ entry.url }}"{% if active %} class="active"{% endif %}>
+        <li class="ml-4">
+          <a href="{{ entry.url }}" class="py-2 text-primary hover:text-accent focus:text-accent{% if active %} text-accent{% endif %}">
             {{ entry.title }}
           </a>
         </li>
