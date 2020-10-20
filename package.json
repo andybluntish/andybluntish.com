@@ -34,7 +34,7 @@
     "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
-    "eslint": "^7.10.0",
+    "eslint": "^7.11.0",
     "eslint-plugin-node": "^11.1.0",
     "prettier": "^2.1.2"
   },
