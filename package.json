@@ -29,9 +29,9 @@
     "cssnano": "^4.1.10",
     "html-minifier": "^4.0.0",
     "markdown-it": "^11.0.1",
-    "postcss": "^8.1.1",
+    "postcss": "^8.1.2",
     "postcss-cli": "^8.1.0",
-    "tailwindcss": "^1.8.13"
+    "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
     "eslint": "^7.10.0",
