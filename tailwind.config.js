@@ -16,6 +16,8 @@ module.exports = {
         layout: 'calc(50vw - 19rem) auto calc(50vw - 19rem)',
       },
       colors: {
+        foreground: 'var(--foreground)',
+        background: 'var(--background)',
         accent: 'var(--accent)',
       },
       textColor: {
