@@ -3,6 +3,8 @@ const htmlmin = require('html-minifier')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
 
@@ -20,7 +22,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (outputPath.endsWith('.html')) {
+    if (isProd && outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
@@ -53,7 +55,8 @@ module.exports = (eleventyConfig) => {
     return `${formattedDate} at ${formattedTime}`
   })
 
-  eleventyConfig.addPassthroughCopy('src/*.css')
+  eleventyConfig.addWatchTarget('src/*.css')
+
   eleventyConfig.addPassthroughCopy('src/img')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
   eleventyConfig.addPassthroughCopy('src/_redirects')

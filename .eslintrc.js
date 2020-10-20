@@ -14,7 +14,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ['.eslintrc.js', '.eleventy.js', 'scripts/*.js'],
+      files: ['.eslintrc.js', '.eleventy.js', 'postcss.config.js', 'scripts/*.js'],
       parserOptions: {
         sourceType: 'script',
       },

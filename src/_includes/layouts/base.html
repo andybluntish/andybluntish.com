@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-primary text-primary">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -15,21 +15,12 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icons/favicon.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
-  {% set css %}
-    {% include 'styles/main.css' %}
-  {% endset %}
-  <style>{{ css | safe }}</style>
-  {%- for stylesheet in stylesheets -%}
-    {% set pageStyles %}
-      {% include 'styles/' + stylesheet + '.css' %}
-    {% endset %}
-    <style>{{ pageStyles | safe }}</style>
-  {%- endfor -%}
+  <link rel="stylesheet" href="/styles.css">
 </head>
-<body{% if classNames %} class="{{ classNames | join(' ') | trim }}"{% endif %}>
+<body class="relative w-full min-h-screen px-3 grid grid-cols-layout grid-rows-layout gap-y-4">
   {% include 'components/header.html' %}
 
-  <main>
+  <main class="self-center min-w-0 col-start-2">
     {{ content | safe }}
   </main>
 
