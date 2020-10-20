@@ -26,6 +26,10 @@ module.exports = {
       },
     },
   },
+  variants: {
+    transform: ['responsive', 'motion-safe', 'motion-reduce'],
+    transitionDuration: ['responsive', 'motion-safe', 'motion-reduce'],
+  },
   purge: {
     preserveHtmlElements: false,
     content: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md'],

@@ -254,15 +254,15 @@ code {
   }
 }
 
-@media (prefers-reduced-motion) {
-  :root {
-    --transition-duration: 0s;
-  }
-  .contact-list a:focus,
-  .contact-list a:hover {
-    transform: none;
-  }
-}
+/* @media (prefers-reduced-motion) { */
+/* :root { */
+/* --transition-duration: 0s; */
+/* } */
+/* .contact-list a:focus, */
+/* .contact-list a:hover { */
+/* transform: none; */
+/* } */
+/* } */
 
 /*******************************************************************************
  * Utility
