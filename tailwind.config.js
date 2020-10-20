@@ -9,6 +9,12 @@ module.exports = {
         light: { raw: '(prefers-color-scheme: light)' },
         dark: { raw: '(prefers-color-scheme: dark)' },
       },
+      gridTemplateRows: {
+        layout: 'auto 1fr auto',
+      },
+      gridTemplateColumns: {
+        layout: 'calc(50vw - 19rem) auto calc(50vw - 19rem)',
+      },
       colors: {
         accent: 'var(--accent)',
       },
