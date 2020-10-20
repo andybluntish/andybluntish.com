@@ -2,33 +2,33 @@
  * Notes
  ******************************************************************************/
 
-.note-list main footer p {
-  margin-bottom: var(--size-double);
-  font-size: var(--font-size-sm);
-  font-style: italic;
-  text-align: center;
-  opacity: var(--opacity-light);
-}
+/* .note-list main footer p { */
+/* margin-bottom: var(--size-double); */
+/* font-size: var(--font-size-sm); */
+/* font-style: italic; */
+/* text-align: center; */
+/* opacity: var(--opacity-light); */
+/* } */
 
-.note-list main > header p {
-  font-style: italic;
-  margin-bottom: var(--size-double);
-}
+/* .note-list main > header p { */
+/* font-style: italic; */
+/* margin-bottom: var(--size-double); */
+/* } */
 
-.note-list .note {
-  margin-bottom: var(--size-quadruple);
-}
+/* .note-list .note { */
+/* margin-bottom: var(--size-quadruple); */
+/* } */
 
-.note header {
-  margin-bottom: var(--size-half);
-}
+/* .note header { */
+/* margin-bottom: var(--size-half); */
+/* } */
 
-.note header time {
-  font-style: italic;
-  font-size: var(--font-size-sm);
-  opacity: var(--opacity-light);
-}
+/* .note header time { */
+/* font-style: italic; */
+/* font-size: var(--font-size-sm); */
+/* opacity: var(--opacity-light); */
+/* } */
 
-.note header a {
-  color: inherit;
-}
+/* .note header a { */
+/* color: inherit; */
+/* } */

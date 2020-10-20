@@ -1,7 +1,7 @@
-<article id="note-{{ note.fileSlug }}" class="note">
-  <header>
-    <a href="{{ note.url }}">
-      <time datetime="{{ note.date | machineDate }}">{{ note.date | humanDate }}</time>
+<article id="note-{{ note.fileSlug }}" class="pb-4 mb-16">
+  <header class="mb-2">
+    <a href="{{ note.url }}" class="text-primary">
+      <time datetime="{{ note.date | machineDate }}" class="text-xs italic opacity-75">{{ note.date | humanDate }}</time>
     </a>
   </header>
 

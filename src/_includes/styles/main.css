@@ -2,22 +2,22 @@
  * Theme
  ******************************************************************************/
 
-:root {
-  /* --line-height: 1.4; */
-  --size: calc(var(--line-height) * 1em);
-  --size-quarter: calc(var(--size) / 4);
-  --size-half: calc(var(--size) / 2);
-  --size-double: calc(var(--size) * 2);
-  --size-quadruple: calc(var(--size) * 4);
-  --font-size-sm: 80%;
-  --opacity-light: 0.8;
-  --opacity-xlight: 0.15;
-  --transition-duration: 0.3s;
-  --transition-function: ease;
-  /* --foreground: #363d49; */
-  /* --background: #fff; */
-  /* --accent: #d93f00; */
-}
+/* :root { */
+/* --line-height: 1.4; */
+/* --size: calc(var(--line-height) * 1em); */
+/* --size-quarter: calc(var(--size) / 4); */
+/* --size-half: calc(var(--size) / 2); */
+/* --size-double: calc(var(--size) * 2); */
+/* --size-quadruple: calc(var(--size) * 4); */
+/* --font-size-sm: 80%; */
+/* --opacity-light: 0.8; */
+/* --opacity-xlight: 0.15; */
+/* --transition-duration: 0.3s; */
+/* --transition-function: ease; */
+/* --foreground: #363d49; */
+/* --background: #fff; */
+/* --accent: #d93f00; */
+/* } */
 
 /* @media (prefers-color-scheme: dark) { */
 /* :root { */
@@ -92,11 +92,11 @@
  * Elements
  ******************************************************************************/
 
-h1,
-h2,
-h3 {
-  margin: 0 0 var(--size-quarter);
-}
+/* h1, */
+/* h2, */
+/* h3 { */
+/* margin: 0 0 var(--size-quarter); */
+/* } */
 
 /* p { */
 /* margin: 0 0 var(--size); */
@@ -204,15 +204,15 @@ code {
 /* margin: auto; */
 /* } */
 
-.contact-list {
-  position: relative;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-around; */
-  /* margin: 0 0 var(--size); */
-  /* padding: 0; */
-  /* z-index: 1; */
-}
+/* .contact-list { */
+/* position: relative; */
+/* display: flex; */
+/* flex-wrap: wrap; */
+/* justify-content: space-around; */
+/* margin: 0 0 var(--size); */
+/* padding: 0; */
+/* z-index: 1; */
+/* } */
 
 /* .contact-list li, */
 /* .contact-list a { */
@@ -268,28 +268,28 @@ code {
  * Utility
  ******************************************************************************/
 
-.rule-above {
-  position: relative;
-  padding-top: var(--size);
-}
-.rule-below {
-  position: relative;
-  padding-bottom: var(--size);
-}
-.rule-above:before,
-.rule-below:after {
-  content: '';
-  display: block;
-  position: absolute;
-  background: var(--foreground);
-  left: 0;
-  width: 100%;
-  height: 1px;
-  opacity: var(--opacity-xlight);
-}
-.rule-above:before {
-  top: 0;
-}
-.rule-below:after {
-  bottom: 0;
-}
+/* .rule-above { */
+/* position: relative; */
+/* padding-top: var(--size); */
+/* } */
+/* .rule-below { */
+/* position: relative; */
+/* padding-bottom: var(--size); */
+/* } */
+/* .rule-above:before, */
+/* .rule-below:after { */
+/* content: ''; */
+/* display: block; */
+/* position: absolute; */
+/* background: var(--foreground); */
+/* left: 0; */
+/* width: 100%; */
+/* height: 1px; */
+/* opacity: var(--opacity-xlight); */
+/* } */
+/* .rule-above:before { */
+/* top: 0; */
+/* } */
+/* .rule-below:after { */
+/* bottom: 0; */
+/* } */
