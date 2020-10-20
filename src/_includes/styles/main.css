@@ -239,20 +239,20 @@ code {
 /* height: auto; */
 /* } */
 
-@media (min-width: 40em) {
-  .contact-list li:nth-child(1) {
-    transform: translate(2.5em, 12.3em);
-  }
-  .contact-list li:nth-child(2) {
-    transform: translate(-1.9em, 3.8em);
-  }
-  .contact-list li:nth-child(4) {
-    transform: translate(1.9em, 3.8em);
-  }
-  .contact-list li:nth-child(5) {
-    transform: translate(-2.5em, 12.3em);
-  }
-}
+/* @media (min-width: 40em) { */
+/* [role="contentinfo"] li:nth-child(1) { */
+/* transform: translate(2.5em, 12.3em); */
+/* } */
+/* [role="contentinfo"] li:nth-child(2) { */
+/* transform: translate(-1.9em, 3.8em); */
+/* } */
+/* [role="contentinfo"] li:nth-child(4) { */
+/* transform: translate(1.9em, 3.8em); */
+/* } */
+/* [role="contentinfo"] li:nth-child(5) { */
+/* transform: translate(-2.5em, 12.3em); */
+/* } */
+/* } */
 
 /* @media (prefers-reduced-motion) { */
 /* :root { */
