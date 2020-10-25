@@ -1,1 +1,1 @@
-module.exports = 'layouts/base.html'
+module.exports = 'layouts/layout.html'
