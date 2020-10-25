@@ -12,10 +12,29 @@ eleventyComputed:
   <p class="mb-8 italic">{{ description }}</p>
 </header>
 
-<ul>
-  {%- for brew in brews -%}
-    <li>
-      <a href="{{ page.url }}{{ brew.brewDate }}/">{{ brew.recipe.name }}</a>
-    </li>
-  {%- endfor -%}
-</ul>
+<h2>Batches</h2>
+
+<table class="w-full">
+  <thead>
+    <tr class="text-left">
+      <th class="p-2 pl-0">Name</th>
+      <th class="p-2">Style</th>
+      <th class="p-2 pr-0">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for brew in beer.brews -%}
+      <tr class="border-t border-gray-400 dark:border-gray-700">
+        <td class="p-2 pl-0">
+          {{ brew.recipe.name }}
+        </td>
+        <td class="p-2 text-sm opacity-75">
+          {{ brew.recipe.style.name }}
+        </td>
+        <td class="p-2 pr-0">
+          <time datetime="{{ brew.brewDate | date | machineDate }}" class="text-sm opacity-75">{{ brew.brewDate | date | humanDate }}</time>
+        </td>
+      </tr>
+    {%- endfor -%}
+  </tbody>
+</table>
