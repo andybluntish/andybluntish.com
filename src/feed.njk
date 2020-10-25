@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
     {%- if note.data.title -%}
       {{- note.data.title -}}
     {%- else -%}
-      {{- note.date | humanDate -}}
+      {{- note.date | humanDateTime -}}
     {%- endif -%}
   {% endset %}
   <entry>
