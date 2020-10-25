@@ -15,7 +15,7 @@ eleventyComputed:
 <ul>
   {%- for brew in brews -%}
     <li>
-      {{ brew.recipe.name }}
+      <a href="{{ page.url }}{{ brew.brewDate }}/">{{ brew.recipe.name }}</a>
     </li>
   {%- endfor -%}
 </ul>
