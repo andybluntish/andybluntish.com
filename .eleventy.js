@@ -36,11 +36,23 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
+  eleventyConfig.addFilter('date', function (date) {
+    return new Date(date)
+  })
+
   eleventyConfig.addFilter('machineDate', function (date) {
     return date.toISOString()
   })
 
   eleventyConfig.addFilter('humanDate', function (date) {
+    return new Intl.DateTimeFormat('en-AU', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }).format(date)
+  })
+
+  eleventyConfig.addFilter('humanDateTime', function (date) {
     const formattedDate = new Intl.DateTimeFormat('en-AU', {
       year: 'numeric',
       month: 'short',
