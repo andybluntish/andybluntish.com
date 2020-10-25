@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer base {
+  /* purgecss start ignore */
+
   :root {
     --foreground: #363d49;
     --background: #fff;
@@ -54,7 +56,7 @@
   }
 
   pre {
-    overflow: auto;
+    @apply overflow-auto;
   }
 
   code {
@@ -85,4 +87,6 @@
       transform: translate(-2.5em, 12.3em);
     }
   }
+
+  /* purgecss end ignore */
 }
