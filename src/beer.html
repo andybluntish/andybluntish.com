@@ -1,0 +1,21 @@
+---
+eleventyComputed:
+  title: "{{ beer.title }}"
+  description: "{{ beer.description }}"
+  eleventyNavigation:
+    key: "{{ beer.title }}"
+    order: 3
+---
+
+<header>
+  <h1>{{ title }}</h1>
+  <p class="mb-8 italic">{{ description }}</p>
+</header>
+
+<ul>
+  {%- for brew in brews -%}
+    <li>
+      {{ brew.recipe.name }}
+    </li>
+  {%- endfor -%}
+</ul>
