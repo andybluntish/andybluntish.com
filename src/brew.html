@@ -4,6 +4,9 @@ pagination:
   size: 1
   alias: brew
 permalink: 'beer/{{ brew.brewDate }}/'
+eleventyComputed:
+  title: '{{ beer.title }} | {{ brew.recipe.name }}'
+  description: '{{ beer.description }}'
 ---
 
 {{ brew.recipe.name }}
