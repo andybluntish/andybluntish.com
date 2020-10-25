@@ -24,6 +24,10 @@
     {{ content | safe }}
   </main>
 
-  {% include 'components/footer.html' %}
+  {% if portraitFooter %}
+    {% include 'components/footer-portrait.html' %}
+  {% else %}
+    {% include 'components/footer.html' %}
+  {% endif %}
 </body>
 </html>
