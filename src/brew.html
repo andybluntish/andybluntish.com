@@ -3,7 +3,7 @@ pagination:
   data: beer.brews
   size: 1
   alias: brew
-permalink: 'beer/{{ brew.brewDate }}/'
+permalink: 'beer/{{ brew._id }}/'
 eleventyComputed:
   title: '{{ beer.title }} | {{ brew.recipe.name }}'
   description: '{{ beer.description }}'
