@@ -12,6 +12,16 @@ eleventyComputed:
   <p class="mb-8 italic">{{ description }}</p>
 </header>
 
+<h2>Recipes</h2>
+
+<ul>
+  {%- for recipe in beer.recipes -%}
+    <li>
+      <a href="{{ page.url }}{{ recipe._id }}/">{{ recipe.name }}</a>
+    </li>
+  {%- endfor -%}
+</ul>
+
 <h2>Batches</h2>
 
 <table class="w-full">
