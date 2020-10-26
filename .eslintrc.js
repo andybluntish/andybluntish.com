@@ -18,6 +18,7 @@ module.exports = {
         '.eleventy.js',
         'postcss.config.js',
         'scripts/*.js',
+        'lib/**/*.js',
         'src/_data/**/*.js',
       ],
       parserOptions: {
