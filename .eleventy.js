@@ -1,9 +1,13 @@
+const isProd = process.env.NODE_ENV === 'production'
+
+if (!isProd) {
+  require('dotenv').config()
+}
+
 const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
-
-const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
