@@ -16,13 +16,14 @@ eleventyComputed:
 
 <ul>
   {%- for recipe in beer.recipes -%}
+    {% set pageUrl = page.url + 'recipes/' + recipe._id + '/' %}
     <li>
-      <a href="{{ page.url }}{{ recipe._id }}/">{{ recipe.name }}</a>
+      <a href="{{ pageUrl }}">{{ recipe.name }}</a>
     </li>
   {%- endfor -%}
 </ul>
 
-<h2>Batches</h2>
+<h2>Batch log</h2>
 
 <table class="w-full">
   <thead>
