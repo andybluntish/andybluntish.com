@@ -29,5 +29,14 @@ module.exports = {
       },
       plugins: ['node'],
     },
+    {
+      files: ['lib/**/*.test.js'],
+      globals: {
+        jest: 'readonly',
+        describe: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+      },
+    },
   ],
 }
