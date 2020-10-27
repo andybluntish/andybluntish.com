@@ -1,0 +1,12 @@
+---
+pagination:
+  data: beer.recipes
+  size: 1
+  alias: recipe
+permalink: 'beer/{{ recipe._id }}/'
+eleventyComputed:
+  title: '{{ beer.title }} | {{ recipe.name }}'
+  description: '{{ beer.description }}'
+---
+
+{{ recipe.name }}
