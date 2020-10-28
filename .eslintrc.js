@@ -19,6 +19,7 @@ module.exports = {
         'postcss.config.js',
         'scripts/*.js',
         'lib/**/*.js',
+        'tests/**/*.js',
         'src/_data/**/*.js',
       ],
       parserOptions: {
@@ -30,7 +31,7 @@ module.exports = {
       plugins: ['node'],
     },
     {
-      files: ['lib/**/*.test.js'],
+      files: ['tests/**/*.test.js'],
       globals: {
         jest: 'readonly',
         describe: 'readonly',

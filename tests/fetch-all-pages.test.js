@@ -1,4 +1,4 @@
-const fetchAllPages = require('./fetch-all-pages')
+const fetchAllPages = require('../lib/fetch-all-pages')
 
 describe('fetchAllPages', () => {
   test('fetches only once with fewer results than the limit', async () => {
