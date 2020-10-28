@@ -64,7 +64,7 @@
   }
 
   code {
-    @apply text-base text-accent;
+    @apply text-accent;
   }
 
   blockquote {
