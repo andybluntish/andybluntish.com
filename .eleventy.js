@@ -48,6 +48,12 @@ module.exports = (eleventyConfig) => {
     return date.toISOString()
   })
 
+  eleventyConfig.addFilter('shortDate', function (date) {
+    return new Intl.DateTimeFormat('en-AU', {
+      dateStyle: 'short',
+    }).format(date)
+  })
+
   eleventyConfig.addFilter('humanDate', function (date) {
     return new Intl.DateTimeFormat('en-AU', {
       year: 'numeric',
