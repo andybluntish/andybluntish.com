@@ -50,14 +50,12 @@ module.exports = (eleventyConfig) => {
     return value
   })
 
-  eleventyConfig.addFilter('percentage', function (value) {
-    value = Number(value)
-
-    if (isNaN(value)) {
-      return '-'
-    }
-
-    return value.toFixed(1) + '%'
+  eleventyConfig.addFilter('percentage', function (value = 0) {
+    return new Intl.NumberFormat('en-AU', {
+      style: 'percent',
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1,
+    }).format(value / 100)
   })
 
   eleventyConfig.addFilter('date', function (date) {
