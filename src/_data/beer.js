@@ -1,8 +1,10 @@
 const CacheAsset = require('@11ty/eleventy-cache-assets')
+const fetchAllPages = require('../../lib/fetch-all-pages')
 
 module.exports = async function () {
-  const recipes = await fetchRecipes()
-  const batches = await fetchBatches()
+  const pageSize = 50
+  const batches = await fetchAllPages(fetchBatches, pageSize)
+  const recipes = await fetchAllPages(fetchRecipes, pageSize)
 
   return {
     title: 'Beer',
@@ -16,8 +18,7 @@ async function fetchRecipes() {
   return []
 }
 
-async function fetchBatches() {
-  const limit = 50
+async function fetchBatches(offset = 0, limit = 50) {
   const status = 'Archived'
   const include = [
     'recipe.style.name',
@@ -27,7 +28,7 @@ async function fetchBatches() {
     'tasteRating',
     'brewDate',
   ].join(',')
-  const url = `https://api.brewfather.app/v1/batches?limit=${limit}&status=${status}&include=${include}`
+  const url = `https://api.brewfather.app/v1/batches?limit=${limit}&offset=${offset}&status=${status}&include=${include}`
 
   try {
     return CacheAsset(url, {
