@@ -32,6 +32,7 @@ eleventyComputed:
       <th class="p-2">Style</th>
       <th class="p-2 text-right"><abbr title="Alcohol by volume">ABV</abbr></th>
       <th class="p-2 text-right"><abbr title="International Bittering Units">IBU</abbr></th>
+      <th class="p-2 text-right"><abbr title="European Brewery Convention">EBC</abbr></th>
       <th class="p-2 pr-0 text-right">Date</th>
     </tr>
   </thead>
@@ -48,7 +49,10 @@ eleventyComputed:
           {{ brew.measuredAbv | percentage }}
         </td>
         <td class="p-2 text-sm text-right opacity-75">
-          {{ brew.estimatedIbu | number }}
+          {{ brew.estimatedIbu | round | formatBlank }}
+        </td>
+        <td class="p-2 text-sm text-right opacity-75">
+          {{ brew.estimatedColor | round | formatBlank }}
         </td>
         <td class="p-2 pr-0 text-right">
           <time datetime="{{ brew.brewDate | date | machineDate }}" title="{{ brew.brewDate | date | humanDate }}" class="text-sm opacity-75">{{ brew.brewDate | date | shortDate }}</time>

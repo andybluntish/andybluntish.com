@@ -8990,6 +8990,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.6,
       estimatedIbu: 23,
+      estimatedColor: 3.2,
       tasteRating: 100,
     },
     {
@@ -9007,6 +9008,7 @@ async function fetchBrews() {
       },
       measuredAbv: 9.3,
       estimatedIbu: 104,
+      estimatedColor: 6.4,
       tasteRating: 81,
     },
     {
@@ -9024,6 +9026,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.4,
       estimatedIbu: 69,
+      estimatedColor: 11.1,
       tasteRating: 81,
     },
     {
@@ -9041,6 +9044,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 405,
+      estimatedColor: 26,
       tasteRating: 60,
     },
     {
@@ -9058,6 +9062,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.2,
       estimatedIbu: 23,
+      estimatedColor: 3.2,
       tasteRating: 100,
     },
     {
@@ -9075,6 +9080,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 24,
+      estimatedColor: 20.2,
       tasteRating: 71,
     },
     {
@@ -9092,6 +9098,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6,
       estimatedIbu: 60,
+      estimatedColor: 15.5,
       tasteRating: null,
     },
     {
@@ -9109,6 +9116,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.6,
       estimatedIbu: 40,
+      estimatedColor: 5.9,
       tasteRating: null,
     },
     {
@@ -9126,6 +9134,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 33,
+      estimatedColor: 39.4,
       tasteRating: null,
     },
     {
@@ -9143,6 +9152,7 @@ async function fetchBrews() {
       },
       measuredAbv: 4.3,
       estimatedIbu: 36,
+      estimatedColor: 3.7,
       tasteRating: null,
     },
     {
@@ -9160,6 +9170,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 41,
+      estimatedColor: 6.2,
       tasteRating: null,
     },
     {
@@ -9177,6 +9188,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 19,
+      estimatedColor: 2.8,
       tasteRating: null,
     },
     {
@@ -9194,6 +9206,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.5,
       estimatedIbu: 34,
+      estimatedColor: 3.8,
       tasteRating: null,
     },
     {
@@ -9211,6 +9224,7 @@ async function fetchBrews() {
       },
       measuredAbv: 9.7,
       estimatedIbu: 220,
+      estimatedColor: 6.4,
       tasteRating: null,
     },
     {
@@ -9228,6 +9242,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5,
       estimatedIbu: 20,
+      estimatedColor: 2.8,
       tasteRating: null,
     },
     {
@@ -9245,6 +9260,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.4,
       estimatedIbu: 46,
+      estimatedColor: 15.8,
       tasteRating: null,
     },
     {
@@ -9262,6 +9278,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.4,
       estimatedIbu: 41,
+      estimatedColor: 7,
       tasteRating: null,
     },
     {
@@ -9279,6 +9296,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.4,
       estimatedIbu: 39,
+      estimatedColor: 7,
       tasteRating: null,
     },
     {
@@ -9296,6 +9314,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.2,
       estimatedIbu: 50,
+      estimatedColor: 16.1,
       tasteRating: null,
     },
     {
@@ -9313,6 +9332,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 38,
+      estimatedColor: 12.3,
       tasteRating: null,
     },
     {
@@ -9330,6 +9350,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 36,
+      estimatedColor: 6.2,
       tasteRating: null,
     },
     {
@@ -9347,6 +9368,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 33,
+      estimatedColor: 42.5,
       tasteRating: null,
     },
     {
@@ -9364,6 +9386,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 68,
+      estimatedColor: 15.6,
       tasteRating: null,
     },
     {
@@ -9381,6 +9404,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.1,
       estimatedIbu: 40,
+      estimatedColor: 7.5,
       tasteRating: null,
     },
     {
@@ -9398,6 +9422,7 @@ async function fetchBrews() {
       },
       measuredAbv: 3.8,
       estimatedIbu: 31,
+      estimatedColor: 4.2,
       tasteRating: null,
     },
     {
@@ -9414,6 +9439,7 @@ async function fetchBrews() {
         },
       },
       measuredAbv: 7.7,
+      estimatedColor: 9,
       tasteRating: null,
     },
     {
@@ -9431,6 +9457,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.6,
       estimatedIbu: 44,
+      estimatedColor: 5.3,
       tasteRating: null,
     },
     {
@@ -9448,6 +9475,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.7,
       estimatedIbu: 52,
+      estimatedColor: 15.8,
       tasteRating: null,
     },
     {
@@ -9465,6 +9493,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.8,
       estimatedIbu: 36,
+      estimatedColor: 6.1,
       tasteRating: null,
     },
     {
@@ -9482,6 +9511,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.5,
       estimatedIbu: 22,
+      estimatedColor: 3.5,
       tasteRating: null,
     },
     {
@@ -9499,6 +9529,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.2,
       estimatedIbu: 39,
+      estimatedColor: 8.7,
       tasteRating: null,
     },
     {
@@ -9516,6 +9547,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.1,
       estimatedIbu: 55,
+      estimatedColor: 15.8,
       tasteRating: null,
     },
     {
@@ -9533,6 +9565,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7,
       estimatedIbu: 33,
+      estimatedColor: 37.5,
       tasteRating: null,
     },
     {
@@ -9550,6 +9583,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.2,
       estimatedIbu: 54,
+      estimatedColor: 9.3,
       tasteRating: null,
     },
     {
@@ -9567,6 +9601,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.8,
       estimatedIbu: 46,
+      estimatedColor: 10.1,
       tasteRating: null,
     },
     {
@@ -9584,6 +9619,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 57,
+      estimatedColor: 12.8,
       tasteRating: null,
     },
     {
@@ -9601,6 +9637,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6,
       estimatedIbu: 63,
+      estimatedColor: 5.7,
       tasteRating: null,
     },
     {
@@ -9618,6 +9655,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.8,
       estimatedIbu: 70,
+      estimatedColor: 19.6,
       tasteRating: null,
     },
     {
@@ -9635,6 +9673,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 35,
+      estimatedColor: 3.6,
       tasteRating: null,
     },
     {
@@ -9668,6 +9707,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6,
       estimatedIbu: 40,
+      estimatedColor: 12.2,
       tasteRating: null,
     },
     {
@@ -9685,6 +9725,7 @@ async function fetchBrews() {
       },
       measuredAbv: 8.3,
       estimatedIbu: 101,
+      estimatedColor: 10,
       tasteRating: null,
     },
     {
@@ -9702,6 +9743,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.4,
       estimatedIbu: 66,
+      estimatedColor: 15.5,
       tasteRating: null,
     },
     {
@@ -9719,6 +9761,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.2,
       estimatedIbu: 49,
+      estimatedColor: 13.9,
       tasteRating: null,
     },
     {
@@ -9736,6 +9779,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.6,
       estimatedIbu: 63,
+      estimatedColor: 12,
       tasteRating: null,
     },
     {
@@ -9753,6 +9797,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.6,
       estimatedIbu: 16,
+      estimatedColor: 17,
       tasteRating: null,
     },
   ]

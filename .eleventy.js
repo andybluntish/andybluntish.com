@@ -40,14 +40,25 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
-  eleventyConfig.addFilter('number', function (value) {
-    value = Number(value)
+  eleventyConfig.addFilter('formatBlank', function (value) {
+    if (typeof value === 'string') {
+      value = value.trim()
+    }
 
-    if (isNaN(value)) {
+    if (!value) {
       return '-'
     }
 
     return value
+  })
+
+  eleventyConfig.addFilter('round', function (value = 0) {
+    const num = Number(value)
+    if (isNaN(num)) {
+      return value
+    }
+
+    return Math.round(value)
   })
 
   eleventyConfig.addFilter('percentage', function (value = 0) {
