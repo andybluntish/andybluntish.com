@@ -28,34 +28,34 @@ eleventyComputed:
 <table class="w-full">
   <thead>
     <tr class="text-left">
-      <th class="p-2 pl-0">Name</th>
-      <th class="p-2">Style</th>
-      <th class="p-2 text-right"><abbr title="Alcohol by volume">ABV</abbr></th>
-      <th class="p-2 text-right"><abbr title="International Bittering Units">IBU</abbr></th>
-      <th class="p-2 text-right"><abbr title="European Brewery Convention">EBC</abbr></th>
-      <th class="p-2 pr-0 text-right">Date</th>
+      <th class="py-2 pr-2">Name</th>
+      <th class="pr-2">Style</th>
+      <th class="pr-2 text-right"><abbr title="Alcohol by volume">ABV</abbr></th>
+      <th class="pr-2 text-right"><abbr title="International Bittering Units">IBU</abbr></th>
+      <th class="pr-2 text-right"><abbr title="European Brewery Convention">EBC</abbr></th>
+      <th class="text-right">Date</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="text-sm opacity-75">
     {%- for brew in beer.brews -%}
       <tr class="border-t border-gray-400 dark:border-gray-700">
-        <td class="p-2 pl-0">
+        <td class="py-2 pr-2 font-semibold">
           {{ brew.recipe.name }}
         </td>
-        <td class="p-2 text-sm opacity-75">
+        <td class="pr-2">
           {{ brew.recipe.style.name }}
         </td>
-        <td class="p-2 text-sm text-right opacity-75">
+        <td class="pr-2 text-right">
           {{ brew.measuredAbv | percentage }}
         </td>
-        <td class="p-2 text-sm text-right opacity-75">
+        <td class="pr-2 text-right">
           {{ brew.estimatedIbu | round | formatBlank }}
         </td>
-        <td class="p-2 text-sm text-right opacity-75">
+        <td class="pr-2 text-right">
           {{ brew.estimatedColor | round | formatBlank }}
         </td>
-        <td class="p-2 pr-0 text-right">
-          <time datetime="{{ brew.brewDate | date | machineDate }}" title="{{ brew.brewDate | date | humanDate }}" class="text-sm opacity-75">{{ brew.brewDate | date | shortDate }}</time>
+        <td class="text-right">
+          <time datetime="{{ brew.brewDate | date | machineDate }}" title="{{ brew.brewDate | date | humanDate }}" class="">{{ brew.brewDate | date | shortDate }}</time>
         </td>
       </tr>
     {%- endfor -%}
