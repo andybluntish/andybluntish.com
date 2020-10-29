@@ -28,8 +28,7 @@ eleventyComputed:
 <table class="w-full">
   <thead>
     <tr class="text-left">
-      <th class="p-2 pl-0 text-right"><span aria-label="Batch number">#</span></th>
-      <th class="p-2">Name</th>
+      <th class="p-2 pl-0">Name</th>
       <th class="p-2">Style</th>
       <th class="p-2 text-right"><abbr title="Alcohol by volume">ABV</abbr></th>
       <th class="p-2 text-right"><abbr title="International Bittering Units">IBU</abbr></th>
@@ -39,10 +38,7 @@ eleventyComputed:
   <tbody>
     {%- for brew in beer.brews -%}
       <tr class="border-t border-gray-400 dark:border-gray-700">
-        <td class="p-2 pl-0 text-sm text-right opacity-75">
-          {{ brew.batchNo }}
-        </td>
-        <td class="p-2">
+        <td class="p-2 pl-0">
           {{ brew.recipe.name }}
         </td>
         <td class="p-2 text-sm opacity-75">
