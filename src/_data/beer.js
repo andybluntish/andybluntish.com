@@ -8990,6 +8990,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.6,
       estimatedIbu: 23,
+      tasteRating: 100,
     },
     {
       _id: 'Xg5foRTeceO2PttRSZtUH5U4E8P41t',
@@ -9006,6 +9007,7 @@ async function fetchBrews() {
       },
       measuredAbv: 9.3,
       estimatedIbu: 104,
+      tasteRating: 81,
     },
     {
       _id: 'GLAsmvqbdWucjTX1cyLbcKrFJ5d2Zm',
@@ -9022,6 +9024,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.4,
       estimatedIbu: 69,
+      tasteRating: 81,
     },
     {
       _id: 'vsa1nV3vYcoDGR9tA10oKjBxrhsV9b',
@@ -9038,6 +9041,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 405,
+      tasteRating: 60,
     },
     {
       _id: 'ZXmXfREGu6mS8nSEV39GN8j2XYFhzQ',
@@ -9054,6 +9058,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.2,
       estimatedIbu: 23,
+      tasteRating: 100,
     },
     {
       _id: 'TfaZGvOsDpvRn8L9VSonXWP2GyEfMw',
@@ -9070,6 +9075,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 24,
+      tasteRating: 71,
     },
     {
       _id: '0PqCXVd7seOybqJjesuLxrs8RN3Lxb',
@@ -9086,6 +9092,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6,
       estimatedIbu: 60,
+      tasteRating: null,
     },
     {
       _id: '6JFZvNBxa432i3FewXlSfnzSR1Ztif',
@@ -9102,6 +9109,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.6,
       estimatedIbu: 40,
+      tasteRating: null,
     },
     {
       _id: 'Mb47pNDupY34xEUZOCrLGylNg0180r',
@@ -9118,6 +9126,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 33,
+      tasteRating: null,
     },
     {
       _id: 'osG9yalHD4aXRRq7M4LjENF0FtLLBB',
@@ -9134,6 +9143,7 @@ async function fetchBrews() {
       },
       measuredAbv: 4.3,
       estimatedIbu: 36,
+      tasteRating: null,
     },
     {
       _id: 'CZciZqXsqFHWyOx9GPwEdLG0mWbmwR',
@@ -9150,6 +9160,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 41,
+      tasteRating: null,
     },
     {
       _id: '1LxjfsdwVo5DntP9mN8eqC0BmByKcE',
@@ -9166,6 +9177,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 19,
+      tasteRating: null,
     },
     {
       _id: 'AtkH79exAfQJlnpJHTmMNb5xmWGPuC',
@@ -9182,6 +9194,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.5,
       estimatedIbu: 34,
+      tasteRating: null,
     },
     {
       _id: 'X76yxvis0zW6ZnD1kKXUFtFC0dRu95',
@@ -9198,6 +9211,7 @@ async function fetchBrews() {
       },
       measuredAbv: 9.7,
       estimatedIbu: 220,
+      tasteRating: null,
     },
     {
       _id: 'E5VSqX3hHuyj1sXKNQGOTavT0r4nZb',
@@ -9214,6 +9228,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5,
       estimatedIbu: 20,
+      tasteRating: null,
     },
     {
       _id: 'E2Deg0bMD3DGwaelFqE6Eu5saylS6r',
@@ -9230,6 +9245,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.4,
       estimatedIbu: 46,
+      tasteRating: null,
     },
     {
       _id: 'mEypBKA70y4cXIzus7RW1RYUsPMSVm',
@@ -9246,6 +9262,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.4,
       estimatedIbu: 41,
+      tasteRating: null,
     },
     {
       _id: 'ZkTQIp9ABNLYz0KaNixJVZSe20I9jp',
@@ -9262,6 +9279,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.4,
       estimatedIbu: 39,
+      tasteRating: null,
     },
     {
       _id: 'y3rT8ftrcP2RL9gVytWubLMw8wZFTM',
@@ -9278,6 +9296,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.2,
       estimatedIbu: 50,
+      tasteRating: null,
     },
     {
       _id: 'gbZxarRAAAXWKAZC5ypI7OkaDCfFCp',
@@ -9294,6 +9313,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 38,
+      tasteRating: null,
     },
     {
       _id: 'I88WpIBsCvcGxK2gJGBg1vPMIeIvlf',
@@ -9310,6 +9330,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 36,
+      tasteRating: null,
     },
     {
       _id: 'm1L0RK7HpKyuK7q50GedzQTuleISBP',
@@ -9326,6 +9347,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 33,
+      tasteRating: null,
     },
     {
       _id: 'ULXN127TUVmOvyFnzlCn6tXIamyq1m',
@@ -9342,6 +9364,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.8,
       estimatedIbu: 68,
+      tasteRating: null,
     },
     {
       _id: '8t4MFXur8q0MpAxmHZgvX6WCAd74LH',
@@ -9358,6 +9381,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.1,
       estimatedIbu: 40,
+      tasteRating: null,
     },
     {
       _id: '7XH3xjJp4TZ3apCSSh09q2XugDZBXB',
@@ -9374,6 +9398,7 @@ async function fetchBrews() {
       },
       measuredAbv: 3.8,
       estimatedIbu: 31,
+      tasteRating: null,
     },
     {
       _id: '8sJc8xNEd3oxX5kEbKbQHOG7duPetG',
@@ -9389,6 +9414,7 @@ async function fetchBrews() {
         },
       },
       measuredAbv: 7.7,
+      tasteRating: null,
     },
     {
       _id: 'ZsixHXSlTn59xgJ9Ps6UykXjkjocos',
@@ -9405,6 +9431,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.6,
       estimatedIbu: 44,
+      tasteRating: null,
     },
     {
       _id: 'lxVUFqSl11fY2kqcrhjnpIIukfifPK',
@@ -9421,6 +9448,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.7,
       estimatedIbu: 52,
+      tasteRating: null,
     },
     {
       _id: 'oCmbq3g4LkjdJafYBNHnz7sauWGBSX',
@@ -9437,6 +9465,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.8,
       estimatedIbu: 36,
+      tasteRating: null,
     },
     {
       _id: 'Y2lTeaLmbCQXIPpQ60cKihCA2dltXI',
@@ -9453,6 +9482,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.5,
       estimatedIbu: 22,
+      tasteRating: null,
     },
     {
       _id: 'jFoqB8qvzOQIcFPNHb8qQtJp3QWCNY',
@@ -9469,6 +9499,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.2,
       estimatedIbu: 39,
+      tasteRating: null,
     },
     {
       _id: 'A0Qt86vspQYMH1tFdjIgvytrPjIeXT',
@@ -9485,6 +9516,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.1,
       estimatedIbu: 55,
+      tasteRating: null,
     },
     {
       _id: 'gaguDK8JCxXrdkf46YprjvuXaCGnU3',
@@ -9501,6 +9533,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7,
       estimatedIbu: 33,
+      tasteRating: null,
     },
     {
       _id: 'JSmCEjtjh2IJoGwOU7aKWFSKfVmTiW',
@@ -9517,6 +9550,7 @@ async function fetchBrews() {
       },
       measuredAbv: 7.2,
       estimatedIbu: 54,
+      tasteRating: null,
     },
     {
       _id: 'lI8UBipBkckGtG8tvFaSP4zUpfh528',
@@ -9533,6 +9567,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.8,
       estimatedIbu: 46,
+      tasteRating: null,
     },
     {
       _id: 'J3N3q1DwsY3YMxBKxpUSVD3XXg89j6',
@@ -9542,13 +9577,14 @@ async function fetchBrews() {
       brewer: 'Andy',
       brewDate: 1493735400000,
       recipe: {
-        name: 'Family Values: Special Edition',
+        name: 'Family Values: SE',
         style: {
           name: 'Strong Bitter',
         },
       },
       measuredAbv: 5.8,
       estimatedIbu: 57,
+      tasteRating: null,
     },
     {
       _id: 'IQzkU2SylhQdXfKhTHK93PX03f2n8s',
@@ -9565,6 +9601,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6,
       estimatedIbu: 63,
+      tasteRating: null,
     },
     {
       _id: 'KuT9TF5X8tU4scIEXvxZAfsechYhq9',
@@ -9581,6 +9618,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.8,
       estimatedIbu: 70,
+      tasteRating: null,
     },
     {
       _id: 'LKF4Ld3ApJB6LuN1ILMVqBmMqAoBaY',
@@ -9597,6 +9635,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.3,
       estimatedIbu: 35,
+      tasteRating: null,
     },
     {
       _id: 'NW6CKW0yO6Q7qQa3leFmJ27PJmTee6',
@@ -9612,6 +9651,7 @@ async function fetchBrews() {
         },
       },
       measuredAbv: 7.5,
+      tasteRating: null,
     },
     {
       _id: 'fNp4lKSDisE7AW7lofJZSDkDm5HhRw',
@@ -9628,6 +9668,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6,
       estimatedIbu: 40,
+      tasteRating: null,
     },
     {
       _id: 'VPhvTvsjY1VdaPL9cN3x8RfskpKoI1',
@@ -9644,6 +9685,7 @@ async function fetchBrews() {
       },
       measuredAbv: 8.3,
       estimatedIbu: 101,
+      tasteRating: null,
     },
     {
       _id: '3BAGviXEM8oyyGX6WKU7Vj7pNBZUmh',
@@ -9660,6 +9702,7 @@ async function fetchBrews() {
       },
       measuredAbv: 5.4,
       estimatedIbu: 66,
+      tasteRating: null,
     },
     {
       _id: 'iP81lsW5LVMuwOSytFI1b7LJaOMHZW',
@@ -9676,6 +9719,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.2,
       estimatedIbu: 49,
+      tasteRating: null,
     },
     {
       _id: 'RuZNmukYSXyb0lnaaRvh6VUG5ou8iF',
@@ -9692,6 +9736,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.6,
       estimatedIbu: 63,
+      tasteRating: null,
     },
     {
       _id: '915gqG7T8dSAICsIcif8fnuEv8nAzf',
@@ -9708,6 +9753,7 @@ async function fetchBrews() {
       },
       measuredAbv: 6.6,
       estimatedIbu: 16,
+      tasteRating: null,
     },
   ]
 }
