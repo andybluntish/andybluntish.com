@@ -12,16 +12,16 @@ eleventyComputed:
   <p class="mb-8 italic">{{ description }}</p>
 </header>
 
-<h2>Recipes</h2>
+{# <h2>Recipes</h2> #}
 
-<ul>
-  {%- for recipe in beer.recipes -%}
-    {% set pageUrl = page.url + 'recipes/' + recipe._id + '/' %}
-    <li>
-      <a href="{{ pageUrl }}">{{ recipe.name }}</a>
-    </li>
-  {%- endfor -%}
-</ul>
+{# <ul> #}
+  {# {%- for recipe in beer.recipes -%} #}
+    {# {% set pageUrl = page.url + 'recipes/' + recipe._id + '/' %} #}
+    {# <li> #}
+      {# <a href="{{ pageUrl }}">{{ recipe.name }}</a> #}
+    {# </li> #}
+  {# {%- endfor -%} #}
+{# </ul> #}
 
 <h2>Batch log</h2>
 
