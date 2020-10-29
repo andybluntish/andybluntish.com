@@ -49,10 +49,10 @@ eleventyComputed:
           {{ brew.recipe.style.name }}
         </td>
         <td class="p-2 text-sm text-right opacity-75">
-          {{ brew.measuredAbv }}%
+          {{ brew.measuredAbv | percentage }}
         </td>
         <td class="p-2 text-sm text-right opacity-75">
-          {{ brew.estimatedIbu }}
+          {{ brew.estimatedIbu | number }}
         </td>
         <td class="p-2 pr-0 text-right">
           <time datetime="{{ brew.brewDate | date | machineDate }}" title="{{ brew.brewDate | date | humanDate }}" class="text-sm opacity-75">{{ brew.brewDate | date | shortDate }}</time>

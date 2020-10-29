@@ -40,6 +40,26 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
+  eleventyConfig.addFilter('number', function (value) {
+    value = Number(value)
+
+    if (isNaN(value)) {
+      return '-'
+    }
+
+    return value
+  })
+
+  eleventyConfig.addFilter('percentage', function (value) {
+    value = Number(value)
+
+    if (isNaN(value)) {
+      return '-'
+    }
+
+    return value.toFixed(1) + '%'
+  })
+
   eleventyConfig.addFilter('date', function (date) {
     return new Date(date)
   })
