@@ -16,12 +16,14 @@ eleventyComputed:
   {%- for note in collections.notes | reverse -%}
     {% set noteTitle = note.data.title %}
     {% set content = note.templateContent %}
-    <li class="mb-24">
+    {% if loop.last %}
+      <li class="mb-12">
+    {% else %}
+      <li class="mb-24">
+    {% endif %}
       {% include 'components/note.html' %}
     </li>
   {%- endfor -%}
 </ul>
 
-<footer>
-  <p class="relative pt-4 text-sm italic opacity-75">{{ notes.footer }}</p>
-</footer>
+<p class="mt-4 text-sm italic opacity-75">Prior ramblings have been lost to time.</p>

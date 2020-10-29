@@ -1,9 +1,13 @@
+const isProd = process.env.NODE_ENV === 'production'
+
+if (!isProd) {
+  require('dotenv').config()
+}
+
 const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
-
-const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
@@ -36,12 +40,47 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
+  eleventyConfig.addFilter('formatBlank', function (value) {
+    if (typeof value === 'string') {
+      value = value.trim()
+    }
+
+    if (!value) {
+      return '-'
+    }
+
+    return value
+  })
+
+  eleventyConfig.addFilter('round', function (value = 0) {
+    const num = Number(value)
+    if (isNaN(num)) {
+      return value
+    }
+
+    return Math.round(value)
+  })
+
+  eleventyConfig.addFilter('percentage', function (value = 0) {
+    return new Intl.NumberFormat('en-AU', {
+      style: 'percent',
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1,
+    }).format(value / 100)
+  })
+
   eleventyConfig.addFilter('date', function (date) {
     return new Date(date)
   })
 
   eleventyConfig.addFilter('machineDate', function (date) {
     return date.toISOString()
+  })
+
+  eleventyConfig.addFilter('shortDate', function (date) {
+    return new Intl.DateTimeFormat('en-AU', {
+      dateStyle: 'short',
+    }).format(date)
   })
 
   eleventyConfig.addFilter('humanDate', function (date) {
