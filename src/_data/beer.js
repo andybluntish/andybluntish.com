@@ -14,8 +14,27 @@ module.exports = async function () {
   }
 }
 
-async function fetchRecipes() {
-  return []
+async function fetchRecipes(offset = 0, limit = 50) {
+  const include = ['fermentables', 'hops', 'yeasts', 'og', 'fg', 'abv', 'ibu', 'searchTags'].join(
+    ','
+  )
+  const url = `https://api.brewfather.app/v1/recipes?limit=${limit}&offset=${offset}&include=${include}`
+
+  try {
+    return CacheAsset(url, {
+      duration: '1d',
+      type: 'json',
+      fetchOptions: {
+        headers: {
+          Authorization: `Basic ${process.env.BREW_FATHER_TOKEN}`,
+        },
+      },
+    })
+  } catch (err) {
+    console.error(err)
+
+    return []
+  }
 }
 
 async function fetchBatches(offset = 0, limit = 50) {
