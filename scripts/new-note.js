@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const fs = require('fs')
 
 let now = new Date()
