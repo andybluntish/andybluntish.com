@@ -12,7 +12,7 @@
     "format:prettier": "yarn run prettier --write './**/*.{js,json}'",
     "format:eslint": "yarn run eslint --fix './**/*.js'",
     "test": "jest",
-    "note:new": "./scripts/new-note.js"
+    "note:new": "node ./scripts/new-note.js"
   },
   "repository": {
     "type": "git",
