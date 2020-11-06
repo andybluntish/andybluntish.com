@@ -46,18 +46,18 @@ eleventyComputed:
           {{ batch.recipe.style.name }}
         </td>
         <td class="w-1/4 pb-2 pr-2 sm:w-auto sm:text-right sm:pb-0">
-          {{ batch.measuredAbv | percentage }}
+          {{ batch.measuredAbv | formatABV }}
           <abbr title="Alcohol by volume" class="sm:hidden">ABV</abbr>
         </td>
         <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
-          {% set ibu = batch.estimatedIbu | round | formatBlank %}
+          {% set ibu = batch.estimatedIbu | formatIBU %}
           {{ ibu }}
           {% if ibu !== '-' %}
             <abbr title="International Bittering Units" class="sm:hidden">IBU</abbr>
           {% endif %}
         </td>
         <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
-          {% set ebc = batch.estimatedColor | round | formatBlank %}
+          {% set ebc = batch.estimatedColor | srmToEBC | formatEBC %}
           {{ ebc }}
           {% if ebc !== '-' %}
             <abbr title="European Brewery Convention" class="sm:hidden">EBC</abbr>

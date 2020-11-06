@@ -40,35 +40,6 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
-  eleventyConfig.addFilter('formatBlank', function (value) {
-    if (typeof value === 'string') {
-      value = value.trim()
-    }
-
-    if (!value) {
-      return '-'
-    }
-
-    return value
-  })
-
-  eleventyConfig.addFilter('round', function (value = 0) {
-    const num = Number(value)
-    if (isNaN(num)) {
-      return value
-    }
-
-    return Math.round(value)
-  })
-
-  eleventyConfig.addFilter('percentage', function (value = 0) {
-    return new Intl.NumberFormat('en-AU', {
-      style: 'percent',
-      minimumFractionDigits: 1,
-      maximumFractionDigits: 1,
-    }).format(value / 100)
-  })
-
   eleventyConfig.addFilter('date', function (date) {
     return new Date(date)
   })
@@ -104,6 +75,53 @@ module.exports = (eleventyConfig) => {
     }).format(date)
 
     return `${formattedDate} at ${formattedTime}`
+  })
+
+  eleventyConfig.addFilter('formatABV', function (value = 0) {
+    return new Intl.NumberFormat('en-AU', {
+      style: 'percent',
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1,
+    }).format(value / 100)
+  })
+
+  eleventyConfig.addFilter('formatIBU', function (value = 0) {
+    if (typeof value === 'string') {
+      value = value.trim()
+    }
+
+    const num = Math.round(value)
+
+    if (isNaN(num)) {
+      return value
+    } else if (!value) {
+      return '-'
+    } else {
+      return value
+    }
+  })
+
+  eleventyConfig.addFilter('srmToEBC', function (value = 0) {
+    const num = Number(value)
+    if (isNaN(num)) {
+      return value
+    }
+
+    return value * 1.97
+  })
+
+  eleventyConfig.addFilter('formatEBC', function (value = 0) {
+    if (typeof value === 'string') {
+      value = value.trim()
+    }
+
+    const num = Number.parseFloat(value)
+
+    if (isNaN(num)) {
+      return value
+    } else {
+      return num.toFixed(1)
+    }
   })
 
   eleventyConfig.addWatchTarget('src/*.css')
