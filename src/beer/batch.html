@@ -1,0 +1,12 @@
+---
+pagination:
+  data: beer.batches
+  size: 1
+  alias: batch
+permalink: 'beer/batches/{{ batch._id }}/'
+eleventyComputed:
+  title: '{{ beer.title }} | {{ batch.name }}'
+  description: '{{ beer.description }}'
+---
+
+{{ batch.recipe.name }}
