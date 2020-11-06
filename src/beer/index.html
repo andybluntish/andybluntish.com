@@ -25,43 +25,44 @@ eleventyComputed:
 
 <h2>Batch log</h2>
 
-<div class="overflow-x-auto">
-  <table class="w-full">
-    <thead>
-      <tr class="text-left">
-        <th class="py-2 pr-2">Name</th>
-        <th class="pr-2">Style</th>
-        <th class="pr-2 text-right"><abbr title="Alcohol by volume">ABV</abbr></th>
-        <th class="pr-2 text-right"><abbr title="International Bittering Units">IBU</abbr></th>
-        <th class="pr-2 text-right"><abbr title="European Brewery Convention">EBC</abbr></th>
-        <th class="text-right">Date</th>
+<table class="w-full">
+  <thead class="hidden sm:table-header-group">
+    <tr class="text-left">
+      <th class="py-2 pr-2">Name</th>
+      <th class="pr-2">Style</th>
+      <th class="pr-2 text-right"><abbr title="Alcohol by volume">ABV</abbr></th>
+      <th class="pr-2 text-right"><abbr title="International Bittering Units">IBU</abbr></th>
+      <th class="pr-2 text-right"><abbr title="European Brewery Convention">EBC</abbr></th>
+      <th class="text-right">Date</th>
+    </tr>
+  </thead>
+  <tbody class="text-sm opacity-75">
+    {%- for batch in beer.batches -%}
+      <tr class="flex flex-wrap border-t border-gray-400 dark:border-gray-700 sm:table-row">
+        <td class="w-1/2 py-2 pr-2 font-semibold sm:w-auto">
+          {{ batch.recipe.name }}
+        </td>
+        <td class="w-1/2 py-2 pr-2 sm:w-auto">
+          {{ batch.recipe.style.name }}
+        </td>
+        <td class="w-1/4 pb-2 pr-2 sm:w-auto sm:text-right">
+          <abbr title="Alcohol by volume" class="sm:hidden">ABV</abbr>
+          {{ batch.measuredAbv | percentage }}
+        </td>
+        <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
+          <abbr title="International Bittering Units" class="sm:hidden">IBU</abbr>
+          {{ batch.estimatedIbu | round | formatBlank }}
+        </td>
+        <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
+          <abbr title="European Brewery Convention" class="sm:hidden">EBC</abbr>
+          {{ batch.estimatedColor | round | formatBlank }}
+        </td>
+        <td class="w-1/4 text-right sm:w-auto">
+          <time datetime="{{ batch.brewDate | date | machineDate }}" title="{{ batch.brewDate | date | humanDate }}" class="">{{ batch.brewDate | date | shortDate }}</time>
+        </td>
       </tr>
-    </thead>
-    <tbody class="text-sm opacity-75">
-      {%- for batch in beer.batches -%}
-        <tr class="border-t border-gray-400 dark:border-gray-700">
-          <td class="py-2 pr-2 font-semibold">
-            {{ batch.recipe.name }}
-          </td>
-          <td class="pr-2">
-            {{ batch.recipe.style.name }}
-          </td>
-          <td class="pr-2 text-right">
-            {{ batch.measuredAbv | percentage }}
-          </td>
-          <td class="pr-2 text-right">
-            {{ batch.estimatedIbu | round | formatBlank }}
-          </td>
-          <td class="pr-2 text-right">
-            {{ batch.estimatedColor | round | formatBlank }}
-          </td>
-          <td class="text-right">
-            <time datetime="{{ batch.brewDate | date | machineDate }}" title="{{ batch.brewDate | date | humanDate }}" class="">{{ batch.brewDate | date | shortDate }}</time>
-          </td>
-        </tr>
-      {%- endfor -%}
-    </tbody>
-  </table>
-</div>
+    {%- endfor -%}
+  </tbody>
+</table>
 
 <p class="mt-12 text-sm italic opacity-75">Records for previous batches have been lost to time.</p>
