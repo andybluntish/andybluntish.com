@@ -9,6 +9,7 @@
     --foreground: #363d49;
     --background: #fff;
     --accent: #d93f00;
+    --deemphasised: #727780;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -16,6 +17,7 @@
       --foreground: #d1d6e0;
       --background: #1b1d22;
       --accent: #ff9e66;
+      --deemphasised: #81858c;
     }
 
     svg {
@@ -68,7 +70,7 @@
   }
 
   blockquote {
-    @apply relative pl-4 m-4 italic border-l-4 border-gray-400 opacity-75;
+    @apply relative pl-4 m-4 italic border-l-4 border-gray-400 text-deemphasised;
   }
 
   @screen dark {
