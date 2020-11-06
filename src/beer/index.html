@@ -45,17 +45,23 @@ eleventyComputed:
         <td class="w-1/2 py-2 pr-2 sm:w-auto">
           {{ batch.recipe.style.name }}
         </td>
-        <td class="w-1/4 pb-2 pr-2 sm:w-auto sm:text-right">
-          <abbr title="Alcohol by volume" class="sm:hidden">ABV</abbr>
+        <td class="w-1/4 pb-2 pr-2 sm:w-auto sm:text-right sm:pb-0">
           {{ batch.measuredAbv | percentage }}
+          <abbr title="Alcohol by volume" class="sm:hidden">ABV</abbr>
         </td>
         <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
-          <abbr title="International Bittering Units" class="sm:hidden">IBU</abbr>
-          {{ batch.estimatedIbu | round | formatBlank }}
+          {% set ibu = batch.estimatedIbu | round | formatBlank %}
+          {{ ibu }}
+          {% if ibu !== '-' %}
+            <abbr title="International Bittering Units" class="sm:hidden">IBU</abbr>
+          {% endif %}
         </td>
         <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
-          <abbr title="European Brewery Convention" class="sm:hidden">EBC</abbr>
-          {{ batch.estimatedColor | round | formatBlank }}
+          {% set ebc = batch.estimatedColor | round | formatBlank %}
+          {{ ebc }}
+          {% if ebc !== '-' %}
+            <abbr title="European Brewery Convention" class="sm:hidden">EBC</abbr>
+          {% endif %}
         </td>
         <td class="w-1/4 text-right sm:w-auto">
           <time datetime="{{ batch.brewDate | date | machineDate }}" title="{{ batch.brewDate | date | humanDate }}" class="">{{ batch.brewDate | date | shortDate }}</time>
