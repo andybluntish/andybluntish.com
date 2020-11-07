@@ -79,6 +79,36 @@
     }
   }
 
+  table {
+    @apply w-full;
+  }
+
+  thead tr {
+    @apply text-left;
+  }
+
+  thead th {
+    @apply py-2 pr-2;
+  }
+
+  thead th:last-child {
+    @apply pr-0;
+  }
+
+  tbody {
+    @apply text-sm;
+  }
+
+  tbody tr {
+    @apply border-t border-gray-400;
+  }
+
+  @screen dark {
+    tbody tr {
+      @apply border-gray-700;
+    }
+  }
+
   /* purgecss end ignore */
 }
 
