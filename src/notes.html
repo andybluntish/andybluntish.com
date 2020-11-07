@@ -5,12 +5,10 @@ eleventyComputed:
   eleventyNavigation:
     key: "{{ notes.title }}"
     order: 2
+pageFooter: Prior ramblings have been lost to time.
 ---
 
-<header>
-  <h1>{{ title }}</h1>
-  <p class="mb-8 italic">{{ description }}</p>
-</header>
+{% include 'components/page-header.html' %}
 
 <ul>
   {%- for note in collections.notes | reverse -%}
@@ -26,4 +24,4 @@ eleventyComputed:
   {%- endfor -%}
 </ul>
 
-<p class="mt-4 meta-text">Prior ramblings have been lost to time.</p>
+{% include 'components/page-footer.html' %}
