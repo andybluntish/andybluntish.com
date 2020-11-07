@@ -22,7 +22,7 @@
         {% endif %}
 
         <li class="ml-4">
-          <a href="{{ entry.url }}" class="py-2 text-primary hover:text-accent focus:text-accent{% if active %} active{% endif %}">
+          <a href="{{ entry.url }}" class="py-2 text-primary hover:text-accent focus:text-accent no-underline {% if active %} active{% endif %}">
             {{ entry.title }}
           </a>
         </li>
