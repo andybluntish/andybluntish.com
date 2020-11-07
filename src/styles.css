@@ -79,6 +79,10 @@
     }
   }
 
+  .meta-text {
+    @apply text-xs italic text-deemphasised;
+  }
+
   @screen sm {
     .portrait-footer li:nth-child(1) {
       transform: translate(2.5em, 12.3em);
