@@ -1,6 +1,6 @@
 <article id="note-{{ note.fileSlug }}">
-  <header class="mb-2">
-    <a href="{{ note.url }}" class="meta-text">
+  <header>
+    <a href="{{ note.url }}" class="inline-block py-2 meta-text hover:text-accent focus:text-accent">
       <time datetime="{{ note.date | machineDate }}">{{ note.date | humanDateTime }}</time>
     </a>
   </header>
