@@ -1,9 +1,9 @@
 <footer role="contentinfo" class="mt-4 text-sm col-start-2">
   <p>
   {% for link in site.footer.links %}
-    <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="underline text-primary hover:text-accent focus:text-accent">{{ link.title }}</a>
+    <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="text-primary hover:text-accent focus:text-accent">{{ link.title }}</a>
     {% if not loop.last %}
-      <span class="text-xs opacity-75">•</span>
+      <span class="meta-text">•</span>
     {% endif %}
   {% endfor %}
   </p>
