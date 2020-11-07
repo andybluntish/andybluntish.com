@@ -19,6 +19,7 @@ module.exports = {
         foreground: 'var(--foreground)',
         background: 'var(--background)',
         accent: 'var(--accent)',
+        deemphasised: 'var(--deemphasised)',
       },
       textColor: {
         primary: 'var(--foreground)',

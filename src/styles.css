@@ -9,6 +9,7 @@
     --foreground: #363d49;
     --background: #fff;
     --accent: #d93f00;
+    --deemphasised: #727780;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -16,6 +17,7 @@
       --foreground: #d1d6e0;
       --background: #1b1d22;
       --accent: #ff9e66;
+      --deemphasised: #81858c;
     }
 
     svg {
@@ -46,13 +48,27 @@
   }
 
   a {
-    @apply no-underline text-accent;
+    @apply underline text-accent transition-all duration-300;
+    text-decoration-color: theme('colors.gray.400');
+    text-underline-position: under;
+  }
+
+  @screen dark {
+    a {
+      text-decoration-color: theme('colors.gray.600');
+    }
   }
 
   a:focus,
   a:hover,
   a.active {
-    @apply underline;
+    text-decoration-color: currentcolor;
+  }
+
+  @media (prefers-reduced-motion) {
+    a {
+      @apply transition-none;
+    }
   }
 
   img {
@@ -68,13 +84,51 @@
   }
 
   blockquote {
-    @apply relative pl-4 m-4 italic border-l-4 border-gray-400 opacity-75;
+    @apply relative pl-4 m-4 italic border-l-4 border-gray-400 text-deemphasised;
   }
 
   @screen dark {
     blockquote {
       @apply border-gray-700;
     }
+  }
+
+  table {
+    @apply w-full;
+  }
+
+  thead tr {
+    @apply text-left;
+  }
+
+  thead th {
+    @apply py-2 pr-2;
+  }
+
+  thead th:last-child {
+    @apply pr-0;
+  }
+
+  tbody {
+    @apply text-sm;
+  }
+
+  tbody tr {
+    @apply border-t border-gray-400;
+  }
+
+  @screen dark {
+    tbody tr {
+      @apply border-gray-700;
+    }
+  }
+
+  /* purgecss end ignore */
+}
+
+@layer components {
+  .meta-text {
+    @apply text-xs italic text-deemphasised;
   }
 
   @screen sm {
@@ -91,6 +145,4 @@
       transform: translate(-2.5em, 12.3em);
     }
   }
-
-  /* purgecss end ignore */
 }
