@@ -5,12 +5,10 @@ eleventyComputed:
   eleventyNavigation:
     key: "{{ beer.title }}"
     order: 3
+pageFooter: Records for previous batches have been lost to time.
 ---
 
-<header>
-  <h1>{{ title }}</h1>
-  <p class="mb-8 italic">{{ description }}</p>
-</header>
+{% include 'components/page-header.html' %}
 
 {# <h2>Recipes</h2> #}
 
@@ -71,4 +69,4 @@ eleventyComputed:
   </tbody>
 </table>
 
-<p class="mt-12 meta-text">Records for previous batches have been lost to time.</p>
+{% include 'components/page-footer.html' %}
