@@ -79,6 +79,10 @@
     }
   }
 
+  /* purgecss end ignore */
+}
+
+@layer components {
   .meta-text {
     @apply text-xs italic text-deemphasised;
   }
@@ -97,6 +101,4 @@
       transform: translate(-2.5em, 12.3em);
     }
   }
-
-  /* purgecss end ignore */
 }
