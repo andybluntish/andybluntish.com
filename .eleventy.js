@@ -40,21 +40,29 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
-  eleventyConfig.addFilter('date', function (date) {
-    return new Date(date)
-  })
-
   eleventyConfig.addFilter('machineDate', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     return date.toISOString()
   })
 
   eleventyConfig.addFilter('shortDate', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     return new Intl.DateTimeFormat('en-AU', {
       dateStyle: 'short',
     }).format(date)
   })
 
   eleventyConfig.addFilter('humanDate', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     return new Intl.DateTimeFormat('en-AU', {
       year: 'numeric',
       month: 'short',
@@ -63,6 +71,10 @@ module.exports = (eleventyConfig) => {
   })
 
   eleventyConfig.addFilter('humanDateTime', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     const formattedDate = new Intl.DateTimeFormat('en-AU', {
       year: 'numeric',
       month: 'short',
