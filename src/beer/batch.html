@@ -9,7 +9,10 @@ eleventyComputed:
   description: '{{ beer.description }}'
 ---
 
-{{ batch.recipe.name }}
+<h1>
+  {{ batch.recipe.name }}
+  (<time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}" class="">{{ batch.brewDate | humanDate }}</time>)
+</h1>
 
 <dl>
   <dt>Style</dt>
@@ -54,15 +57,10 @@ eleventyComputed:
     {% endfor %}
   </dd>
 
-  <dt>Yeasts</dt>
+  <dt>Yeast</dt>
   <dd>
     {% for y in batch.recipe.yeasts %}
       {{ y.name | formatYeast }} ({{ y.productId}}){% if not loop.last %},{% endif %}
     {% endfor %}
-  </dd>
-
-  <dt>Brew Date</dt>
-  <dd>
-    <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}" class="">{{ batch.brewDate | humanDate }}</time>
   </dd>
 </dl>
