@@ -136,6 +136,30 @@ module.exports = (eleventyConfig) => {
     }
   })
 
+  eleventyConfig.addFilter('formatFermentable', function (value) {
+    switch (value.trim()) {
+      case 'Oats, Flaked':
+        return 'Flaked Oats'
+      case 'Milk Sugar (Lactose)':
+        return 'Lactose'
+      case 'Pale Malt, Traditional Ale':
+        return 'Pale Ale'
+      case 'Caramel/Crystal Malt':
+        return 'Caramel Malt'
+
+      default:
+        return value
+    }
+  })
+
+  eleventyConfig.addFilter('formatHop', function (value) {
+    return value
+  })
+
+  eleventyConfig.addFilter('formatYeast', function (value) {
+    return value
+  })
+
   eleventyConfig.addWatchTarget('src/*.css')
 
   eleventyConfig.addPassthroughCopy('src/img')

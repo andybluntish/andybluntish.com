@@ -5,8 +5,64 @@ pagination:
   alias: batch
 permalink: 'beer/batches/{{ batch._id }}/'
 eleventyComputed:
-  title: '{{ beer.title }} | {{ batch.name }}'
+  title: '{{ beer.title }} | {{ batch.recipe.name }}'
   description: '{{ beer.description }}'
 ---
 
 {{ batch.recipe.name }}
+
+<dl>
+  <dt>Style</dt>
+  <dd>{{ batch.recipe.style.name }}</dd>
+
+  <dt>
+    <abbr title="Alcohol by volume">ABV</abbr>
+  </dt>
+  <dd>{{ batch.measuredAbv | formatABV }}</dd>
+
+  <dt>
+    <abbr title="International Bittering Units">IBU</abbr>
+  </dt>
+  <dd>{{ batch.estimatedIbu | formatIBU }}</dd>
+
+  <dt>
+    <abbr title="European Brewery Convention">EBC</abbr>
+  </dt>
+  <dd>{{ batch.estimatedColor | srmToEBC | formatEBC }}</dd>
+
+  <dt>
+    <abbr title="Original Gravity">OG</abbr>
+  </dt>
+  <dd>{{ batch.estimatedOg }}</dd>
+
+  <dt>
+    <abbr title="Final Gravity">FG</abbr>
+  </dt>
+  <dd>{{ batch.estimatedFg }}</dd>
+
+  <dt>Fermentables</dt>
+  <dd>
+    {% for f in batch.recipe.fermentables %}
+      {{ f.name | formatFermentable }}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  </dd>
+
+  <dt>Hops</dt>
+  <dd>
+    {% for h in batch.recipe.hops %}
+      {{ h.name | formatHop }}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  </dd>
+
+  <dt>Yeasts</dt>
+  <dd>
+    {% for y in batch.recipe.yeasts %}
+      {{ y.name | formatYeast }} ({{ y.productId}}){% if not loop.last %},{% endif %}
+    {% endfor %}
+  </dd>
+
+  <dt>Brew Date</dt>
+  <dd>
+    <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}" class="">{{ batch.brewDate | humanDate }}</time>
+  </dd>
+</dl>

@@ -50,8 +50,8 @@ async function fetchBatches(offset = 0, limit = 50) {
     'recipe.fermentables',
     'recipe.hops',
     'recipe.yeasts',
-    'recipe.og',
-    'recipe.fg',
+    'estimatedOg',
+    'estimatedFg',
   ].join(',')
   const url = `https://api.brewfather.app/v1/batches?limit=${limit}&offset=${offset}&status=${status}&include=${include}`
 
