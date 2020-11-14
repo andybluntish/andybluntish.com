@@ -136,6 +136,18 @@ module.exports = (eleventyConfig) => {
     }
   })
 
+  eleventyConfig.addFilter('formatFermentables', function (data) {
+    const names = data.map((h) => h.name)
+
+    return [...new Set(names)]
+  })
+
+  eleventyConfig.addFilter('formatHops', function (data) {
+    const names = data.map((h) => h.name)
+
+    return [...new Set(names)]
+  })
+
   eleventyConfig.addWatchTarget('src/*.css')
 
   eleventyConfig.addPassthroughCopy('src/img')

@@ -58,27 +58,28 @@ eleventyComputed:
   {% if batch.recipe.fermentables.length %}
     <dt>Fermentables</dt>
     <dd>
-      {% for f in batch.recipe.fermentables %}
-        {{ f.name }}{% if not loop.last %},{% endif %}
-      {% endfor %}
+      <ul>
+        {% for fermentable in batch.recipe.fermentables | formatFermentables %}
+          <li>{{ fermentable }}</li>
+        {% endfor %}
+      </ul>
     </dd>
   {% endif %}
 
   {% if batch.recipe.hops.length %}
     <dt>Hops</dt>
     <dd>
-      {% for h in batch.recipe.hops %}
-        {{ h.name }}{% if not loop.last %},{% endif %}
-      {% endfor %}
+      <ul>
+        {% for hop in batch.recipe.hops | formatHops %}
+          <li>{{ hop }}</li>
+        {% endfor %}
+      </ul>
     </dd>
   {% endif %}
 
   {% if batch.recipe.yeasts.length %}
+    {% set yeast = batch.recipe.yeasts | first %}
     <dt>Yeast</dt>
-    <dd>
-      {% for y in batch.recipe.yeasts %}
-        {{ y.name }} ({{ y.productId}}){% if not loop.last %},{% endif %}
-      {% endfor %}
-    </dd>
+    <dd>{{ yeast.name }} ({{ yeast.productId}})</dd>
   {% endif %}
 </dl>
