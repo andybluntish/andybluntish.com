@@ -1,5 +1,6 @@
 const CacheAsset = require('@11ty/eleventy-cache-assets')
 const fetchAllPages = require('../../lib/fetch-all-pages')
+const Batch = require('../../lib/batch')
 
 module.exports = async function () {
   const pageSize = 50
@@ -56,7 +57,7 @@ async function fetchBatches(offset = 0, limit = 50) {
   const url = `https://api.brewfather.app/v1/batches?limit=${limit}&offset=${offset}&status=${status}&include=${include}`
 
   try {
-    return CacheAsset(url, {
+    const data = await CacheAsset(url, {
       duration: '1d',
       type: 'json',
       fetchOptions: {
@@ -65,6 +66,8 @@ async function fetchBatches(offset = 0, limit = 50) {
         },
       },
     })
+
+    return data.map((d) => new Batch(d))
   } catch (err) {
     console.error(err)
 
