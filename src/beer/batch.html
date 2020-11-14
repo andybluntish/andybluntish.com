@@ -15,52 +15,70 @@ eleventyComputed:
 </h1>
 
 <dl>
-  <dt>Style</dt>
-  <dd>{{ batch.recipe.style.name }}</dd>
+  {% if batch.recipe.style.name %}
+    <dt>Style</dt>
+    <dd>{{ batch.recipe.style.name }}</dd>
+  {% endif %}
 
-  <dt>
-    <abbr title="Alcohol by volume">ABV</abbr>
-  </dt>
-  <dd>{{ batch.measuredAbv | formatABV }}</dd>
+  {% if batch.measuredAbv %}
+    <dt>
+      <abbr title="Alcohol by volume">ABV</abbr>
+    </dt>
+    <dd>{{ batch.measuredAbv | formatABV }}</dd>
+  {% endif %}
 
-  <dt>
-    <abbr title="International Bittering Units">IBU</abbr>
-  </dt>
-  <dd>{{ batch.estimatedIbu | formatIBU }}</dd>
+  {% if batch.estimatedIbu %}
+    <dt>
+      <abbr title="International Bittering Units">IBU</abbr>
+    </dt>
+    <dd>{{ batch.estimatedIbu | formatIBU }}</dd>
+  {% endif %}
 
-  <dt>
-    <abbr title="European Brewery Convention">EBC</abbr>
-  </dt>
-  <dd>{{ batch.estimatedColor | srmToEBC | formatEBC }}</dd>
+  {% if batch.estimatedColor %}
+    <dt>
+      <abbr title="European Brewery Convention">EBC</abbr>
+    </dt>
+    <dd>{{ batch.estimatedColor | srmToEBC | formatEBC }}</dd>
+  {% endif %}
 
-  <dt>
-    <abbr title="Original Gravity">OG</abbr>
-  </dt>
-  <dd>{{ batch.estimatedOg }}</dd>
+  {% if batch.estimatedOg %}
+    <dt>
+      <abbr title="Original Gravity">OG</abbr>
+    </dt>
+    <dd>{{ batch.estimatedOg }}</dd>
+  {% endif %}
 
-  <dt>
-    <abbr title="Final Gravity">FG</abbr>
-  </dt>
-  <dd>{{ batch.estimatedFg }}</dd>
+  {% if batch.estimatedFg %}
+    <dt>
+      <abbr title="Final Gravity">FG</abbr>
+    </dt>
+    <dd>{{ batch.estimatedFg }}</dd>
+  {% endif %}
 
-  <dt>Fermentables</dt>
-  <dd>
-    {% for f in batch.recipe.fermentables %}
-      {{ f.name | formatFermentable }}{% if not loop.last %},{% endif %}
-    {% endfor %}
-  </dd>
+  {% if batch.recipe.fermentables.length %}
+    <dt>Fermentables</dt>
+    <dd>
+      {% for f in batch.recipe.fermentables %}
+        {{ f.name | formatFermentable }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    </dd>
+  {% endif %}
 
-  <dt>Hops</dt>
-  <dd>
-    {% for h in batch.recipe.hops %}
-      {{ h.name | formatHop }}{% if not loop.last %},{% endif %}
-    {% endfor %}
-  </dd>
+  {% if batch.recipe.hops.length %}
+    <dt>Hops</dt>
+    <dd>
+      {% for h in batch.recipe.hops %}
+        {{ h.name | formatHop }}{% if not loop.last %},{% endif %}
+      {% endfor %}
+    </dd>
+  {% endif %}
 
-  <dt>Yeast</dt>
-  <dd>
-    {% for y in batch.recipe.yeasts %}
-      {{ y.name | formatYeast }} ({{ y.productId}}){% if not loop.last %},{% endif %}
-    {% endfor %}
-  </dd>
+  {% if batch.recipe.yeasts.length %}
+    <dt>Yeast</dt>
+    <dd>
+      {% for y in batch.recipe.yeasts %}
+        {{ y.name | formatYeast }} ({{ y.productId}}){% if not loop.last %},{% endif %}
+      {% endfor %}
+    </dd>
+  {% endif %}
 </dl>
