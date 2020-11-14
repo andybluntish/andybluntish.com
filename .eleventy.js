@@ -89,65 +89,6 @@ module.exports = (eleventyConfig) => {
     return `${formattedDate} at ${formattedTime}`
   })
 
-  eleventyConfig.addFilter('formatABV', function (value = 0) {
-    return new Intl.NumberFormat('en-AU', {
-      style: 'percent',
-      minimumFractionDigits: 1,
-      maximumFractionDigits: 1,
-    }).format(value / 100)
-  })
-
-  eleventyConfig.addFilter('formatIBU', function (value = 0) {
-    if (typeof value === 'string') {
-      value = value.trim()
-    }
-
-    const num = Math.round(value)
-
-    if (isNaN(num)) {
-      return value
-    } else if (!value) {
-      return '-'
-    } else {
-      return value
-    }
-  })
-
-  eleventyConfig.addFilter('srmToEBC', function (value = 0) {
-    const num = Number(value)
-    if (isNaN(num)) {
-      return value
-    }
-
-    return value * 1.97
-  })
-
-  eleventyConfig.addFilter('formatEBC', function (value = 0) {
-    if (typeof value === 'string') {
-      value = value.trim()
-    }
-
-    const num = Number.parseFloat(value)
-
-    if (isNaN(num)) {
-      return value
-    } else {
-      return num.toFixed(1)
-    }
-  })
-
-  eleventyConfig.addFilter('formatFermentables', function (data) {
-    const names = data.map((h) => h.name)
-
-    return [...new Set(names)]
-  })
-
-  eleventyConfig.addFilter('formatHops', function (data) {
-    const names = data.map((h) => h.name)
-
-    return [...new Set(names)]
-  })
-
   eleventyConfig.addWatchTarget('src/*.css')
 
   eleventyConfig.addPassthroughCopy('src/img')
