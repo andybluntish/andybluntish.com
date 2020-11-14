@@ -38,28 +38,26 @@ pageFooter: Records for previous batches have been lost to time.
     {%- for batch in beer.batches -%}
       <tr class="flex flex-wrap sm:table-row">
         <td class="w-1/2 py-2 pr-2 font-semibold sm:w-auto">
-          <a href="/beer/batches/{{ batch._id }}" class="no-underline text-primary hover:text-accent focus:text-accent">
-            {{ batch.recipe.name }}
+          <a href="/beer/batches/{{ batch.id }}" class="no-underline text-primary hover:text-accent focus:text-accent">
+            {{ batch.name }}
           </a>
         </td>
         <td class="w-1/2 py-2 pr-2 sm:w-auto">
-          {{ batch.recipe.style.name }}
+          {{ batch.style }}
         </td>
         <td class="w-1/4 pb-2 pr-2 sm:w-auto sm:text-right sm:pb-0">
-          {{ batch.measuredAbv | formatABV }}
+          {{ batch.abv }}
           <abbr title="Alcohol by volume" class="sm:hidden">ABV</abbr>
         </td>
         <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
-          {% set ibu = batch.estimatedIbu | formatIBU %}
-          {{ ibu }}
-          {% if ibu !== '-' %}
+          {{ batch.ibu }}
+          {% if batch.ibu !== '-' %}
             <abbr title="International Bittering Units" class="sm:hidden">IBU</abbr>
           {% endif %}
         </td>
         <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
-          {% set ebc = batch.estimatedColor | srmToEBC | formatEBC %}
-          {{ ebc }}
-          {% if ebc !== '-' %}
+          {{ batch.ebc }}
+          {% if batch.ebc !== '-' %}
             <abbr title="European Brewery Convention" class="sm:hidden">EBC</abbr>
           {% endif %}
         </td>

@@ -3,83 +3,93 @@ pagination:
   data: beer.batches
   size: 1
   alias: batch
-permalink: 'beer/batches/{{ batch._id }}/'
+permalink: 'beer/batches/{{ batch.id }}/'
 eleventyComputed:
-  title: '{{ beer.title }} | {{ batch.recipe.name }}'
+  title: '{{ beer.title }} | {{ batch.name }}'
   description: '{{ beer.description }}'
 ---
 
 <h1>
-  {{ batch.recipe.name }}
+  {{ batch.name }}
   (<time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}" class="">{{ batch.brewDate | humanDate }}</time>)
 </h1>
 
-<dl>
-  {% if batch.recipe.style.name %}
-    <dt>Style</dt>
-    <dd>{{ batch.recipe.style.name }}</dd>
+{% macro beerStat(name, value) %}
+  <dt>{{ name }}</dt>
+  <dd class="col-span-3">{{ value }}</dd>
+{% endmacro %}
+
+<dl class="grid gap-2 grid-cols-4">
+  {% if batch.style %}
+    {{ beerStat('Style', batch.style) }}
   {% endif %}
 
-  {% if batch.measuredAbv %}
-    <dt>
+  {% if batch.abv %}
+    {% set name %}
       <abbr title="Alcohol by volume">ABV</abbr>
-    </dt>
-    <dd>{{ batch.measuredAbv | formatABV }}</dd>
+    {% endset %}
+
+    {{ beerStat(name | safe, batch.abv) }}
   {% endif %}
 
-  {% if batch.estimatedIbu %}
-    <dt>
+  {% if batch.ibu %}
+    {% set name %}
       <abbr title="International Bittering Units">IBU</abbr>
-    </dt>
-    <dd>{{ batch.estimatedIbu | formatIBU }}</dd>
+    {% endset %}
+    {{ beerStat(name | safe, batch.ibu) }}
   {% endif %}
 
-  {% if batch.estimatedColor %}
-    <dt>
+  {% if batch.ebc %}
+    {% set name %}
       <abbr title="European Brewery Convention">EBC</abbr>
-    </dt>
-    <dd>{{ batch.estimatedColor | srmToEBC | formatEBC }}</dd>
+    {% endset %}
+    {{ beerStat(name | safe, batch.ebc) }}
   {% endif %}
 
-  {% if batch.estimatedOg %}
-    <dt>
+  {% if batch.og %}
+    {% set name %}
       <abbr title="Original Gravity">OG</abbr>
-    </dt>
-    <dd>{{ batch.estimatedOg }}</dd>
+    {% endset %}
+    {{ beerStat(name | safe, batch.og) }}
   {% endif %}
 
-  {% if batch.estimatedFg %}
-    <dt>
+  {% if batch.fg %}
+    {% set name %}
       <abbr title="Final Gravity">FG</abbr>
-    </dt>
-    <dd>{{ batch.estimatedFg }}</dd>
+    {% endset %}
+    {{ beerStat(name | safe, batch.fg) }}
   {% endif %}
 
-  {% if batch.recipe.fermentables.length %}
-    <dt>Fermentables</dt>
-    <dd>
+  {% if batch.fermentables.length %}
+    {% set value %}
       <ul>
-        {% for fermentable in batch.recipe.fermentables | formatFermentables %}
+        {% for fermentable in batch.fermentables %}
           <li>{{ fermentable }}</li>
         {% endfor %}
       </ul>
-    </dd>
+    {% endset %}
+    {{ beerStat('Fermentables', value | safe) }}
   {% endif %}
 
-  {% if batch.recipe.hops.length %}
-    <dt>Hops</dt>
-    <dd>
+  {% if batch.hops.length %}
+    {% set value %}
       <ul>
-        {% for hop in batch.recipe.hops | formatHops %}
+        {% for hop in batch.hops %}
           <li>{{ hop }}</li>
         {% endfor %}
       </ul>
-    </dd>
+    {% endset %}
+    {{ beerStat('Hops', value | safe) }}
   {% endif %}
 
-  {% if batch.recipe.yeasts.length %}
-    {% set yeast = batch.recipe.yeasts | first %}
-    <dt>Yeast</dt>
-    <dd>{{ yeast.name }} ({{ yeast.productId}})</dd>
+  {% if batch.yeasts.length %}
+    {% set value %}
+      <ul>
+        {% for yeast in batch.yeasts %}
+          <li>{{ yeast }}</li>
+        {% endfor %}
+      </ul>
+    {% endset %}
+    {{ beerStat('Yeast', value | safe) }}
   {% endif %}
 </dl>
