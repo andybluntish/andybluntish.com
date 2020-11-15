@@ -62,7 +62,7 @@ pageFooter: Records for previous batches have been lost to time.
           {% endif %}
         </td>
         <td class="w-1/4 text-right sm:w-auto">
-          <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}" class="">{{ batch.brewDate | shortDate }}</time>
+          <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | shortDate }}</time>
         </td>
       </tr>
     {%- endfor -%}
