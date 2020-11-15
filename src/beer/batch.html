@@ -11,7 +11,6 @@ eleventyComputed:
 
 <h1 class="flex items-center">
   {{ batch.name }}
-  <span class="pl-2 text-lg text-deemphasised">(<time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>)</span>
 </h1>
 
 {% macro beerStat(name, value) %}
@@ -73,5 +72,12 @@ eleventyComputed:
   {% if batch.yeasts.length %}
     {% set value = batch.yeasts | join(', ') %}
     {{ beerStat('Yeast', value) }}
+  {% endif %}
+
+  {% if batch.brewDate %}
+    {% set value %}
+      <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
+    {% endset %}
+    {{ beerStat('Brew Date', value | safe) }}
   {% endif %}
 </dl>
