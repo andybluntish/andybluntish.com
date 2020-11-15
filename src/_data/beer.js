@@ -1,6 +1,6 @@
 const CacheAsset = require('@11ty/eleventy-cache-assets')
 const fetchAllPages = require('../../lib/fetch-all-pages')
-const Batch = require('../../lib/batch')
+const Batch = require('../../lib/beer/batch')
 
 module.exports = async function () {
   const pageSize = 50
