@@ -9,13 +9,13 @@ eleventyComputed:
   description: '{{ beer.description }}'
 ---
 
-<h1>
+<h1 class="flex items-center">
   {{ batch.name }}
-  (<time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}" class="">{{ batch.brewDate | humanDate }}</time>)
+  <span class="pl-2 text-lg text-deemphasised">(<time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>)</span>
 </h1>
 
 {% macro beerStat(name, value) %}
-  <dt>{{ name }}</dt>
+  <dt class="font-bold">{{ name }}</dt>
   <dd class="col-span-3">{{ value }}</dd>
 {% endmacro %}
 
