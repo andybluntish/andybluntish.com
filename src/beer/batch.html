@@ -61,35 +61,17 @@ eleventyComputed:
   {% endif %}
 
   {% if batch.fermentables.length %}
-    {% set value %}
-      <ul>
-        {% for fermentable in batch.fermentables %}
-          <li>{{ fermentable }}</li>
-        {% endfor %}
-      </ul>
-    {% endset %}
-    {{ beerStat('Fermentables', value | safe) }}
+    {% set value = batch.fermentables | join(', ') %}
+    {{ beerStat('Fermentables', value) }}
   {% endif %}
 
   {% if batch.hops.length %}
-    {% set value %}
-      <ul>
-        {% for hop in batch.hops %}
-          <li>{{ hop }}</li>
-        {% endfor %}
-      </ul>
-    {% endset %}
-    {{ beerStat('Hops', value | safe) }}
+    {% set value = batch.hops | join(', ') %}
+    {{ beerStat('Hops', value) }}
   {% endif %}
 
   {% if batch.yeasts.length %}
-    {% set value %}
-      <ul>
-        {% for yeast in batch.yeasts %}
-          <li>{{ yeast }}</li>
-        {% endfor %}
-      </ul>
-    {% endset %}
-    {{ beerStat('Yeast', value | safe) }}
+    {% set value = batch.yeasts | join(', ') %}
+    {{ beerStat('Yeast', value) }}
   {% endif %}
 </dl>
