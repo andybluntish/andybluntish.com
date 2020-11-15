@@ -1,0 +1,83 @@
+---
+pagination:
+  data: beer.batches
+  size: 1
+  alias: batch
+permalink: 'beer/batches/{{ batch.id }}/'
+eleventyComputed:
+  title: '{{ beer.title }} | {{ batch.name }}'
+  description: '{{ beer.description }}'
+---
+
+<h1 class="flex items-center">
+  {{ batch.name }}
+</h1>
+
+{% macro beerStat(name, value) %}
+  <dt class="font-bold">{{ name }}</dt>
+  <dd class="col-span-3">{{ value }}</dd>
+{% endmacro %}
+
+<dl class="grid gap-2 grid-cols-4">
+  {% if batch.style %}
+    {{ beerStat('Style', batch.style) }}
+  {% endif %}
+
+  {% if batch.abv %}
+    {% set name %}
+      <abbr title="Alcohol by volume">ABV</abbr>
+    {% endset %}
+
+    {{ beerStat(name | safe, batch.abv) }}
+  {% endif %}
+
+  {% if batch.ibu %}
+    {% set name %}
+      <abbr title="International Bittering Units">IBU</abbr>
+    {% endset %}
+    {{ beerStat(name | safe, batch.ibu) }}
+  {% endif %}
+
+  {% if batch.ebc %}
+    {% set name %}
+      <abbr title="European Brewery Convention">EBC</abbr>
+    {% endset %}
+    {{ beerStat(name | safe, batch.ebc) }}
+  {% endif %}
+
+  {% if batch.og %}
+    {% set name %}
+      <abbr title="Original Gravity">OG</abbr>
+    {% endset %}
+    {{ beerStat(name | safe, batch.og) }}
+  {% endif %}
+
+  {% if batch.fg %}
+    {% set name %}
+      <abbr title="Final Gravity">FG</abbr>
+    {% endset %}
+    {{ beerStat(name | safe, batch.fg) }}
+  {% endif %}
+
+  {% if batch.fermentables.length %}
+    {% set value = batch.fermentables | join(', ') %}
+    {{ beerStat('Fermentables', value) }}
+  {% endif %}
+
+  {% if batch.hops.length %}
+    {% set value = batch.hops | join(', ') %}
+    {{ beerStat('Hops', value) }}
+  {% endif %}
+
+  {% if batch.yeasts.length %}
+    {% set value = batch.yeasts | join(', ') %}
+    {{ beerStat('Yeast', value) }}
+  {% endif %}
+
+  {% if batch.brewDate %}
+    {% set value %}
+      <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
+    {% endset %}
+    {{ beerStat('Brew Date', value | safe) }}
+  {% endif %}
+</dl>

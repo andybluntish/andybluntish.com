@@ -40,21 +40,29 @@ module.exports = (eleventyConfig) => {
     return content
   })
 
-  eleventyConfig.addFilter('date', function (date) {
-    return new Date(date)
-  })
-
   eleventyConfig.addFilter('machineDate', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     return date.toISOString()
   })
 
   eleventyConfig.addFilter('shortDate', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     return new Intl.DateTimeFormat('en-AU', {
       dateStyle: 'short',
     }).format(date)
   })
 
   eleventyConfig.addFilter('humanDate', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     return new Intl.DateTimeFormat('en-AU', {
       year: 'numeric',
       month: 'short',
@@ -63,6 +71,10 @@ module.exports = (eleventyConfig) => {
   })
 
   eleventyConfig.addFilter('humanDateTime', function (date) {
+    if (typeof date.toISOString !== 'function') {
+      date = new Date(date)
+    }
+
     const formattedDate = new Intl.DateTimeFormat('en-AU', {
       year: 'numeric',
       month: 'short',
@@ -75,53 +87,6 @@ module.exports = (eleventyConfig) => {
     }).format(date)
 
     return `${formattedDate} at ${formattedTime}`
-  })
-
-  eleventyConfig.addFilter('formatABV', function (value = 0) {
-    return new Intl.NumberFormat('en-AU', {
-      style: 'percent',
-      minimumFractionDigits: 1,
-      maximumFractionDigits: 1,
-    }).format(value / 100)
-  })
-
-  eleventyConfig.addFilter('formatIBU', function (value = 0) {
-    if (typeof value === 'string') {
-      value = value.trim()
-    }
-
-    const num = Math.round(value)
-
-    if (isNaN(num)) {
-      return value
-    } else if (!value) {
-      return '-'
-    } else {
-      return value
-    }
-  })
-
-  eleventyConfig.addFilter('srmToEBC', function (value = 0) {
-    const num = Number(value)
-    if (isNaN(num)) {
-      return value
-    }
-
-    return value * 1.97
-  })
-
-  eleventyConfig.addFilter('formatEBC', function (value = 0) {
-    if (typeof value === 'string') {
-      value = value.trim()
-    }
-
-    const num = Number.parseFloat(value)
-
-    if (isNaN(num)) {
-      return value
-    } else {
-      return num.toFixed(1)
-    }
   })
 
   eleventyConfig.addWatchTarget('src/*.css')
