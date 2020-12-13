@@ -9,7 +9,7 @@
     "styles": "postcss ./src/styles.css -d ./dist",
     "lint": "yarn run eslint .",
     "format": "yarn run format:prettier; yarn run format:eslint",
-    "format:prettier": "yarn run prettier --write './**/*.{js,json}'",
+    "format:prettier": "yarn run prettier --write './**/*.{js,json,css,md}'",
     "format:eslint": "yarn run eslint --fix './**/*.js'",
     "test": "jest",
     "note:new": "node ./scripts/new-note.js"
