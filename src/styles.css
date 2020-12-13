@@ -10,6 +10,7 @@
     --background: #fff;
     --accent: #d93f00;
     --deemphasised: #727780;
+    --divider: theme('colors.gray.300');
   }
 
   @media (prefers-color-scheme: dark) {
@@ -18,6 +19,7 @@
       --background: #1b1d22;
       --accent: #ff9e66;
       --deemphasised: #81858c;
+      --divider: theme('colors.gray.600');
     }
 
     svg {
@@ -49,7 +51,7 @@
 
   a {
     @apply underline text-accent transition-all duration-300;
-    text-decoration-color: theme('colors.deemphasised');
+    text-decoration-color: theme('colors.divider');
     text-underline-position: under;
   }
 
@@ -78,7 +80,7 @@
   }
 
   blockquote {
-    @apply relative pl-4 m-4 italic border-l-4 border-gray-400 dark:border-gray-700 text-deemphasised;
+    @apply relative pl-4 m-4 italic border-l-4 border-divider text-deemphasised;
   }
 
   table {
@@ -102,7 +104,7 @@
   }
 
   tbody tr {
-    @apply border-t border-gray-400 dark:border-gray-700;
+    @apply border-t border-divider;
   }
 
   /* purgecss end ignore */

@@ -5,11 +5,12 @@ module.exports = {
   theme: {
     colors: {
       current: 'currentColor',
-      gray: colors.trueGray,
+      gray: colors.coolGray,
       foreground: 'var(--foreground)',
       background: 'var(--background)',
       accent: 'var(--accent)',
       deemphasised: 'var(--deemphasised)',
+      divider: 'var(--divider)',
     },
     extend: {
       gridTemplateRows: {
