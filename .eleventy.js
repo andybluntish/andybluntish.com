@@ -26,7 +26,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (isProd && outputPath.endsWith('.html')) {
+    if (isProd && (outputPath.endsWith('.html') || outputPath.endsWith('.xml'))) {
       return htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
