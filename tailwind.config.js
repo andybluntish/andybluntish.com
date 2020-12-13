@@ -1,5 +1,27 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   theme: {
+    colors: {
+      current: 'currentColor',
+      gray: colors.trueGray,
+      foreground: {
+        DEFAULT: 'var(--foreground)',
+        dark: 'var(--foreground)',
+      },
+      background: {
+        DEFAULT: 'var(--background)',
+        dark: 'var(--background)',
+      },
+      accent: {
+        DEFAULT: 'var(--accent)',
+        dark: 'var(--accent)',
+      },
+      deemphasised: {
+        DEFAULT: 'var(--deemphasised)',
+        dark: 'var(--deemphasised)',
+      },
+    },
     extend: {
       screens: {
         light: { raw: '(prefers-color-scheme: light)' },
@@ -10,12 +32,6 @@ module.exports = {
       },
       gridTemplateColumns: {
         layout: 'calc(50vw - 19rem) auto calc(50vw - 19rem)',
-      },
-      colors: {
-        foreground: 'var(--foreground)',
-        background: 'var(--background)',
-        accent: 'var(--accent)',
-        deemphasised: 'var(--deemphasised)',
       },
       textColor: {
         primary: 'var(--foreground)',
