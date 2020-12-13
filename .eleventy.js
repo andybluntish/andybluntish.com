@@ -91,7 +91,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addWatchTarget('src/*.css')
 
-  eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/assets/img')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
   eleventyConfig.addPassthroughCopy('src/_redirects')
 

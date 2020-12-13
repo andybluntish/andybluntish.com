@@ -6,7 +6,7 @@
     "dev": "yarn clean && yarn html --serve & yarn styles --watch",
     "clean": "rm -rf dist",
     "html": "eleventy .",
-    "styles": "postcss ./src/styles.css -d ./dist",
+    "styles": "postcss ./src/assets/styles.css -d ./dist/assets",
     "lint": "yarn run eslint .",
     "format": "yarn run format:prettier; yarn run format:eslint",
     "format:prettier": "yarn run prettier --write './**/*.{js,json,css,md}'",
