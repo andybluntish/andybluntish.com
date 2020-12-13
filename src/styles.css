@@ -52,7 +52,6 @@
   a {
     @apply underline text-accent transition-all duration-300;
     text-decoration-color: theme('colors.divider');
-    text-underline-position: under;
   }
 
   a:focus,
