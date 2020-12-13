@@ -70,13 +70,7 @@
   }
 
   blockquote {
-    @apply relative pl-4 m-4 italic border-l-4 border-gray-400 text-deemphasised;
-  }
-
-  @screen dark {
-    blockquote {
-      @apply border-gray-700;
-    }
+    @apply relative pl-4 m-4 italic border-l-4 border-gray-400 dark:border-gray-700 text-deemphasised;
   }
 
   table {
@@ -100,13 +94,7 @@
   }
 
   tbody tr {
-    @apply border-t border-gray-400;
-  }
-
-  @screen dark {
-    tbody tr {
-      @apply border-gray-700;
-    }
+    @apply border-t border-gray-400 dark:border-gray-700;
   }
 
   /* purgecss end ignore */
