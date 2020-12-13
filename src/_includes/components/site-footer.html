@@ -3,7 +3,7 @@
 <footer role="contentinfo" class="mt-4 text-sm col-start-2">
   <p>
   {% for link in site.footer.links %}
-    <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="text-primary hover:text-accent focus:text-accent">{{ link.title }}</a>
+    <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="text-foreground hover:text-accent focus:text-accent dark:text-foreground-dark dark:hover:text-accent-dark dark:focus:text-accent-dark">{{ link.title }}</a>
     {% if not loop.last %}
       {{ text.separator() }}
     {% endif %}
