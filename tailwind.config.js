@@ -1,25 +1,23 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+  darkMode: 'media',
   theme: {
+    colors: {
+      current: 'currentColor',
+      gray: colors.coolGray,
+      foreground: 'var(--foreground)',
+      background: 'var(--background)',
+      accent: 'var(--accent)',
+      deemphasised: 'var(--deemphasised)',
+      divider: 'var(--divider)',
+    },
     extend: {
-      screens: {
-        light: { raw: '(prefers-color-scheme: light)' },
-        dark: { raw: '(prefers-color-scheme: dark)' },
-      },
       gridTemplateRows: {
         layout: 'auto 1fr auto',
       },
       gridTemplateColumns: {
         layout: 'calc(50vw - 19rem) auto calc(50vw - 19rem)',
-      },
-      colors: {
-        foreground: 'var(--foreground)',
-        background: 'var(--background)',
-        accent: 'var(--accent)',
-        deemphasised: 'var(--deemphasised)',
       },
       textColor: {
         primary: 'var(--foreground)',
@@ -35,6 +33,6 @@ module.exports = {
   },
   purge: {
     preserveHtmlElements: false,
-    content: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md'],
+    content: ['./dist/**/*.html'],
   },
 }
