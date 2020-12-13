@@ -113,6 +113,10 @@
     @apply text-xs italic text-deemphasised;
   }
 
+  .subtle-link {
+    @apply text-primary hover:text-accent focus:text-accent;
+  }
+
   @screen sm {
     .portrait-footer li:nth-child(1) {
       transform: translate(2.5em, 12.3em);
