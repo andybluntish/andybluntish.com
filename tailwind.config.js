@@ -33,6 +33,6 @@ module.exports = {
   },
   purge: {
     preserveHtmlElements: false,
-    content: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md'],
+    content: ['./dist/**/*.html'],
   },
 }

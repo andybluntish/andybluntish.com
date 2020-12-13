@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* purgecss start ignore */
-
   :root {
     --foreground: #363d49;
     --background: #fff;
@@ -105,8 +103,6 @@
   tbody tr {
     @apply border-t border-divider;
   }
-
-  /* purgecss end ignore */
 }
 
 @layer components {
