@@ -2,7 +2,7 @@
   <ul class="relative z-10 flex flex-wrap justify-around mb-6">
     {% for link in site.footer.links %}
       <li>
-        <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="inline-block p-2 text-foreground hover:text-accent focus:text-accent dark:text-foreground-dark dark:hover:text-accent-dark dark:focus:text-accent-dark hover:scale-125 focus:scale-125 motion-safe:transform">
+        <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="inline-block p-2 text-primary hover:text-accent focus:text-accent hover:scale-125 focus:scale-125 motion-safe:transform">
           <svg role="img" aria-labelledby="t-{{ link.title | lower }}" width="32" height="32">
             <use xlink:href="#i-{{ link.title | lower }}"></use>
           </svg>

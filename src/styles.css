@@ -5,7 +5,21 @@
 @layer base {
   /* purgecss start ignore */
 
+  :root {
+    --foreground: #363d49;
+    --background: #fff;
+    --accent: #d93f00;
+    --deemphasised: #727780;
+  }
+
   @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground: #d1d6e0;
+      --background: #1b1d22;
+      --accent: #ff9e66;
+      --deemphasised: #81858c;
+    }
+
     svg {
       filter: brightness(0.8) contrast(1.2);
     }
@@ -34,13 +48,15 @@
   }
 
   a {
-    @apply underline text-accent dark:text-accent-dark transition-all duration-300;
+    @apply underline text-accent transition-all duration-300;
+    text-decoration-color: theme('colors.deemphasised');
+    text-underline-position: under;
   }
 
   a:focus,
   a:hover,
   a.active {
-    text-decoration-color: currentcolor;
+    text-decoration-color: theme('colors.current');
   }
 
   @media (prefers-reduced-motion) {

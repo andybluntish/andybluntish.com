@@ -38,7 +38,7 @@ pageFooter: Records for previous batches have been lost to time.
     {%- for batch in beer.batches -%}
       <tr class="flex flex-wrap sm:table-row">
         <td class="w-1/2 py-2 pr-2 font-semibold sm:w-auto">
-          <a href="/beer/batches/{{ batch.id }}" class="no-underline text-foreground hover:text-accent focus:text-accent dark:text-foreground-dark dark:hover:text-accent-dark dark:focus:text-accent-dark">
+          <a href="/beer/batches/{{ batch.id }}" class="no-underline text-primary hover:text-accent focus:text-accent">
             {{ batch.name }}
           </a>
         </td>
