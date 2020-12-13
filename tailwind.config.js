@@ -6,20 +6,20 @@ module.exports = {
       current: 'currentColor',
       gray: colors.trueGray,
       foreground: {
-        DEFAULT: 'var(--foreground)',
-        dark: 'var(--foreground)',
+        DEFAULT: '#363d49',
+        dark: '#d1d6e0',
       },
       background: {
-        DEFAULT: 'var(--background)',
-        dark: 'var(--background)',
+        DEFAULT: '#fff',
+        dark: '#1b1d22',
       },
       accent: {
-        DEFAULT: 'var(--accent)',
-        dark: 'var(--accent)',
+        DEFAULT: '#d93f00',
+        dark: '#ff9e66',
       },
       deemphasised: {
-        DEFAULT: 'var(--deemphasised)',
-        dark: 'var(--deemphasised)',
+        DEFAULT: '#727780',
+        dark: '#81858c',
       },
     },
     extend: {

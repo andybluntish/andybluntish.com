@@ -5,21 +5,7 @@
 @layer base {
   /* purgecss start ignore */
 
-  :root {
-    --foreground: #363d49;
-    --background: #fff;
-    --accent: #d93f00;
-    --deemphasised: #727780;
-  }
-
   @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground: #d1d6e0;
-      --background: #1b1d22;
-      --accent: #ff9e66;
-      --deemphasised: #81858c;
-    }
-
     svg {
       filter: brightness(0.8) contrast(1.2);
     }
