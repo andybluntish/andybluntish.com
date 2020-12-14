@@ -8,6 +8,7 @@ const markdownIt = require('markdown-it')
 const htmlmin = require('html-minifier')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
@@ -24,6 +25,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
   eleventyConfig.addPlugin(pluginRss)
+  eleventyConfig.addPlugin(syntaxHighlight)
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (isProd && (outputPath.endsWith('.html') || outputPath.endsWith('.xml'))) {
