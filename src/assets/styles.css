@@ -110,6 +110,16 @@
     @apply text-primary hover:text-accent focus:text-accent;
   }
 
+  .inline-bullet,
+  .inline-bullet li {
+    @apply flex;
+  }
+  .inline-bullet li:not(:first-of-type):before {
+    content: '•';
+
+    @apply mx-1 list-none text-deemphasised;
+  }
+
   @screen sm {
     .portrait-footer li:nth-child(1) {
       transform: translate(2.5em, 12.3em);
