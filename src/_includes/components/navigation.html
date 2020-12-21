@@ -1,0 +1,24 @@
+{% macro list(entries, page, listClassNames, itemClassNames, linkClassNames, activeClassName = 'active') %}
+<ul class="{{ listClassNames }}">
+  {%- for entry in entries %}
+    {% if entry.url == '/' %}
+      {% set active = entry.url == page.url %}
+    {% else %}
+      {% set active = page.url.startsWith(entry.url) %}
+    {% endif %}
+
+    <li class="{{ itemClassNames }}{% if active %} {{ activeClassName }}{% endif %}">
+      <a href="{{ entry.url }}" class="{{ linkClassNames }}{% if active %} {{ activeClassName }}{% endif %}">
+        {{ entry.title }}
+      </a>
+    </li>
+  {%- endfor %}
+</ul>
+{% endmacro %}
+
+{% macro header(entries, page) %}
+{% set listClassNames = 'flex p-0 m-0 text-sm font-bold uppercase' %}
+{% set itemClassNames = 'ml-4' %}
+{% set linkClassNames = 'py-2 no-underline subtle-link' %}
+{{ list(entries, page, listClassNames, itemClassNames, linkClassNames) }}
+{% endmacro %}
