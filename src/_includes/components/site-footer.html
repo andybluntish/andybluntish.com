@@ -1,13 +1,7 @@
-{% import "components/text.html" as "text" %}
+{% import "components/navigation.html" as "navigation" %}
 
 <footer role="contentinfo" class="mt-4 text-sm col-start-2">
-  <p>
-  {% for link in site.footer.links %}
-    <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="subtle-link">{{ link.title }}</a>
-    {% if not loop.last %}
-      {{ text.separator() }}
-    {% endif %}
-  {% endfor %}
-  </p>
+  {{ navigation.footer(collections.all | eleventyNavigation, page) }}
+
   <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
 </footer>
