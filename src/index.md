@@ -2,7 +2,7 @@
 eleventyNavigation:
   key: About
   order: 1
-portraitFooter: true
+layout: layouts/home.html
 ---
 
 G’day, my name is [Andy]({{ site.url }}/) 👋
