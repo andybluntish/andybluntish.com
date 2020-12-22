@@ -1,14 +1,17 @@
 {% macro list(entries, page, listClassNames, itemClassNames, linkClassNames, activeClassName = 'active') %}
 <ul class="{{ listClassNames }}">
   {%- for entry in entries %}
-    {% if entry.url == '/' %}
-      {% set active = entry.url == page.url %}
+    {# The current link is "active" #}
+    {% if (entry.url == '/' and entry.url == page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
+      {% set itemClasses = (itemClassNames + ' ' + activeClassName) | trim %}
+      {% set linkClasses = (linkClassNames + ' ' + activeClassName) | trim %}
     {% else %}
-      {% set active = page.url.startsWith(entry.url) %}
+      {% set itemClasses = itemClassNames | trim %}
+      {% set linkClasses = linkClassNames | trim %}
     {% endif %}
 
-    <li class="{{ itemClassNames }}{% if active %} {{ activeClassName }}{% endif %}">
-      <a href="{{ entry.url }}" class="{{ linkClassNames }}{% if active %} {{ activeClassName }}{% endif %}">
+    <li{% if itemClasses %} class="{{ itemClasses }}"{% endif %}>
+      <a href="{{ entry.url }}"{% if linkClasses %} class="{{ linkClasses }}"{% endif %}>
         {{ entry.title }}
       </a>
     </li>
