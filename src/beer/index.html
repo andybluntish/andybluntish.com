@@ -8,7 +8,10 @@ eleventyComputed:
 pageFooter: Records for previous batches have been lost to time.
 ---
 
-{% include 'components/page-header.html' %}
+<header>
+  <h1>{{ title }}</h1>
+  <p class="mb-8 italic">{{ description }}</p>
+</header>
 
 {# <h2>Recipes</h2> #}
 
@@ -69,4 +72,4 @@ pageFooter: Records for previous batches have been lost to time.
   </tbody>
 </table>
 
-{% include 'components/page-footer.html' %}
+<p class="mt-12 meta-text">{{ pageFooter }}</p>

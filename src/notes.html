@@ -8,7 +8,10 @@ eleventyComputed:
 pageFooter: Prior ramblings have been lost to time.
 ---
 
-{% include 'components/page-header.html' %}
+<header>
+  <h1>{{ title }}</h1>
+  <p class="mb-8 italic">{{ description }}</p>
+</header>
 
 <ul>
   {% for note in collections.notes | reverse %}
@@ -24,4 +27,4 @@ pageFooter: Prior ramblings have been lost to time.
   {% endfor %}
 </ul>
 
-{% include 'components/page-footer.html' %}
+<p class="mt-12 meta-text">{{ pageFooter }}</p>
