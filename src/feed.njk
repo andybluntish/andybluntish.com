@@ -16,20 +16,20 @@ eleventyExcludeFromCollections: true
     <email>{{ site.author.email }}</email>
   </author>
   {%- for note in collections.notes | reverse %}
-    {%- set absoluteNoteUrl %}{{ note.url | absoluteUrl(site.url) }}{% endset %}
-    {%- set title %}
-      {%- if note.data.title -%}
-        {{- note.data.title -}}
-      {%- else -%}
-        {{- note.date | humanDateTime -}}
-      {%- endif -%}
-    {% endset %}
-    <entry>
-      <title>{{ title }}</title>
-      <link href="{{ absoluteNoteUrl }}"/>
-      <updated>{{ note.date | rssDate }}</updated>
-      <id>{{ absoluteNoteUrl }}</id>
-      <content type="html">{{ note.templateContent | htmlToAbsoluteUrls(absoluteNoteUrl) }}</content>
-    </entry>
-  {%- endfor %}
+  {%- set absoluteNoteUrl %}{{ note.url | absoluteUrl(site.url) }}{% endset %}
+  {%- set title %}
+    {%- if note.data.title -%}
+      {{- note.data.title -}}
+    {%- else -%}
+      {{- note.date | humanDateTime -}}
+    {%- endif -%}
+  {% endset %}
+  <entry>
+    <title>{{ title }}</title>
+    <link href="{{ absoluteNoteUrl }}"/>
+    <updated>{{ note.date | rssDate }}</updated>
+    <id>{{ absoluteNoteUrl }}</id>
+    <content type="html">{{ note.templateContent | htmlToAbsoluteUrls(absoluteNoteUrl) | trim }}</content>
+  </entry>
+  {%- endfor -%}
 </feed>

@@ -11,7 +11,7 @@ pageFooter: Prior ramblings have been lost to time.
 {% include 'components/page-header.html' %}
 
 <ul>
-  {%- for note in collections.notes | reverse -%}
+  {% for note in collections.notes | reverse %}
     {% set noteTitle = note.data.title %}
     {% set content = note.templateContent %}
     {% if loop.last %}
@@ -21,7 +21,7 @@ pageFooter: Prior ramblings have been lost to time.
     {% endif %}
       {% include 'components/note.html' %}
     </li>
-  {%- endfor -%}
+  {% endfor %}
 </ul>
 
 {% include 'components/page-footer.html' %}

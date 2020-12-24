@@ -8,7 +8,7 @@ eleventyComputed:
   title: '{{ beer.title }} | {{ batch.name }}'
   description: '{{ beer.description }}'
 ---
-{% import "components/text.html" as "text" %}
+{% import 'components/text.html' as 'text' %}
 
 {% macro beerStat(name, value) %}
   <dt class="font-bold">{{ name }}</dt>
