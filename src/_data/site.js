@@ -1,18 +1,19 @@
 module.exports = function () {
   const now = new Date()
+  const url = 'https://andybluntish.com'
+  const name = 'Andy Stanford-Bluntish'
   const email = 'andybluntish@gmail.com'
   const username = 'andybluntish'
 
   return {
-    name: 'andybluntish.com',
-    title: 'Andy Stanford-Bluntish',
+    title: name,
     description: 'I build things on the web. I love what I do.',
     shortName: username,
     author: {
-      name: 'Andy Stanford-Bluntish',
+      name,
       email,
     },
-    url: 'https://andybluntish.com',
+    url,
     copyright: {
       start: 2006,
       end: now.getFullYear(),
