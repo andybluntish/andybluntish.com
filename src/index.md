@@ -2,7 +2,6 @@
 eleventyNavigation:
   key: About
   order: 1
-layout: layouts/home.html
 ---
 
 G’day, my name is [Andy]({{ site.url }}/) 👋

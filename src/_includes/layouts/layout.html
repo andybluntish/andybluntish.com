@@ -1,14 +1,35 @@
----
-layout: layouts/base.html
----
 {% import 'components/global.html' as 'global' %}
 
-<body class="relative w-full min-h-screen px-3 grid grid-cols-layout grid-rows-layout gap-y-8">
-  {{ global.header(page, collections.all | eleventyNavigation, site.title) }}
+<!doctype html>
+<html lang="en" class="text-primary bg-primary">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff">
+  <title>{{ [site.title, title] | select() | join(' | ') }}</title>
+  <meta name="description" content="{{ [description, site.description] | select() | first }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="copyright" content="Copyright (c) {{ site.copyright.start }}–{{ site.copyright.end }} {{ site.author.name }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+  <body class="relative w-full min-h-screen px-3 grid grid-cols-layout grid-rows-layout gap-y-8">
+    {{ global.header(page, collections.all | eleventyNavigation, site.title) }}
 
-  <main class="self-center min-w-0 col-start-2">
-    {{ content | safe }}
-  </main>
+    <main class="self-center min-w-0 col-start-2">
+      {{ content | safe }}
+    </main>
 
-  {{ global.footer(page, collections.all | eleventyNavigation, site.copyright.end, site.author.name) }}
-</body>
+    {% if page.url === '/' %}
+      {{ global.portraitFooter(site.footer.links, site.author.name) }}
+    {% else %}
+      {{ global.footer(page, collections.all | eleventyNavigation, site.copyright.end, site.author.name) }}
+    {% endif %}
+  </body>
+</html>
