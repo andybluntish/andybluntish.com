@@ -27,6 +27,7 @@
     "@11ty/eleventy-cache-assets": "^2.1.0",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "autoprefixer": "^10.2.4",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
@@ -37,7 +38,6 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "eslint": "^7.18.0",
     "eslint-plugin-node": "^11.1.0",
     "jest": "^26.6.3",
