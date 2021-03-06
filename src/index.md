@@ -1,4 +1,5 @@
 ---
+layout: layouts/home.html
 eleventyNavigation:
   key: About
   order: 1
