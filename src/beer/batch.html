@@ -7,6 +7,8 @@ permalink: 'beer/batches/{{ batch.id }}/'
 eleventyComputed:
   title: '{{ beer.title }} | {{ batch.name }}'
   description: '{{ beer.description }}'
+mainClassNames:
+  - self-center
 ---
 {% import 'components/text.html' as 'text' %}
 
