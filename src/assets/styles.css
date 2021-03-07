@@ -122,16 +122,16 @@
 
   @screen sm {
     .portrait-footer li:nth-child(1) {
-      transform: translate(2.5em, 12.3em);
+      transform: translate(2.3em, 12.3em);
     }
     .portrait-footer li:nth-child(2) {
-      transform: translate(-1.9em, 3.8em);
+      transform: translate(-2em, 3.8em);
     }
     .portrait-footer li:nth-child(4) {
-      transform: translate(1.9em, 3.8em);
+      transform: translate(2em, 3.8em);
     }
     .portrait-footer li:nth-child(5) {
-      transform: translate(-2.5em, 12.3em);
+      transform: translate(-2.3em, 12.3em);
     }
   }
 

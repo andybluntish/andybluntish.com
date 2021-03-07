@@ -16,9 +16,6 @@ module.exports = {
       gridTemplateRows: {
         layout: 'auto 1fr auto',
       },
-      gridTemplateColumns: {
-        layout: 'calc(50vw - 19rem) auto calc(50vw - 19rem)',
-      },
       textColor: {
         primary: 'var(--foreground)',
       },
