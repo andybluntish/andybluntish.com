@@ -1,7 +1,13 @@
+---
+mainClassNames:
+  - self-center
+footerClassNames:
+  - portrait-footer
+---
 {% extends "layouts/layout.html" %}
 
 {% block footer %}
-<div class="max-w-xl m-auto portrait-footer">
+<div class="max-w-xl m-auto">
   <ul class="relative z-10 flex flex-wrap justify-around mb-6">
     {% for link in site.footer.links %}
     <li>
