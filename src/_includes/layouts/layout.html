@@ -17,11 +17,11 @@
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
-<body class="min-h-screen px-4 pt-4 grid grid-rows-layout gap-y-8">
+<body class="min-h-screen px-4 pt-4 grid grid-rows-layout gap-y-8{% if bodyClassNames %} {{ bodyClassNames | join(' ') | trim }}{% endif %}">
   {% import 'components/navigation.html' as 'navigation' %}
   {% set navigationItems = collections.all | eleventyNavigation %}
 
-  <header role="banner">
+  <header role="banner"{% if headerClassNames %} class="{{ headerClassNames | join(' ') | trim }}"{% endif %}>
     <nav role="navigation" class="flex items-center justify-between">
       <a href="/" rel="home" id="logo" class="w-8 subtle-link hover:scale-110 focus:scale-110 motion-safe:transform">
         <svg fill="currentColor" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="block" aria-labelledby="logo-title">
@@ -41,13 +41,15 @@
     </nav>
   </header>
 
-  <main class="self-center min-w-0">
-    <div class="max-w-xl mx-auto">
-      {{ content | safe }}
-    </div>
+  <main class="min-w-0{% if mainClassNames %} {{ mainClassNames | join(' ') | trim }}{% endif %}">
+    {% block main %}
+      <div class="max-w-xl mx-auto">
+        {{ content | safe }}
+      </div>
+    {% endblock %}
   </main>
 
-  <footer role="contentinfo">
+  <footer role="contentinfo"{% if footerClassNames %} class="{{ footerClassNames | join(' ') | trim }}"{% endif %}>
     {% block footer %}
       <div class="justify-between text-sm text-center sm:flex">
         <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
