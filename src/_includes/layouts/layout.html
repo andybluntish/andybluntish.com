@@ -51,7 +51,7 @@
 
   <footer role="contentinfo"{% if footerClassNames %} class="{{ footerClassNames | join(' ') | trim }}"{% endif %}>
     {% block footer %}
-      <div class="justify-between text-sm text-center sm:flex">
+      <div class="justify-between text-xs text-center sm:flex">
         <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
 
         {% set footerNavListClassNames = 'justify-center p-0 m-0 mb-4 inline-bullet' %}
