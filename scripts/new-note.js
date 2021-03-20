@@ -10,7 +10,7 @@ const id = KSUID.randomSync(now)
 const outputPath = `./src/notes/${id.string}.md`
 const content = `
 ---
-id: ${id.string}
+uuid: ${id.string}
 date: ${id.date.toISOString()}
 ---
 

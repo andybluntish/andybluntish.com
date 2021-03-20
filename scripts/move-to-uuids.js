@@ -22,7 +22,7 @@ files.forEach((fileName) => {
     if (match && match[1]) {
       let dateString = match[1]
       id = KSUID.randomSync(new Date(dateString))
-      lines.push(`id: ${id.string}`)
+      lines.push(`uuid: ${id.string}`)
       lines.push(`date: ${id.date.toISOString()}`)
     } else {
       lines.push(line)
