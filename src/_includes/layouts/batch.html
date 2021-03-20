@@ -1,0 +1,18 @@
+---
+eleventyComputed:
+  title: '{{ beer.title }} | {{ batch.name }}'
+  description: '{{ beer.description }}'
+  bodyClassNames:
+    - 'batch-{{ batch.id }}'
+mainClassNames:
+  - self-center
+stylesheets:
+  - batches
+---
+{% extends "layouts/layout.html" %}
+
+{% block main %}
+  <div class="max-w-xl mx-auto">
+    {{ content | safe }}
+  </div>
+{% endblock %}
