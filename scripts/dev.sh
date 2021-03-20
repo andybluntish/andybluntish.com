@@ -13,4 +13,4 @@ echo "--- Building and watching HTML"
 yarn run eleventy "$INPUT" --serve &
 
 echo "--- Building and watching CSS"
-yarn run postcss "$INPUT/src/assets/css/main.css" -d "$OUTPUT/assets/css" --watch
+yarn run postcss "$INPUT/src/assets/css/*.css" -d "$OUTPUT/assets/css" --watch

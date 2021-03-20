@@ -16,6 +16,9 @@
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/main.css">
+  {% for sheet in stylesheets %}
+    <link rel="stylesheet" href="/assets/css/{{ sheet }}.css">
+  {% endfor %}
 </head>
 <body class="min-h-screen px-4 pt-4 grid grid-rows-layout gap-y-4 sm:gap-y-8{% if bodyClassNames %} {{ bodyClassNames | join(' ') | trim }}{% endif %}">
   {% import 'components/navigation.html' as 'navigation' %}
