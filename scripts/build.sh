@@ -12,4 +12,4 @@ echo "--- Building HTML"
 yarn run eleventy "$INPUT"
 
 echo "--- Building CSS"
-yarn run postcss "$INPUT/src/assets/styles.css" -d "$OUTPUT/assets"
+yarn run postcss "$INPUT/src/assets/css/main.css" -d "$OUTPUT/assets/css"
