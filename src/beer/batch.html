@@ -45,21 +45,22 @@ stylesheets:
     {% if batch.ebc %}
       {{ text.separator() }} {{ batch.ebc }} <abbr title="European Brewery Convention">EBC</abbr>
     {% endif %}
+  </p>
+
+  <dl class="grid gap-x-2 grid-cols-4">
+    {% if batch.fermentables.length %}
+      {% set value = batch.fermentables | join(', ') %}
+      {{ beerStat('Fermentables', value) }}
+    {% endif %}
+
+    {% if batch.hops.length %}
+      {% set value = batch.hops | join(', ') %}
+      {{ beerStat('Hops', value) }}
+    {% endif %}
+
+    {% if batch.yeasts.length %}
+      {% set value = batch.yeasts | join(', ') %}
+      {{ beerStat('Yeast', value) }}
+    {% endif %}
+  </dl>
 </article>
-
-<dl class="grid gap-x-2 grid-cols-4">
-  {% if batch.fermentables.length %}
-    {% set value = batch.fermentables | join(', ') %}
-    {{ beerStat('Fermentables', value) }}
-  {% endif %}
-
-  {% if batch.hops.length %}
-    {% set value = batch.hops | join(', ') %}
-    {{ beerStat('Hops', value) }}
-  {% endif %}
-
-  {% if batch.yeasts.length %}
-    {% set value = batch.yeasts | join(', ') %}
-    {{ beerStat('Yeast', value) }}
-  {% endif %}
-</dl>
