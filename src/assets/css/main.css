@@ -143,7 +143,6 @@
    * https://github.com/PrismJS/prism-themes/blob/master/themes/prism-dracula.css
    */
 
-  /* code, */
   code[class*='language-'],
   pre[class*='language-'] {
     color: #f8f8f2;
@@ -163,27 +162,26 @@
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-
-    @apply text-sm;
   }
 
   /* Code blocks */
   pre[class*='language-'] {
-    @apply p-3 my-2 -mx-3 sm:rounded-lg;
+    padding: 1em;
+    margin: 0.5em 0;
     overflow: auto;
+    border-radius: 0.3em;
   }
 
-  /* :not(pre) > code, */
   :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
     background: #282a36;
   }
 
   /* Inline code */
-  /* :not(pre) > code, */
   :not(pre) > code[class*='language-'] {
+    padding: 0.1em;
+    border-radius: 0.3em;
     white-space: normal;
-    @apply py-0.5 px-1 rounded;
   }
 
   .token.comment,
