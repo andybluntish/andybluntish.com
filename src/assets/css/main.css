@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 
 :root {
   --foreground: #363d49;
@@ -12,6 +12,7 @@
   --space: 1rem;
   --half-space: calc(var(--space) / 2);
   --quarter-space: calc(var(--space) / 4);
+  --double-space: calc(var(--space) * 2);
   --text: 1rem;
   --text-sm: 0.85rem;
   --text-lg: 1.125rem;
@@ -20,6 +21,7 @@
   --text-3xl: 1.875rem;
   --text-5xl: 3rem;
   --border-radius: 0.35rem;
+  --transition: 0.1s ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,7 +84,7 @@ blockquote {
 a {
   color: var(--accent);
   text-decoration: underline;
-  transition: all 0.2s ease-in-out;
+  transition: all var(--transition);
   text-decoration-color: var(--divider);
 }
 
@@ -105,6 +107,72 @@ a.active {
 img {
   height: auto;
   max-width: 100%;
+}
+
+/*******************************************************************************
+ * Layout
+ ******************************************************************************/
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: var(--space);
+  padding: var(--space) var(--space) 0;
+  min-height: 100vh;
+}
+
+@media (min-width: 640px) {
+  body {
+    row-gap: var(--double-space);
+  }
+}
+
+/*******************************************************************************
+ * Header
+ ******************************************************************************/
+
+[role='navigation'] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 2rem;
+  transition: transform var(--transition);
+}
+#logo:focus,
+#logo:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+#logo > svg {
+  display: block;
+}
+
+@media (prefers-reduced-motion) {
+  #logo {
+    transition: none;
+  }
+}
+
+/*******************************************************************************
+ * Main
+ ******************************************************************************/
+
+main {
+  min-width: 0;
+}
+
+main > div {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/*******************************************************************************
+ * Footer
+ ******************************************************************************/
+
+[role='contentinfo'] {
 }
 
 /*
