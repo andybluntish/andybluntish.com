@@ -11,14 +11,15 @@
 
   --space: 1rem;
   --half-space: calc(var(--space) / 2);
+  --quarter-space: calc(var(--space) / 4);
   --text: 1rem;
   --text-sm: 0.85rem;
-  --text-lg: 1rem;
-  --text-xl: 1rem;
-  --text-2xl: 1rem;
-  --text-3xl: 1rem;
-  --text-5xl: 1rem;
-  --border-radius: 0.35;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-5xl: 3rem;
+  --border-radius: 0.35rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,17 +40,44 @@
   }
 }
 
-/**
- * Text
- */
+/*******************************************************************************
+ * Typography
+ ******************************************************************************/
+
+h1,
+h2 {
+  margin-bottom: var(--quarter-space);
+  font-weight: bold;
+  @apply text-5xl;
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+code {
+  color: var(--accent);
+}
 
 p {
   margin-bottom: var(--space);
 }
 
-/**
+blockquote {
+  position: relative;
+  padding-left: var(--space);
+  color: var(--deemphasised);
+  font-style: italic;
+  border-left: 4px solid var(--divider);
+}
+
+/*******************************************************************************
  * Links
- */
+ ******************************************************************************/
 
 a {
   color: var(--accent);
@@ -70,33 +98,18 @@ a.active {
   }
 }
 
+/*******************************************************************************
+ * Media
+ ******************************************************************************/
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 /*
 @layer base {
-  h1,
-  h2,
-  h3 {
-    @apply mb-1 font-bold;
-  }
 
-  h1 {
-    @apply text-3xl;
-  }
-
-  h2 {
-    @apply text-2xl;
-  }
-
-  img {
-    @apply h-auto max-w-full;
-  }
-
-  code {
-    @apply text-accent;
-  }
-
-  blockquote {
-    @apply relative pl-4 m-4 italic border-l-4 border-divider text-deemphasised;
-  }
 
   table {
     @apply w-full;
@@ -158,6 +171,10 @@ a.active {
   }
   }
 */
+
+/*******************************************************************************
+ * Syntax Highlighting
+ ******************************************************************************/
 
 /**
   * Dracula Theme originally by Zeno Rocha [@zenorocha]
