@@ -166,22 +166,24 @@ body {
 }
 
 #logo {
-  /* transition: transform var(--transition); */
+  transition: all var(--transition);
 }
-/* #logo:focus, */
-/* #logo:hover { */
-/* transform: scale3d(1.1, 1.1, 1); */
-/* } */
+
+#logo:focus,
+#logo:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
 #logo > svg {
   width: 2rem;
   display: block;
 }
 
-/* @media (prefers-reduced-motion) { */
-/* #logo { */
-/* transition: none; */
-/* } */
-/* } */
+@media (prefers-reduced-motion) {
+  #logo {
+    transition: none;
+  }
+}
 
 [role='navigation'] ul {
   display: flex;
