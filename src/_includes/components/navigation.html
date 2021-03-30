@@ -1,4 +1,4 @@
-{% macro list(entries, page, listClassName, activeClassName = 'active') %}
+{% macro list(entries, page, linkClassName = 'subtle-link') %}
   <ul>
     {%- for entry in entries %}
       {# The current link points to the current page #}
@@ -7,7 +7,7 @@
       {% endif %}
 
       <li>
-        <a href="{{ entry.url }}"{% if current %} aria-current="page"{% endif %}>
+        <a href="{{ entry.url }}" {% if linkClassName %} class="{{ linkClassName }}"{% endif %} {% if current %} aria-current="page"{% endif %}>
           {{ entry.title }}
         </a>
       </li>

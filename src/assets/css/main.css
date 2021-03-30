@@ -97,6 +97,15 @@ a.active {
   text-decoration-color: currentColor;
 }
 
+a.subtle-link {
+  color: var(--foreground);
+}
+a.subtle-link:focus,
+a.subtle-link:hover,
+a.subtle-link.active {
+  color: var(--accent);
+}
+
 @media (prefers-reduced-motion) {
   a {
     transition: none;
@@ -193,14 +202,6 @@ body {
   font-size: var(--font-size-sm);
   text-align: center;
   padding: 0 var(--space);
-}
-
-.footer a {
-  color: var(--foreground);
-}
-.footer a:focus,
-.footer a:hover {
-  color: var(--accent);
 }
 
 .footer ul {
