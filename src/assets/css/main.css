@@ -195,6 +195,14 @@ body {
   padding: 0 var(--space);
 }
 
+.footer a {
+  color: var(--foreground);
+}
+.footer a:focus,
+.footer a:hover {
+  color: var(--accent);
+}
+
 .footer ul {
   margin: 0 0 var(--space);
   padding: 0;
@@ -208,6 +216,7 @@ body {
 
 .footer li:not(:first-of-type):before {
   content: '•';
+  opacity: 0.5;
   margin: 0 var(--quarter-space);
 }
 
