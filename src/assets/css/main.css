@@ -146,6 +146,7 @@ body {
   grid-template-rows: auto 1fr auto;
   row-gap: var(--space);
   min-height: 100vh;
+  padding: var(--space) var(--space) 0;
 }
 
 @media (min-width: 640px) {
@@ -217,7 +218,6 @@ body {
 .footer {
   font-size: var(--font-size-sm);
   text-align: center;
-  padding: 0 var(--space);
 }
 
 .footer ul {
