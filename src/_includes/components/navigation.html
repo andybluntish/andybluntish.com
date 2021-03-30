@@ -1,5 +1,5 @@
 {% macro list(entries, page, listClassName, activeClassName = 'active') %}
-  <ul{% if listClassName %} class="{{ listClassName }}"{% endif %}>
+  <ul>
     {%- for entry in entries %}
       {# The current link points to the current page #}
       {% if (entry.url == '/' and entry.url == page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
