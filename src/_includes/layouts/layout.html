@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="text-primary bg-primary">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,7 +24,7 @@
   {% import 'components/navigation.html' as 'navigation' %}
   {% set navigationItems = collections.all | eleventyNavigation %}
 
-  <header role="banner"{% if headerClassNames %} class="{{ headerClassNames | join(' ') | trim }}"{% endif %}>
+  <header role="banner">
     <nav role="navigation">
       <a href="/" rel="home" id="logo" class="subtle-link">
         <svg fill="currentColor" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-labelledby="logo-title">
@@ -37,33 +37,24 @@
         </svg>
       </a>
 
-      {% set headerNavListClassNames = 'flex p-0 m-0 text-sm font-bold uppercase' %}
-      {% set headerNavItemClassNames = 'ml-4' %}
-      {% set headerNavLinkClassNames = 'py-2 no-underline subtle-link' %}
-      {{ navigation.list(navigationItems, page, headerNavListClassNames, headerNavItemClassNames, headerNavLinkClassNames) }}
+      {{ navigation.list(navigationItems, page) }}
     </nav>
   </header>
 
-  <main{% if mainClassNames %} class="{{ mainClassNames | join(' ') | trim }}"{% endif %}>
-    {% block main %}
-      <div>
-        {{ content | safe }}
-      </div>
-    {% endblock %}
-  </main>
+  {% block main %}
+    <main>
+      {{ content | safe }}
+    </main>
+  {% endblock %}
 
-  <footer role="contentinfo"{% if footerClassNames %} class="{{ footerClassNames | join(' ') | trim }}"{% endif %}>
-    {% block footer %}
-      <div class="justify-between text-xs text-center sm:flex">
-        <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
+  {% block footer %}
+    <footer role="contentinfo" class="footer">
+      <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
 
-        {% set footerNavListClassNames = 'justify-center p-0 m-0 mb-4 inline-bullet' %}
-        {% set footerNavItemClassNames = '' %}
-        {% set footerNavLinkClassNames = 'subtle-link' %}
-        {% set footerNavActiveClassName = '' %}
-        {{ navigation.list(navigationItems, page, footerNavListClassNames, footerNavItemClassNames, footerNavLinkClassNames, footerNavActiveClassName) }}
-      </div>
-    {% endblock %}
-  </footer>
+      <nav>
+        {{ navigation.list(navigationItems, page) }}
+      </nav>
+    </footer>
+  {% endblock %}
 </body>
 </html>
