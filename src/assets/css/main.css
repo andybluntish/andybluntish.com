@@ -219,6 +219,15 @@ main > .content {
   margin: 0 auto;
 }
 
+.page-header {
+  margin-bottom: var(--double-space);
+}
+
+.page-header .subtitle {
+  margin-top: var(--half-space);
+  font-style: italic;
+}
+
 /*******************************************************************************
  * Footer
  ******************************************************************************/
