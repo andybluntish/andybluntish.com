@@ -1,7 +1,6 @@
-const plugins = []
+const plugins = [require('autoprefixer')]
 
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(require('autoprefixer'))
   plugins.push(
     require('cssnano')({
       preset: [
