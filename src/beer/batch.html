@@ -12,8 +12,6 @@ eleventyComputed:
 mainClassNames:
   - self-center
 ---
-{% import 'components/text.html' as 'text' %}
-
 {% macro beerStat(name, value) %}
   <dt class="font-bold">{{ name }}</dt>
   <dd class="mb-2 col-span-4 sm:col-span-3">{{ value }}</dd>
@@ -26,7 +24,7 @@ mainClassNames:
     <p class="m-0 font-light uppercase">
       {{ batch.style }}
       {% if batch.brewDate %}
-        {{ text.separator() }} <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
+        <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
       {% endif %}
     </p>
   </header>
@@ -37,11 +35,11 @@ mainClassNames:
     {% endif %}
 
     {% if batch.ibu %}
-      {{ text.separator() }} {{ batch.ibu }} <abbr title="International Bittering Units">IBU</abbr>
+      {{ batch.ibu }} <abbr title="International Bittering Units">IBU</abbr>
     {% endif %}
 
     {% if batch.ebc %}
-      {{ text.separator() }} {{ batch.ebc }} <abbr title="European Brewery Convention">EBC</abbr>
+      {{ batch.ebc }} <abbr title="European Brewery Convention">EBC</abbr>
     {% endif %}
   </p>
 
