@@ -206,12 +206,13 @@ body {
 
 main {
   min-width: 0;
+  align-self: center;
 }
 
-/* main > div { */
-/* max-width: 36rem; */
-/* margin: 0 auto; */
-/* } */
+main > .content {
+  max-width: 36rem;
+  margin: 0 auto;
+}
 
 /*******************************************************************************
  * Footer

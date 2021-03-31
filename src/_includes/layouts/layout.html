@@ -41,11 +41,13 @@
     </nav>
   </header>
 
-  {% block main %}
-    <main>
-      {{ content | safe }}
-    </main>
-  {% endblock %}
+  <main>
+    {% block main %}
+      <div class="content">
+        {{ content | safe }}
+      </div>
+    {% endblock %}
+  </main>
 
   <footer role="contentinfo">
     {% block footer %}
