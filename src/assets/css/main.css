@@ -350,6 +350,11 @@ main > .content {
   margin-bottom: 3rem;
 }
 
+.note-link {
+  display: inline-block;
+  padding: var(--half-space) 0;
+}
+
 /*
 @layer base {
 
