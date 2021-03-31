@@ -118,7 +118,7 @@ a.active {
 }
 
 a.subtle-link {
-  color: var(--foreground);
+  color: currentColor;
 }
 a.subtle-link:focus,
 a.subtle-link:hover,
