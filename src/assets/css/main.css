@@ -51,7 +51,7 @@
 h1,
 h2 {
   margin: 0;
-  font-size: var(--space);
+  font-size: var(--font-size);
   line-height: 1;
   font-weight: bold;
 }
