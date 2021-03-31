@@ -68,16 +68,18 @@ p {
   margin: 0 0 var(--space);
 }
 
-code {
+code,
+pre {
   color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: var(--font-size-sm);
+  line-height: 1;
 }
 
 blockquote {
   font-size: var(--font-size-sm);
   font-style: italic;
   opacity: 0.8;
-  margin: var(--space) var(--double-space);
 }
 
 /*******************************************************************************
