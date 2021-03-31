@@ -1,10 +1,16 @@
 ---
-layout: layouts/batch.html
 pagination:
   data: beer.batches
   size: 1
   alias: batch
 permalink: 'beer/batches/{{ batch.id }}/'
+eleventyComputed:
+  title: '{{ beer.title }} | {{ batch.name }}'
+  description: '{{ beer.description }}'
+  bodyClassNames:
+    - 'batch-{{ batch.id }}'
+mainClassNames:
+  - self-center
 ---
 {% import 'components/text.html' as 'text' %}
 
