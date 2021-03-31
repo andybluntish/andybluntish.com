@@ -178,8 +178,9 @@ body {
 }
 
 @media (prefers-reduced-motion) {
-  #logo {
-    transition: none;
+  #logo:focus,
+  #logo:hover {
+    transform: none;
   }
 }
 
@@ -282,7 +283,7 @@ main > .content {
 @media (prefers-reduced-motion) {
   .footer--home a:focus,
   .footer--home a:hover {
-    transition: none;
+    transform: none;
   }
 }
 
