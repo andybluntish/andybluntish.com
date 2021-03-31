@@ -47,14 +47,16 @@
     </main>
   {% endblock %}
 
-  {% block footer %}
-    <footer role="contentinfo" class="footer">
-      <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
+  <footer role="contentinfo">
+    {% block footer %}
+      <div class="footer">
+        <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
 
-      <nav>
-        {{ navigation.list(navigationItems, page) }}
-      </nav>
-    </footer>
-  {% endblock %}
+        <nav>
+          {{ navigation.list(navigationItems, page) }}
+        </nav>
+      </div>
+    {% endblock %}
+  </footer>
 </body>
 </html>

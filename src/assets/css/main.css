@@ -51,7 +51,7 @@
 h1,
 h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--space);
   line-height: 1;
   font-weight: bold;
 }
@@ -175,7 +175,7 @@ body {
 }
 
 #logo > svg {
-  width: 2rem;
+  width: var(--double-space);
   display: block;
 }
 
@@ -204,9 +204,9 @@ body {
  * Main
  ******************************************************************************/
 
-/* main { */
-/* min-width: 0; */
-/* } */
+main {
+  min-width: 0;
+}
 
 /* main > div { */
 /* max-width: 36rem; */
@@ -246,6 +246,63 @@ body {
   }
 }
 
+.footer--home {
+  max-width: calc(var(--space) * 36);
+  margin: 0 auto;
+}
+
+.footer--home ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 0 var(--double-space);
+  padding: 0;
+  list-style: none;
+  z-index: 1;
+}
+
+.footer--home li {
+  transition: all var(--transition);
+}
+
+.footer--home a {
+  display: inline-block;
+  padding: var(--half-space);
+}
+
+.footer--home a:focus,
+.footer--home a:hover {
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+@media (prefers-reduced-motion) {
+  .footer--home a:focus,
+  .footer--home a:hover {
+    transition: none;
+  }
+}
+
+.footer--home img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer--home li:nth-child(1) {
+    transform: translate(2.3em, 12.3em);
+  }
+  .footer--home li:nth-child(2) {
+    transform: translate(-2em, 3.8em);
+  }
+  .footer--home li:nth-child(4) {
+    transform: translate(2em, 3.8em);
+  }
+  .footer--home li:nth-child(5) {
+    transform: translate(-2.3em, 12.3em);
+  }
+}
+
 /*
 @layer base {
 
@@ -279,36 +336,7 @@ body {
   .meta-text {
     @apply text-sm italic text-deemphasised;
   }
-
-  .subtle-link {
-    @apply text-primary hover:text-accent focus:text-accent;
-  }
-
-  .inline-bullet,
-  .inline-bullet li {
-    @apply flex;
-  }
-  .inline-bullet li:not(:first-of-type):before {
-    content: '•';
-
-    @apply mx-1 list-none text-deemphasised;
-  }
-
-  @screen sm {
-    .portrait-footer li:nth-child(1) {
-      transform: translate(2.3em, 12.3em);
-    }
-    .portrait-footer li:nth-child(2) {
-      transform: translate(-2em, 3.8em);
-    }
-    .portrait-footer li:nth-child(4) {
-      transform: translate(2em, 3.8em);
-    }
-    .portrait-footer li:nth-child(5) {
-      transform: translate(-2.3em, 12.3em);
-    }
-  }
-  }
+}
 */
 
 /*******************************************************************************
