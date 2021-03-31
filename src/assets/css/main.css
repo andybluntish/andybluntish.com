@@ -99,6 +99,7 @@ blockquote {
 a {
   color: var(--accent);
   text-decoration: underline;
+  -webkit-text-decoration-color: var(--divider);
   text-decoration-color: var(--divider);
   transition: all var(--transition);
 }
@@ -106,6 +107,7 @@ a {
 a:focus,
 a:hover,
 a.active {
+  -webkit-text-decoration-color: currentColor;
   text-decoration-color: currentColor;
 }
 
@@ -370,7 +372,6 @@ pre[class*='language-'] {
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
