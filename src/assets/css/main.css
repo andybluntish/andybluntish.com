@@ -147,7 +147,7 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   body {
     row-gap: var(--double-space);
   }
@@ -243,7 +243,7 @@ main > .content {
   opacity: 0.5;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .footer {
     display: flex;
     justify-content: space-between;
@@ -292,7 +292,7 @@ main > .content {
   margin: 0 auto;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .footer--home li:nth-child(1) {
     transform: translate3d(2.3em, 12.3em, 0);
   }
