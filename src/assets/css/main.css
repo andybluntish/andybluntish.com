@@ -89,7 +89,13 @@ blockquote {
   margin: var(--space) var(--double-space);
   font-size: var(--font-size-sm);
   font-style: italic;
-  opacity: 0.8;
+  opacity: 0.7;
+}
+
+.meta-text {
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  opacity: 0.7;
 }
 
 /*******************************************************************************
@@ -228,6 +234,10 @@ main > .content {
   font-style: italic;
 }
 
+.page-footer {
+  margin-top: var(--double-space);
+}
+
 /*******************************************************************************
  * Footer
  ******************************************************************************/
@@ -260,6 +270,10 @@ main > .content {
     justify-content: space-between;
   }
 }
+
+/*******************************************************************************
+ * Home
+ ******************************************************************************/
 
 .footer--home {
   margin: 0 auto;
@@ -318,6 +332,24 @@ main > .content {
   }
 }
 
+/*******************************************************************************
+ * Notes
+ ******************************************************************************/
+
+.notes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notes-item {
+  margin-bottom: 6rem;
+}
+
+.notes-item:last-of-type {
+  margin-bottom: 3rem;
+}
+
 /*
 @layer base {
 
@@ -347,11 +379,6 @@ main > .content {
   }
 }
 
-@layer components {
-  .meta-text {
-    @apply text-sm italic text-deemphasised;
-  }
-}
 */
 
 /*******************************************************************************
