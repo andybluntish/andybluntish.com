@@ -174,7 +174,6 @@ body {
 }
 
 #logo > svg {
-  width: var(--double-space);
   display: block;
 }
 
