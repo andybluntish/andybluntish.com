@@ -39,8 +39,8 @@
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -257,7 +257,7 @@ main > .content {
   display: flex;
 }
 
-.footer li:not(:first-of-type):before {
+.footer li:not(:first-of-type)::before {
   content: '•';
   margin: 0 var(--quarter-space);
   opacity: 0.6;
