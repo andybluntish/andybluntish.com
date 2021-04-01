@@ -353,7 +353,7 @@ main > .content {
 
 .note-link {
   display: inline-block;
-  padding: var(--half-space) 0;
+  padding: 0 0 var(--quarter-space);
 }
 
 /*
