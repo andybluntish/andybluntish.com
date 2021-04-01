@@ -1,9 +1,9 @@
 :root {
-  --foreground: #363d49;
-  --background: #fff;
-  --accent: #d93f00;
-  --deemphasised: #727780;
-  --divider: #d1d6e0;
+  --foreground: hsl(218, 15%, 25%);
+  --background: hsl(0, 0%, 100%);
+  --accent: hsl(17, 100%, 43%);
+  --deemphasised: hsl(219, 6%, 47%);
+  --divider: hsl(220, 19%, 85%);
 
   --space: 1rem;
   --half-space: calc(var(--space) / 2);
@@ -22,11 +22,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground: #d1d6e0;
-    --background: #1b1d22;
-    --accent: #ff9e66;
-    --deemphasised: #81858c;
-    --divider: #4c5667;
+    --foreground: hsl(220, 19%, 85%);
+    --background: hsl(223, 11%, 12%);
+    --accent: hsl(22, 100%, 70%);
+    --deemphasised: hsl(218, 5%, 53%);
+    --divider: hsl(218, 15%, 35%);
   }
 
   svg {
