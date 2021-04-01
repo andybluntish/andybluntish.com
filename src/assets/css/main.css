@@ -10,7 +10,7 @@
   --quarter-space: calc(var(--space) / 4);
   --double-space: calc(var(--space) * 2);
   --font-size: 1rem;
-  --font-size-sm: 0.8em;
+  --font-size-sm: 0.75em;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
@@ -87,14 +87,17 @@ pre {
 
 blockquote {
   margin: var(--space) var(--double-space);
-  font-size: var(--font-size-sm);
-  font-style: italic;
-  opacity: 0.6;
+}
+
+blockquote p::before {
+  content: '“';
+}
+blockquote p::after {
+  content: '”';
 }
 
 .meta-text {
   font-size: var(--font-size-sm);
-  opacity: 0.6;
 }
 
 /*******************************************************************************
@@ -206,8 +209,9 @@ body {
   margin-left: var(--space);
 }
 
-[role='navigation'] a {
+[role='navigation'] li a {
   text-decoration: none;
+  padding: var(--space) 0;
 }
 
 /*******************************************************************************
@@ -230,7 +234,6 @@ main > .content {
 
 .page-header .subtitle {
   margin-top: var(--half-space);
-  font-style: italic;
 }
 
 .page-footer {
@@ -260,7 +263,6 @@ main > .content {
 .footer li:not(:first-of-type)::before {
   content: '•';
   margin: 0 var(--quarter-space);
-  opacity: 0.6;
 }
 
 @media (min-width: 40rem) {
