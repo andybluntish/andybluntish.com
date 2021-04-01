@@ -81,7 +81,7 @@ code,
 pre {
   color: var(--accent);
   font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: var(--font-size-sm);
+  font-size: 85%;
   line-height: 1;
 }
 
