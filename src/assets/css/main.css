@@ -145,6 +145,54 @@ video {
 }
 
 /*******************************************************************************
+ * Tables
+ ******************************************************************************/
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table .numeric-value,
+table .date-value {
+  text-align: right;
+}
+
+thead th {
+  padding: var(--half-space) var(--half-space) var(--half-space) 0;
+}
+
+thead th:last-child {
+  padding-right: 0;
+}
+
+tbody {
+  font-size: var(--font-size-sm);
+}
+
+tr {
+  border-bottom: 1px solid var(--divider);
+}
+
+tbody tr:last-child {
+  border: none;
+}
+
+tbody td {
+  padding: var(--quarter-space) var(--quarter-space) var(--quarter-space) 0;
+}
+
+tbody td:last-child {
+  padding-right: 0;
+}
+
+tbody a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*******************************************************************************
  * Layout
  ******************************************************************************/
 
