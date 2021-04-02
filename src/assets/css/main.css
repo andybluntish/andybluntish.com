@@ -404,36 +404,34 @@ main > .content {
   padding: 0 0 var(--quarter-space);
 }
 
-/*
-@layer base {
+/*******************************************************************************
+ * Brew log
+ ******************************************************************************/
 
-
-  table {
-    @apply w-full;
+/* using max-width to reduce overriding and resetting */
+@media (max-width: 40rem) {
+  .brew-log thead {
+    display: none;
   }
 
-  thead tr {
-    @apply text-left;
+  .brew-log tbody tr {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  thead th {
-    @apply py-2 pr-2;
+  .brew-log tbody td {
+    width: 50%;
   }
 
-  thead th:last-child {
-    @apply pr-0;
+  .brew-log tbody td[class$='-value'] {
+    width: 25%;
+    padding-top: 0;
   }
 
-  tbody {
-    @apply text-sm;
-  }
-
-  tbody tr {
-    @apply border-t border-divider;
+  .brew-log tbody td.numeric-value {
+    text-align: left;
   }
 }
-
-*/
 
 /*******************************************************************************
  * Syntax Highlighting
