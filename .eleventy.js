@@ -7,6 +7,7 @@ if (!isProd) {
 const markdownIt = require('markdown-it')
 const parse5 = require('parse5')
 const { PurgeCSS } = require('purgecss')
+const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
@@ -63,9 +64,12 @@ module.exports = (eleventyConfig) => {
         fontFace: true,
         keyframes: true,
       })
+      const purgedCSS = purgeCSSResult[0].css
+      // minify styles
+      const minifiedCSS = new CleanCSS({}).minify(purgedCSS).styles
 
       // set the <style> node content to the purged CSS string
-      styleNode.value = purgeCSSResult[0].css
+      styleNode.value = minifiedCSS
 
       // return the serialized document as the content for this page
       // the <style> node's content now includes only the CSS used in the HTML of the page
@@ -82,8 +86,6 @@ module.exports = (eleventyConfig) => {
         removeComments: true,
         collapseWhitespace: true,
         collapseBooleanAttributes: true,
-        minifyCSS: true,
-        minifyJS: true,
       })
     }
 
