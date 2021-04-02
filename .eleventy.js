@@ -27,6 +27,17 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(syntaxHighlight)
 
+  eleventyConfig.addTransform('purgecss', function (content, outputPath) {
+    if (isProd && outputPath.endsWith('.html')) {
+      // get the contents of the <style> block
+      // using the content and styles, run purge css
+      // replace the contents of the <style> block with the pruged css
+      // optionally, minify the css (though this can be handled by htmlmin in the next step)
+    }
+
+    return content
+  })
+
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (isProd && outputPath.endsWith('.html')) {
       return htmlmin.minify(content, {
