@@ -5,7 +5,7 @@ module.exports = async function () {
   const batches = await Batch.fetchAll(pageSize)
 
   return {
-    title: 'Beer',
+    title: 'Brew log',
     description: 'Beer is for fun.',
     batches,
   }
