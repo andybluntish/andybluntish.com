@@ -7,6 +7,7 @@ module.exports = async function () {
   return {
     title: 'Brew log',
     description: 'Beer is for fun.',
+    navigationTitle: 'Beer',
     batches,
   }
 }
