@@ -2,7 +2,6 @@
   --foreground: hsl(218, 15%, 25%);
   --background: hsl(0, 0%, 100%);
   --accent: hsl(17, 100%, 43%);
-  --deemphasised: hsl(219, 6%, 47%);
   --divider: hsl(220, 19%, 85%);
 
   --space: 1rem;
@@ -10,13 +9,9 @@
   --quarter-space: calc(var(--space) / 4);
   --double-space: calc(var(--space) * 2);
   --font-size: 1rem;
-  --font-size-sm: 0.75em;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-5xl: 3rem;
-  --border-radius: 0.35rem;
+  --font-size-sm: calc(var(--font-size) * 0.8);
+  --font-size-lg: calc(var(--font-size) * 1.2);
+  --font-size-xl: calc(var(--font-size) * 1.8);
   --transition: 0.1s ease-in-out;
 }
 
@@ -25,7 +20,6 @@
     --foreground: hsl(220, 19%, 85%);
     --background: hsl(223, 11%, 12%);
     --accent: hsl(22, 100%, 70%);
-    --deemphasised: hsl(218, 5%, 53%);
     --divider: hsl(218, 15%, 35%);
   }
 
@@ -57,20 +51,11 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-h1,
-h2 {
+h1 {
   margin: 0;
-  font-size: var(--font-size);
+  font-size: var(--font-size-xl);
   line-height: 1;
   font-weight: bold;
-}
-
-h1 {
-  font-size: var(--font-size-3xl);
-}
-
-h2 {
-  font-size: var(--font-size-2xl);
 }
 
 p {
