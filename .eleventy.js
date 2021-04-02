@@ -59,6 +59,9 @@ module.exports = (eleventyConfig) => {
             raw: css,
           },
         ],
+        variables: true,
+        fontFace: true,
+        keyframes: true,
       })
 
       // set the <style> node content to the purged CSS string
