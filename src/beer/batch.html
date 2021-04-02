@@ -12,51 +12,47 @@ eleventyComputed:
 mainClassNames:
   - self-center
 ---
-{% macro beerStat(name, value) %}
-  <dt class="font-bold">{{ name }}</dt>
-  <dd class="mb-2 col-span-4 sm:col-span-3">{{ value }}</dd>
-{% endmacro %}
-
-<article>
+<article class="beer-batch">
   <header>
-    <h1 class="text-5xl">{{ batch.name }}</h1>
+    <h1>{{ batch.name }}</h1>
 
-    <p class="m-0 font-light uppercase">
+    <p class="beer-batch-info">
       {{ batch.style }}
-      {% if batch.brewDate %}
-        <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
-      {% endif %}
+      {% include "components/separator-dot.html" %}
+      <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
     </p>
   </header>
 
-  <p class="my-6 text-lg">
+  <p class="beer-batch-stats">
     {% if batch.abv %}
       {{ batch.abv }} <abbr title="Alcohol by volume">ABV</abbr>
     {% endif %}
 
     {% if batch.ibu %}
+      {% include "components/separator-dot.html" %}
       {{ batch.ibu }} <abbr title="International Bittering Units">IBU</abbr>
     {% endif %}
 
     {% if batch.ebc %}
+      {% include "components/separator-dot.html" %}
       {{ batch.ebc }} <abbr title="European Brewery Convention">EBC</abbr>
     {% endif %}
   </p>
 
   <dl class="grid gap-x-2 grid-cols-4">
     {% if batch.fermentables.length %}
-      {% set value = batch.fermentables | join(', ') %}
-      {{ beerStat('Fermentables', value) }}
+      <dt>Fermentables</dt>
+      <dd>{{ batch.fermentables | join(', ') }}
     {% endif %}
 
     {% if batch.hops.length %}
-      {% set value = batch.hops | join(', ') %}
-      {{ beerStat('Hops', value) }}
+      <dt>Hops</dt>
+      <dd>{{ batch.hops | join(', ') }}
     {% endif %}
 
     {% if batch.yeasts.length %}
-      {% set value = batch.yeasts | join(', ') %}
-      {{ beerStat('Yeast', value) }}
+      <dt>Yeast</dt>
+      <dd>{{ batch.yeasts | join(', ') }}
     {% endif %}
   </dl>
 </article>
