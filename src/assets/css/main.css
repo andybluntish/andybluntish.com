@@ -420,6 +420,10 @@ main > .content {
  * Brew log
  ******************************************************************************/
 
+.brew-log tbody td abbr {
+  display: none;
+}
+
 /* using max-width to reduce overriding and resetting */
 @media (max-width: 40rem) {
   .brew-log thead {
@@ -442,6 +446,10 @@ main > .content {
 
   .brew-log tbody td.numeric-value {
     text-align: left;
+  }
+
+  .brew-log tbody td abbr {
+    display: initial;
   }
 }
 
