@@ -91,8 +91,6 @@ module.exports = (eleventyConfig) => {
     return `${formattedDate} at ${formattedTime}`
   })
 
-  eleventyConfig.addWatchTarget('src/assets/css/*.css')
-
   eleventyConfig.addPassthroughCopy('src/assets')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
   eleventyConfig.addPassthroughCopy('src/_redirects')
