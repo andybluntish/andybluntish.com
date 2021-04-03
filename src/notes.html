@@ -9,11 +9,11 @@ pageFooter: Prior ramblings have been lost to time.
 ---
 {% include 'components/page-header.html' %}
 
-<ul class="notes">
+<ul class="note-list">
   {% for note in collections.notes | reverse %}
     {% set noteTitle = note.data.title %}
     {% set content = note.templateContent %}
-    <li class="notes-item">
+    <li class="note-item">
       {% include 'components/note.html' %}
     </li>
   {% endfor %}

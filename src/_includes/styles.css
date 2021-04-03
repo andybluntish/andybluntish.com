@@ -386,17 +386,17 @@ main > .content {
  * Notes
  ******************************************************************************/
 
-.notes {
+.note-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.notes-item {
+.note-item {
   margin-bottom: 6rem;
 }
 
-.notes-item:last-of-type {
+.note-item:last-of-type {
   margin-bottom: 3rem;
 }
 
