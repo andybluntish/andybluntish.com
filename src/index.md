@@ -3,8 +3,6 @@ layout: layouts/home.html
 eleventyNavigation:
   key: About
   order: 1
-stylesheets:
-  - home
 ---
 
 G’day, my name is [Andy]({{ site.url }}/) 👋
