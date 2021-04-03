@@ -15,10 +15,18 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
-  {% set css %}
-    {% include "styles.css" %}
-  {% endset %}
-  <style>{{ css | safe }}</style>
+  <style>
+    {% set css %}
+      {% include "styles/main.css" %}
+    {% endset %}
+    {{ css | safe }}
+    {% for sheet in stylesheets %}
+      {% set css %}
+        {% include "styles/" + sheet + ".css" %}
+      {% endset %}
+      {{ css | safe }}
+    {% endfor %}
+  </style>
 </head>
 <body{% if bodyClassNames %} class="{{ bodyClassNames | join(' ') | trim }}"{% endif %}>
   {% import 'components/navigation.html' as 'navigation' %}

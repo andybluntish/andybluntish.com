@@ -322,67 +322,6 @@ main > .content {
 }
 
 /*******************************************************************************
- * Home
- ******************************************************************************/
-
-.footer--home {
-  margin: 0 auto;
-  max-width: calc(var(--space) * 36);
-}
-
-.footer--home ul {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 0 var(--double-space);
-  padding: 0;
-  list-style: none;
-  z-index: 1;
-}
-
-.footer--home li {
-  transition: all var(--transition);
-}
-
-.footer--home a {
-  display: inline-block;
-  padding: var(--half-space);
-}
-
-.footer--home a:focus,
-.footer--home a:hover {
-  transform: scale3d(1.2, 1.2, 1);
-}
-
-@media (prefers-reduced-motion) {
-  .footer--home a:focus,
-  .footer--home a:hover {
-    transform: none;
-  }
-}
-
-.footer--home img {
-  display: block;
-  margin: 0 auto;
-}
-
-@media (min-width: 40rem) {
-  .footer--home li:nth-child(1) {
-    transform: translate3d(2.3em, 12.3em, 0);
-  }
-  .footer--home li:nth-child(2) {
-    transform: translate3d(-2em, 3.8em, 0);
-  }
-  .footer--home li:nth-child(4) {
-    transform: translate3d(2em, 3.8em, 0);
-  }
-  .footer--home li:nth-child(5) {
-    transform: translate3d(-2.3em, 12.3em, 0);
-  }
-}
-
-/*******************************************************************************
  * Notes
  ******************************************************************************/
 
