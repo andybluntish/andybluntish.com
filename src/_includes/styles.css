@@ -289,6 +289,10 @@ main > .content {
  * Footer
  ******************************************************************************/
 
+[role='contentinfo'] {
+  line-height: 1;
+}
+
 .footer {
   font-size: var(--font-size-sm);
   text-align: center;
