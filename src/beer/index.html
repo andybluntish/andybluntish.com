@@ -3,68 +3,51 @@ eleventyComputed:
   title: "{{ beer.title }}"
   description: "{{ beer.description }}"
   eleventyNavigation:
-    key: "{{ beer.title }}"
+    key: "{{ beer.navigationTitle }}"
     order: 3
-pageFooter: Details of previous batches have been lost to time and poor record-keeping.
+pageFooter: Details of previous batches back to 2005 have been lost to time and poor record-keeping.
 ---
+{% include 'components/page-header.html' %}
 
-<header>
-  <h1>{{ title }}</h1>
-  <p class="mb-8 italic">{{ description }}</p>
-</header>
-
-{# <h2>Recipes</h2> #}
-
-{# <ul> #}
-  {# {%- for recipe in beer.recipes -%} #}
-    {# {% set pageUrl = page.url + 'recipes/' + recipe._id + '/' %} #}
-    {# <li> #}
-      {# <a href="{{ pageUrl }}">{{ recipe.name }}</a> #}
-    {# </li> #}
-  {# {%- endfor -%} #}
-{# </ul> #}
-
-<h2>Brew log</h2>
-
-<table>
-  <thead class="hidden sm:table-header-group">
+<table class="brew-log">
+  <thead>
     <tr>
       <th>Name</th>
       <th>Style</th>
-      <th class="text-right"><abbr title="Alcohol by volume">ABV</abbr></th>
-      <th class="text-right"><abbr title="International Bittering Units">IBU</abbr></th>
-      <th class="text-right"><abbr title="European Brewery Convention">EBC</abbr></th>
-      <th class="text-right">Date</th>
+      <th class="numeric-value"><abbr title="Alcohol by volume">ABV</abbr></th>
+      <th class="numeric-value"><abbr title="International Bittering Units">IBU</abbr></th>
+      <th class="numeric-value"><abbr title="European Brewery Convention">EBC</abbr></th>
+      <th class="date-value">Date</th>
     </tr>
   </thead>
   <tbody>
     {%- for batch in beer.batches -%}
-      <tr class="flex flex-wrap sm:table-row">
-        <td class="w-1/2 py-2 pr-2 font-semibold sm:w-auto">
-          <a href="/beer/batches/{{ batch.id }}" class="no-underline subtle-link">
+      <tr>
+        <td>
+          <a href="/beer/batches/{{ batch.id }}" class="subtle-link">
             {{ batch.name }}
           </a>
         </td>
-        <td class="w-1/2 py-2 pr-2 sm:w-auto">
+        <td>
           {{ batch.style }}
         </td>
-        <td class="w-1/4 pb-2 pr-2 sm:w-auto sm:text-right sm:pb-0">
+        <td class="numeric-value">
           {{ batch.abv }}
-          <abbr title="Alcohol by volume" class="sm:hidden">ABV</abbr>
+          <abbr title="Alcohol by volume">ABV</abbr>
         </td>
-        <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
+        <td class="numeric-value">
           {{ batch.ibu }}
           {% if batch.ibu !== '-' %}
-            <abbr title="International Bittering Units" class="sm:hidden">IBU</abbr>
+            <abbr title="International Bittering Units">IBU</abbr>
           {% endif %}
         </td>
-        <td class="w-1/4 pr-2 sm:w-auto sm:text-right">
+        <td class="numeric-value">
           {{ batch.ebc }}
           {% if batch.ebc !== '-' %}
-            <abbr title="European Brewery Convention" class="sm:hidden">EBC</abbr>
+            <abbr title="European Brewery Convention">EBC</abbr>
           {% endif %}
         </td>
-        <td class="w-1/4 text-right sm:w-auto">
+        <td class="date-value">
           <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | shortDate }}</time>
         </td>
       </tr>
@@ -72,4 +55,4 @@ pageFooter: Details of previous batches have been lost to time and poor record-k
   </tbody>
 </table>
 
-<p class="mt-12 meta-text">{{ pageFooter }}</p>
+{% include 'components/page-footer.html' %}

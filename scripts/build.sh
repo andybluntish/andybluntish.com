@@ -10,6 +10,3 @@ clean_output
 
 echo "--- Building HTML"
 yarn run eleventy "$INPUT"
-
-echo "--- Building CSS"
-yarn run postcss "$INPUT/src/assets/css/*.css" -d "$OUTPUT/assets/css"

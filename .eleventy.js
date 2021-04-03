@@ -1,14 +1,8 @@
-const isProd = process.env.NODE_ENV === 'production'
-
-if (!isProd) {
+if (!process.env.NODE_ENV === 'production') {
   require('dotenv').config()
 }
 
 const markdownIt = require('markdown-it')
-const htmlmin = require('html-minifier')
-const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
-const pluginRss = require('@11ty/eleventy-plugin-rss')
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
@@ -23,78 +17,22 @@ module.exports = (eleventyConfig) => {
     })
   )
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin)
-  eleventyConfig.addPlugin(pluginRss)
-  eleventyConfig.addPlugin(syntaxHighlight)
+  // Plugins
+  eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'))
+  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-rss'))
+  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
 
-  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (isProd && outputPath.endsWith('.html')) {
-      return htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        minifyCSS: true,
-        minifyJS: true,
-      })
-    }
+  // Transforms
+  eleventyConfig.addTransform('purgecss', require('./lib/transforms/purgecss'))
+  eleventyConfig.addTransform('htmlmin', require('./lib/transforms/htmlmin'))
 
-    return content
-  })
+  // Filters
+  eleventyConfig.addFilter('machineDate', require('./lib/filters/machine-date'))
+  eleventyConfig.addFilter('shortDate', require('./lib/filters/short-date'))
+  eleventyConfig.addFilter('humanDate', require('./lib/filters/human-date'))
+  eleventyConfig.addFilter('humanDateTime', require('./lib/filters/human-date-time'))
 
-  eleventyConfig.addFilter('machineDate', function (date) {
-    if (typeof date.toISOString !== 'function') {
-      date = new Date(date)
-    }
-
-    return date.toISOString()
-  })
-
-  eleventyConfig.addFilter('shortDate', function (date) {
-    if (typeof date.toISOString !== 'function') {
-      date = new Date(date)
-    }
-
-    return new Intl.DateTimeFormat('en-AU', {
-      dateStyle: 'short',
-    }).format(date)
-  })
-
-  eleventyConfig.addFilter('humanDate', function (date) {
-    if (typeof date.toISOString !== 'function') {
-      date = new Date(date)
-    }
-
-    return new Intl.DateTimeFormat('en-AU', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    }).format(date)
-  })
-
-  eleventyConfig.addFilter('humanDateTime', function (date) {
-    if (typeof date.toISOString !== 'function') {
-      date = new Date(date)
-    }
-
-    const formattedDate = new Intl.DateTimeFormat('en-AU', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    }).format(date)
-
-    const formattedTime = new Intl.DateTimeFormat('en-AU', {
-      hour: 'numeric',
-      minute: 'numeric',
-    }).format(date)
-
-    return `${formattedDate} at ${formattedTime}`
-  })
-
-  eleventyConfig.addWatchTarget('src/assets/css/*.css')
-
-  eleventyConfig.addPassthroughCopy('src/assets/img')
-  eleventyConfig.addPassthroughCopy('src/assets/notes')
+  eleventyConfig.addPassthroughCopy('src/assets')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
   eleventyConfig.addPassthroughCopy('src/_redirects')
 
