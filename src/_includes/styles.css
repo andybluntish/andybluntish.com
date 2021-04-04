@@ -457,6 +457,24 @@ main > .content {
   font-size: var(--font-size-lg);
 }
 
+@media (min-width: 40rem) {
+  .beer-batch {
+    position: relative;
+  }
+
+  .beer-batch-details {
+    position: relative;
+    margin-left: 210px;
+    z-index: 1;
+  }
+
+  .beer-batch-image {
+    position: absolute;
+    top: -95px;
+    left: -110px;
+  }
+}
+
 /*******************************************************************************
  * Syntax Highlighting
  ******************************************************************************/
