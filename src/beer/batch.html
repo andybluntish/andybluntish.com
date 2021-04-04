@@ -9,8 +9,6 @@ eleventyComputed:
   description: '{{ beer.description }}'
   bodyClassNames:
     - 'batch-{{ batch.id }}'
-mainClassNames:
-  - self-center
 ---
 <article class="beer-batch">
   <header>
@@ -39,7 +37,7 @@ mainClassNames:
     {% endif %}
   </p>
 
-  <dl class="grid gap-x-2 grid-cols-4">
+  <dl>
     {% if batch.fermentables.length %}
       <dt>Fermentables</dt>
       <dd>{{ batch.fermentables | join(', ') }}
