@@ -445,8 +445,8 @@ main > .content {
 }
 
 .beer-batch-stats {
-  margin: var(--double-space) 0;
-  font-size: var(--font-size-lg);
+  margin: var(--space) 0;
+  /* font-size: var(--font-size-lg); */
 }
 
 @media (min-width: 40rem) {
@@ -462,7 +462,7 @@ main > .content {
 
   .beer-batch-image {
     position: absolute;
-    top: -100px;
+    top: -110px;
     left: -110px;
   }
 }
