@@ -446,7 +446,6 @@ main > .content {
 
 .beer-batch-stats {
   margin: var(--space) 0;
-  /* font-size: var(--font-size-lg); */
 }
 
 @media (min-width: 40rem) {
