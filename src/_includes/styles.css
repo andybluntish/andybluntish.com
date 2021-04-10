@@ -22,6 +22,14 @@
     --accent: hsl(22, 100%, 70%);
     --divider: hsl(218, 15%, 35%);
   }
+
+  svg {
+    filter: brightness(0.8) contrast(1.2);
+  }
+
+  img:not([src*='.svg']) {
+    filter: grayscale(30%);
+  }
 }
 
 *,
