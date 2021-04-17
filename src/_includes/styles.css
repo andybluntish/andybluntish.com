@@ -458,6 +458,12 @@ main > .content {
   margin: var(--space) 0;
 }
 
+.beer-batch-image {
+  display: block;
+  margin: var(--double-space) auto;
+  filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 0.35));
+}
+
 @media (min-width: 40rem) {
   .beer-batch {
     position: relative;
@@ -471,8 +477,15 @@ main > .content {
 
   .beer-batch-image {
     position: absolute;
-    top: -95px;
-    left: -110px;
+    margin: 0;
+    top: -50px;
+    left: -5px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .beer-batch > .beer-batch-image {
+    filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 1)) var(--img-filter);
   }
 }
 
