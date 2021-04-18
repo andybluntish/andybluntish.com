@@ -458,34 +458,39 @@ main > .content {
   margin: var(--space) 0;
 }
 
+.beer-batch-ingredients,
+.beer-batch-ingredients dd:last-child {
+  margin: 0;
+}
+
 .beer-batch-image {
   display: block;
   margin: var(--double-space) auto;
-  filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 0.35));
+  filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 0.3));
 }
 
 @media (min-width: 40rem) {
   .beer-batch {
-    position: relative;
+    display: grid;
+    grid-column-gap: var(--space);
+    grid-template-columns: 200px auto;
+    align-items: center;
   }
 
   .beer-batch-details {
-    position: relative;
-    margin-left: 220px;
-    z-index: 1;
+    grid-column: 2;
   }
 
   .beer-batch-image {
-    position: absolute;
+    grid-column: 1;
+    grid-row: 1;
     margin: 0;
-    top: -50px;
-    left: -5px;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .beer-batch > .beer-batch-image {
-    filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 1)) var(--img-filter);
+    filter: drop-shadow(0 0 35px #000) var(--img-filter);
   }
 }
 
