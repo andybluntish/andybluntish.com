@@ -471,7 +471,7 @@ main > .content {
 .beer-batch-image {
   display: block;
   margin: var(--double-space) auto;
-  filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 0.3));
+  filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 0.2));
 }
 
 @media (min-width: 40rem) {
