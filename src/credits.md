@@ -1,9 +1,3 @@
----
-eleventyNavigation:
-  key: Credits
-  order: 4
----
-
 # Credits
 
 - [Water](https://thenounproject.com/term/water/1478810) by Bharat from [the Noun Project](https://thenounproject.com/)
