@@ -2,7 +2,6 @@
 eleventyNavigation:
   key: Credits
   order: 4
-  skipHeader: true
 ---
 
 # Credits
