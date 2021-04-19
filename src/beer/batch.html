@@ -56,7 +56,10 @@ eleventyComputed:
     </dl>
   </div>
 
-  {% set basePath = "/assets/beer/batches/" + batch.imageName %}
-  <img class="beer-batch-image" src="{{ basePath }}/can.png" srcset="{{ basePath }}/can.png 200w, {{ basePath }}/can@2x.png 400w" alt="{{ batch.name }} can label" width="200" height="400" />
+  <picture class="beer-batch-image">
+    {% set basePath = "/assets/beer/batches/" + batch.imageName %}
+    <source srcset="{{ basePath }}/can-dark.png 200w, {{ basePath }}/can-dark@2x.png 400w" media="(prefers-color-scheme: dark)">
+    <img src="{{ basePath }}/can.png" srcset="{{ basePath }}/can.png 200w, {{ basePath }}/can@2x.png 400w" alt="{{ batch.name }} can label" width="200" height="400" />
+  </picture>
 
 </article>
