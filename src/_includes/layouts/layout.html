@@ -55,7 +55,7 @@
         <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
 
         <nav>
-          {{ navigation.list(navigationItems, page) }}
+          {{ navigation.list(navigationItems, page, header = false) }}
         </nav>
       </div>
     {% endblock %}
