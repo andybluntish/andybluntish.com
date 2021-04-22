@@ -21,14 +21,16 @@
     --background: hsl(223, 11%, 12%);
     --accent: hsl(22, 100%, 70%);
     --divider: hsl(218, 15%, 35%);
+    --svg-filter: brightness(0.8) contrast(1.2);
+    --img-filter: grayscale(15%);
   }
 
   svg {
-    filter: brightness(0.8) contrast(1.2);
+    filter: var(--svg-filter);
   }
 
   img:not([src*='.svg']) {
-    filter: grayscale(40%);
+    filter: var(--img-filter);
   }
 }
 
@@ -446,6 +448,16 @@ main > .content {
  * Beer batch
  ******************************************************************************/
 
+.beer-batch {
+  display: grid;
+  align-items: center;
+}
+
+.beer-batch-details {
+  position: relative;
+  z-index: 1;
+}
+
 .beer-batch-info {
   margin: var(--quarter-space) 0;
   font-weight: 300;
@@ -453,8 +465,41 @@ main > .content {
 }
 
 .beer-batch-stats {
-  margin: var(--double-space) 0;
-  font-size: var(--font-size-lg);
+  margin: var(--space) 0;
+}
+
+.beer-batch-ingredients,
+.beer-batch-ingredients dd:last-child {
+  margin: 0;
+}
+
+.beer-batch-image {
+  display: block;
+  margin: var(--double-space) auto var(--space);
+  filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 0.3));
+}
+
+@media (min-width: 40rem) {
+  .beer-batch {
+    grid-column-gap: var(--space);
+    grid-template-columns: 200px auto;
+  }
+
+  .beer-batch-details {
+    grid-column: 2;
+  }
+
+  .beer-batch-image {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .beer-batch > .beer-batch-image {
+    filter: drop-shadow(0 0 35px #000) var(--img-filter);
+  }
 }
 
 /*******************************************************************************

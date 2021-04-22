@@ -1,16 +1,19 @@
-{% macro list(entries, page, linkClassName = 'subtle-link') %}
+{% macro list(entries, page, header = false, linkClassName = 'subtle-link') %}
   <ul>
     {%- for entry in entries %}
-      {# The current link points to the current page #}
-      {% if (entry.url == '/' and entry.url == page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
-        {% set current = true %}
-      {% endif %}
+      {# if rendering in the header, only render header links #}
+      {%- if (header and entry.header) or not header %}
+        {# The current link points to the current page #}
+        {% if (entry.url == '/' and entry.url == page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
+          {% set current = true %}
+        {% endif %}
 
-      <li>
-        <a href="{{ entry.url }}" {% if linkClassName %} class="{{ linkClassName }}"{% endif %} {% if current %} aria-current="page"{% endif %}>
-          {{ entry.title }}
-        </a>
-      </li>
+        <li>
+          <a href="{{ entry.url }}" {% if linkClassName %} class="{{ linkClassName }}"{% endif %} {% if current %} aria-current="page"{% endif %}>
+            {{ entry.title }}
+          </a>
+        </li>
+      {%- endif %}
     {%- endfor %}
   </ul>
 {% endmacro %}

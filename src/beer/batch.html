@@ -9,50 +9,57 @@ eleventyComputed:
   description: '{{ beer.description }}'
   bodyClassNames:
     - 'batch-{{ batch.id }}'
-mainClassNames:
-  - self-center
 ---
 <article class="beer-batch">
-  <header>
-    <h1>{{ batch.name }}</h1>
+  <div class="beer-batch-details">
+    <header>
+      <h1>{{ batch.name }}</h1>
 
-    <p class="beer-batch-info">
-      {{ batch.style }}
-      {% include "components/separator-dot.html" %}
-      <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
+      <p class="beer-batch-info">
+        {{ batch.style }}
+        {% include "components/separator-dot.html" %}
+        <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
+      </p>
+    </header>
+
+    <p class="beer-batch-stats">
+      {% if batch.abv %}
+        {{ batch.abv }} <abbr title="Alcohol by volume">ABV</abbr>
+      {% endif %}
+
+      {% if batch.ibu %}
+        {% include "components/separator-dot.html" %}
+        {{ batch.ibu }} <abbr title="International Bittering Units">IBU</abbr>
+      {% endif %}
+
+      {% if batch.ebc %}
+        {% include "components/separator-dot.html" %}
+        {{ batch.ebc }} <abbr title="European Brewery Convention">EBC</abbr>
+      {% endif %}
     </p>
-  </header>
 
-  <p class="beer-batch-stats">
-    {% if batch.abv %}
-      {{ batch.abv }} <abbr title="Alcohol by volume">ABV</abbr>
-    {% endif %}
+    <dl class="beer-batch-ingredients">
+      {% if batch.fermentables.length %}
+        <dt>Fermentables</dt>
+        <dd>{{ batch.fermentables | join(', ') }}
+      {% endif %}
 
-    {% if batch.ibu %}
-      {% include "components/separator-dot.html" %}
-      {{ batch.ibu }} <abbr title="International Bittering Units">IBU</abbr>
-    {% endif %}
+      {% if batch.hops.length %}
+        <dt>Hops</dt>
+        <dd>{{ batch.hops | join(', ') }}
+      {% endif %}
 
-    {% if batch.ebc %}
-      {% include "components/separator-dot.html" %}
-      {{ batch.ebc }} <abbr title="European Brewery Convention">EBC</abbr>
-    {% endif %}
-  </p>
+      {% if batch.yeasts.length %}
+        <dt>Yeast</dt>
+        <dd>{{ batch.yeasts | join(', ') }}
+      {% endif %}
+    </dl>
+  </div>
 
-  <dl class="grid gap-x-2 grid-cols-4">
-    {% if batch.fermentables.length %}
-      <dt>Fermentables</dt>
-      <dd>{{ batch.fermentables | join(', ') }}
-    {% endif %}
+  <picture class="beer-batch-image">
+    {% set basePath = "/assets/beer/batches/" + batch.imageName %}
+    <source srcset="{{ basePath }}/can-dark.png 200w, {{ basePath }}/can-dark@2x.png 400w" media="(prefers-color-scheme: dark)">
+    <img src="{{ basePath }}/can.png" srcset="{{ basePath }}/can.png 200w, {{ basePath }}/can@2x.png 400w" alt="{{ batch.name }} can label" width="200" height="400" />
+  </picture>
 
-    {% if batch.hops.length %}
-      <dt>Hops</dt>
-      <dd>{{ batch.hops | join(', ') }}
-    {% endif %}
-
-    {% if batch.yeasts.length %}
-      <dt>Yeast</dt>
-      <dd>{{ batch.yeasts | join(', ') }}
-    {% endif %}
-  </dl>
 </article>
