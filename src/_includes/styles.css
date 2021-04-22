@@ -448,6 +448,11 @@ main > .content {
  * Beer batch
  ******************************************************************************/
 
+.beer-batch {
+  display: grid;
+  align-items: center;
+}
+
 .beer-batch-details {
   position: relative;
   z-index: 1;
@@ -470,16 +475,14 @@ main > .content {
 
 .beer-batch-image {
   display: block;
-  margin: var(--double-space) auto;
+  margin: var(--double-space) auto var(--space);
   filter: drop-shadow(0 0 35px hsla(0, 0%, 0%, 0.3));
 }
 
 @media (min-width: 40rem) {
   .beer-batch {
-    display: grid;
     grid-column-gap: var(--space);
     grid-template-columns: 200px auto;
-    align-items: center;
   }
 
   .beer-batch-details {
