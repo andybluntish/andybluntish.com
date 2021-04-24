@@ -478,6 +478,10 @@ main > .content {
   margin: 0 auto;
 }
 
+.beer-batch-image img {
+  filter: none;
+}
+
 @media (min-width: 40rem) {
   .beer-batch {
     grid-column-gap: var(--space);
