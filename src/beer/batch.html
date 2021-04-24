@@ -58,7 +58,12 @@ eleventyComputed:
 
   <picture class="beer-batch-image">
     {% set basePath = "/assets/beer/batches/" + batch.imageName %}
-    <source srcset="{{ basePath }}/can-dark.jpg 270w, {{ basePath }}/can-dark@2x.jpg 540w" media="(prefers-color-scheme: dark)">
+
+    {% for ext in ['avif', 'webp', 'jpg'] %}
+      <source srcset="{{ basePath }}/can.{{ ext }} 270w, {{ basePath }}/can@2x.{{ ext }} 540w"  media="(prefers-color-scheme: light)" type="image/{{ ext }}">
+      <source srcset="{{ basePath }}/can-dark.{{ ext }} 270w, {{ basePath }}/can-dark@2x.{{ ext }} 540w" media="(prefers-color-scheme: dark)" type="image/{{ ext }}">
+    {% endfor %}
+
     <img src="{{ basePath }}/can.jpg" srcset="{{ basePath }}/can.jpg 270w, {{ basePath }}/can@2x.jpg 540w" alt="{{ batch.name }} can label" width="270" height="540" />
   </picture>
 
