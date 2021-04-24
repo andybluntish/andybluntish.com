@@ -17,3 +17,5 @@ date: ${id.date.toISOString()}
 `.trimStart()
 
 fs.writeFileSync(outputPath, content)
+
+console.log(outputPath)
