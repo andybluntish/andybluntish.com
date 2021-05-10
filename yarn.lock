@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-1.0.0.tgz#b1fa53da49aafe0ab3fe38bc6b6058b704aa59a1"
   integrity sha512-2FWYlkphQ/83MG7b9qqBJfJJ0K9zupNz/6n4EdDuNLw6hQHGp4Sp4UMDRyBvA/xCTYDBaPSuSjHuu45tSujegg==
 
-"@11ty/eleventy-cache-assets@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-cache-assets/-/eleventy-cache-assets-2.1.0.tgz#85a99296fea8f7b5807e0ed7af2adf8c66a4892c"
-  integrity sha512-QZPSvK3yOZlPUQvTxzRYH6hv2S/jz8Pac2NLKQ/BPg16Siba6ujXP0ApToPGZftyDyFa0dZVZxhWcX4ino4KSg==
+"@11ty/eleventy-cache-assets@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-cache-assets/-/eleventy-cache-assets-2.2.1.tgz#465ebc794102b1e20b71207010de272c1a3191ab"
+  integrity sha512-RnbYXSFmj0d7+9kOPdCmdFou3616++aCNLBBNXxjVJF5tXdziO8PdjS9w0ktBgCIGfxz1/nwPHhL+HEqo3Iz/Q==
   dependencies:
     debug "^4.3.1"
     flat-cache "^3.0.4"
@@ -404,10 +404,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@eslint/eslintrc@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.0.tgz#99cc0a0584d72f1df38b900fb062ba995f395547"
-  integrity sha512-2ZPCc+uNbjV5ERJr+aKSPRwZgKd2z11x0EgLvb1PURmUrn9QNRXFqje0Ldq454PfAVyaJYyrDvvIKSFP4NnBog==
+"@eslint/eslintrc@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.1.tgz#442763b88cecbe3ee0ec7ca6d6dd6168550cbf14"
+  integrity sha512-5v7TDE9plVhvxQeWLXDTvFvJBdH6pEsdnl2g/dAptmuFEPedQ4Erq5rsDsX+mvAM610IhNaO2W5V1dOOnDKxkQ==
   dependencies:
     ajv "^6.12.4"
     debug "^4.1.1"
@@ -1921,10 +1921,10 @@ domutils@^2.4.2, domutils@^2.4.3, domutils@^2.4.4:
     domelementtype "^2.0.1"
     domhandler "^4.0.0"
 
-dotenv@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
-  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+dotenv@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-9.0.1.tgz#a889a28a3a515812dde1e7f8183ef5cdf3186b97"
+  integrity sha512-W8FNeNnnvJoYfgkFRKzp8kTgz0T2YY4TJ9xy1Ma0hSebPTK8iquRtpG12TUrSTX5zIN9D/wSLEEuI+Ad35tlyw==
 
 easy-extender@^2.3.4:
   version "2.3.4"
@@ -2143,13 +2143,13 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz#21fdc8fbcd9c795cc0321f0563702095751511a8"
   integrity sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
 
-eslint@^7.25.0:
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.25.0.tgz#1309e4404d94e676e3e831b3a3ad2b050031eb67"
-  integrity sha512-TVpSovpvCNpLURIScDRB6g5CYu/ZFq9GfX2hLNIV4dSBKxIWojeDODvYl3t0k0VtMxYeR8OXPCFE5+oHMlGfhw==
+eslint@^7.26.0:
+  version "7.26.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.26.0.tgz#d416fdcdcb3236cd8f282065312813f8c13982f6"
+  integrity sha512-4R1ieRf52/izcZE7AlLy56uIHHDLT74Yzz2Iv2l6kDaYvEu9x+wMB5dZArVL8SYGXSYV2YAg70FcW5Y5nGGNIg==
   dependencies:
     "@babel/code-frame" "7.12.11"
-    "@eslint/eslintrc" "^0.4.0"
+    "@eslint/eslintrc" "^0.4.1"
     ajv "^6.10.0"
     chalk "^4.0.0"
     cross-spawn "^7.0.2"
@@ -4698,10 +4698,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
-  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
+prettier@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.0.tgz#b6a5bf1284026ae640f17f7ff5658a7567fc0d18"
+  integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
 
 pretty-format@^26.6.2:
   version "26.6.2"
