@@ -303,6 +303,10 @@ main > .content {
   text-align: center;
 }
 
+.footer p {
+  word-break: keep-all;
+}
+
 .footer ul {
   margin: 0 0 var(--space);
   padding: 0;
