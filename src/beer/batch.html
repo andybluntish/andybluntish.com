@@ -16,24 +16,30 @@ eleventyComputed:
       <h1>{{ batch.name }}</h1>
 
       <p class="beer-batch-info">
-        {{ batch.style }}
-        {% include "components/separator-dot.html" %}
+        {% if batch.style %}
+          {{ batch.style }}
+          {% include "components/separator-dot.html" %}
+        {% endif %}
         <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | humanDate }}</time>
       </p>
     </header>
 
     <p class="beer-batch-stats">
-      {% if batch.abv %}
+      {% if batch.abv !== '-' %}
         {{ batch.abv }} <abbr title="Alcohol by volume">ABV</abbr>
       {% endif %}
 
-      {% if batch.ibu %}
-        {% include "components/separator-dot.html" %}
+      {% if batch.ibu !== '-' %}
+        {% if batch.abv !== '-' %}
+          {% include "components/separator-dot.html" %}
+        {% endif %}
         {{ batch.ibu }} <abbr title="International Bittering Units">IBU</abbr>
       {% endif %}
 
-      {% if batch.ebc %}
-        {% include "components/separator-dot.html" %}
+      {% if batch.ebc !== '-' %}
+        {% if batch.ibu !== '-' %}
+          {% include "components/separator-dot.html" %}
+        {% endif %}
         {{ batch.ebc }} <abbr title="European Brewery Convention">EBC</abbr>
       {% endif %}
     </p>
