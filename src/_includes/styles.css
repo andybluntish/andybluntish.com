@@ -47,6 +47,10 @@ html {
  * Typography
  ******************************************************************************/
 
+html {
+  font: -apple-system-body;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
