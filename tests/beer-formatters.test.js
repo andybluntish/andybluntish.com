@@ -25,7 +25,7 @@ describe('uniq', () => {
 })
 
 describe('abv', () => {
-  const { abv, BLANK_VALUE } = formatters
+  const { abv } = formatters
 
   test('it returns the blank value when input is empty or not a number', () => {
     expect(abv(undefined)).toEqual('0.0%')
