@@ -21,9 +21,9 @@
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-cache-assets": "^2.2.1",
-    "@11ty/eleventy-navigation": "^0.2.0",
+    "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
     "clean-css": "^5.1.2",
     "dotenv": "^9.0.1",
     "html-minifier": "^4.0.0",
