@@ -28,14 +28,14 @@ describe('abv', () => {
   const { abv, BLANK_VALUE } = formatters
 
   test('it returns the blank value when input is empty or not a number', () => {
-    expect(abv(0)).toEqual(BLANK_VALUE)
-    expect(abv(undefined)).toEqual(BLANK_VALUE)
-    expect(abv(null)).toEqual(BLANK_VALUE)
-    expect(abv(false)).toEqual(BLANK_VALUE)
-    expect(abv('nope')).toEqual(BLANK_VALUE)
+    expect(abv(undefined)).toEqual('0.0%')
+    expect(abv(null)).toEqual('0.0%')
+    expect(abv(false)).toEqual('0.0%')
+    expect(abv('nope')).toEqual('0.0%')
   })
 
   test('it returns number as a percentage', () => {
+    expect(abv(0)).toEqual('0.0%')
     expect(abv(4)).toEqual('4.0%')
     expect(abv(5.2)).toEqual('5.2%')
     expect(abv(6.69)).toEqual('6.7%')
