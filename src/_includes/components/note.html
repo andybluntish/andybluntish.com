@@ -1,9 +1,0 @@
-<article id="note-{{ note.fileSlug }}">
-  <header>
-    <a href="{{ note.url }}" class="note-link meta-text subtle-link">
-      <time datetime="{{ note.date | machineDate }}">{{ note.date | humanDateTime }}</time>
-    </a>
-  </header>
-
-  {{ content | safe }}
-</article>

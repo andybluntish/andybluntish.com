@@ -1,14 +1,13 @@
 {
   "name": "andybluntish.com",
-  "version": "14.1.0",
+  "version": "14.2.0",
   "scripts": {
     "build": "NODE_ENV=production ./scripts/build.sh",
     "start": "./scripts/dev.sh",
     "dev": "yarn run start",
     "test": "jest",
     "lint": "eslint .",
-    "format": "prettier --write './**/*.{js,json,css,md}'; eslint --fix './**/*.js'",
-    "note:new": "node ./scripts/new-note.js"
+    "format": "prettier --write './**/*.{js,json,css,md}'; eslint --fix './**/*.js'"
   },
   "repository": {
     "type": "git",

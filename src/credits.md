@@ -1,3 +1,9 @@
+---
+eleventyNavigation:
+  key: Credits
+  order: 3
+---
+
 # Credits
 
 ## Beer
