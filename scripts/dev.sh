@@ -3,8 +3,7 @@
 set -euo pipefail
 [[ ${DEBUG:-} ]] && set -x
 
-HERE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
-source "$HERE/config.sh"
+source "scripts/config.sh"
 
 clean_output
 
