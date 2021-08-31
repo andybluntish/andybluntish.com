@@ -23,16 +23,6 @@
     --background: hsl(223, 11%, 12%);
     --accent: hsl(22, 100%, 70%);
     --divider: hsl(218, 15%, 35%);
-    --svg-filter: brightness(0.8) contrast(1.2);
-    --img-filter: grayscale(15%);
-  }
-
-  svg {
-    filter: var(--svg-filter);
-  }
-
-  img:not([src*=".svg"]) {
-    filter: var(--img-filter);
   }
 }
 
