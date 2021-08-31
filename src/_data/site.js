@@ -1,13 +1,13 @@
 module.exports = function () {
-  const now = new Date()
-  const url = 'https://andybluntish.com'
-  const name = 'Andy Stanford-Bluntish'
-  const email = 'andybluntish@gmail.com'
-  const username = 'andybluntish'
+  const now = new Date();
+  const url = "https://andybluntish.com";
+  const name = "Andy Stanford-Bluntish";
+  const email = "andybluntish@gmail.com";
+  const username = "andybluntish";
 
   return {
     title: name,
-    description: 'I build things on the web. I love what I do.',
+    description: "I build things on the web. I love what I do.",
     shortName: username,
     author: {
       name,
@@ -21,26 +21,26 @@ module.exports = function () {
     footer: {
       links: [
         {
-          title: 'Twitter',
+          title: "Twitter",
           href: `https://twitter.com/${username}/`,
         },
         {
-          title: 'CodePen',
+          title: "CodePen",
           href: `https://codepen.io/${username}/`,
         },
         {
-          title: 'GitHub',
+          title: "GitHub",
           href: `https://github.com/${username}/`,
         },
         {
-          title: 'Instagram',
+          title: "Instagram",
           href: `https://instagram.com/${username}/`,
         },
         {
-          title: 'Email',
+          title: "Email",
           href: `mailto:${email}`,
         },
       ],
     },
-  }
-}
+  };
+};
