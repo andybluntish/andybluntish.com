@@ -14,7 +14,7 @@
   --font-size-xl: calc(var(--font-size) * 1.8);
   --font-weight-normal: 400;
   --font-weight-bold: 600;
-  --transition: 0.1s ease-in-out;
+  --transition: 0.15s ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
