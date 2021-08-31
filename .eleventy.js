@@ -2,14 +2,12 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-const markdownIt = require('markdown-it')
-
 module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
 
   eleventyConfig.setLibrary(
     'md',
-    markdownIt({
+    require('markdown-it')({
       html: true,
       breaks: true,
       linkify: true,
@@ -19,8 +17,6 @@ module.exports = (eleventyConfig) => {
 
   // Plugins
   eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'))
-  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-rss'))
-  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
 
   // Transforms
   eleventyConfig.addTransform('purgecss', require('./lib/transforms/purgecss'))
