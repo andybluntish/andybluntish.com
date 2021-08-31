@@ -36,7 +36,7 @@
         </svg>
       </a>
 
-      {{ navigation.list(navigationItems, page, header = true) }}
+      {{ navigation.header(navigationItems, page) }}
     </nav>
   </header>
 
@@ -54,7 +54,7 @@
         <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
 
         <nav>
-          {{ navigation.list(navigationItems, page) }}
+          {{ navigation.footer(navigationItems, page) }}
         </nav>
       </div>
     {% endblock %}
