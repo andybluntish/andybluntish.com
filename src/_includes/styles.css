@@ -237,6 +237,7 @@ table .date-value {
 
 thead th {
   padding: var(--half-space) var(--half-space) var(--half-space) 0;
+  font-weight: var(--font-weight-bold);
 }
 
 thead th:last-child {
