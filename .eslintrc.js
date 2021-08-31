@@ -4,26 +4,26 @@ module.exports = {
     es2020: true,
     commonjs: true,
   },
-  extends: ['eslint:recommended', 'plugin:node/recommended'],
+  extends: ["eslint:recommended", "plugin:node/recommended"],
   parserOptions: {
     ecmaVersion: 2020,
   },
   rules: {
-    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
   overrides: [
     {
-      files: ['tests/**/*.test.js'],
+      files: ["tests/**/*.test.js"],
       env: {
         jest: true,
       },
     },
     {
-      files: ['src/js/**/*.js'],
+      files: ["src/js/**/*.js"],
       env: {
         browser: true,
       },
-      extends: ['eslint:recommended'],
+      extends: ["eslint:recommended"],
     },
   ],
-}
+};

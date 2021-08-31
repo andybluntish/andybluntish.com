@@ -36,7 +36,7 @@
         </svg>
       </a>
 
-      {{ navigation.list(navigationItems, page, header = true) }}
+      {{ navigation.header(navigationItems, page) }}
     </nav>
   </header>
 
@@ -51,10 +51,10 @@
   <footer role="contentinfo">
     {% block footer %}
       <div class="footer">
-        <p>&copy; {{ site.copyright.end }} {{ site.author.name }}</p>
+        <p>&copy; {{ site.copyright.end }} <a href="/" rel="me" class="subtle-link">{{ site.author.name }}</a></p>
 
         <nav>
-          {{ navigation.list(navigationItems, page) }}
+          {{ navigation.footer(navigationItems, page) }}
         </nav>
       </div>
     {% endblock %}
