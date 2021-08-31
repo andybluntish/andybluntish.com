@@ -421,7 +421,6 @@ dd {
 
 .beer-batch-info {
   margin: var(--quarter-space) 0;
-  font-weight: 300;
   text-transform: uppercase;
 }
 
