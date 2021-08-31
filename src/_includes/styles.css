@@ -156,6 +156,10 @@ main > .content {
   margin-left: var(--space);
 }
 
+.footer a {
+  padding: var(--half-space) 0;
+}
+
 @media (min-width: 40rem) {
   .footer {
     display: flex;
