@@ -292,19 +292,15 @@ main > .content {
 }
 
 .footer ul {
+  display: flex;
+  justify-content: center;
   margin: 0 0 var(--space);
   padding: 0;
-  justify-content: center;
+  list-style: none;
 }
 
-.footer ul,
-.footer li {
-  display: flex;
-}
-
-.footer li:not(:first-of-type)::before {
-  content: "•";
-  margin: 0 var(--quarter-space);
+.footer li:not(:first-child) {
+  margin-left: var(--space);
 }
 
 @media (min-width: 40rem) {
