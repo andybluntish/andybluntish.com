@@ -34,7 +34,7 @@ module.exports = (eleventyConfig) => {
     require("./lib/filters/human-date-time")
   );
 
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/_redirects");
 

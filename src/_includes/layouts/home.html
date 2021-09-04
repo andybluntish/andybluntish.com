@@ -1,4 +1,4 @@
-{% extends "layouts/layout.html" %}
+{% extends "layouts/base.html" %}
 
 {% block footer %}
   <div class="footer--home">
@@ -15,8 +15,8 @@
     </ul>
 
     <picture>
-      <source srcset="/assets/img/me-dark.jpg 300w, /assets/img/me-dark@2x.jpg 600w" media="(prefers-color-scheme: dark)">
-      <img src="/assets/img/me.jpg" srcset="/assets/img/me.jpg 300w, /assets/img/me@2x.jpg 600w" alt="{{ site.author.name }}" width="300" height="307">
+      <source srcset="/img/me-dark.jpg 300w, /img/me-dark@2x.jpg 600w" media="(prefers-color-scheme: dark)">
+      <img src="/img/me.jpg" srcset="/img/me.jpg 300w, /img/me@2x.jpg 600w" alt="{{ site.author.name }}" width="300" height="307">
     </picture>
 
     <div hidden>
