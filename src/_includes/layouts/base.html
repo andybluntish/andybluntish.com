@@ -19,8 +19,7 @@
   {% endset %}
   <style>{{ css | safe }}</style>
 </head>
-{% set pageClass = "page" + page.filePathStem | replace('/', '-') %}
-<body class="{{ pageClass }}{% if bodyClassNames %} {{ bodyClassNames | join(' ') | trim }}{% endif %}">
+<body class="{{ ["page" + page.filePathStem | replace('/', '-'), bodyClassNames if bodyClassNames else [] | join(' ') | trim ] | join(' ') | trim }}">
   {% import 'components/navigation.html' as 'navigation' %}
   {% set navigationItems = collections.all | eleventyNavigation %}
 
