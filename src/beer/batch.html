@@ -63,7 +63,7 @@ eleventyComputed:
   </div>
 
   <picture class="beer-batch-image">
-    {% set basePath = "/assets/beer/batches/" + batch.imageName %}
+    {% set basePath = "/img/beer/batches/" + batch.imageName %}
 
     {% for ext in ['avif', 'webp', 'jpg'] %}
       <source srcset="{{ basePath }}/can.{{ ext }} 270w, {{ basePath }}/can@2x.{{ ext }} 540w"  media="(prefers-color-scheme: light)" type="image/{{ ext }}">

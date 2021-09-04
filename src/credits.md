@@ -8,7 +8,7 @@ eleventyNavigation:
 
 ## Beer
 
-Default [beer](/beer/) can label ([light](/assets/beer/batches/default/can@2x.jpg), [dark](/assets/beer/batches/default/can-dark@2x.jpg)):
+Default [beer](/beer/) can label ([light](/img/beer/batches/default/can@2x.jpg), [dark](/img/beer/batches/default/can-dark@2x.jpg)):
 
 - [Water](https://thenounproject.com/term/water/1478810) by Bharat from [the Noun Project](https://thenounproject.com/)
 - [Grain](https://thenounproject.com/term/grain/2805269) by Adrien Coquet from [the Noun Project](https://thenounproject.com/)
