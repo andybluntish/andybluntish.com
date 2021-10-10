@@ -2,12 +2,12 @@
   "name": "andybluntish.com",
   "version": "14.2.0",
   "scripts": {
-    "build": "NODE_ENV=production ./scripts/build.sh",
-    "start": "./scripts/dev.sh",
-    "dev": "yarn run start",
+    "build": "eleventy --quiet",
+    "start": "eleventy --serve --quiet",
     "test": "jest",
     "lint": "eslint .",
-    "format": "prettier --write './**/*.{js,json,css,md}'; eslint --fix './**/*.js'"
+    "format": "prettier --write './**/*.{js,json,css,md}'; eslint --fix './**/*.js'",
+    "clean": "rm -r dist > /dev/null 2>&1"
   },
   "repository": {
     "type": "git",
