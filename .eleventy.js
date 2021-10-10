@@ -17,6 +17,7 @@ module.exports = (eleventyConfig) => {
 
   // Plugins
   eleventyConfig.addPlugin(require("@11ty/eleventy-navigation"));
+  eleventyConfig.addPlugin(require("@11ty/eleventy-upgrade-help"));
 
   // Transforms
   eleventyConfig.addTransform("purgecss", require("./lib/transforms/purgecss"));
