@@ -3,7 +3,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setQuietMode(true);
 
   eleventyConfig.setLibrary(
     "md",
@@ -37,7 +37,6 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
-  eleventyConfig.addPassthroughCopy("src/_redirects");
 
   return {
     dir: { input: "src", output: "dist" },
