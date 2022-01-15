@@ -6,7 +6,7 @@
     "start": "eleventy --serve --quiet",
     "test": "jest",
     "lint": "eslint .",
-    "format": "prettier --write './**/*.{js,json,css,md}'; eslint --fix './**/*.js'",
+    "format": "eslint --fix .",
     "clean": "rm -r dist > /dev/null 2>&1"
   },
   "repository": {
@@ -31,7 +31,9 @@
   },
   "devDependencies": {
     "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.4.7",
     "prettier": "^2.5.1"
   }
