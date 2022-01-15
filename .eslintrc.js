@@ -4,7 +4,11 @@ module.exports = {
     es2020: true,
     commonjs: true,
   },
-  extends: ["eslint:recommended", "plugin:node/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:prettier/recommended",
+  ],
   parserOptions: {
     ecmaVersion: 2020,
   },
