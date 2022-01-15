@@ -21,11 +21,5 @@ module.exports = async function () {
       return 1;
     });
 
-  return {
-    title: "Brew log",
-    description: "Beer is for fun.",
-    navigationTitle: "Beer",
-    batches,
-    recipes,
-  };
+  return { batches, recipes };
 };

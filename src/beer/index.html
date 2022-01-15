@@ -1,59 +1,11 @@
 ---
 eleventyComputed:
-  title: "{{ beer.title }}"
-  description: "{{ beer.description }}"
+  title: Beer
+  description: Beer is for fun.
   eleventyNavigation:
-    key: "{{ beer.navigationTitle }}"
+    key: "{{ title }}"
     order: 2
     header: true
-pageFooter: Details of previous batches back to 2005 have been lost to time and poor record-keeping.
 ---
-{% include 'components/page-header.html' %}
 
-<table class="brew-log">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Style</th>
-      <th class="numeric-value"><abbr title="Alcohol by volume">ABV</abbr></th>
-      <th class="numeric-value"><abbr title="International Bittering Units">IBU</abbr></th>
-      <th class="numeric-value"><abbr title="European Brewery Convention">EBC</abbr></th>
-      <th class="date-value">Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    {%- for batch in beer.batches -%}
-      <tr>
-        <td>
-          <a href="/beer/batches/{{ batch.id }}" class="subtle-link">
-            {{ batch.name }}
-          </a>
-        </td>
-        <td>
-          {{ batch.style }}
-        </td>
-        <td class="numeric-value">
-          {{ batch.abv }}
-          <abbr title="Alcohol by volume">ABV</abbr>
-        </td>
-        <td class="numeric-value">
-          {{ batch.ibu }}
-          {% if batch.ibu !== '-' %}
-            <abbr title="International Bittering Units">IBU</abbr>
-          {% endif %}
-        </td>
-        <td class="numeric-value">
-          {{ batch.ebc }}
-          {% if batch.ebc !== '-' %}
-            <abbr title="European Brewery Convention">EBC</abbr>
-          {% endif %}
-        </td>
-        <td class="date-value">
-          <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">{{ batch.brewDate | shortDate }}</time>
-        </td>
-      </tr>
-    {%- endfor -%}
-  </tbody>
-</table>
-
-{% include 'components/page-footer.html' %}
+<p>Beer</p>
