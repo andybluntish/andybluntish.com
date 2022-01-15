@@ -23,7 +23,7 @@
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-upgrade-help": "^1.0.1",
     "clean-css": "^5.2.2",
-    "dotenv": "^10.0.0",
+    "dotenv": "^12.0.3",
     "html-minifier": "^4.0.0",
     "markdown-it": "^12.3.2",
     "parse5": "^6.0.1",
