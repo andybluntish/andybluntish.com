@@ -1,10 +1,10 @@
 ---
 eleventyNavigation:
-  key: Credits
+  key: Attributions
   order: 3
 ---
 
-# Credits
+# {{eleventyNavigation.key}}
 
 ## Beer
 
