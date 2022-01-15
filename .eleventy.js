@@ -35,6 +35,12 @@ module.exports = (eleventyConfig) => {
     require("./lib/filters/human-date-time")
   );
 
+  // Shortcodesshortcodes
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "image",
+    require("./lib/shortcodes/image")
+  );
+
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
 
