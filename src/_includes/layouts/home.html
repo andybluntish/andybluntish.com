@@ -1,9 +1,23 @@
+---
+eleventyComputed:
+  footerLinks:
+    - title: Twitter
+      href: https://twitter.com/{{ site.author.username }}/
+    - title: CodePen
+      href: https://codepen.io/{{ site.author.username }}/
+    - title: GitHub
+      href: https://github.com/{{ site.author.username }}/
+    - title: Instagram
+      href: https://instagram.com/{{ site.author.username }}/
+    - title: Email
+      href: mailto:{{ site.author.email }}
+---
 {% extends "layouts/base.html" %}
 
 {% block footer %}
   <div class="footer--home">
     <ul>
-      {% for link in site.footer.links %}
+      {% for link in footerLinks %}
       <li>
         <a href="{{ link.href }}" rel="me" title="{{ link.title }}" class="subtle-link">
           <svg role="img" aria-labelledby="t-{{ link.title | lower }}" width="32" height="32">

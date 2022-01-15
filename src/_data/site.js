@@ -12,35 +12,12 @@ module.exports = function () {
     author: {
       name,
       email,
+      username,
     },
     url,
     copyright: {
       start: 2006,
       end: now.getFullYear(),
-    },
-    footer: {
-      links: [
-        {
-          title: "Twitter",
-          href: `https://twitter.com/${username}/`,
-        },
-        {
-          title: "CodePen",
-          href: `https://codepen.io/${username}/`,
-        },
-        {
-          title: "GitHub",
-          href: `https://github.com/${username}/`,
-        },
-        {
-          title: "Instagram",
-          href: `https://instagram.com/${username}/`,
-        },
-        {
-          title: "Email",
-          href: `mailto:${email}`,
-        },
-      ],
     },
   };
 };
