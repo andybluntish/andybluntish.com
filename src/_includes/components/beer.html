@@ -1,0 +1,71 @@
+{% macro recipeSummary(recipe) %}
+  <p class="beer-recipe-summary">
+    {{ name(recipe) }}
+    {{ style(recipe) }}
+    {{ abv(recipe) }}
+    {{ ibu(recipe) }}
+    {{ ebc(recipe) }}
+  </p>
+{% endmacro %}
+
+{% macro recipeDetails(recipe) %}
+  <dl class="beer-recipe-ingredients">
+    {% if recipe.fermentables.length %}
+      <dt>Fermentables</dt>
+      <dd>{{ recipe.fermentables | join(', ') }}
+    {% endif %}
+
+    {% if recipe.hops.length %}
+      <dt>Hops</dt>
+      <dd>{{ recipe.hops | join(', ') }}
+    {% endif %}
+
+    {% if recipe.yeasts.length %}
+      <dt>Yeast</dt>
+      <dd>{{ recipe.yeasts | join(', ') }}
+    {% endif %}
+  </dl>
+{% endmacro %}
+
+{% macro name(recipe, className = 'beer-name') %}
+  <span class="{{ className }}">
+    {{ recipe.name }}
+  </span>
+{% endmacro %}
+
+{% macro style(recipe, classstyle = 'beer-style') %}
+  <span class="{{ classstyle }}">
+    {{ recipe.style }}
+  </span>
+{% endmacro %}
+
+{% macro abv(recipe, className = 'beer-abv') %}
+  <span class="{{ className }}">
+    {{ recipe.abv }}
+    <abbr title="Alcohol by volume">ABV</abbr>
+  </span>
+{% endmacro %}
+
+{% macro ibu(recipe, className = 'beer-abv') %}
+  <span class="{{ className }}">
+    {{ recipe.ibu }}
+    {% if recipe.ibu !== '-' %}
+      <abbr title="International Bittering Units">IBU</abbr>
+    {% endif %}
+  </span>
+{% endmacro %}
+
+{% macro ebc(recipe, className = 'beer-abv') %}
+  <span class="{{ className }}">
+    {{ recipe.ebc }}
+    {% if recipe.ebc !== '-' %}
+      <abbr title="European Brewery Convention">EBC</abbr>
+    {% endif %}
+  </span>
+{% endmacro %}
+
+{% macro brewDate(recipe, className = 'beer-date') %}
+  <span class="{{ className }}">
+    <time datetime="{{ recipe.brewDate | machineDate }}" title="{{ recipe.brewDate | humanDate }}">{{ recipe.brewDate | shortDate }}</time>
+  </span>
+{% endmacro %}
