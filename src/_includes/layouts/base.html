@@ -14,13 +14,13 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icons/favicon.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
-  {% set pageId = "page" + page.filePathStem | replace('/', '-') %}
+  {% set pageId = page.filePathStem | slugify %}
   {% set css %}
     {% include "styles.css" %}
   {% endset %}
   <style>{{ css | safe }}</style>
 </head>
-<body class="{{ [pageId, pageClassNames] | className }}">
+<body class="{{ ["page-" + pageId, pageClassNames] | className }}">
   {% import 'components/navigation.html' as 'navigation' %}
   {% set navigationItems = collections.all | eleventyNavigation %}
 
