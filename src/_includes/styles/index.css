@@ -4,3 +4,7 @@ main {
   max-width: 38rem;
   align-self: center;
 }
+
+[role="contentinfo"] {
+  padding: 0;
+}

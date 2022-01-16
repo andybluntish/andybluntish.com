@@ -50,13 +50,11 @@
 
   <footer role="contentinfo">
     {% block footer %}
-      <div class="footer">
-        <p>&copy; {{ site.copyright.end }} <a href="/" rel="me" class="subtle-link">{{ site.author.name }}</a></p>
+      <p>&copy; {{ site.copyright.end }} <a href="/" rel="me" class="subtle-link">{{ site.author.name }}</a></p>
 
-        <nav>
-          {{ navigation.footer(navigationItems, page) }}
-        </nav>
-      </div>
+      <nav>
+        {{ navigation.footer(navigationItems, page) }}
+      </nav>
     {% endblock %}
   </footer>
 </body>

@@ -119,37 +119,31 @@ main {
  ******************************************************************************/
 
 [role="contentinfo"] {
-  line-height: 1;
-}
-
-.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+  padding: var(--space);
   font-size: var(--font-size-sm);
+  line-height: 1;
   text-align: center;
 }
 
-.footer p {
+[role="contentinfo"] p {
+  margin: 0;
   word-break: keep-all;
 }
 
-.footer ul {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 var(--space);
-  padding: 0;
-  list-style: none;
-}
-
-.footer li:not(:first-child) {
-  margin-left: var(--space);
-}
-
-.footer a {
+[role="contentinfo"] a {
   padding: var(--half-space) 0;
 }
 
+[role="contentinfo"] .nav-list {
+  justify-content: center;
+}
+
 @media (min-width: 40rem) {
-  .footer {
-    display: flex;
+  [role="contentinfo"] {
+    flex-direction: row;
     justify-content: space-between;
   }
 }
