@@ -273,6 +273,14 @@ tbody a {
  * Lists
  ******************************************************************************/
 
+.inline-list {
+  display: flex;
+  gap: 0 var(--space);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 dt {
   font-weight: var(--font-weight-bold);
 }
