@@ -7,7 +7,7 @@ permalink: 'beer/batches/{{ batch.id }}/'
 eleventyComputed:
   title: '{{ beer.title }} | {{ batch.name }}'
   description: '{{ beer.description }}'
-  bodyClassNames:
+  pageClassNames:
     - 'batch-{{ batch.id }}'
 ---
 <article class="beer-batch">
