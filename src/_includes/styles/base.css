@@ -65,13 +65,22 @@ body {
  ******************************************************************************/
 
 [role="banner"] {
-  padding: var(--space);
-}
-
-[role="navigation"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: var(--space);
+}
+
+[role="banner"] a {
+  text-decoration: none;
+}
+
+/* Navigation */
+[role="navigation"] a {
+  padding: var(--space) 0;
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
 }
 
 /* Logo */
@@ -95,26 +104,6 @@ body {
   #logo:hover {
     transform: none;
   }
-}
-
-/* Navigation */
-[role="navigation"] ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-transform: uppercase;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-}
-
-[role="navigation"] li {
-  margin-left: var(--space);
-}
-
-[role="navigation"] li a {
-  text-decoration: none;
-  padding: var(--space) 0;
 }
 
 /*******************************************************************************
