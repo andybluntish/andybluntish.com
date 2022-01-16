@@ -16,7 +16,8 @@
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
   {% set pageId = page.filePathStem | slugify %}
   {% set css %}
-    {% include "styles.css" %}
+    {% include "styles/base.css" %}
+    {% include "styles/" + pageId + ".css" ignore missing %}
   {% endset %}
   <style>{{ css | safe }}</style>
 </head>
