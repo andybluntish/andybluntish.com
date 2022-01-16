@@ -24,6 +24,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addTransform("htmlmin", require("./lib/transforms/htmlmin"));
 
   // Filters
+  eleventyConfig.addFilter("className", require("./lib/filters/class-name"));
   eleventyConfig.addFilter(
     "machineDate",
     require("./lib/filters/machine-date")
