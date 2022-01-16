@@ -2,6 +2,8 @@
 eleventyNavigation:
   key: Attributions
   order: 3
+pageClassNames:
+  - centered-content
 ---
 
 # {{eleventyNavigation.key}}

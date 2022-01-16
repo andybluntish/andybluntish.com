@@ -1,10 +1,3 @@
-main {
-  margin: 0 auto;
-  padding: 0 var(--space);
-  max-width: 38rem;
-  align-self: center;
-}
-
 [role="contentinfo"] {
   display: unset;
   padding: unset;

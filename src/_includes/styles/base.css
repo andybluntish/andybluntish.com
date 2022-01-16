@@ -114,6 +114,13 @@ main {
   min-width: 0;
 }
 
+body.centered-content > main {
+  align-self: center;
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
+
 /*******************************************************************************
  * Footer
  ******************************************************************************/
