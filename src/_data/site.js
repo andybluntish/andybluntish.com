@@ -12,7 +12,6 @@ module.exports = function () {
     author: {
       name,
       email,
-      username,
     },
     url,
     copyright: {

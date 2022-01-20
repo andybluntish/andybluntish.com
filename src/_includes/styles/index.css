@@ -40,6 +40,7 @@
 [role="contentinfo"] svg {
   width: 2rem;
   height: 2rem;
+  fill: currentColor;
 }
 
 [role="contentinfo"] img {
