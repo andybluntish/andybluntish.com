@@ -4,6 +4,8 @@ eleventyNavigation:
   key: About
   order: 1
   header: true
+pageClassNames:
+  - centered-content
 ---
 
 G’day, my name is [Andy]({{ site.url }}/) 👋

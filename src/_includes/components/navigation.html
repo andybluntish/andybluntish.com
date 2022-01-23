@@ -1,5 +1,5 @@
 {% macro list(entries, page, linkClassName = 'subtle-link') %}
-  <ul>
+  <ul class="inline-list nav-list">
     {%- for entry in entries %}
       {# The current link points to the current page #}
       {% if (entry.url == '/' and entry.url == page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
@@ -16,7 +16,7 @@
 {% endmacro %}
 
 {% macro header(entries, page) %}
-  {{ list(entries | selectattr("header"), page) }}
+  {{ list(entries | selectattr('header'), page) }}
 {% endmacro %}
 
 {% macro footer(entries, page) %}

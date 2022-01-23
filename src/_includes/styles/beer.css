@@ -1,0 +1,47 @@
+/*******************************************************************************
+ * Brew log
+ ******************************************************************************/
+
+.brew-log tbody td abbr {
+  display: none;
+}
+
+.brew-log td:nth-child(1) {
+  font-weight: var(--font-weight-bold);
+}
+
+/* using max-width to reduce overriding and resetting */
+@media (max-width: 40rem) {
+  .brew-log thead {
+    display: none;
+  }
+
+  .brew-log tbody tr {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .brew-log tbody td {
+    width: 50%;
+  }
+
+  .brew-log td:nth-child(n + 3) {
+    width: 25%;
+    padding-top: 0;
+  }
+
+  .brew-log td:nth-child(6) {
+    text-align: end;
+  }
+
+  .brew-log tbody td abbr {
+    display: initial;
+  }
+}
+
+@media (min-width: 40rem) {
+  .brew-log th:nth-child(n + 3),
+  .brew-log td:nth-child(n + 3) {
+    text-align: end;
+  }
+}
