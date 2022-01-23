@@ -1,11 +1,7 @@
 {% macro batchSummary(batch) %}
   <article id="beer-batch-{{ batch.id }}" class="beer-batch">
     <header>
-      <h1>
-        <a href="/beer/batches/{{ batch.id }}" class="subtle-link">
-          {{ name(batch) }}
-        </a>
-      </h1>
+      <h1>{{ name(batch) }}</h1>
       <p>{{ style(batch) }}</p>
     </header>
 
