@@ -1,0 +1,28 @@
+---
+pageTitle: Brew log
+description: A log of all the brews I’ve remembered to log.
+eleventyComputed:
+  title: Beer | {{ pageTitle }}
+  eleventyNavigation:
+    key: Beer
+    order: 2
+    header: true
+---
+{% import 'components/beer.html' as 'b' %}
+
+<header class="page-header">
+  <h1 class="title">{{ pageTitle }}</h1>
+  <p class="subtitle">{{ description }}</p>
+</header>
+
+<ol reversed class="brew-log">
+  {%- for batch in beer.batches -%}
+    <li class="brew-log-entry">
+      {{ b.batchSummary(batch) }}
+    </li>
+  {%- endfor -%}
+</ol>
+
+<footer class="page-footer">
+  <p class="meta-text">Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
+</footer>
