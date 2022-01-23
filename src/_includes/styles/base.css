@@ -112,14 +112,15 @@ body {
  ******************************************************************************/
 
 main {
-  min-width: 0;
+  padding: 0 var(--space);
 }
 
-.centered-content > main {
+.centered-content main {
   align-self: center;
-  max-width: 38rem;
+}
+.centered-content main > .content {
   margin: 0 auto;
-  padding: 0 var(--space);
+  max-width: 38rem;
 }
 
 /*******************************************************************************

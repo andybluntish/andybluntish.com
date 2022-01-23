@@ -43,9 +43,11 @@
   </header>
 
   <main>
-    {% block main %}
-      {{ content | safe }}
-    {% endblock %}
+    <div class="content">
+      {% block main %}
+        {{ content | safe }}
+      {% endblock %}
+    </div>
   </main>
 
   <footer role="contentinfo">
