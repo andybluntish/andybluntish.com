@@ -6,6 +6,10 @@
   display: none;
 }
 
+.brew-log td:nth-child(1) {
+  font-weight: var(--font-weight-bold);
+}
+
 /* using max-width to reduce overriding and resetting */
 @media (max-width: 40rem) {
   .brew-log thead {
