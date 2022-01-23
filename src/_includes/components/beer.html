@@ -3,17 +3,17 @@
     <header>
       <h1>{{ name(batch) }}</h1>
       <p>{{ style(batch) }}</p>
+      <p>{{ brewDate(batch) }}</p>
     </header>
 
-    <p class="beer-batch-stats">
-      {{ abv(batch) }}
-      {{ ibu(batch) }}
-      {{ ebc(batch) }}
-      {{ brewDate(batch) }}
-    </p>
+    <div class="beer-batch-info">
+      <div class="beer-batch-stats">
+        {{ stats(batch) }}
+      </div>
 
-    <div class="beer-batch-ingredients">
-      {{ ingredients(batch) }}
+      <div class="beer-batch-ingredients">
+        {{ ingredients(batch) }}
+      </div>
     </div>
   </article>
 {% endmacro %}
@@ -61,21 +61,34 @@
   </span>
 {% endmacro %}
 
+{% macro stats(recipe, className = 'beer-ingredients') %}
+  <dl class="{{ className }}">
+    <dt>Alcohol</dt>
+    <dd>{{ abv(recipe) }}</dd>
+
+    <dt>Bitterness</dt>
+    <dd>{{ ibu(recipe) }}</dd>
+
+    <dt>Color</dt>
+    <dd>{{ ebc(recipe) }}</dd>
+  </dl>
+{% endmacro %}
+
 {% macro ingredients(recipe, className = 'beer-ingredients') %}
   <dl class="{{ className }}">
     {% if recipe.fermentables.length %}
       <dt>Fermentables</dt>
-      <dd>{{ recipe.fermentables | join(', ') }}
+      <dd>{{ recipe.fermentables | join(', ') }}</dd>
     {% endif %}
 
     {% if recipe.hops.length %}
       <dt>Hops</dt>
-      <dd>{{ recipe.hops | join(', ') }}
+      <dd>{{ recipe.hops | join(', ') }}</dd>
     {% endif %}
 
     {% if recipe.yeasts.length %}
       <dt>Yeast</dt>
-      <dd>{{ recipe.yeasts | join(', ') }}
+      <dd>{{ recipe.yeasts | join(', ') }}</dd>
     {% endif %}
   </dl>
 {% endmacro %}
