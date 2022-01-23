@@ -15,13 +15,30 @@ eleventyComputed:
   <p class="subtitle">{{ description }}</p>
 </header>
 
-<ol reversed class="brew-log">
-  {%- for batch in beer.batches -%}
-    <li class="brew-log-entry">
-      {{ b.batchSummary(batch) }}
-    </li>
-  {%- endfor -%}
-</ol>
+<table class="brew-log">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Style</th>
+      <th><abbr title="Alcohol by volume">ABV</abbr></th>
+      <th><abbr title="International Bittering Units">IBU</abbr></th>
+      <th><abbr title="European Brewery Convention">EBC</abbr></th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for batch in beer.batches -%}
+      <tr>
+        <td>{{ b.name(batch) }}</td>
+        <td>{{ b.style(batch) }}</td>
+        <td>{{ b.abv(batch) }}</td>
+        <td>{{ b.ibu(batch) }}</td>
+        <td>{{ b.ebc(batch) }}</td>
+        <td>{{ b.brewDate(batch) }}</td>
+      </tr>
+    {%- endfor -%}
+  </tbody>
+</table>
 
 <footer class="page-footer">
   <p class="meta-text">Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
