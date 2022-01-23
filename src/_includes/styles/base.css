@@ -2,7 +2,7 @@
   --foreground: hsl(218, 15%, 25%);
   --background: hsl(0, 0%, 100%);
   --accent: hsl(17, 100%, 43%);
-  --divider: hsl(220, 19%, 85%);
+  --border: hsl(220, 19%, 85%);
 
   --space: 1rem;
   --half-space: calc(var(--space) / 2);
@@ -22,7 +22,7 @@
     --foreground: hsl(220, 19%, 85%);
     --background: hsl(223, 11%, 12%);
     --accent: hsl(22, 100%, 70%);
-    --divider: hsl(218, 15%, 35%);
+    --border: hsl(218, 15%, 35%);
   }
 }
 
@@ -182,8 +182,8 @@ p {
 a {
   color: var(--accent);
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--divider);
-  text-decoration-color: var(--divider);
+  -webkit-text-decoration-color: var(--border);
+  text-decoration-color: var(--border);
   transition: all var(--transition);
 }
 
@@ -207,55 +207,6 @@ a.subtle-link.active {
   a {
     transition: none;
   }
-}
-
-/*******************************************************************************
- * Tables
- ******************************************************************************/
-
-table {
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-}
-
-table .numeric-value,
-table .date-value {
-  text-align: right;
-}
-
-thead th {
-  padding: var(--half-space) var(--half-space) var(--half-space) 0;
-  font-weight: var(--font-weight-bold);
-}
-
-thead th:last-child {
-  padding-right: 0;
-}
-
-tbody {
-  font-size: var(--font-size-sm);
-}
-
-tr {
-  border-bottom: 1px solid var(--divider);
-}
-
-tbody tr:last-child {
-  border: none;
-}
-
-tbody td {
-  padding: var(--quarter-space) var(--quarter-space) var(--quarter-space) 0;
-}
-
-tbody td:last-child {
-  padding-right: 0;
-}
-
-tbody a {
-  text-decoration: none;
-  font-weight: var(--font-weight-bold);
 }
 
 /*******************************************************************************
@@ -288,99 +239,4 @@ dd {
 
 .page-footer {
   margin-top: var(--double-space);
-}
-
-/*******************************************************************************
- * Brew log
- ******************************************************************************/
-
-.brew-log tbody td abbr {
-  display: none;
-}
-
-/* using max-width to reduce overriding and resetting */
-@media (max-width: 40rem) {
-  .brew-log thead {
-    display: none;
-  }
-
-  .brew-log tbody tr {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .brew-log tbody td {
-    width: 50%;
-  }
-
-  .brew-log tbody td[class$="-value"] {
-    width: 25%;
-    padding-top: 0;
-  }
-
-  .brew-log tbody td.numeric-value {
-    text-align: left;
-  }
-
-  .brew-log tbody td abbr {
-    display: initial;
-  }
-}
-
-/*******************************************************************************
- * Beer batch
- ******************************************************************************/
-
-.beer-batch {
-  display: grid;
-  align-items: center;
-}
-
-.beer-batch-details {
-  position: relative;
-  z-index: 1;
-}
-
-.beer-batch-info {
-  margin: var(--quarter-space) 0;
-  text-transform: uppercase;
-}
-
-.beer-batch-stats {
-  margin: var(--space) 0;
-}
-
-.beer-batch-ingredients,
-.beer-batch-ingredients dd:last-child {
-  margin: 0;
-}
-
-.beer-batch-image {
-  display: block;
-  margin: 0 auto;
-}
-
-.beer-batch-image img {
-  filter: none;
-}
-
-@media (min-width: 40rem) {
-  .beer-batch {
-    grid-column-gap: var(--space);
-    grid-template-columns: 12.5rem auto;
-  }
-
-  .beer-batch-details {
-    grid-column: 2;
-  }
-
-  .beer-batch-image {
-    grid-column: 1;
-    grid-row: 1;
-    margin-top: -2.1875rem;
-    margin-right: -2.1875rem;
-    margin-bottom: -2.1875rem;
-    margin-left: -2.1875rem;
-    max-width: 16.875rem;
-  }
 }
