@@ -231,11 +231,6 @@ table {
   border-collapse: collapse;
 }
 
-table .numeric-value,
-table .date-value {
-  text-align: right;
-}
-
 thead th {
   padding: var(--half-space) var(--half-space) var(--half-space) 0;
   font-weight: var(--font-weight-bold);
@@ -258,16 +253,11 @@ tbody tr:last-child {
 }
 
 tbody td {
-  padding: var(--quarter-space) var(--quarter-space) var(--quarter-space) 0;
+  padding: var(--quarter-space) var(--half-space) var(--quarter-space) 0;
 }
 
 tbody td:last-child {
   padding-right: 0;
-}
-
-tbody a {
-  text-decoration: none;
-  font-weight: var(--font-weight-bold);
 }
 
 /*******************************************************************************
