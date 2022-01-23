@@ -175,6 +175,18 @@ p {
   font-size: var(--font-size-sm);
 }
 
+.page-header {
+  margin-bottom: var(--double-space);
+}
+
+.page-header .subtitle {
+  margin-top: var(--half-space);
+}
+
+.page-footer {
+  margin-top: var(--double-space);
+}
+
 /*******************************************************************************
  * Links
  ******************************************************************************/
@@ -210,6 +222,55 @@ a.subtle-link.active {
 }
 
 /*******************************************************************************
+ * Tables
+ ******************************************************************************/
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table .numeric-value,
+table .date-value {
+  text-align: right;
+}
+
+thead th {
+  padding: var(--half-space) var(--half-space) var(--half-space) 0;
+  font-weight: var(--font-weight-bold);
+}
+
+thead th:last-child {
+  padding-right: 0;
+}
+
+tbody {
+  font-size: var(--font-size-sm);
+}
+
+tr {
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child {
+  border: none;
+}
+
+tbody td {
+  padding: var(--quarter-space) var(--quarter-space) var(--quarter-space) 0;
+}
+
+tbody td:last-child {
+  padding-right: 0;
+}
+
+tbody a {
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+}
+
+/*******************************************************************************
  * Lists
  ******************************************************************************/
 
@@ -227,16 +288,4 @@ dt {
 
 dd {
   margin: 0 0 var(--space);
-}
-
-.page-header {
-  margin-bottom: var(--double-space);
-}
-
-.page-header .subtitle {
-  margin-top: var(--half-space);
-}
-
-.page-footer {
-  margin-top: var(--double-space);
 }
