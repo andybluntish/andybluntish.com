@@ -2,6 +2,94 @@
  * Brew log
  ******************************************************************************/
 
+.brew-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*******************************************************************************
+ * Brew Log Batch
+ ******************************************************************************/
+
+.beer-batch {
+  --vertical-gap: var(--quarter-space);
+  padding-left: var(--quarter-space);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--vertical-gap);
+  font-size: var(--font-size-sm);
+}
+
+.beer-batch summary {
+  list-style-position: outside;
+}
+
+/* Summary */
+/* .beer-summary { } */
+
+.beer-summary-header {
+  display: flex;
+  flex-grow: 1;
+  gap: var(--half-space);
+}
+
+.beer-summary-name {
+  font-size: inherit;
+}
+
+.beer-summary-style {
+  margin-bottom: var(--vertical-gap);
+}
+
+.beer-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 var(--quarter-space);
+  list-style: none;
+  margin-bottom: var(--vertical-gap);
+  padding: 0;
+}
+
+.beer-summary-stats dt {
+  grid-row: 1;
+}
+
+.beer-summary-stats li:last-child {
+  text-align: end;
+}
+
+:is(.beer-summary-stats, .beer-details-ingredients) :is(dt, dd) {
+  margin: 0;
+}
+
+@media (min-width: 40rem) {
+  .beer-summary {
+    display: flex;
+    text-align: end;
+  }
+
+  .beer-summary-style {
+    margin: 0;
+  }
+
+  .beer-summary-stats dt {
+    display: none;
+  }
+}
+
+/* Details */
+.beer-details-ingredients {
+  margin: 0;
+}
+.beer-details-ingredients dd {
+  /* background: green; */
+  margin-bottom: var(--vertical-gap);
+}
+
+/*******************************************************************************
+ * Brew log
+ ******************************************************************************/
+
 .brew-log tbody td abbr {
   display: none;
 }
