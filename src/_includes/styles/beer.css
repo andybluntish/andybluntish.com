@@ -14,10 +14,15 @@
 
 .beer-batch {
   --vertical-gap: var(--quarter-space);
+
   padding-left: var(--quarter-space);
   border-bottom: 1px solid var(--border);
   margin-bottom: var(--vertical-gap);
   font-size: var(--font-size-sm);
+}
+
+.brew-log li:last-of-type .beer-batch {
+  border-bottom: none;
 }
 
 .beer-batch summary {
