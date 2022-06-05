@@ -164,7 +164,6 @@ main {
 h1 {
   margin: 0;
   font-size: var(--font-size-xl);
-  line-height: 1;
   font-weight: var(--font-weight-bold);
 }
 
