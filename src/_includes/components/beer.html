@@ -41,34 +41,51 @@
   </span>
 {% endmacro %}
 
-{% macro statsList(recipe, className = 'beer-stats') %}
-  <dl class="{{ className }}">
-    <dt>Alcohol</dt>
-    <dd>{{ abv(recipe) }}</dd>
+{% macro batch(recipe, classNameBase = 'beer-batch') %}
+  <article class="{{ classNameBase }}">
+    <details>
+      <summary>
+        {{ beerBatchSummary(recipe) }}
+      </summary>
 
-    <dt>Bitterness</dt>
-    <dd>{{ ibu(recipe) }}</dd>
-
-    <dt>Color</dt>
-    <dd>{{ ebc(recipe) }}</dd>
-  </dl>
+      {{ beerBatchDetails(recipe) }}
+    </details>
+  </article>
 {% endmacro %}
 
-{% macro ingredientsList(recipe, className = 'beer-ingredients') %}
-  <dl class="{{ className }}">
-    {% if recipe.fermentables.length %}
-      <dt>Fermentables</dt>
-      <dd>{{ recipe.fermentables | join(', ') }}</dd>
-    {% endif %}
+{% macro beerBatchSummary(recipe, classNameBase = 'beer-summary') %}
+  <div class="{{ classNameBase }}">
+    <header class="{{ classNameBase }}-header">
+      <h1 class="{{classNameBase}}-name">{{ recipe.name }}</h1>
+      <p class="{{ classNameBase}}-style">{{ recipe.style }}</p>
+    </header>
 
-    {% if recipe.hops.length %}
-      <dt>Hops</dt>
-      <dd>{{ recipe.hops | join(', ') }}</dd>
-    {% endif %}
+    <ul class="{{ classNameBase }}-stats">
+      <li>{{ abv(recipe) }}</li>
+      <li>{{ ibu(recipe) }}</li>
+      <li>{{ ebc(recipe) }}</li>
+      <li>{{ brewDate(recipe) }}</li>
+    </ul>
+  </div>
+{% endmacro %}
 
-    {% if recipe.yeasts.length %}
-      <dt>Yeast</dt>
-      <dd>{{ recipe.yeasts | join(', ') }}</dd>
-    {% endif %}
-  </dl>
+{% macro beerBatchDetails(recipe, classNameBase = 'beer-details') %}
+  <div class="{{ classNameBase }}">
+    <dl class="{{ classNameBase }}-ingredients">
+      {% if recipe.fermentables.length %}
+        <dt>Fermentables</dt>
+        <dd>{{ recipe.fermentables | join(', ') }}</dd>
+      {% endif %}
+
+      {% if recipe.hops.length %}
+        <dt>Hops</dt>
+        <dd>{{ recipe.hops | join(', ') }}</dd>
+      {% endif %}
+
+      {% if recipe.yeasts.length %}
+        <dt>Yeast</dt>
+        <dd>{{ recipe.yeasts | join(', ') }}</dd>
+      {% endif %}
+    </dl>
+  </div>
 {% endmacro %}
