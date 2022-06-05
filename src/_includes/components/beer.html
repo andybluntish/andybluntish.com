@@ -23,6 +23,18 @@
   </span>
 {% endmacro %}
 
+{% macro og(recipe, className = 'beer-og') %}
+  <span class="{{ className }}">
+    {{ recipe.og }}
+  </span>
+{% endmacro %}
+
+{% macro fg(recipe, className = 'beer-fg') %}
+  <span class="{{ className }}">
+    {{ recipe.fg }}
+  </span>
+{% endmacro %}
+
 {% macro ibu(recipe, className = 'beer-ibu') %}
   <span class="{{ className }}">
     {{ recipe.ibu }}
@@ -93,6 +105,26 @@
       {% if recipe.yeasts.length %}
         <dt>Yeast</dt>
         <dd>{{ recipe.yeasts | join(', ') }}</dd>
+      {% endif %}
+    </dl>
+
+    <dl class="{{ classNameBase }}-more-stats">
+      {% set recipeBrewMethod = brewMethod(recipe) %}
+      {% if recipeBrewMethod %}
+        <dt>Type</dt>
+        <dd>{{ recipeBrewMethod }}</dd>
+      {% endif %}
+
+      {% set recipeOg = og(recipe) %}
+      {% if recipeOg %}
+        <dt>Original Gravity</dt>
+        <dd>{{ recipeOg }}</dd>
+      {% endif %}
+
+      {% set recipeFg = fg(recipe) %}
+      {% if recipeFg %}
+        <dt>Final Gravity</dt>
+        <dd>{{ recipeFg }}</dd>
       {% endif %}
     </dl>
   </div>
