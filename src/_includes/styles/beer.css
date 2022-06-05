@@ -2,46 +2,77 @@
  * Brew log
  ******************************************************************************/
 
-.brew-log tbody td abbr {
-  display: none;
+.brew-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.brew-log td:nth-child(1) {
-  font-weight: var(--font-weight-bold);
+/*******************************************************************************
+ * Brew Log Batch
+ ******************************************************************************/
+
+.beer-batch {
+  --vertical-gap: var(--quarter-space);
+
+  padding-left: var(--quarter-space);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--vertical-gap);
+  font-size: var(--font-size-sm);
 }
 
-/* using max-width to reduce overriding and resetting */
-@media (max-width: 40rem) {
-  .brew-log thead {
-    display: none;
-  }
+.brew-log li:last-of-type .beer-batch {
+  border-bottom: none;
+}
 
-  .brew-log tbody tr {
-    display: flex;
-    flex-flow: row wrap;
-  }
+.beer-batch summary {
+  list-style-position: outside;
+}
 
-  .brew-log tbody td {
-    width: 50%;
-  }
+.beer-batch :is(dl, dt) {
+  margin: 0;
+}
 
-  .brew-log td:nth-child(n + 3) {
-    width: 25%;
-    padding-top: 0;
-  }
+.beer-batch dd {
+  margin-bottom: var(--vertical-gap);
+}
 
-  .brew-log td:nth-child(6) {
-    text-align: end;
-  }
+.beer-summary-header {
+  display: flex;
+  flex-grow: 1;
+  gap: var(--half-space);
+}
 
-  .brew-log tbody td abbr {
-    display: initial;
-  }
+.beer-summary-name {
+  font-size: inherit;
+}
+
+.beer-summary-style {
+  margin-bottom: var(--vertical-gap);
+}
+
+.beer-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 var(--quarter-space);
+  list-style: none;
+  margin-bottom: var(--vertical-gap);
+  padding: 0;
+}
+
+.beer-summary-stats li:last-child {
+  text-align: end;
+}
+
+.beer-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--quarter-space);
 }
 
 @media (min-width: 40rem) {
-  .brew-log th:nth-child(n + 3),
-  .brew-log td:nth-child(n + 3) {
+  .beer-summary {
+    display: flex;
     text-align: end;
   }
 }

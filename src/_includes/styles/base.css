@@ -164,11 +164,13 @@ main {
 h1 {
   margin: 0;
   font-size: var(--font-size-xl);
-  line-height: 1;
   font-weight: var(--font-weight-bold);
 }
 
-p {
+p,
+ul,
+ol,
+dl {
   margin: 0 0 var(--space);
 }
 
