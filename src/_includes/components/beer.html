@@ -10,6 +10,12 @@
   </span>
 {% endmacro %}
 
+{% macro brewMethod(recipe, className = 'beer-brew-method') %}
+  <span class="{{ className }}">
+    {{ recipe.brewMethod }}
+  </span>
+{% endmacro %}
+
 {% macro abv(recipe, className = 'beer-abv') %}
   <span class="{{ className }}">
     {{ recipe.abv }}
@@ -71,6 +77,8 @@
 
 {% macro beerBatchDetails(recipe, classNameBase = 'beer-details') %}
   <div class="{{ classNameBase }}">
+    <p>{{ brewMethod(recipe) }}</p>
+
     <dl class="{{ classNameBase }}-ingredients">
       {% if recipe.fermentables.length %}
         <dt>Fermentables</dt>
