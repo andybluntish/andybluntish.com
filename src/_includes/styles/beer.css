@@ -24,8 +24,13 @@
   list-style-position: outside;
 }
 
-/* Summary */
-/* .beer-summary { } */
+.beer-batch :is(dl, dt) {
+  margin: 0;
+}
+
+.beer-batch dd {
+  margin-bottom: var(--vertical-gap);
+}
 
 .beer-summary-header {
   display: flex;
@@ -50,16 +55,14 @@
   padding: 0;
 }
 
-.beer-summary-stats dt {
-  grid-row: 1;
-}
-
 .beer-summary-stats li:last-child {
   text-align: end;
 }
 
-:is(.beer-summary-stats, .beer-details-ingredients) :is(dt, dd) {
-  margin: 0;
+.beer-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--quarter-space);
 }
 
 @media (min-width: 40rem) {
@@ -67,20 +70,4 @@
     display: flex;
     text-align: end;
   }
-
-  .beer-summary-style {
-    margin: 0;
-  }
-
-  .beer-summary-stats dt {
-    display: none;
-  }
-}
-
-/* Details */
-.beer-details-ingredients {
-  margin: 0;
-}
-.beer-details-ingredients dd {
-  margin-bottom: var(--vertical-gap);
 }

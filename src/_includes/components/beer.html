@@ -89,26 +89,7 @@
 
 {% macro beerBatchDetails(recipe, classNameBase = 'beer-details') %}
   <div class="{{ classNameBase }}">
-    <p>{{ brewMethod(recipe) }}</p>
-
-    <dl class="{{ classNameBase }}-ingredients">
-      {% if recipe.fermentables.length %}
-        <dt>Fermentables</dt>
-        <dd>{{ recipe.fermentables | join(', ') }}</dd>
-      {% endif %}
-
-      {% if recipe.hops.length %}
-        <dt>Hops</dt>
-        <dd>{{ recipe.hops | join(', ') }}</dd>
-      {% endif %}
-
-      {% if recipe.yeasts.length %}
-        <dt>Yeast</dt>
-        <dd>{{ recipe.yeasts | join(', ') }}</dd>
-      {% endif %}
-    </dl>
-
-    <dl class="{{ classNameBase }}-more-stats">
+    <dl>
       {% set recipeBrewMethod = brewMethod(recipe) %}
       {% if recipeBrewMethod %}
         <dt>Type</dt>
@@ -125,6 +106,23 @@
       {% if recipeFg %}
         <dt>Final Gravity</dt>
         <dd>{{ recipeFg }}</dd>
+      {% endif %}
+    </dl>
+
+    <dl>
+      {% if recipe.fermentables.length %}
+        <dt>Fermentables</dt>
+        <dd>{{ recipe.fermentables | join(', ') }}</dd>
+      {% endif %}
+
+      {% if recipe.hops.length %}
+        <dt>Hops</dt>
+        <dd>{{ recipe.hops | join(', ') }}</dd>
+      {% endif %}
+
+      {% if recipe.yeasts.length %}
+        <dt>Yeast</dt>
+        <dd>{{ recipe.yeasts | join(', ') }}</dd>
       {% endif %}
     </dl>
   </div>
