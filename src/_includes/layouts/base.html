@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#fff">
   <title>{{ [site.title, title] | select() | join(' | ') }}</title>
   <meta name="author" content="{{ site.author.name }}">
   <meta name="description" content="{{ [description, site.description] | select() | first }}">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="copyright" content="Copyright (c) {{ site.copyright.start }}–{{ site.copyright.end }} {{ site.author.name }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icons/favicon.png">
