@@ -20,26 +20,41 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(require("@11ty/eleventy-upgrade-help"));
 
   // Transforms
-  eleventyConfig.addTransform("purgecss", require("./lib/transforms/purgecss"));
-  eleventyConfig.addTransform("htmlmin", require("./lib/transforms/htmlmin"));
+  eleventyConfig.addTransform(
+    "purgecss",
+    require("./lib/transforms/purgecss.cjs")
+  );
+  eleventyConfig.addTransform(
+    "htmlmin",
+    require("./lib/transforms/htmlmin.cjs")
+  );
 
   // Filters
-  eleventyConfig.addFilter("className", require("./lib/filters/class-name"));
+  eleventyConfig.addFilter(
+    "className",
+    require("./lib/filters/class-name.cjs")
+  );
   eleventyConfig.addFilter(
     "machineDate",
-    require("./lib/filters/machine-date")
+    require("./lib/filters/machine-date.cjs")
   );
-  eleventyConfig.addFilter("shortDate", require("./lib/filters/short-date"));
-  eleventyConfig.addFilter("humanDate", require("./lib/filters/human-date"));
+  eleventyConfig.addFilter(
+    "shortDate",
+    require("./lib/filters/short-date.cjs")
+  );
+  eleventyConfig.addFilter(
+    "humanDate",
+    require("./lib/filters/human-date.cjs")
+  );
   eleventyConfig.addFilter(
     "humanDateTime",
-    require("./lib/filters/human-date-time")
+    require("./lib/filters/human-date-time.cjs")
   );
 
   // Shortcodesshortcodes
   eleventyConfig.addNunjucksAsyncShortcode(
     "image",
-    require("./lib/shortcodes/image")
+    require("./lib/shortcodes/image.cjs")
   );
 
   eleventyConfig.addPassthroughCopy("src/img");
@@ -47,7 +62,6 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: { input: "src", output: "dist" },
-    templateFormats: ["html", "njk", "md"],
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
