@@ -9,7 +9,6 @@ const machineDate = require("./lib/filters/machine-date.cjs");
 const shortDate = require("./lib/filters/short-date.cjs");
 const humanDate = require("./lib/filters/human-date.cjs");
 const humanDateTime = require("./lib/filters/human-date-time.cjs");
-const image = require("./lib/shortcodes/image.cjs");
 
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
@@ -42,9 +41,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("shortDate", shortDate);
   eleventyConfig.addFilter("humanDate", humanDate);
   eleventyConfig.addFilter("humanDateTime", humanDateTime);
-
-  // Shortcodesshortcodes
-  eleventyConfig.addNunjucksAsyncShortcode("image", image);
 
   // Static files
   eleventyConfig.addPassthroughCopy("src/img");
