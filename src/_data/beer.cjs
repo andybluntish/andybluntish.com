@@ -1,4 +1,4 @@
-const beerData = require("../../lib/beer/data");
+const beerData = require("../../lib/beer/data.cjs");
 
 module.exports = function () {
   return beerData();
