@@ -1,6 +1,2 @@
-!.eleventy.js
-.cache
-.env
-.git
+eleventy.cjs
 dist
-node_modules
