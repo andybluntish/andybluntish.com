@@ -3,8 +3,8 @@
   "version": "14.2.0",
   "type": "module",
   "scripts": {
-    "build": "eleventy --config=eleventy.cjs --quiet",
-    "start": "eleventy --config=eleventy.cjs --serve --quiet",
+    "build": "eleventy --config=eleventy.cjs",
+    "start": "eleventy --config=eleventy.cjs --serve",
     "test": "jest",
     "lint": "eslint .",
     "format": "eslint --fix .",
