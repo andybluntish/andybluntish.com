@@ -1,5 +1,18 @@
+const dotenv = require("dotenv");
+const markdownIt = require("markdown-it");
+const eleventyNavigation = require("@11ty/eleventy-navigation");
+const eleventyUpgradeHelp = require("@11ty/eleventy-upgrade-help");
+const purgecss = require("./lib/transforms/purgecss.cjs");
+const htmlmin = require("./lib/transforms/htmlmin.cjs");
+const className = require("./lib/filters/class-name.cjs");
+const machineDate = require("./lib/filters/machine-date.cjs");
+const shortDate = require("./lib/filters/short-date.cjs");
+const humanDate = require("./lib/filters/human-date.cjs");
+const humanDateTime = require("./lib/filters/human-date-time.cjs");
+const image = require("./lib/shortcodes/image.cjs");
+
 if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
+  dotenv.config();
 }
 
 module.exports = (eleventyConfig) => {
@@ -7,7 +20,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.setLibrary(
     "md",
-    require("markdown-it")({
+    markdownIt({
       html: true,
       breaks: true,
       linkify: true,
@@ -16,47 +29,24 @@ module.exports = (eleventyConfig) => {
   );
 
   // Plugins
-  eleventyConfig.addPlugin(require("@11ty/eleventy-navigation"));
-  eleventyConfig.addPlugin(require("@11ty/eleventy-upgrade-help"));
+  eleventyConfig.addPlugin(eleventyNavigation);
+  eleventyConfig.addPlugin(eleventyUpgradeHelp);
 
   // Transforms
-  eleventyConfig.addTransform(
-    "purgecss",
-    require("./lib/transforms/purgecss.cjs")
-  );
-  eleventyConfig.addTransform(
-    "htmlmin",
-    require("./lib/transforms/htmlmin.cjs")
-  );
+  eleventyConfig.addTransform("purgecss", purgecss);
+  eleventyConfig.addTransform("htmlmin", htmlmin);
 
   // Filters
-  eleventyConfig.addFilter(
-    "className",
-    require("./lib/filters/class-name.cjs")
-  );
-  eleventyConfig.addFilter(
-    "machineDate",
-    require("./lib/filters/machine-date.cjs")
-  );
-  eleventyConfig.addFilter(
-    "shortDate",
-    require("./lib/filters/short-date.cjs")
-  );
-  eleventyConfig.addFilter(
-    "humanDate",
-    require("./lib/filters/human-date.cjs")
-  );
-  eleventyConfig.addFilter(
-    "humanDateTime",
-    require("./lib/filters/human-date-time.cjs")
-  );
+  eleventyConfig.addFilter("className", className);
+  eleventyConfig.addFilter("machineDate", machineDate);
+  eleventyConfig.addFilter("shortDate", shortDate);
+  eleventyConfig.addFilter("humanDate", humanDate);
+  eleventyConfig.addFilter("humanDateTime", humanDateTime);
 
   // Shortcodesshortcodes
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "image",
-    require("./lib/shortcodes/image.cjs")
-  );
+  eleventyConfig.addNunjucksAsyncShortcode("image", image);
 
+  // Static files
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
 
