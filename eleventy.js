@@ -2,13 +2,13 @@ const dotenv = require("dotenv");
 const markdownIt = require("markdown-it");
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventyUpgradeHelp = require("@11ty/eleventy-upgrade-help");
-const purgecss = require("./lib/transforms/purgecss.cjs");
-const htmlmin = require("./lib/transforms/htmlmin.cjs");
-const className = require("./lib/filters/class-name.cjs");
-const machineDate = require("./lib/filters/machine-date.cjs");
-const shortDate = require("./lib/filters/short-date.cjs");
-const humanDate = require("./lib/filters/human-date.cjs");
-const humanDateTime = require("./lib/filters/human-date-time.cjs");
+const purgecss = require("./lib/transforms/purgecss.js");
+const htmlmin = require("./lib/transforms/htmlmin.js");
+const className = require("./lib/filters/class-name.js");
+const machineDate = require("./lib/filters/machine-date.js");
+const shortDate = require("./lib/filters/short-date.js");
+const humanDate = require("./lib/filters/human-date.js");
+const humanDateTime = require("./lib/filters/human-date-time.js");
 
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();

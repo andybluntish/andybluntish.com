@@ -1,10 +1,9 @@
 {
   "name": "andybluntish.com",
   "version": "14.2.0",
-  "type": "module",
   "scripts": {
-    "build": "eleventy --config=eleventy.cjs",
-    "start": "eleventy --config=eleventy.cjs --serve",
+    "build": "eleventy --config=eleventy.js",
+    "start": "eleventy --config=eleventy.js --serve",
     "test": "jest",
     "lint": "eslint .",
     "format": "eslint --fix .",
