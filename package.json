@@ -19,7 +19,7 @@
   "private": true,
   "homepage": "https://andybluntish.com",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.11",
+    "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-upgrade-help": "^1.0.1",
