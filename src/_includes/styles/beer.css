@@ -3,9 +3,19 @@
  ******************************************************************************/
 
 .brew-log {
+  --gap: var(--quarter-space);
+
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.brew-log > li {
+  padding-top: var(--gap);
+}
+
+.brew-log > li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border);
 }
 
 /*******************************************************************************
@@ -13,16 +23,8 @@
  ******************************************************************************/
 
 .beer-batch {
-  --vertical-gap: var(--quarter-space);
-
   padding-left: var(--quarter-space);
-  border-bottom: 1px solid var(--border);
-  margin-bottom: var(--vertical-gap);
   font-size: var(--font-size-sm);
-}
-
-.brew-log li:last-of-type .beer-batch {
-  border-bottom: none;
 }
 
 .beer-batch summary {
@@ -42,13 +44,12 @@
 }
 
 .beer-batch dd {
-  margin-bottom: var(--vertical-gap);
+  margin-bottom: var(--gap);
 }
 
 .beer-summary-header {
   display: flex;
-  flex-grow: 1;
-  gap: var(--half-space);
+  gap: var(--gap);
 }
 
 .beer-summary-name {
@@ -56,15 +57,15 @@
 }
 
 .beer-summary-style {
-  margin-bottom: var(--vertical-gap);
+  margin-bottom: var(--gap);
 }
 
 .beer-summary-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0 var(--half-space);
+  gap: var(--gap);
   list-style: none;
-  margin-bottom: var(--vertical-gap);
+  margin-bottom: var(--gap);
   padding: 0;
 }
 
@@ -74,17 +75,18 @@
 
 .beer-details {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--half-space);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
 }
 
 @media (min-width: 40rem) {
-  .beer-summary {
-    display: flex;
-    text-align: end;
+  .brew-log {
+    --gap: var(--half-space);
   }
 
-  .beer-details {
-    grid-template-columns: 1fr 0.73fr;
+  .beer-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
   }
 }
