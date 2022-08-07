@@ -26,7 +26,15 @@
 }
 
 .beer-batch summary {
+  position: relative;
   list-style-position: outside;
+  cursor: pointer;
+}
+
+.beer-batch ::-webkit-details-marker {
+  position: absolute;
+  left: -0.85rem;
+  top: 0.2rem;
 }
 
 .beer-batch :is(dl, dt) {
