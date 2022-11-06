@@ -27,6 +27,10 @@ module.exports = function () {
       href: `mailto:${site.author.email}`,
       footer: true,
     },
+    {
+      title: "Mastodon",
+      href: "https://mastodon.online/@andybluntish",
+    },
   ];
 
   return links;
