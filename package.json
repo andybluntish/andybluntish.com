@@ -2,8 +2,8 @@
   "name": "andybluntish.com",
   "version": "14.2.0",
   "scripts": {
-    "build": "eleventy --config=eleventy.js",
-    "start": "eleventy --config=eleventy.js --serve",
+    "build": "eleventy",
+    "start": "eleventy --serve",
     "test": "jest",
     "lint": "eslint .",
     "format": "eslint --fix .",
