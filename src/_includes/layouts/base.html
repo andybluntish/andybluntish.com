@@ -14,6 +14,9 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icons/favicon.png">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+  {%- for link in externalLinks -%}
+    <link rel="me" href="{{ link.href }}">
+  {%- endfor -%}
   {% set pageId = page.filePathStem | slugify %}
   {% set css %}
     {% include "styles/base.css" %}
