@@ -18,6 +18,7 @@
   {% set css %}
     {% include "styles/base.css" %}
     {% include "styles/" + pageId + ".css" ignore missing %}
+    {{ page.url | webcGetCss | safe }}
   {% endset %}
   <style>{{ css | safe }}</style>
 </head>
