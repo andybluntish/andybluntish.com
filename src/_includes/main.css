@@ -1,0 +1,32 @@
+:root {
+  --foreground: hsl(218, 15%, 25%);
+  --background: hsl(0, 0%, 100%);
+  --accent: hsl(17, 100%, 43%);
+  --border: hsl(220, 19%, 85%);
+
+  --space: 1rem;
+  --half-space: calc(var(--space) / 2);
+  --quarter-space: calc(var(--space) / 4);
+  --double-space: calc(var(--space) * 2);
+  --font-size: 1rem;
+  --font-size-sm: calc(var(--font-size) * 0.8);
+  --font-size-lg: calc(var(--font-size) * 1.2);
+  --font-size-xl: calc(var(--font-size) * 1.8);
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --transition: 0.15s ease-in-out;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+[hidden] {
+  display: none;
+}
