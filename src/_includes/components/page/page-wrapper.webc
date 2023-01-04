@@ -1,0 +1,9 @@
+<slot name="header">
+  <page-header></page-header>
+</slot>
+
+<slot></slot>
+
+<slot name="footer">
+  <page-footer></page-footer>
+</slot>
