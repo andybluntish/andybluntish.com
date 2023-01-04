@@ -35,7 +35,7 @@
       {%- for link in site.externalLinks -%}
         {%- if link.footer -%}
         <li>
-          <a class="subtle-link" href="{{ link.href }}" rel="me">
+          <a href="{{ link.href }}" rel="me">
             <svg width="32" height="32" role="img" aria-labelledby="t-{{ link.title | lower }}">
               <use xlink:href="#i-{{ link.title | lower }}" />
             </svg>
@@ -65,29 +65,17 @@
     max-width: calc(var(--space) * 36);
   }
 
-  li, a {
-    transition: all var(--transition);
-  }
-
   a {
     display: inline-block;
     padding: var(--half-space);
-  }
-  a:focus,
-  a:hover {
-    transform: scale3d(1.2, 1.2, 1);
+    color: currentColor;
   }
 
-  @media (prefers-reduced-motion) {
-    a:focus,
-    a:hover {
-      transform: none;
-    }
- }
+  a:where(:focus, :hover) {
+    color: var(--accent);
+  }
 
   svg {
-    width: 2rem;
-    height: 2rem;
     fill: currentColor;
   }
 
