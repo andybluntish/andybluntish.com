@@ -2,7 +2,9 @@
   <page-header></page-header>
 </slot>
 
-<slot></slot>
+<main>
+  <slot></slot>
+</main>
 
 <slot name="footer">
   <page-footer></page-footer>
