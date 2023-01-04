@@ -6,3 +6,10 @@ layout: layouts/root.html
   <template webc:nokeep @raw="content"></template>
   <home-footer slot="footer"></home-footer>
 </page-wrapper>
+
+<style>
+  main {
+    margin: 0 auto;
+    max-width: 40rem;
+  }
+</style>
