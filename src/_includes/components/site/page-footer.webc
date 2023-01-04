@@ -31,7 +31,7 @@
     color: currentColor;
   }
 
-  a:where(:focus, :hover, .active) {
+  a:where(:focus, :hover) {
     color: var(--accent);
   }
 
