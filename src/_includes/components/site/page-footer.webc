@@ -1,3 +1,8 @@
 <footer webc:root webc:keep role="contentinfo">
-  <p>footer</p>
+  <p>
+    &copy; <template webc:nokeep @raw="site.copyrightYear"></template>
+    <a href="/" rel="me" class="subtle-link" @raw="site.author.name"></a>
+  </p>
+
+  <site-navigation></site-navigation>
 </footer>
