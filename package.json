@@ -1,6 +1,6 @@
 {
   "name": "andybluntish.com",
-  "version": "14.2.0",
+  "version": "15.0.0",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
