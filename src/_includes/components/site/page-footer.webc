@@ -6,3 +6,38 @@
 
   <site-navigation></site-navigation>
 </footer>
+
+<style webc:scoped>
+  :host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space);
+    padding: var(--space);
+    font-size: var(--font-size-sm);
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  ul {
+    justify-content: center;
+  }
+
+  a {
+    color: currentColor;
+  }
+
+  a:where(:focus, :hover, .active) {
+    color: var(--accent);
+  }
+
+  @media (min-width: 20rem) {
+    :host {
+      flex-direction: row;
+    }
+  }
+</style>

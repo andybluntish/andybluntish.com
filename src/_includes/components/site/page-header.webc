@@ -24,25 +24,13 @@
   a {
     color: currentColor;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
   }
 
   a:where(:focus, :hover, .active) {
     color: var(--accent);
-  }
-
-  ul {
-    display: flex;
-    gap: 0 var(--space);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  ul a {
-    padding: var(--space) 0;
-    text-transform: uppercase;
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
   }
 
   svg {
