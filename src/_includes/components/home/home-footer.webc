@@ -1,4 +1,4 @@
-<footer role="contentinfo" webc:root>
+<footer webc:root webc:keep role="contentinfo">
   <div hidden>
     <svg xmlns="http://www.w3.org/2000/svg">
       <symbol id="i-twitter" viewBox="0 0 20 20">
