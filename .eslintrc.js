@@ -1,17 +1,17 @@
 module.exports = {
   env: {
     node: true,
-    es2020: true,
+    es2021: true,
     commonjs: true,
+  },
+  parserOptions: {
+    ecmaVersion: "latest",
   },
   extends: [
     "eslint:recommended",
     "plugin:node/recommended",
     "plugin:prettier/recommended",
   ],
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
   rules: {
     "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
@@ -27,7 +27,7 @@ module.exports = {
       env: {
         browser: true,
       },
-      extends: ["eslint:recommended"],
+      extends: ["eslint:recommended", "plugin:prettier/recommended"],
     },
   ],
 };
