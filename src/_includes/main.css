@@ -69,6 +69,19 @@ main {
   align-self: center;
 }
 
+main > article > header {
+  margin-bottom: var(--double-space);
+}
+
+main > article > header p {
+  margin-top: var(--half-space);
+}
+
+main > article > footer {
+  margin-top: var(--double-space);
+  font-size: var(--font-size-sm);
+}
+
 /*******************************************************************************
  * Typography
  ******************************************************************************/
