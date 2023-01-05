@@ -1,0 +1,133 @@
+:root {
+  --foreground: hsl(218, 15%, 25%);
+  --background: hsl(0, 0%, 100%);
+  --accent: hsl(17, 100%, 43%);
+  --border: hsl(220, 19%, 85%);
+
+  --space: 1rem;
+  --half-space: calc(var(--space) / 2);
+  --quarter-space: calc(var(--space) / 4);
+  --double-space: calc(var(--space) * 2);
+  --font-size: 1rem;
+  --font-size-sm: calc(var(--font-size) * 0.8);
+  --font-size-lg: calc(var(--font-size) * 1.2);
+  --font-size-xl: calc(var(--font-size) * 1.8);
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --transition: 0.15s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: hsl(220, 19%, 85%);
+    --background: hsl(223, 11%, 12%);
+    --accent: hsl(22, 100%, 70%);
+    --border: hsl(218, 15%, 35%);
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*******************************************************************************
+ * Layout
+ ******************************************************************************/
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: var(--space);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Avenir Next", Avenir, sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 40rem) {
+  body {
+    row-gap: var(--double-space);
+  }
+}
+
+/*******************************************************************************
+ * Main
+ ******************************************************************************/
+
+main {
+  padding: 0 var(--space);
+  align-self: center;
+}
+
+main > article > header {
+  margin-bottom: var(--double-space);
+}
+
+main > article > header p {
+  margin-top: var(--half-space);
+}
+
+main > article > footer {
+  margin-top: var(--double-space);
+  font-size: var(--font-size-sm);
+}
+
+/*******************************************************************************
+ * Typography
+ ******************************************************************************/
+
+h1 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0 0 var(--space);
+}
+
+dt {
+  font-weight: var(--font-weight-bold);
+}
+
+dd {
+  margin: 0 0 var(--space);
+}
+
+/*******************************************************************************
+ * Links
+ ******************************************************************************/
+
+a {
+  color: var(--accent);
+}
+
+/*******************************************************************************
+ * Media
+ ******************************************************************************/
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/*******************************************************************************
+ * Utils
+ ******************************************************************************/
+
+[hidden] {
+  display: none;
+}

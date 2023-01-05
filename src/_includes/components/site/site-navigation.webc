@@ -1,0 +1,35 @@
+<nav webc:root webc:keep>
+  <template webc:type="11ty" 11ty:type="njk">
+    {% set entries = collections.all | eleventyNavigation %}
+    {% if header %}
+      {% set entries = entries | selectattr('header') %}
+    {% endif %}
+
+    <ul>
+      {%- for entry in entries %}
+        {# The current link points to the current page, or a child page #}
+        {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
+          {% set current = true %}
+        {% else %}
+          {% set current = false %}
+        {% endif %}
+
+        <li>
+          <a href="{{ entry.url }}"{% if current %} aria-current="page"{% endif %}>
+            {{ entry.title }}
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </template>
+</nav>
+
+<style webc:scoped>
+  ul {
+    display: flex;
+    gap: 0 var(--space);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

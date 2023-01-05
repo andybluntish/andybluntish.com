@@ -1,0 +1,11 @@
+<slot name="header">
+  <site-header></site-header>
+</slot>
+
+<main>
+  <slot></slot>
+</main>
+
+<slot name="footer">
+  <site-footer></site-footer>
+</slot>

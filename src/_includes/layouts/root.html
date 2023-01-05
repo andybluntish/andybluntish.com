@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ [site.title, title] | select() | join(' | ') }}</title>
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="description" content="{{ [description, site.description] | select() | first }}">
+  <meta name="generator" content="{{ eleventy.generator }}">
+  <meta name="copyright" content="Copyright (c) 2006–{{ site.copyrightYear }} {{ site.author.name }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff">
+  <link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/icons/favicon.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+  {%- for link in site.externalLinks -%}
+    <link rel="me" href="{{ link.href }}">
+  {%- endfor -%}
+  {% set css %}
+    {% include "main.css" ignore missing %}
+    {{ page.url | webcGetCss | safe }}
+  {% endset %}
+  <style>{{ css | safe }}</style>
+</head>
+<body>
+  {{ content | safe }}
+  <script>{{ page.url | webcGetJs | safe }}</script>
+</body>
+</html>

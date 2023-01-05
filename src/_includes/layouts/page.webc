@@ -1,0 +1,7 @@
+---
+layout: layouts/root.html
+---
+
+<page-wrapper>
+  <template webc:nokeep @raw="content"></template>
+</page-wrapper>

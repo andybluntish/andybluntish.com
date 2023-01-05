@@ -1,0 +1,10 @@
+---
+layout: layouts/home.webc
+eleventyNavigation:
+  key: About
+  order: 1
+---
+
+<template webc:type="11ty" 11ty:type="njk,md">
+  {% include "content/home.md" %}
+</template>
