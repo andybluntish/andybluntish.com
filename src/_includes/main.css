@@ -99,13 +99,13 @@ dl {
   margin: 0 0 var(--space);
 }
 
-/* dt { */
-  /* font-weight: var(--font-weight-bold); */
-/* } */
+dt {
+  font-weight: var(--font-weight-bold);
+}
 
-/* dd { */
-  /* margin: 0 0 var(--space); */
-/* } */
+dd {
+  margin: 0 0 var(--space);
+}
 
 /*******************************************************************************
  * Links
