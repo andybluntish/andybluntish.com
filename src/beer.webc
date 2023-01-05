@@ -1,6 +1,6 @@
 ---
 pageTitle: Brew log
-description: A log of all the brews I’ve remembered to log.
+description: A log of all the brews that I remembered to log.
 eleventyComputed:
   title: Beer | {{ pageTitle }}
   eleventyNavigation:
