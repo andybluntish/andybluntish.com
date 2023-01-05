@@ -1,5 +1,5 @@
 <slot name="header">
-  <page-header></page-header>
+  <site-header></site-header>
 </slot>
 
 <main>
@@ -7,5 +7,5 @@
 </main>
 
 <slot name="footer">
-  <page-footer></page-footer>
+  <site-footer></site-footer>
 </slot>
