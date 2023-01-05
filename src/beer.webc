@@ -1,0 +1,184 @@
+---
+pageTitle: Brew log
+description: A log of all the brews I’ve remembered to log.
+eleventyComputed:
+  title: Beer | {{ pageTitle }}
+  eleventyNavigation:
+    key: Beer
+    order: 2
+---
+
+<article>
+  <header>
+    <h1 @raw="pageTitle"></h1>
+    <p @raw="description"></p>
+  </header>
+
+  <ol class="batches" reversed>
+    <template webc:type="11ty" 11ty:type="njk">
+      {%- for batch in beer.batches -%}
+        <li class="batch">
+          <details>
+            <summary>
+              <div class="batch-summary">
+                <header>
+                  <h1>{{ batch.name }}</h1>
+                  <p>{{ batch.style }}</p>
+                </header>
+
+                <ul>
+                  <li>
+                    {{ batch.abv }}
+                    <abbr title="Alcohol by volume">ABV</abbr>
+                  </li>
+                  <li>
+                    {{ batch.ibu }}
+                    {% if batch.ibu !== '-' %}
+                      <abbr title="International Bittering Units">IBU</abbr>
+                    {% endif %}
+                  </li>
+                  <li>
+                    {{ batch.ebc }}
+                    {% if batch.ebc !== '-' %}
+                      <abbr title="European Brewery Convention">EBC</abbr>
+                    {% endif %}
+                  </li>
+                  <li>
+                    <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
+                      {{ batch.brewDate | shortDate }}
+                    </time>
+                  </li>
+                </ul>
+              </div>
+            </summary>
+
+            <div class="batch-details">
+              <dl>
+                {% if batch.fermentables.length %}
+                  <dt>Fermentables</dt>
+                  <dd>{{ batch.fermentables | join(', ') }}</dd>
+                {% endif %}
+
+                {% if batch.hops.length %}
+                  <dt>Hops</dt>
+                  <dd>{{ batch.hops | join(', ') }}</dd>
+                {% endif %}
+
+                {% if batch.yeasts.length %}
+                  <dt>Yeast</dt>
+                  <dd>{{ batch.yeasts | join(', ') }}</dd>
+                {% endif %}
+              </dl>
+
+              <dl>
+                {% if batch.brewMethod %}
+                  <dt>Type</dt>
+                  <dd>{{ batch.brewMethod }}</dd>
+                {% endif %}
+
+                {% if batch.og %}
+                  <dt>Original Gravity</dt>
+                  <dd>{{ batch.og }}</dd>
+                {% endif %}
+
+                {% if batch.fg %}
+                  <dt>Final Gravity</dt>
+                  <dd>{{ batch.fg }}</dd>
+                {% endif %}
+              </dl>
+            </div>
+          </details>
+        </li>
+      {%- endfor -%}
+    </template>
+  </ol>
+
+  <footer>
+    <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
+  </footer>
+</article>
+
+<style webc:scoped>
+  .batches {
+    --gap: var(--quarter-space);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 40rem) {
+    .batches {
+      --gap: var(--half-space);
+    }
+  }
+
+  ::-webkit-details-marker {
+    position: absolute;
+    left: -0.85rem;
+    top: 0.2rem;
+  }
+
+  .batch {
+    padding-top: var(--gap);
+    padding-left: var(--quarter-space);
+    font-size: var(--font-size-sm);
+  }
+
+  .batch:not(:last-of-type) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .batch summary {
+    position: relative;
+    list-style-position: outside;
+    cursor: pointer;
+  }
+
+  .batch h1 {
+    font-size: inherit;
+  }
+
+  .batch-summary header {
+    display: flex;
+    gap: var(--gap);
+  }
+
+  .batch-summary header p {
+    margin-bottom: var(--gap);
+  }
+
+  .batch-summary ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+    list-style: none;
+    margin-bottom: var(--gap);
+    padding: 0;
+  }
+
+  .batch-summary li:last-child {
+    text-align: end;
+  }
+
+  @media (min-width: 40rem) {
+    .batch-summary {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);
+    }
+  }
+
+  .batch-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+  }
+
+  dl, dt {
+    margin: 0;
+  }
+
+  dd {
+    margin-bottom: var(--gap);
+  }
+</style>
