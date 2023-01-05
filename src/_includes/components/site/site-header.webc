@@ -25,8 +25,9 @@
     color: currentColor;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
+    font-stretch: 125%;
+
   }
 
   a:where(:focus, :hover) {

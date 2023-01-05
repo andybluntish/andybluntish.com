@@ -101,7 +101,7 @@ eleventyComputed:
 <style>
   article {
     margin: 0 auto;
-    max-width: 38rem;
+    max-width: 48rem;
   }
 
   .batches {
@@ -111,7 +111,7 @@ eleventyComputed:
     padding: 0;
   }
 
-  @media (min-width: 40rem) {
+  @media (min-width: 50rem) {
     .batches {
       --gap: var(--half-space);
     }
@@ -126,7 +126,6 @@ eleventyComputed:
   .batch {
     padding-top: var(--gap);
     padding-left: var(--quarter-space);
-    font-size: var(--font-size-sm);
   }
 
   .batch:not(:last-of-type) {
@@ -165,7 +164,7 @@ eleventyComputed:
     text-align: end;
   }
 
-  @media (min-width: 40rem) {
+  @media (min-width: 50rem) {
     .batch-summary {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

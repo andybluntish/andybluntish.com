@@ -1,6 +1,8 @@
 :root {
   --foreground: hsl(218, 15%, 25%);
+  --foreground: black;
   --background: hsl(0, 0%, 100%);
+  --background: white;
   --accent: hsl(17, 100%, 43%);
   --border: hsl(220, 19%, 85%);
 
@@ -10,17 +12,21 @@
   --double-space: calc(var(--space) * 2);
   --font-size: 1rem;
   --font-size-sm: calc(var(--font-size) * 0.8);
-  --font-size-lg: calc(var(--font-size) * 1.2);
-  --font-size-xl: calc(var(--font-size) * 1.8);
+  --font-size-lg: calc(var(--font-size) * 1.4);
+  --font-size-xl: calc(var(--font-size) * 2.8);
   --font-weight-normal: 400;
   --font-weight-bold: 600;
+  --font-weight-max: 900;
   --transition: 0.15s ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground: hsl(220, 19%, 85%);
+    --foreground: white;
+
     --background: hsl(223, 11%, 12%);
+    --background: black;
     --accent: hsl(22, 100%, 70%);
     --border: hsl(218, 15%, 35%);
   }
@@ -37,6 +43,18 @@ html {
 }
 
 /*******************************************************************************
+ * Fonts
+ ******************************************************************************/
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+/*******************************************************************************
  * Layout
  ******************************************************************************/
 
@@ -49,7 +67,8 @@ body {
   min-height: 100vh;
   color: var(--foreground);
   background: var(--background);
-  font-family: "Avenir Next", Avenir, sans-serif;
+  font-family: "Mona Sans", "Avenir Next", Avenir, system-ui, -apple-system,
+    sans-serif;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
@@ -73,23 +92,32 @@ main > article > header {
   margin-bottom: var(--double-space);
 }
 
+main > article > header h1 {
+  font-weight: var(--font-weight-max);
+  line-height: 1.1;
+}
+
 main > article > header p {
-  margin-top: var(--half-space);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  font-stretch: 125%;
 }
 
 main > article > footer {
   margin-top: var(--double-space);
-  font-size: var(--font-size-sm);
+  font-weight: 200;
+  font-variation-settings: "ital" 12;
 }
 
 /*******************************************************************************
  * Typography
  ******************************************************************************/
 
-h1 {
+h1, dt {
   margin: 0;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
+  font-stretch: 125%;
 }
 
 p,
@@ -99,12 +127,22 @@ dl {
   margin: 0 0 var(--space);
 }
 
+b, strong {
+  font-stretch: 125%;
+  font-weight: var(--font-weight-max);
+}
+
 dt {
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size);
 }
 
 dd {
   margin: 0 0 var(--space);
+}
+
+abbr {
+  font-weight: 200;
+  font-size: var(--font-size-sm);
 }
 
 /*******************************************************************************
