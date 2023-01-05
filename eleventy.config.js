@@ -49,6 +49,7 @@ module.exports = (eleventyConfig) => {
   // Static files
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   return {
     dir: { input: "src", output: "dist" },
