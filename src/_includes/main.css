@@ -1,10 +1,8 @@
 :root {
-  --foreground: hsl(218, 15%, 25%);
-  --foreground: black;
-  --background: hsl(0, 0%, 100%);
-  --background: white;
-  --accent: hsl(17, 100%, 43%);
-  --border: hsl(220, 19%, 85%);
+  --foreground: #363d49;
+  --background: #fff;
+  --accent: #db3e00;
+  --border: #d1d6e0;
 
   --space: 1rem;
   --half-space: calc(var(--space) / 2);
@@ -22,13 +20,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground: hsl(220, 19%, 85%);
-    --foreground: white;
-
-    --background: hsl(223, 11%, 12%);
-    --background: black;
-    --accent: hsl(22, 100%, 70%);
-    --border: hsl(218, 15%, 35%);
+    --foreground: #d1d6e0;
+    --background: #1b1d22;
+    --accent: #ff9e66;
+    --border: #4c5667;
   }
 }
 
