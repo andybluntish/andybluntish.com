@@ -22,7 +22,7 @@ eleventyComputed:
             <summary>
               <div class="batch-summary">
                 <header>
-                  <h1>{{ batch.name }}</h1>
+                  <h2>{{ batch.name }}</h2>
                   <p>{{ batch.style }}</p>
                 </header>
 
@@ -138,7 +138,7 @@ eleventyComputed:
     cursor: pointer;
   }
 
-  .batch h1 {
+  .batch h2 {
     font-size: inherit;
   }
 
@@ -177,8 +177,5 @@ eleventyComputed:
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap);
     margin-top: var(--space);
-  }
-
-  .batch-details dd {
   }
 </style>

@@ -79,41 +79,20 @@ body {
 }
 
 /*******************************************************************************
- * Main
- ******************************************************************************/
-
-main {
-  padding: 0 var(--space);
-  align-self: center;
-}
-
-main > article > header {
-  margin-bottom: var(--double-space);
-}
-
-main > article > header h1 {
-  font-weight: var(--font-weight-max);
-  line-height: 1.1;
-}
-
-main > article > header p {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  font-stretch: 125%;
-}
-
-main > article > footer {
-  margin-top: var(--double-space);
-  font-weight: 200;
-}
-
-/*******************************************************************************
  * Typography
  ******************************************************************************/
 
-h1, dt {
+h1 {
   margin: 0;
   font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-max);
+  font-stretch: 125%;
+  line-height: 1.1;
+}
+
+h2, dt, main > article > header p {
+  margin: 0;
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   font-stretch: 125%;
 }
@@ -131,7 +110,7 @@ b, strong {
 }
 
 dt {
-  font-size: var(--font-size);
+  font-size: inherit;
 }
 
 dd {
@@ -158,6 +137,24 @@ a {
 img {
   height: auto;
   max-width: 100%;
+}
+
+/*******************************************************************************
+ * Main
+ ******************************************************************************/
+
+main {
+  padding: 0 var(--space);
+  align-self: center;
+}
+
+main > article > header {
+  margin-bottom: var(--double-space);
+}
+
+main > article > footer {
+  margin-top: var(--double-space);
+  font-weight: 200;
 }
 
 /*******************************************************************************
