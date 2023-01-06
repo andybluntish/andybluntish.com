@@ -120,9 +120,15 @@ eleventyNavigation:
     padding-top: var(--gap);
   }
 
+  .batch details[open] h2,
+  .batch summary:hover h2 {
+    color: var(--accent);
+  }
+
   .batch h2 {
     font-size: inherit;
   }
+
   .batch dt {
     font-size: var(--font-size-sm);
   }
