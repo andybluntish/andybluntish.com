@@ -106,7 +106,6 @@ main > article > header p {
 main > article > footer {
   margin-top: var(--double-space);
   font-weight: 200;
-  font-variation-settings: "ital" 12;
 }
 
 /*******************************************************************************
