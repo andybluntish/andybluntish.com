@@ -4,11 +4,9 @@ const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventyUpgradeHelp = require("@11ty/eleventy-upgrade-help");
 const purgecss = require("./lib/transforms/purgecss.js");
 const htmlmin = require("./lib/transforms/htmlmin.js");
-const className = require("./lib/filters/class-name.js");
 const machineDate = require("./lib/filters/machine-date.js");
 const shortDate = require("./lib/filters/short-date.js");
 const humanDate = require("./lib/filters/human-date.js");
-const humanDateTime = require("./lib/filters/human-date-time.js");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 
 if (process.env.NODE_ENV !== "production") {
@@ -40,11 +38,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addTransform("htmlmin", htmlmin);
 
   // Filters
-  eleventyConfig.addFilter("className", className);
   eleventyConfig.addFilter("machineDate", machineDate);
   eleventyConfig.addFilter("shortDate", shortDate);
   eleventyConfig.addFilter("humanDate", humanDate);
-  eleventyConfig.addFilter("humanDateTime", humanDateTime);
 
   // Static files
   eleventyConfig.addPassthroughCopy("src/img");
@@ -54,7 +50,6 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: { input: "src", output: "dist" },
-    dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
   };
