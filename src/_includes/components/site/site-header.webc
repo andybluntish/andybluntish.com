@@ -26,8 +26,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: var(--font-weight-bold);
-    font-stretch: 125%;
-
+    font-stretch: var(--font-stretch-max);
   }
 
   a:where(:focus, :hover) {

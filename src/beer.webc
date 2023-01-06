@@ -106,8 +106,7 @@ eleventyNavigation:
   }
 
   .batch {
-    padding-top: var(--gap);
-    padding-left: var(--gap);
+    padding-left: var(--quarter-space);
   }
 
   .batch:not(:last-of-type) {
@@ -118,10 +117,14 @@ eleventyNavigation:
     position: relative;
     list-style-position: outside;
     cursor: pointer;
+    padding-top: var(--gap);
   }
 
   .batch h2 {
     font-size: inherit;
+  }
+  .batch dt {
+    font-size: var(--font-size-sm);
   }
 
   .batch-summary header {
@@ -131,6 +134,7 @@ eleventyNavigation:
 
   .batch-summary header p {
     margin-bottom: var(--gap);
+    font-weight: var(--font-weight-light);
   }
 
   .batch-summary ul {
@@ -147,7 +151,8 @@ eleventyNavigation:
   }
 
   .batch-details {
-    margin-top: var(--space);
+    margin-top: var(--half-space);
+    margin-bottom: 0;
   }
 
   @media (min-width: 50rem) {
@@ -156,7 +161,9 @@ eleventyNavigation:
       grid-template-columns: repeat(2, 1fr);
       gap: var(--gap);
     }
+  }
 
+  @media (min-width: 40rem) {
     .batch-details {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -166,10 +173,9 @@ eleventyNavigation:
     }
   }
 
-
   ::-webkit-details-marker {
     position: absolute;
-    left: -0.85rem;
-    top: 0.2rem;
+    left: -0.8rem;
+    top: 0.85rem;
   }
 </style>

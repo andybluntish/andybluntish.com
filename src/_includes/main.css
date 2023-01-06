@@ -13,9 +13,11 @@
   --font-size-sm: calc(var(--font-size) * 0.8);
   --font-size-lg: calc(var(--font-size) * 1.4);
   --font-size-xl: calc(var(--font-size) * 2.8);
+  --font-weight-light: 200;
   --font-weight-normal: 400;
-  --font-weight-bold: 600;
+  --font-weight-bold: 700;
   --font-weight-max: 900;
+  --font-stretch-max: 125%;
   --transition: 0.15s ease-in-out;
 }
 
@@ -45,7 +47,7 @@ html {
 @font-face {
   font-family: "Mona Sans";
   src: url("/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
-    url("/fonts/Mona-Sans.woff2") format("woff2-variations");
+       url("/fonts/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
@@ -82,7 +84,7 @@ h1 {
   margin: 0;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-max);
-  font-stretch: 125%;
+  font-stretch: var(--font-stretch-max);
   line-height: 1.1;
 }
 
@@ -90,7 +92,7 @@ h2, dt, main > article > header p {
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  font-stretch: 125%;
+  font-stretch: var(--font-stretch-max);
 }
 
 p,
@@ -101,7 +103,7 @@ dl {
 }
 
 b, strong {
-  font-stretch: 125%;
+  font-stretch: var(--font-stretch-max);
   font-weight: var(--font-weight-max);
 }
 
@@ -111,11 +113,6 @@ dt {
 
 dd {
   margin: 0 0 var(--space);
-}
-
-abbr {
-  font-weight: 200;
-  font-size: var(--font-size-sm);
 }
 
 /*******************************************************************************
@@ -148,9 +145,13 @@ main > article > header {
   margin-bottom: var(--double-space);
 }
 
+main > article > header p {
+  font-weight: var(--font-weight-light);
+}
+
 main > article > footer {
   margin-top: var(--double-space);
-  font-weight: 200;
+  font-weight: var(--font-weight-light);
 }
 
 /*******************************************************************************
