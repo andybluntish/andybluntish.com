@@ -1,16 +1,14 @@
 ---
-pageTitle: Brew log
+title: Brew log
 description: A log of all the brews that I remembered to log.
-eleventyComputed:
-  title: Beer | {{ pageTitle }}
-  eleventyNavigation:
-    key: Beer
-    order: 2
+eleventyNavigation:
+  key: Beer
+  order: 2
 ---
 
 <article>
   <header>
-    <h1 @raw="pageTitle"></h1>
+    <h1 @raw="title"></h1>
     <p @raw="description"></p>
   </header>
 
