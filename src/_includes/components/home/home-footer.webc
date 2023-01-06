@@ -46,10 +46,10 @@
     </ul>
   </template>
 
-  <picture>
-    <source srcset="/img/me-dark.jpg 300w, /img/me-dark@2x.jpg 600w" media="(prefers-color-scheme: dark)">
+  <!-- <picture> -->
+    <!-- <source srcset="/img/me-dark.jpg 300w, /img/me-dark@2x.jpg 600w" media="(prefers-color-scheme: dark)"> -->
     <img src="/img/me.jpg" srcset="/img/me.jpg 300w, /img/me@2x.jpg 600w" :alt="site.author.name" width="300" height="307">
-  </picture>
+  <!-- </picture> -->
 </footer>
 
 <style webc:scoped>
