@@ -176,13 +176,9 @@ eleventyComputed:
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap);
+    margin-top: var(--space);
   }
 
-  dl, dt {
-    margin: 0;
-  }
-
-  dd {
-    margin-bottom: var(--gap);
+  .batch-details dd {
   }
 </style>
