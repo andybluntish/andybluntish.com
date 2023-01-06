@@ -52,41 +52,37 @@ eleventyComputed:
               </div>
             </summary>
 
-            <div class="batch-details">
-              <dl>
-                {% if batch.fermentables.length %}
-                  <dt>Fermentables</dt>
-                  <dd>{{ batch.fermentables | join(', ') }}</dd>
-                {% endif %}
+            <dl class="batch-details">
+              {% if batch.fermentables.length %}
+                <dt>Fermentables</dt>
+                <dd>{{ batch.fermentables | join(', ') }}</dd>
+              {% endif %}
 
-                {% if batch.hops.length %}
-                  <dt>Hops</dt>
-                  <dd>{{ batch.hops | join(', ') }}</dd>
-                {% endif %}
+              {% if batch.hops.length %}
+                <dt>Hops</dt>
+                <dd>{{ batch.hops | join(', ') }}</dd>
+              {% endif %}
 
-                {% if batch.yeasts.length %}
-                  <dt>Yeast</dt>
-                  <dd>{{ batch.yeasts | join(', ') }}</dd>
-                {% endif %}
-              </dl>
+              {% if batch.yeasts.length %}
+                <dt>Yeast</dt>
+                <dd>{{ batch.yeasts | join(', ') }}</dd>
+              {% endif %}
 
-              <dl>
-                {% if batch.brewMethod %}
-                  <dt>Type</dt>
-                  <dd>{{ batch.brewMethod }}</dd>
-                {% endif %}
+              {% if batch.brewMethod %}
+                <dt>Type</dt>
+                <dd>{{ batch.brewMethod }}</dd>
+              {% endif %}
 
-                {% if batch.og %}
-                  <dt>Original Gravity</dt>
-                  <dd>{{ batch.og }}</dd>
-                {% endif %}
+              {% if batch.og %}
+                <dt>Original Gravity</dt>
+                <dd>{{ batch.og }}</dd>
+              {% endif %}
 
-                {% if batch.fg %}
-                  <dt>Final Gravity</dt>
-                  <dd>{{ batch.fg }}</dd>
-                {% endif %}
-              </dl>
-            </div>
+              {% if batch.fg %}
+                <dt>Final Gravity</dt>
+                <dd>{{ batch.fg }}</dd>
+              {% endif %}
+            </dl>
           </details>
         </li>
       {%- endfor -%}
@@ -105,27 +101,15 @@ eleventyComputed:
   }
 
   .batches {
-    --gap: var(--quarter-space);
+    --gap: var(--half-space);
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  @media (min-width: 50rem) {
-    .batches {
-      --gap: var(--half-space);
-    }
-  }
-
-  ::-webkit-details-marker {
-    position: absolute;
-    left: -0.85rem;
-    top: 0.2rem;
-  }
-
   .batch {
     padding-top: var(--gap);
-    padding-left: var(--quarter-space);
+    padding-left: var(--gap);
   }
 
   .batch:not(:last-of-type) {
@@ -164,18 +148,30 @@ eleventyComputed:
     text-align: end;
   }
 
+  .batch-details {
+    margin-top: var(--space);
+  }
+
   @media (min-width: 50rem) {
     .batch-summary {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: var(--gap);
     }
+
+    .batch-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, auto);
+      grid-auto-flow: column;
+      gap: 0 var(--gap);
+    }
   }
 
-  .batch-details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap);
-    margin-top: var(--space);
+
+  ::-webkit-details-marker {
+    position: absolute;
+    left: -0.85rem;
+    top: 0.2rem;
   }
 </style>
