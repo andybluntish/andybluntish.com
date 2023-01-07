@@ -41,7 +41,6 @@ module.exports = function () {
 
   return {
     title: author.name,
-    shortName: "AndySB",
     description: "I build things on the web. I love what I do.",
     author,
     host,
