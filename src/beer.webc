@@ -161,7 +161,7 @@ eleventyNavigation:
     margin-bottom: 0;
   }
 
-  @media (min-width: 50rem) {
+  @media (min-width: 42rem) {
     .batch-summary {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -169,7 +169,7 @@ eleventyNavigation:
     }
   }
 
-  @media (min-width: 40rem) {
+  @media (min-width: 32rem) {
     .batch-details {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -181,7 +181,7 @@ eleventyNavigation:
 
   ::-webkit-details-marker {
     position: absolute;
-    left: -0.8rem;
+    left: -1rem;
     top: 0.85rem;
   }
 </style>
