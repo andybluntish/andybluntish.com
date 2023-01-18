@@ -7,8 +7,8 @@ module.exports = function () {
 
   const externalLinks = [
     {
-      title: "Twitter",
-      href: `https://twitter.com/${author.username}/`,
+      title: "Mastodon",
+      href: `https://mastodon.online/@${author.username}`,
       footer: true,
     },
     {
@@ -30,10 +30,6 @@ module.exports = function () {
       title: "Email",
       href: `mailto:${author.email}`,
       footer: true,
-    },
-    {
-      title: "Mastodon",
-      href: `https://mastodon.online/@${author.username}`,
     },
   ];
 
