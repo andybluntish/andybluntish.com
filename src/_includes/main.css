@@ -91,7 +91,7 @@ h1 {
   line-height: 1.1;
 }
 
-h2, dt, main > article > header p {
+h2, dt, b, strong {
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -106,8 +106,7 @@ dl {
 }
 
 b, strong {
-  font-stretch: var(--font-stretch-max);
-  font-weight: var(--font-weight-max);
+  font-size: inherit;
 }
 
 dt {
@@ -153,6 +152,7 @@ main > article > header {
 }
 
 main > article > header p {
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-light);
 }
 
