@@ -24,6 +24,23 @@
     ssri "^8.0.1"
     ws "^8.5.0"
 
+"@11ty/eleventy-dev-server@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-dev-server/-/eleventy-dev-server-1.0.3.tgz#9f3cf0721b785e748e74e7e40be692495efa0303"
+  integrity sha512-SjYQewOO0Oo2jUI5h0Lk87pRJllDBzbdcHGZTYEf00gz966kidP1Hyd3ySaHqL4lFqW2I6jIxNVKPlhwYhp6yA==
+  dependencies:
+    "@11ty/eleventy-utils" "^1.0.1"
+    chokidar "^3.5.3"
+    debug "^4.3.4"
+    dev-ip "^1.0.1"
+    finalhandler "^1.2.0"
+    mime "^3.0.0"
+    minimist "^1.2.7"
+    morphdom "^2.6.1"
+    please-upgrade-node "^3.2.0"
+    ssri "^8.0.1"
+    ws "^8.12.0"
+
 "@11ty/eleventy-fetch@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-fetch/-/eleventy-fetch-3.0.0.tgz#b767ad99d871616c1f8011bba9d26b84dc583fbf"
@@ -64,7 +81,53 @@
   dependencies:
     normalize-path "^3.0.0"
 
-"@11ty/eleventy@2.0.0-canary.23", "@11ty/eleventy@^2.0.0-canary.19":
+"@11ty/eleventy@^2.0.0-beta.2":
+  version "2.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-beta.2.tgz#7f385842864c7f30b28e71559ab9cdceebf7c9e2"
+  integrity sha512-nH9uxixBqvgT7eCT2PcVvbWPlisv/fc2Me4jpAiiu96HsNF1IK/kSRpDhWUXV9HjXfCN5Hi+wcI/ZXm+5bYF6g==
+  dependencies:
+    "@11ty/dependency-tree" "^2.0.1"
+    "@11ty/eleventy-dev-server" "^1.0.3"
+    "@11ty/eleventy-utils" "^1.0.1"
+    "@iarna/toml" "^2.2.5"
+    "@sindresorhus/slugify" "^1.1.2"
+    bcp-47-normalize "^1.1.1"
+    chokidar "^3.5.3"
+    cross-spawn "^7.0.3"
+    debug "^4.3.4"
+    dependency-graph "^0.11.0"
+    ejs "^3.1.8"
+    fast-glob "^3.2.12"
+    graceful-fs "^4.2.10"
+    gray-matter "^4.0.3"
+    hamljs "^0.6.2"
+    handlebars "^4.7.7"
+    is-glob "^4.0.3"
+    iso-639-1 "^2.1.15"
+    kleur "^4.1.5"
+    liquidjs "^10.4.0"
+    lodash.chunk "^4.2.0"
+    lodash.get "^4.4.2"
+    lodash.set "^4.3.2"
+    luxon "^3.2.1"
+    markdown-it "^13.0.1"
+    micromatch "^4.0.5"
+    minimist "^1.2.7"
+    moo "^0.5.2"
+    multimatch "^5.0.0"
+    mustache "^4.2.0"
+    normalize-path "^3.0.0"
+    nunjucks "^3.2.3"
+    path-to-regexp "^6.2.1"
+    please-upgrade-node "^3.2.0"
+    posthtml "^0.16.6"
+    posthtml-urls "^1.0.0"
+    pug "^3.0.2"
+    recursive-copy "^2.0.14"
+    semver "^7.3.8"
+    slugify "^1.6.5"
+
+"@11ty/eleventy@^2.0.0-canary.19":
   version "2.0.0-canary.23"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.23.tgz#8f8303b49e17a70cea87033575b1b192cc9714d9"
   integrity sha512-Vl8L/NjBvIgMusE3uBvWFCmUmiNw7OE6k1Dz9vRindqviJY9g77A8AFft7YEVPs7oVilzQFHVqtGeQigOrm6SA==
@@ -2183,7 +2246,7 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-finalhandler@^1.1.2:
+finalhandler@^1.1.2, finalhandler@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.2.0.tgz#7d23fe5731b207b4640e4fcd00aec1f9207a7b32"
   integrity sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==
@@ -3115,7 +3178,7 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@^10.3.3:
+liquidjs@^10.3.3, liquidjs@^10.4.0:
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.4.0.tgz#4993135c87a582389bccd3a4be2cabf044c01474"
   integrity sha512-4fpR8KFJ96bXkzynK9Yo1jwn7sjOkJfKawSbEXINc39DZfy7r5SYtcAM5T/Ccg5n0xoZf6ap5Gap4VwFCJiQ1g==
@@ -3185,6 +3248,11 @@ luxon@^3.1.1:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.2.0.tgz#7962c5dafcd3623e70e222882be49b381e7a8718"
   integrity sha512-Namj3XqoJjFekq/JHQEaaAv4zyE/fyyDBrMEBnIL2s/X54SC8W5Ea0uej1TRXUArWec8OojsAVsGBYhNRjpMVw==
+
+luxon@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.2.1.tgz#14f1af209188ad61212578ea7e3d518d18cee45f"
+  integrity sha512-QrwPArQCNLAKGO/C+ZIilgIuDnEnKx5QYODdDtbFaxzsbZcc/a7WFq7MhsVYgRlwawLtvOUESTlfJ+hc/USqPg==
 
 make-dir@^3.0.0:
   version "3.1.0"
@@ -4346,6 +4414,11 @@ write-file-atomic@^5.0.0:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
+
+ws@^8.12.0:
+  version "8.12.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.12.0.tgz#485074cc392689da78e1828a9ff23585e06cddd8"
+  integrity sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig==
 
 ws@^8.5.0:
   version "8.10.0"
