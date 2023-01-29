@@ -26,6 +26,12 @@
     justify-content: center;
   }
 
+  a {
+    font-weight: var(--font-weight-normal);
+    text-decoration-color: currentColor;
+    text-decoration-thickness: unset;
+  }
+
   @media (min-width: 20rem) {
     :host {
       flex-direction: row;
