@@ -49,10 +49,10 @@
     "@11ty/eleventy" "^2.0.0-canary.19"
     "@11ty/webc" "^0.8.0"
 
-"@11ty/eleventy-upgrade-help@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-upgrade-help/-/eleventy-upgrade-help-1.0.1.tgz#56464d9239c93d66b70c82a3e3edbebf82d65fe6"
-  integrity sha512-9YqcRPYhBCJjcbAdz7cGIHHzpNDLr9V3igWjeuOfq3w3I4QsYjvr/ZZCLJLSsYfwIWyyTVAGbrF800pM7qSPQA==
+"@11ty/eleventy-upgrade-help@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-upgrade-help/-/eleventy-upgrade-help-2.0.5.tgz#2db0a2971aaaf40d5da2d8cfea5b4a15c93433ce"
+  integrity sha512-sIH/ObNN2QDyd9Tqzb4N5gKuhgmq7VDO5o/GNpD+jMwCmMFumUiCoNcpp1tlRonuNp7IAVrXIg6SYDp6aqvQUw==
   dependencies:
     chalk "^4.1.1"
     semver "^7.3.5"
