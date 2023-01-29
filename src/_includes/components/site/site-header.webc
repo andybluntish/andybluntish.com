@@ -22,15 +22,9 @@
   }
 
   a {
-    color: currentColor;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: var(--font-weight-bold);
     font-stretch: var(--font-stretch-max);
-  }
-
-  a:where(:focus, :hover) {
-    color: var(--accent);
   }
 
   svg {

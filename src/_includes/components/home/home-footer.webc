@@ -67,11 +67,6 @@
   a {
     display: inline-block;
     padding: var(--half-space);
-    color: currentColor;
-  }
-
-  a:where(:focus, :hover) {
-    color: var(--accent);
   }
 
   svg {

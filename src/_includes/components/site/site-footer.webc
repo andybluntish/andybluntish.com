@@ -26,14 +26,6 @@
     justify-content: center;
   }
 
-  a {
-    color: currentColor;
-  }
-
-  a:where(:focus, :hover) {
-    color: var(--accent);
-  }
-
   @media (min-width: 20rem) {
     :host {
       flex-direction: row;
