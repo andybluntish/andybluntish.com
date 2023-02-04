@@ -91,7 +91,7 @@ h1 {
   line-height: 1.1;
 }
 
-h2, dt, b, strong {
+h2, dt, b, strong, th {
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -105,7 +105,7 @@ dl {
   margin: 0 0 var(--space);
 }
 
-b, strong {
+b, strong, th {
   font-size: inherit;
 }
 
@@ -162,6 +162,34 @@ main > article > header p {
 main > article > footer {
   margin-top: var(--double-space);
   font-weight: var(--font-weight-light);
+}
+
+/*******************************************************************************
+ * Tables
+ ******************************************************************************/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: start;
+  padding: var(--half-space) var(--half-space) var(--half-space) 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-inline-end: 0;
+}
+
+tbody tr {
+  border-top: 1px solid var(--border);
+}
+
+tbody tr:first-child {
+  border-width: 2px;
 }
 
 /*******************************************************************************
