@@ -1,5 +1,5 @@
 ---
-title: Brew log
+title: Beer
 description: A log of all the brews that I remembered to log.
 eleventyNavigation:
   key: Beer
@@ -12,82 +12,40 @@ eleventyNavigation:
     <p @raw="description"></p>
   </header>
 
-  <ol class="batches" reversed>
-    <template webc:type="11ty" 11ty:type="njk">
-      {%- for batch in beer.batches -%}
-        <li>
-          <article class="batch">
-            <details>
-              <summary>
-                <div class="batch-summary">
-                  <header>
-                    <h2>{{ batch.name }}</h2>
-                    <p>{{ batch.style }}</p>
-                  </header>
-
-                  <ul>
-                    <li>
-                      {{ batch.abv }}
-                      <abbr title="Alcohol by volume">ABV</abbr>
-                    </li>
-                    <li>
-                      {{ batch.ibu }}
-                      {% if batch.ibu !== '-' %}
-                        <abbr title="International Bittering Units">IBU</abbr>
-                      {% endif %}
-                    </li>
-                    <li>
-                      {{ batch.ebc }}
-                      {% if batch.ebc !== '-' %}
-                        <abbr title="European Brewery Convention">EBC</abbr>
-                      {% endif %}
-                    </li>
-                    <li>
-                      <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
-                        {{ batch.brewDate | shortDate }}
-                      </time>
-                    </li>
-                  </ul>
-                </div>
-              </summary>
-
-              <dl class="batch-details">
-                {% if batch.fermentables.length %}
-                  <dt>Fermentables</dt>
-                  <dd>{{ batch.fermentables | join(', ') }}</dd>
-                {% endif %}
-
-                {% if batch.hops.length %}
-                  <dt>Hops</dt>
-                  <dd>{{ batch.hops | join(', ') }}</dd>
-                {% endif %}
-
-                {% if batch.yeasts.length %}
-                  <dt>Yeast</dt>
-                  <dd>{{ batch.yeasts | join(', ') }}</dd>
-                {% endif %}
-
-                {% if batch.brewMethod %}
-                  <dt>Type</dt>
-                  <dd>{{ batch.brewMethod }}</dd>
-                {% endif %}
-
-                {% if batch.og %}
-                  <dt>Original Gravity</dt>
-                  <dd>{{ batch.og }}</dd>
-                {% endif %}
-
-                {% if batch.fg %}
-                  <dt>Final Gravity</dt>
-                  <dd>{{ batch.fg }}</dd>
-                {% endif %}
-              </dl>
-            </details>
-          </article>
-        </li>
-      {%- endfor -%}
-    </template>
-  </ol>
+  <template webc:type="11ty" 11ty:type="njk">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Style</th>
+          <th><abbr-abv></abbr-abv></th>
+          <th><abbr-ibu></abbr-ibu></th>
+          <th><abbr-ebc></abbr-ebc></th>
+          <th>Brew Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for batch in beer.batches -%}
+          <tr>
+            <td>
+              <a href="{{ batch.href }}">
+                {{ batch.name }}
+              </a>
+            </td>
+            <td>{{ batch.style }}</td>
+            <td>{{ batch.abv }}</td>
+            <td>{{ batch.ibu }} </td>
+            <td>{{ batch.ebc }}</td>
+            <td>
+              <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
+                {{ batch.brewDate | shortDate }}
+              </time>
+            </td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </template>
 
   <footer>
     <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>

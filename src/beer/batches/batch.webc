@@ -1,0 +1,67 @@
+---
+pagination:
+  data: beer.batches
+  size: 1
+  alias: batch
+permalink: batch.permalink
+description: Beer is for fun
+---
+
+<template webc:type="11ty" 11ty:type="njk">
+  <article class="batch">
+    <header>
+      <h2>{{ batch.name }}</h2>
+      <p>{{ batch.style }}</p>
+    </header>
+
+    <dl>
+      <dt><abbr-abv></abbr-abv></dt>
+      <dd>{{ batch.abv }}</dd>
+
+      <dt><abbr-ibu></abbr-ibu></dt>
+      <dd>{{ batch.ibu }}</dd>
+
+      <dt><abbr-ebc></abbr-ebc></dt>
+      <dd>{{ batch.ebc }}</dd>
+
+      <dt>Brew Date</dt>
+      <dd>
+        <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
+          {{ batch.brewDate | shortDate }}
+        </time>
+      </dd>
+    </dl>
+
+    <dl class="batch-details">
+      {% if batch.fermentables.length %}
+        <dt>Fermentables</dt>
+        <dd>{{ batch.fermentables | join(', ') }}</dd>
+      {% endif %}
+
+      {% if batch.hops.length %}
+        <dt>Hops</dt>
+        <dd>{{ batch.hops | join(', ') }}</dd>
+      {% endif %}
+
+      {% if batch.yeasts.length %}
+        <dt>Yeast</dt>
+        <dd>{{ batch.yeasts | join(', ') }}</dd>
+      {% endif %}
+
+      {% if batch.brewMethod %}
+        <dt>Type</dt>
+        <dd>{{ batch.brewMethod }}</dd>
+      {% endif %}
+
+      {% if batch.og %}
+        <dt>Original Gravity</dt>
+        <dd>{{ batch.og }}</dd>
+      {% endif %}
+
+      {% if batch.fg %}
+        <dt>Final Gravity</dt>
+        <dd>{{ batch.fg }}</dd>
+      {% endif %}
+    </dl>
+  </article>
+</template>
