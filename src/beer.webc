@@ -15,73 +15,75 @@ eleventyNavigation:
   <ol class="batches" reversed>
     <template webc:type="11ty" 11ty:type="njk">
       {%- for batch in beer.batches -%}
-        <li class="batch">
-          <details>
-            <summary>
-              <div class="batch-summary">
-                <header>
-                  <h2>{{ batch.name }}</h2>
-                  <p>{{ batch.style }}</p>
-                </header>
+        <li>
+          <article class="batch">
+            <details>
+              <summary>
+                <div class="batch-summary">
+                  <header>
+                    <h2>{{ batch.name }}</h2>
+                    <p>{{ batch.style }}</p>
+                  </header>
 
-                <ul>
-                  <li>
-                    {{ batch.abv }}
-                    <abbr title="Alcohol by volume">ABV</abbr>
-                  </li>
-                  <li>
-                    {{ batch.ibu }}
-                    {% if batch.ibu !== '-' %}
-                      <abbr title="International Bittering Units">IBU</abbr>
-                    {% endif %}
-                  </li>
-                  <li>
-                    {{ batch.ebc }}
-                    {% if batch.ebc !== '-' %}
-                      <abbr title="European Brewery Convention">EBC</abbr>
-                    {% endif %}
-                  </li>
-                  <li>
-                    <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
-                      {{ batch.brewDate | shortDate }}
-                    </time>
-                  </li>
-                </ul>
-              </div>
-            </summary>
+                  <ul>
+                    <li>
+                      {{ batch.abv }}
+                      <abbr title="Alcohol by volume">ABV</abbr>
+                    </li>
+                    <li>
+                      {{ batch.ibu }}
+                      {% if batch.ibu !== '-' %}
+                        <abbr title="International Bittering Units">IBU</abbr>
+                      {% endif %}
+                    </li>
+                    <li>
+                      {{ batch.ebc }}
+                      {% if batch.ebc !== '-' %}
+                        <abbr title="European Brewery Convention">EBC</abbr>
+                      {% endif %}
+                    </li>
+                    <li>
+                      <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
+                        {{ batch.brewDate | shortDate }}
+                      </time>
+                    </li>
+                  </ul>
+                </div>
+              </summary>
 
-            <dl class="batch-details">
-              {% if batch.fermentables.length %}
-                <dt>Fermentables</dt>
-                <dd>{{ batch.fermentables | join(', ') }}</dd>
-              {% endif %}
+              <dl class="batch-details">
+                {% if batch.fermentables.length %}
+                  <dt>Fermentables</dt>
+                  <dd>{{ batch.fermentables | join(', ') }}</dd>
+                {% endif %}
 
-              {% if batch.hops.length %}
-                <dt>Hops</dt>
-                <dd>{{ batch.hops | join(', ') }}</dd>
-              {% endif %}
+                {% if batch.hops.length %}
+                  <dt>Hops</dt>
+                  <dd>{{ batch.hops | join(', ') }}</dd>
+                {% endif %}
 
-              {% if batch.yeasts.length %}
-                <dt>Yeast</dt>
-                <dd>{{ batch.yeasts | join(', ') }}</dd>
-              {% endif %}
+                {% if batch.yeasts.length %}
+                  <dt>Yeast</dt>
+                  <dd>{{ batch.yeasts | join(', ') }}</dd>
+                {% endif %}
 
-              {% if batch.brewMethod %}
-                <dt>Type</dt>
-                <dd>{{ batch.brewMethod }}</dd>
-              {% endif %}
+                {% if batch.brewMethod %}
+                  <dt>Type</dt>
+                  <dd>{{ batch.brewMethod }}</dd>
+                {% endif %}
 
-              {% if batch.og %}
-                <dt>Original Gravity</dt>
-                <dd>{{ batch.og }}</dd>
-              {% endif %}
+                {% if batch.og %}
+                  <dt>Original Gravity</dt>
+                  <dd>{{ batch.og }}</dd>
+                {% endif %}
 
-              {% if batch.fg %}
-                <dt>Final Gravity</dt>
-                <dd>{{ batch.fg }}</dd>
-              {% endif %}
-            </dl>
-          </details>
+                {% if batch.fg %}
+                  <dt>Final Gravity</dt>
+                  <dd>{{ batch.fg }}</dd>
+                {% endif %}
+              </dl>
+            </details>
+          </article>
         </li>
       {%- endfor -%}
     </template>
