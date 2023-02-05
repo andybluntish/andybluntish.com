@@ -57,6 +57,10 @@ description: Beer is for fun
         <dd>{{ batch.yeasts | join(', ') }}</dd>
       {% endif %}
     </dl>
+
+    {% if batch.imageName !== "" %}
+      <img src="{{batch}}" alt="">
+    {% endif %}
   </article>
 </template>
 
@@ -111,6 +115,32 @@ description: Beer is for fun
 
     :where(dt, dd):nth-child(n) {
       grid-column: auto / auto;
+    }
+  }
+
+  img {
+    background: orange;
+    width: 250px;
+    height: 350px;
+    display: block;
+    margin: auto;
+  }
+
+  @media (min-width: 48rem) {
+    article:has(img) {
+      max-width: 48rem;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 1fr;
+    }
+
+    article:has(img) :where(header, dl) {
+      grid-column: 1 / span 1;
+    }
+
+    article:has(img) :where(img) {
+      grid-column: 2;
+      grid-row: 1 / span 2;
     }
   }
 </style>
