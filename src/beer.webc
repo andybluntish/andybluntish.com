@@ -1,5 +1,5 @@
 ---
-title: Brew log
+title: Beer
 description: A log of all the brews that I remembered to log.
 eleventyNavigation:
   key: Beer
@@ -12,80 +12,55 @@ eleventyNavigation:
     <p @raw="description"></p>
   </header>
 
-  <ol class="batches" reversed>
-    <template webc:type="11ty" 11ty:type="njk">
-      {%- for batch in beer.batches -%}
-        <li class="batch">
-          <details>
-            <summary>
-              <div class="batch-summary">
-                <header>
-                  <h2>{{ batch.name }}</h2>
-                  <p>{{ batch.style }}</p>
-                </header>
-
-                <ul>
-                  <li>
-                    {{ batch.abv }}
-                    <abbr title="Alcohol by volume">ABV</abbr>
-                  </li>
-                  <li>
-                    {{ batch.ibu }}
-                    {% if batch.ibu !== '-' %}
-                      <abbr title="International Bittering Units">IBU</abbr>
-                    {% endif %}
-                  </li>
-                  <li>
-                    {{ batch.ebc }}
-                    {% if batch.ebc !== '-' %}
-                      <abbr title="European Brewery Convention">EBC</abbr>
-                    {% endif %}
-                  </li>
-                  <li>
-                    <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
-                      {{ batch.brewDate | shortDate }}
-                    </time>
-                  </li>
-                </ul>
-              </div>
-            </summary>
-
-            <dl class="batch-details">
-              {% if batch.fermentables.length %}
-                <dt>Fermentables</dt>
-                <dd>{{ batch.fermentables | join(', ') }}</dd>
+  <template webc:type="11ty" 11ty:type="njk">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Style</th>
+          <th><abbr-abv></abbr-abv></th>
+          <th><abbr-ibu></abbr-ibu></th>
+          <th><abbr-ebc></abbr-ebc></th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for batch in beer.batches -%}
+          <tr>
+            <td>
+              <a href="{{ batch.href }}">
+                {{ batch.name }}
+              </a>
+            </td>
+            <td>
+              {{ batch.style }}
+            </td>
+            <td>
+              {{ batch.abv }}
+              <abbr-abv></abbr-abv>
+            </td>
+            <td>
+              {{ batch.ibu }}
+              {% if batch.ibu !== '-' %}
+                <abbr-ibu></abbr-ibu>
               {% endif %}
-
-              {% if batch.hops.length %}
-                <dt>Hops</dt>
-                <dd>{{ batch.hops | join(', ') }}</dd>
+            </td>
+            <td>
+              {{ batch.ebc }}
+              {% if batch.ebc !== '-' %}
+                <abbr-ebc></abbr-ebc>
               {% endif %}
-
-              {% if batch.yeasts.length %}
-                <dt>Yeast</dt>
-                <dd>{{ batch.yeasts | join(', ') }}</dd>
-              {% endif %}
-
-              {% if batch.brewMethod %}
-                <dt>Type</dt>
-                <dd>{{ batch.brewMethod }}</dd>
-              {% endif %}
-
-              {% if batch.og %}
-                <dt>Original Gravity</dt>
-                <dd>{{ batch.og }}</dd>
-              {% endif %}
-
-              {% if batch.fg %}
-                <dt>Final Gravity</dt>
-                <dd>{{ batch.fg }}</dd>
-              {% endif %}
-            </dl>
-          </details>
-        </li>
-      {%- endfor -%}
-    </template>
-  </ol>
+            </td>
+            <td>
+              <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
+                {{ batch.brewDate | shortDate }}
+              </time>
+            </td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </template>
 
   <footer>
     <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
@@ -98,90 +73,39 @@ eleventyNavigation:
     max-width: 48rem;
   }
 
-  .batches {
-    --gap: var(--half-space);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .batch {
-    padding-left: var(--quarter-space);
-  }
-
-  .batch:not(:last-of-type) {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .batch summary {
-    position: relative;
-    list-style-position: outside;
-    cursor: pointer;
-    padding-top: var(--gap);
-  }
-
-  .batch details[open] h2,
-  .batch summary:hover h2 {
-    color: var(--accent);
-  }
-
-  .batch h2 {
-    font-size: inherit;
-  }
-
-  .batch dt {
-    font-size: var(--font-size-sm);
-  }
-
-  .batch-summary header {
-    display: flex;
-    gap: var(--gap);
-  }
-
-  .batch-summary header p {
-    margin-bottom: var(--gap);
-    font-weight: var(--font-weight-light);
-  }
-
-  .batch-summary ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--gap);
-    list-style: none;
-    margin-bottom: var(--gap);
-    padding: 0;
-  }
-
-  .batch-summary li:last-child {
+  :where(th, td):nth-child(n+3) {
     text-align: end;
   }
 
-  .batch-details {
-    margin-top: var(--half-space);
-    margin-bottom: 0;
+  td:nth-child(2) {
+    font-weight: var(--font-weight-light);
   }
 
-  @media (min-width: 42rem) {
-    .batch-summary {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--gap);
+  td abbr {
+    display: none;
+  }
+
+  @media (max-width: 40rem) {
+    thead {
+      display: none;
     }
-  }
 
-  @media (min-width: 32rem) {
-    .batch-details {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(6, auto);
-      grid-auto-flow: column;
-      gap: 0 var(--gap);
+    tbody tr {
+      display: flex;
+      flex-wrap: wrap;
     }
-  }
 
-  ::-webkit-details-marker {
-    position: absolute;
-    left: -1rem;
-    top: 0.85rem;
+    td:nth-child(-n+2) {
+      flex-basis: calc(100% / 2);
+    }
+
+    td:nth-child(n+3) {
+      flex-basis: calc(100% / 4);
+      text-align: start;
+    }
+
+    tbody td abbr {
+      display: initial;
+    }
   }
 </style>

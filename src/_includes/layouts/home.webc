@@ -2,10 +2,10 @@
 layout: layouts/root.html
 ---
 
-<page-wrapper>
+<site-wrapper>
   <template webc:nokeep @raw="content"></template>
   <home-footer slot="footer"></home-footer>
-</page-wrapper>
+</site-wrapper>
 
 <style>
   main {
