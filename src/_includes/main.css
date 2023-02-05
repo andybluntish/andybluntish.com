@@ -184,12 +184,16 @@ td:last-child {
   padding-inline-end: 0;
 }
 
-tbody tr {
-  border-top: 1px solid var(--border);
+thead {
+  border-bottom: 2px solid var(--border);
 }
 
-tbody tr:first-child {
-  border-width: 2px;
+tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child {
+  border: none;
 }
 
 /*******************************************************************************
