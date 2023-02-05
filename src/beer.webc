@@ -73,7 +73,7 @@ eleventyNavigation:
     max-width: 48rem;
   }
 
-  :where(th, td):nth-child(n+3) {
+  *:where(th, td):nth-child(n+3) {
     text-align: end;
   }
 
