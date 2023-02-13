@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "format": "eslint --fix .",
     "clean": "rm -r dist > /dev/null 2>&1",
-    "subset-fonts": "NODE_ENV=production yarn build && glyphhanger dist/**/*.html --subset=fonts/Mona-Sans.woff2 --formats=woff2 --css --output=fonts && mv fonts/Mona-Sans-subset.woff2 src/fonts/"
+    "subset-fonts": "NODE_ENV=production yarn clean && yarn build && glyphhanger dist/**/*.html --subset=fonts/Mona-Sans.woff2 --formats=woff2 --css --output=fonts && mv fonts/Mona-Sans-subset.woff2 src/fonts/"
   },
   "repository": {
     "type": "git",
