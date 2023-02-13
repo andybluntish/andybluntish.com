@@ -9,27 +9,14 @@ module.exports = function () {
     {
       title: "Mastodon",
       href: `https://mastodon.online/@${author.username}`,
-      footer: true,
-    },
-    {
-      title: "CodePen",
-      href: `https://codepen.io/${author.username}/`,
-      footer: true,
     },
     {
       title: "GitHub",
       href: `https://github.com/${author.username}/`,
-      footer: true,
     },
     {
-      title: "Instagram",
-      href: `https://instagram.com/${author.username}/`,
-      footer: true,
-    },
-    {
-      title: "Email",
-      href: `mailto:${author.email}`,
-      footer: true,
+      title: "CodePen",
+      href: `https://codepen.io/${author.username}/`,
     },
   ];
 
