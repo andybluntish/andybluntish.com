@@ -32,7 +32,7 @@
     text-decoration-thickness: unset;
   }
 
-  @media (min-width: 20rem) {
+  @media (min-width: 24rem) {
     :host {
       flex-direction: row;
     }
