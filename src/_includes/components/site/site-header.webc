@@ -10,7 +10,7 @@
     </svg>
   </a>
 
-  <site-navigation></site-navigation>
+  <site-navigation @header="true"></site-navigation>
 </header>
 
 <style webc:scoped>
