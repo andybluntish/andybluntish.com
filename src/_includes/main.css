@@ -14,19 +14,16 @@
   --font-stretch-max: 125%;
   --transition: 0.15s ease-in-out;
 
-  --light-color: #fefefe;
-  --dark-color: #111;
-
-  --foreground: var(--dark-color);
-  --background: var(--light-color);
+  --foreground: #111;
+  --background: #fefefe;
   --accent: #d14600;
   --border: #d1d6e0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground: var(--light-color);
-    --background: var(--dark-color);
+    --foreground: #eee;
+    --background: #111;
     --accent: #f84;
     --border: #222;
 
