@@ -99,10 +99,10 @@
       const value = e.target.value;
       status.textContent = `Color theme is “${value}”.`;
       if (value === "auto") {
-        delete document.body.dataset[key];
+        delete document.documentElement.dataset[key];
         clearValue();
       } else {
-        document.body.dataset[key] = value;
+        document.documentElement.dataset[key] = value;
         setValue(value);
       }
     });
