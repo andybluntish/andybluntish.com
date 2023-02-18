@@ -1,29 +1,31 @@
 <footer webc:root webc:keep>
-  <p>
-    &copy; <template webc:nokeep @raw="site.copyrightYear"></template>
-    <a href="/" rel="me" class="subtle-link" @raw="site.author.name"></a>
-  </p>
+  <div>
+    <p>
+      &copy; <template webc:nokeep @raw="site.copyrightYear"></template>
+      <a href="/" rel="me" class="subtle-link" @raw="site.author.name"></a>
+    </p>
 
-  <site-navigation></site-navigation>
+    <site-navigation></site-navigation>
+  </div>
+  <div>
+    <site-theme-toggle></site-theme-toggle>
+  </div>
 </footer>
 
 <style webc:scoped>
   :host {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: var(--space);
     padding: var(--space);
     text-align: center;
     font-size: var(--font-size-sm);
   }
 
   p {
-    margin: 0;
+    margin-block-end: var(--half-space);
     word-break: keep-all;
   }
 
-  ul {
+  /* override navigation styles */
+  nav > ul {
     justify-content: center;
   }
 
@@ -33,9 +35,16 @@
     text-decoration-thickness: unset;
   }
 
-  @media (min-width: 24rem) {
+  @media (min-width: 32rem) {
     :host {
-      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space);
+      text-align: initial;
+    }
+
+    nav > ul {
+      justify-content: unset;
     }
   }
 </style>
