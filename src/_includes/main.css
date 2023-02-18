@@ -7,31 +7,52 @@
   --font-size-sm: calc(var(--font-size) * 0.8);
   --font-size-lg: calc(var(--font-size) * 1.4);
   --font-size-xl: calc(var(--font-size) * 2.8);
-  --font-weight-light: 250;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --font-weight-max: 900;
   --font-stretch-max: 125%;
   --transition: 0.15s ease-in-out;
 
+  /* Light Mode */
   --foreground: #111;
   --background: #fefefe;
   --accent: #d14600;
   --border: #d1d6e0;
+  --font-weight-light: 250;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-max: 900;
+
+  /* Dark Mode */
+  --foreground-dark: #eee;
+  --background-dark: #111;
+  --accent-dark: #f84;
+  --border-dark: #222;
+  --font-weight-light-dark: 200;
+  --font-weight-normal-dark: 300;
+  --font-weight-bold-dark: 600;
+  --font-weight-max-dark: 800;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #eee;
-    --background: #111;
-    --accent: #f84;
-    --border: #222;
-
-    --font-weight-light: 200;
-    --font-weight-normal: 300;
-    --font-weight-bold: 600;
-    --font-weight-max: 800;
+  :root:not([data-user-theme]) {
+    --foreground: var(--foreground-dark);
+    --background: var(--background-dark);
+    --accent: var(--accent-dark);
+    --border: var(--border-dark);
+    --font-weight-light: var(--font-weight-light-dark);
+    --font-weight-normal: var(--font-weight-normal-dark);
+    --font-weight-bold: var(--font-weight-bold-dark);
+    --font-weight-max: var(--font-weight-max-dark);
   }
+}
+
+:root[data-user-theme="dark"] {
+  --foreground: var(--foreground-dark);
+  --background: var(--background-dark);
+  --accent: var(--accent-dark);
+  --border: var(--border-dark);
+  --font-weight-light: var(--font-weight-light-dark);
+  --font-weight-normal: var(--font-weight-normal-dark);
+  --font-weight-bold: var(--font-weight-bold-dark);
+  --font-weight-max: var(--font-weight-max-dark);
 }
 
 html {
