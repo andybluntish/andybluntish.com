@@ -7,7 +7,7 @@
   --font-size-sm: calc(var(--font-size) * 0.8);
   --font-size-lg: calc(var(--font-size) * 1.4);
   --font-size-xl: calc(var(--font-size) * 2.8);
-  --font-weight-light: 200;
+  --font-weight-light: 250;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --font-weight-max: 900;
