@@ -55,10 +55,11 @@ html {
 @font-face {
   font-family: "Mona Sans";
   src: url("/fonts/Mona-Sans-subset.woff2") format("woff2 supports variations"),
-       url("/fonts/Mona-Sans-subset.woff2") format("woff2-variations");
+    url("/fonts/Mona-Sans-subset.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
-  unicode-range: U+20,U+23,U+25,U+27-29,U+2C-3A,U+41-50,U+52-57,U+59,U+61-69,U+6B-70,U+72-7A,U+A9,U+F6,U+2019;
+  unicode-range: U+20, U+23, U+25, U+27-29, U+2C-3A, U+41-50, U+52-57, U+59,
+    U+61-69, U+6B-70, U+72-7A, U+A9, U+F6, U+2019;
   font-display: swap;
 }
 
@@ -100,7 +101,11 @@ h1 {
   line-height: 1.1;
 }
 
-h2, dt, b, strong, th {
+h2,
+dt,
+b,
+strong,
+th {
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -114,7 +119,9 @@ dl {
   margin: 0 0 var(--space);
 }
 
-b, strong, th {
+b,
+strong,
+th {
   font-size: inherit;
 }
 
@@ -137,7 +144,8 @@ a {
   text-decoration-thickness: 2px;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--accent);
 }
 
