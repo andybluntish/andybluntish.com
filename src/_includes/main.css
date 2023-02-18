@@ -145,6 +145,10 @@ a:hover,
 a:focus {
   color: var(--accent);
 }
+a:focus {
+  outline: 3px solid var(--accent);
+  text-decoration: none;
+}
 
 /*******************************************************************************
  * Media
