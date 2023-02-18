@@ -14,7 +14,7 @@
 
 <style webc:scoped>
   :host {
-    padding: var(--space);
+    padding: var(--space) var(--space) var(--half-space);
     text-align: center;
     font-size: var(--font-size-sm);
   }
@@ -27,6 +27,7 @@
   /* override navigation styles */
   nav > ul {
     justify-content: center;
+    margin-block-end: var(--half-space);
   }
 
   a {
