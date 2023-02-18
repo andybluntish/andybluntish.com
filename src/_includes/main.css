@@ -29,6 +29,11 @@
     --background: var(--dark-color);
     --accent: #f84;
     --border: #222;
+
+    --font-weight-light: 200;
+    --font-weight-normal: 300;
+    --font-weight-bold: 600;
+    --font-weight-max: 800;
   }
 }
 
@@ -71,6 +76,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Mona Sans", system-ui, -apple-system, sans-serif;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-normal);
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
