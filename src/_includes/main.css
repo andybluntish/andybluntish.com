@@ -169,7 +169,7 @@ main {
 }
 
 main > article > header {
-  margin-bottom: var(--double-space);
+  margin-block-end: var(--double-space);
 }
 
 main > article > header p:first-of-type {
@@ -178,7 +178,7 @@ main > article > header p:first-of-type {
 }
 
 main > article > footer {
-  margin-top: var(--double-space);
+  margin-block-start: var(--double-space);
   font-weight: var(--font-weight-light);
 }
 
@@ -203,11 +203,11 @@ td:last-child {
 }
 
 thead {
-  border-bottom: 2px solid var(--border);
+  border-block-end: 2px solid var(--border);
 }
 
 tbody tr {
-  border-bottom: 1px solid var(--border);
+  border-block-end: 1px solid var(--border);
 }
 
 tbody tr:last-child {
