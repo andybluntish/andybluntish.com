@@ -52,7 +52,7 @@
 <style webc:scoped>
   :host {
     display: inline-flex;
-    gap: var(--half-space);
+    gap: var(--quarter-space);
     align-items: center;
     margin-bottom: var(--half-space);
   }
