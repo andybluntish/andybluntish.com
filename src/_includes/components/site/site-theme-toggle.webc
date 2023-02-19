@@ -83,6 +83,12 @@
     opacity: 0.5;
   }
 
+  label:hover,
+  label:focus {
+    color: var(--accent);
+    opacity: 1;
+  }
+
   input[type="radio"]:checked + label {
     font-weight: var(--font-weight-bold);
     opacity: 1;
