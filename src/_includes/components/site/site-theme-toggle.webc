@@ -94,6 +94,11 @@
     font-weight: var(--font-weight-bold);
     opacity: 1;
   }
+
+  svg {
+    width: var(--space);
+    height: var(--space);
+  }
 </style>
 
 <script>
