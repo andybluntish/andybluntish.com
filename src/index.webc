@@ -2,6 +2,7 @@
 eleventyNavigation:
   key: About
   order: 1
+  header: true
 ---
 
 <template webc:type="11ty" 11ty:type="njk,md">
