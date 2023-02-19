@@ -2,7 +2,7 @@
   <div>
     <p>
       &copy; <template webc:nokeep @raw="site.copyrightYear"></template>
-      <a href="/" rel="me" class="subtle-link" @raw="site.author.name"></a>
+      <template @raw="site.author.name" webc:nokeep></template>
     </p>
 
     <site-navigation></site-navigation>
