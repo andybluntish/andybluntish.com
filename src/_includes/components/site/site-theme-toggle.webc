@@ -55,6 +55,7 @@
     gap: var(--half-space);
     align-items: center;
     margin-bottom: var(--half-space);
+    height: 100%;
   }
 
   ul {
