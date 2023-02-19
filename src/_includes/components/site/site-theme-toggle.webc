@@ -69,19 +69,19 @@
 
   li { position: relative; }
 
-  [type="radio"] {
+  :host input {
     position: absolute;
-    opacity: 0;
-    margin: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    cursor: pointer;
     pointer-events: none;
   }
 
   label {
     display: inline-block;
-    cursor: pointer;
     opacity: 0.5;
+    cursor: pointer;
   }
 
   label:hover,
@@ -90,8 +90,7 @@
     opacity: 1;
   }
 
-  input[type="radio"]:checked + label {
-    font-weight: var(--font-weight-bold);
+  input:checked + label {
     opacity: 1;
   }
 
