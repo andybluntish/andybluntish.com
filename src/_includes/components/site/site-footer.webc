@@ -1,15 +1,10 @@
 <footer webc:root="override">
-  <div>
-    <p>
-      &copy; <template webc:nokeep @raw="site.copyrightYear"></template>
-      <template @raw="site.author.name" webc:nokeep></template>
-    </p>
+  <p>
+    &copy; <template webc:nokeep @raw="site.copyrightYear"></template>
+    <template @raw="site.author.name" webc:nokeep></template>
+  </p>
 
-    <site-navigation></site-navigation>
-  </div>
-  <div>
-    <site-theme-toggle></site-theme-toggle>
-  </div>
+  <site-navigation></site-navigation>
 </footer>
 
 <style webc:scoped>
