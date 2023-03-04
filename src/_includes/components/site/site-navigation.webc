@@ -1,4 +1,4 @@
-<nav webc:root webc:keep>
+<nav webc:root="override">
   <template webc:type="11ty" 11ty:type="njk">
     {% set entries = collections.all | eleventyNavigation %}
     {% if header %}
