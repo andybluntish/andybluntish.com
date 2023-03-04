@@ -1,4 +1,4 @@
-<div webc:root webc:keep aria-labelledby="label-select-theme">
+<div webc:root="override" aria-labelledby="label-select-theme">
   <span id="label-select-theme">Theme:</span>
   <span role="status" class="sr-only">Color theme is "auto".</span>
   <ul>
