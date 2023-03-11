@@ -2,7 +2,7 @@
   <site-header :class="headerClass"></site-header>
 </slot>
 
-<main :class="mainClass">
+<main class="flow" :class="mainClass">
   <slot></slot>
 </main>
 
