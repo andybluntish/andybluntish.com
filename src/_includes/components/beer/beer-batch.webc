@@ -1,0 +1,7 @@
+<article webc:root="override" class="flow">
+  <header class="flow">
+    <h1 @raw="batch.name"></h1>
+  </header>
+
+  <p @raw="batch.style"></p>
+</article>

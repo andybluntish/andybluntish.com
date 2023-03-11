@@ -1,0 +1,12 @@
+---
+pagination:
+  data: beer.batches
+  size: 1
+  alias: batch
+permalink: "{{batch.permalink}}"
+description: Beer is for fun
+---
+
+{% renderTemplate "webc", { batch: batch } %}
+  <beer-batch :@batch="batch"></beer-batch>
+{% endrenderTemplate %}
