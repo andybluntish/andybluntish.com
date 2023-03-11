@@ -8,8 +8,8 @@ eleventyNavigation:
 mainClass: "wrapper"
 ---
 
-<article>
-  <header>
+<article class="flow">
+  <header class="flow">
     <h1 @raw="title"></h1>
     <p @raw="description"></p>
   </header>
