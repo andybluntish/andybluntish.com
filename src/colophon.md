@@ -2,7 +2,7 @@
 eleventyNavigation:
   key: Colophon
   order: 99
-mainClass: "wrapper"
+mainClass: "wrapper-narrow"
 ---
 
 # Colophon

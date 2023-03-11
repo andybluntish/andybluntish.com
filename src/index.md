@@ -3,7 +3,7 @@ eleventyNavigation:
   key: About
   order: 1
   header: true
-mainClass: "wrapper"
+mainClass: "wrapper-narrow"
 ---
 
 G’day, my name is [Andy]({{ page.url }}) 👋
