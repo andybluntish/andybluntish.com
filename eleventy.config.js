@@ -8,6 +8,7 @@ const machineDate = require("./lib/filters/machine-date.js");
 const shortDate = require("./lib/filters/short-date.js");
 const humanDate = require("./lib/filters/human-date.js");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
@@ -27,6 +28,7 @@ module.exports = (eleventyConfig) => {
   );
 
   // Plugins
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigation);
   eleventyConfig.addPlugin(eleventyUpgradeHelp);
   eleventyConfig.addPlugin(pluginWebc, {
