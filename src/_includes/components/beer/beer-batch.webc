@@ -1,4 +1,4 @@
-<article webc:root="override" class="flow">
+<article webc:root="override">
   <header class="flow">
     <h1 @raw="batch.name"></h1>
     <p @raw="batch.style"></p>
@@ -59,8 +59,8 @@
     gap: 0 var(--step-3);
   }
 
-  dd {
-    margin-block-end: var(--step-0);
+  dt {
+    margin-block-start: var(--step-0);
   }
 
   *:where(dt, dd):nth-child(-n+2) {
