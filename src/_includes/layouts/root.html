@@ -19,8 +19,10 @@
     <link rel="me" href="{{ link.href }}">
   {%- endfor -%}
   {% set css %}
-    {% include "main.css" ignore missing %}
-    {{ page.url | webcGetCss | safe }}
+    {% include "css/variables.css" ignore missing %}
+    {% include "css/reset.css" ignore missing %}
+    {% include "css/main.css" ignore missing %}
+    {# page.url | webcGetCss | safe #}
   {% endset %}
   <style>{{ css | safe }}</style>
 </head>
