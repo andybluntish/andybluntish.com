@@ -1,7 +1,10 @@
 ---
 layout: layouts/root.html
+headerClass: ""
+mainClass: ""
+footerClass: ""
 ---
 
-<site-wrapper>
+<site-wrapper :@header-class="headerClass" :@main-class="mainClass" :@footer-class="footerClass">
   <template webc:nokeep @raw="content"></template>
 </site-wrapper>
