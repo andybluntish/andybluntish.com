@@ -235,3 +235,9 @@ tbody tr:last-child {
   width: 1px !important;
   white-space: nowrap !important;
 }
+
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 40rem;
+}
