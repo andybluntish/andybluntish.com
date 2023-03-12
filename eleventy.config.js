@@ -10,7 +10,7 @@ const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { writeFileSync } = require("fs");
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.BUILD_ENV !== "production") {
   dotenv.config();
 }
 
