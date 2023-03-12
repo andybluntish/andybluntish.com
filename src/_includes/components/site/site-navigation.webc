@@ -1,11 +1,11 @@
-<nav webc:root webc:keep>
+<nav webc:root="override">
   <template webc:type="11ty" 11ty:type="njk">
     {% set entries = collections.all | eleventyNavigation %}
     {% if header %}
       {% set entries = entries | selectattr('header') %}
     {% endif %}
 
-    <ul>
+    <ul role="list">
       {%- for entry in entries %}
         {# The current link points to the current page, or a child page #}
         {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
@@ -27,9 +27,8 @@
 <style webc:scoped>
   ul {
     display: flex;
-    gap: 0 var(--space);
+    gap: 0 var(--step-0);
     margin: 0;
     padding: 0;
-    list-style: none;
   }
 </style>

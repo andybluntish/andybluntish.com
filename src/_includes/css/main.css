@@ -1,0 +1,180 @@
+/*******************************************************************************
+ * Typography
+ ******************************************************************************/
+
+/* Font subset with https://github.com/zachleat/glyphhanger */
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/Mona-Sans-subset.woff2") format("woff2 supports variations"),
+    url("/fonts/Mona-Sans-subset.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  unicode-range: U+20, U+23, U+25, U+27-29, U+2C-3A, U+41-50, U+52-57, U+59,
+    U+61-69, U+6B-70, U+72-7A, U+A9, U+F6, U+2019;
+  font-display: swap;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Mona Sans", system-ui, -apple-system, sans-serif;
+  font-size: var(--step-0);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-weight-bold);
+  font-stretch: var(--font-stretch-max);
+  line-height: 1.1;
+  max-width: 28ch;
+}
+
+h1 {
+  font-size: var(--step-4);
+  font-weight: var(--font-weight-max);
+  max-width: 20ch;
+}
+
+h2 {
+  font-size: var(--step-3);
+}
+
+h3 {
+  font-size: var(--step-2);
+}
+
+th,
+dt,
+strong,
+b {
+  font-size: inherit;
+  font-weight: var(--font-weight-bold);
+  font-stretch: var(--font-stretch-max);
+}
+
+ol,
+ul {
+  padding-inline-start: var(--step-0);
+}
+
+/*******************************************************************************
+ * Links
+ ******************************************************************************/
+
+a {
+  color: currentColor;
+  font-weight: var(--font-weight-bold);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.2ex;
+  text-underline-offset: 0.2ex;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent);
+}
+
+a:focus {
+  outline: 3px solid var(--accent);
+  text-decoration: none;
+}
+
+/*******************************************************************************
+ * Flow Content
+ ******************************************************************************/
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--step-0));
+}
+
+*:is(h1, h2, h3, blockquote) {
+  --flow-space: var(--step-2);
+}
+
+*:is(h1, h2, h3, dt) + * {
+  --flow-space: var(--step--2);
+}
+
+/*******************************************************************************
+ * Layout
+ ******************************************************************************/
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--step-4);
+  min-height: 100dvh;
+}
+
+main {
+  align-self: center;
+  padding-inline: var(--step-0);
+}
+
+.wrapper,
+.wrapper-narrow {
+  margin-inline: auto;
+  max-width: 60rem;
+}
+.wrapper-narrow {
+  max-width: 40rem;
+}
+
+/*******************************************************************************
+ * Article
+ ******************************************************************************/
+
+article > header p:first-of-type {
+  font-size: var(--step-1);
+  font-weight: var(--font-weight-light);
+}
+
+article > footer {
+  font-weight: var(--font-weight-light);
+}
+
+/*******************************************************************************
+ * Tables
+ ******************************************************************************/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: start;
+  padding: var(--step--2);
+  padding-inline-start: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-inline-end: 0;
+}
+
+thead {
+  border-block-end: 2px solid var(--border);
+}
+
+tbody tr {
+  border-block-end: 1px solid var(--border);
+}
+
+tbody tr:last-child {
+  border: none;
+}
+
+/*******************************************************************************
+ * Utils
+ ******************************************************************************/
+
+[hidden] {
+  display: none;
+}

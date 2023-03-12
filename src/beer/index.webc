@@ -5,10 +5,11 @@ eleventyNavigation:
   key: Beer
   order: 2
   header: true
+mainClass: "wrapper"
 ---
 
-<article>
-  <header>
+<article class="flow">
+  <header class="flow">
     <h1 @raw="title"></h1>
     <p @raw="description"></p>
   </header>
@@ -69,11 +70,6 @@ eleventyNavigation:
 </article>
 
 <style>
-  article {
-    margin: 0 auto;
-    max-width: 48rem;
-  }
-
   *:where(th, td):nth-child(n+3) {
     text-align: end;
   }
