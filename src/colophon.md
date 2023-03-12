@@ -1,11 +1,12 @@
 ---
+title: Colophon
 eleventyNavigation:
   key: Colophon
   order: 99
 mainClass: "wrapper-narrow"
 ---
 
-# Colophon
+# {{title}}
 
 This is my personal website, for your enjoyment. It's also for just tinkering, experimenting, and having fun. Let's be honest, it's mostly for _my_ enjoyment.
 
