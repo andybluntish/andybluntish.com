@@ -8,7 +8,7 @@ const shortDate = require("./lib/filters/short-date.js");
 const humanDate = require("./lib/filters/human-date.js");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const { writeFile } = require('node:fs/promises');
+const { writeFileSync } = require("fs");
 
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
@@ -52,7 +52,7 @@ module.exports = (eleventyConfig) => {
       const { content, outputPath } = result;
       const minified = await minify(content, outputPath);
 
-      await writeFile(outputPath, minified);
+      writeFileSync(outputPath, minified);
     }
   });
 
