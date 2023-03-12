@@ -22,9 +22,7 @@
   }
 
   a {
-    text-decoration: none;
     text-transform: uppercase;
-    font-weight: var(--font-weight-max);
     font-stretch: var(--font-stretch-max);
   }
 
