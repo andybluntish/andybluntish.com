@@ -2,13 +2,13 @@ const dotenv = require("dotenv");
 const markdownIt = require("markdown-it");
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventyUpgradeHelp = require("@11ty/eleventy-upgrade-help");
-const purgecss = require("./lib/transforms/purgecss.js");
-const htmlmin = require("./lib/transforms/htmlmin.js");
+const minify = require("./lib/minify.js");
 const machineDate = require("./lib/filters/machine-date.js");
 const shortDate = require("./lib/filters/short-date.js");
 const humanDate = require("./lib/filters/human-date.js");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const { writeFile } = require('node:fs/promises');
 
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
@@ -35,10 +35,6 @@ module.exports = (eleventyConfig) => {
     components: "src/_includes/components/**/*.webc",
   });
 
-  // Transforms
-  eleventyConfig.addTransform("purgecss", purgecss);
-  eleventyConfig.addTransform("htmlmin", htmlmin);
-
   // Filters
   eleventyConfig.addFilter("machineDate", machineDate);
   eleventyConfig.addFilter("shortDate", shortDate);
@@ -49,6 +45,16 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  // After build
+  eleventyConfig.on("eleventy.after", async ({ results }) => {
+    for (const result of results) {
+      const { content, outputPath } = result;
+      const minified = await minify(content, outputPath);
+
+      await writeFile(outputPath, minified);
+    }
+  });
 
   return {
     dir: { input: "src", output: "dist" },
