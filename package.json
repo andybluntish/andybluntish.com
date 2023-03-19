@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "format": "eslint --fix .",
     "clean": "rm -r dist > /dev/null 2>&1",
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --incremental",
     "start:prod": "yarn clean && yarn build && python -m http.server -d ./dist",
     "subset-fonts": "yarn clean && yarn build && glyphhanger dist/**/*.html --subset=fonts/Mona-Sans.woff2 --formats=woff2 --css --output=fonts && mv fonts/Mona-Sans-subset.woff2 src/fonts/"
   },
