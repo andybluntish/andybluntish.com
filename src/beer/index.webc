@@ -27,7 +27,7 @@ mainClass: "wrapper"
         </tr>
       </thead>
       <tbody>
-        {%- for batch in beer.batches -%}
+        {%- for batch in batches -%}
           <tr>
             <td>
               <a href="{{ batch.href }}">
