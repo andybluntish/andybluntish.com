@@ -1,0 +1,10 @@
+:root {
+  --background: #f0cc52;
+  --foreground: #512D19;
+  --accent: #644f80;
+}
+
+body {
+  font-family: silkscreen, system-ui, -apple-system, sans-serif;
+  letter-spacing: -2px;
+}
