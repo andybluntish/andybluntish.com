@@ -41,21 +41,21 @@
   dependencies:
     dependency-graph "^0.11.0"
 
-"@11ty/eleventy-plugin-bundle@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-bundle/-/eleventy-plugin-bundle-1.0.3.tgz#d18fbdee3c2ecf3c9cc713ec88f6584d97f20251"
-  integrity sha512-e9DY9CpU4IlWqbG2ztzXtuhFj+y99QeCgFuz1+hN6jeZUhA+ejXxbkETfF+u2F3IzBk19kqbPQnd9dfSp424oA==
+"@11ty/eleventy-plugin-bundle@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-bundle/-/eleventy-plugin-bundle-1.0.4.tgz#7c3482b6db3934d2870c3e7cc14ab3f7bc7e09d1"
+  integrity sha512-3qk7I95/hiTdvLEzitHfiK00heF2qtDq3T+N89SbbcNing31fq6A0suK/f6AOK5xdp/VpxfjWg3bqky+0XD+1Q==
   dependencies:
     debug "^4.3.4"
 
-"@11ty/eleventy-plugin-webc@^0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-webc/-/eleventy-plugin-webc-0.9.3.tgz#55190281ed2bad6d75a3e85a6d98c930559867a3"
-  integrity sha512-8l5+x25TV/lFmarAi4kKBDHbXsyzhgp5zMLYBIHLMd9ZkDByfsCXDV149KCRQHBKmu0lBrB2NXxolIfUP/+NVA==
+"@11ty/eleventy-plugin-webc@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-webc/-/eleventy-plugin-webc-0.10.0.tgz#034148cf568d1eda0f45de4e38c0b7a5c703904d"
+  integrity sha512-8K0Ys7Utpja8hU+XClrCB59y0+QcSi/+h18io7V+ki6APIR6rLP4oiJtARyrjDw5T6Zj1c3BdFrHpY8V6iohNQ==
   dependencies:
     "@11ty/eleventy" "^2.0.0"
-    "@11ty/eleventy-plugin-bundle" "^1.0.3"
-    "@11ty/webc" "^0.9.1"
+    "@11ty/eleventy-plugin-bundle" "^1.0.4"
+    "@11ty/webc" "^0.10.0"
 
 "@11ty/eleventy-upgrade-help@^2.0.5":
   version "2.0.5"
@@ -118,10 +118,10 @@
     semver "^7.3.8"
     slugify "^1.6.5"
 
-"@11ty/webc@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@11ty/webc/-/webc-0.9.1.tgz#4fc16881e4c9b11b929b9dc749629a112d29bab3"
-  integrity sha512-6dcelOBvSOKjTMa49/f/bztXHByTFh+Tj3kQGyrCC9q7o0qHTf2Y8AREPPlMSWE0bkvGds8NVfMc3NsRHtwgPQ==
+"@11ty/webc@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@11ty/webc/-/webc-0.10.0.tgz#06029ef0609a8a4436713e24223cf2a6344de23b"
+  integrity sha512-Z5/IUk2VQsQsp+ILFPuCi3+YuYnUVNchFS7MH/gL4pBpkLNbuM0QaNQmdcwF3psz6SxXuikNtlHuLuO29kl3ew==
   dependencies:
     "@11ty/eleventy-utils" "^1.0.1"
     css-tree "^2.3.1"
@@ -130,7 +130,7 @@
     fast-glob "^3.2.12"
     is-glob "^4.0.3"
     nanoid "^4.0.1"
-    node-retrieve-globals "^2.0.4"
+    node-retrieve-globals "^2.0.6"
     parse5 "^7.1.2"
 
 "@ampproject/remapping@^2.1.0":
@@ -3503,10 +3503,10 @@ node-releases@^2.0.3:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.4.tgz#f38252370c43854dc48aa431c766c6c398f40476"
   integrity sha512-gbMzqQtTtDz/00jQzZ21PQzdI9PyLYqUSvD0p3naOhX4odFji0ZxYdnVwPTxmSwkmxhcFImpozceidSG+AgoPQ==
 
-node-retrieve-globals@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/node-retrieve-globals/-/node-retrieve-globals-2.0.4.tgz#1524b8999738014f072b4dde087e4c01e007e7ad"
-  integrity sha512-wLRKplw3dfzMkWuDZdKzvL18HoZMMTsdC3h99xeMHD8nDmxuGuBowv4LLHVq8O4efmD0oHx1hcs6bKLXXTGCtQ==
+node-retrieve-globals@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/node-retrieve-globals/-/node-retrieve-globals-2.0.6.tgz#9c1413dd115b8022892223720440419270ccebb4"
+  integrity sha512-z4kFZ6rjYf2uT2W2qtNfPVuCmMS9oogiuMTQnFp8xEeGKdVPvm3tZ4gslmQZnOOrVOkPMlitfgxGIhFXmiFx4w==
   dependencies:
     acorn "^8.8.2"
     acorn-walk "^8.2.0"
