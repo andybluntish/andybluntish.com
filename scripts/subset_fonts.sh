@@ -1,19 +1,18 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 set -euo pipefail
 [[ ${DEBUG:-} ]] && set -x
 
+function subset_font() {
+  local font_file=$1
+  local font_family=$2
+
+  glyphhanger dist/**/*.html --subset="fonts/${font_file}" --family="${font_family}" --formats="woff2" --output="src/fonts/"
+}
+
 yarn clean
 yarn build
 
-# Mona Sans
-glyphhanger dist/**/*.html --subset=fonts/Mona-Sans.woff2 --family="Mona Sans" --formats=woff2 --css --output=fonts
-mv fonts/Mona-Sans-subset.woff2 src/fonts/
-
-# Silkscreen Regular
-glyphhanger dist/**/*.html --subset=fonts/Silkscreen-Regular.ttf --family="silkscreen" --formats=woff2 --css --output=fonts
-mv fonts/Silkscreen-Regular-subset.woff2 src/fonts/
-
-# Silkscreen Bold
-glyphhanger dist/**/*.html --subset=fonts/Silkscreen-Bold.ttf --family="silkscreen" --formats=woff2 --css --output=fonts
-mv fonts/Silkscreen-Bold-subset.woff2 src/fonts/
+subset_font "Mona-Sans.woff2" "Mona Sans"
+subset_font "Silkscreen-Regular.ttf" "silkscreen"
+subset_font "Silkscreen-Bold.ttf" "silkscreen"
