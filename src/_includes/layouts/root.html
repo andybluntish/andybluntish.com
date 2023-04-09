@@ -22,11 +22,12 @@
     {% include "css/variables.css" ignore missing %}
     {% include "css/reset.css" ignore missing %}
     {% include "css/main.css" ignore missing %}
+    {% include "css/pages/" + pageStylesheet + ".css" ignore missing %}
     {{ page.url | webcGetCss | safe }}
   {% endset %}
   <style>{{ css | safe }}</style>
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
   {{ content | safe }}
   <script>{{ page.url | webcGetJs | safe }}</script>
 </body>

@@ -9,8 +9,6 @@
     url("/fonts/Mona-Sans-subset.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
-  unicode-range: U+20, U+23, U+25, U+27-29, U+2C-3A, U+41-50, U+52-57, U+59,
-    U+61-69, U+6B-70, U+72-7A, U+A9, U+F6, U+2019;
   font-display: swap;
 }
 

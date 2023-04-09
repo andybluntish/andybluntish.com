@@ -1,11 +1,13 @@
 ---
 pagination:
-  data: beer.batches
+  data: batches
   size: 1
   alias: batch
 permalink: "{{batch.permalink}}"
 description: Beer is for fun
 mainClass: "wrapper"
+eleventyComputed:
+  pageStylesheet: "beer/batches/{{batch.slug}}"
 ---
 
 {% renderTemplate "webc", { batch: batch } %}
