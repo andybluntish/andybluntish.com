@@ -14,55 +14,41 @@ mainClass: "wrapper"
     <p @raw="description"></p>
   </header>
 
-  <template webc:type="11ty" 11ty:type="njk">
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Style</th>
-          <th><abbr-abv></abbr-abv></th>
-          <th><abbr-ibu></abbr-ibu></th>
-          <th><abbr-ebc></abbr-ebc></th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        {%- for batch in batches -%}
-          <tr>
-            <td>
-              <a href="{{ batch.href }}">
-                {{ batch.name }}
-              </a>
-            </td>
-            <td>
-              {{ batch.style }}
-            </td>
-            <td>
-              {{ batch.abv }}
-              <abbr-abv></abbr-abv>
-            </td>
-            <td>
-              {{ batch.ibu }}
-              {% if batch.ibu !== '-' %}
-                <abbr-ibu></abbr-ibu>
-              {% endif %}
-            </td>
-            <td>
-              {{ batch.ebc }}
-              {% if batch.ebc !== '-' %}
-                <abbr-ebc></abbr-ebc>
-              {% endif %}
-            </td>
-            <td>
-              <time datetime="{{ batch.brewDate | machineDate }}" title="{{ batch.brewDate | humanDate }}">
-                {{ batch.brewDate | shortDate }}
-              </time>
-            </td>
-          </tr>
-        {%- endfor -%}
-      </tbody>
-    </table>
-  </template>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Style</th>
+        <th><abbr-abv></abbr-abv></th>
+        <th><abbr-ibu></abbr-ibu></th>
+        <th><abbr-ebc></abbr-ebc></th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr webc:for="batch of batches">
+        <td>
+          <a :href="batch.href" @raw="batch.name"></a>
+        </td>
+        <td @raw="batch.style"></td>
+        <td>
+          <template webc:nokeep @raw="batch.abv"></template>
+          <abbr-abv></abbr-abv>
+        </td>
+        <td>
+          <template webc:nokeep @raw="batch.ibu"></template>
+          <abbr-ibu webc:if="batch.ibu !== '-'"></abbr-ibu>
+        </td>
+        <td>
+          <template webc:nokeep @raw="batch.ebc"></template>
+          <abbr-ebc webc:if="batch.ebc !== '-'"></abbr-ebc>
+        </td>
+        <td>
+          <time :datetime="batch.machineBrewDate" :title="batch.prettyBrewDate" @raw="batch.shortBrewDate"></time>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
   <footer>
     <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
