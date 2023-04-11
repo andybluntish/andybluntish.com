@@ -6,8 +6,6 @@ pagination:
 permalink: "{{batch.permalink}}"
 description: Beer is for fun
 mainClass: "wrapper"
-eleventyComputed:
-  pageStylesheet: "beer/batches/{{batch.slug}}"
 ---
 
 {% renderTemplate "webc", { batch: batch } %}
