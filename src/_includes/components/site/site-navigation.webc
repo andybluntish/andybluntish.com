@@ -1,22 +1,36 @@
 <nav webc:root="override">
   <template webc:type="11ty" 11ty:type="njk">
-    <ul role="list">
-      {%- for entry in collections.all | eleventyNavigation %}
-        {% if entry.header != "omit" or not header %}
-          {# The current link points to the current page, or a child page #}
-          {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
-            {% set current = true %}
-          {% else %}
-            {% set current = false %}
-          {% endif %}
+    {% set entries = collections.all | eleventyNavigation %}
 
-          <li>
-            <a href="{{ entry.url }}" {{"aria-current=page" if current }}>
-              {{ entry.title }}
-            </a>
-          </li>
+    {% macro renderNavListItem(entry) -%}
+      {% if entry.header != "omit" or not header %}
+
+        {% set active = false %}
+        {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
+          {% set active = true %}
         {% endif %}
-      {%- endfor %}
+
+        {% set current = false %}
+        {% if (entry.url === page.url) %}
+          {% set current = true %}
+        {% endif %}
+
+        <li{% if active %} class="active"{% endif %}>
+          <a href="{{ entry.url }}"{% if current %} aria-current="page"{% endif %}>
+            {{ entry.title }}
+          </a>
+
+          {%- if active and header and entry.children.length -%}
+            <ul role="list">
+              {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+            </ul>
+          {%- endif -%}
+        </li>
+      {% endif %}
+    {%- endmacro %}
+
+    <ul role="list">
+      {%- for entry in entries %}{{ renderNavListItem(entry) }}{%- endfor -%}
     </ul>
   </template>
 </nav>
