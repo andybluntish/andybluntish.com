@@ -15,7 +15,7 @@
         {% endif %}
 
         <li>
-          <a href="{{ entry.url }}"{% if current %} aria-current="page"{% endif %}>
+          <a href="{{ entry.url }}" {{'aria-current="page"' if current }}>
             {{ entry.title }}
           </a>
         </li>

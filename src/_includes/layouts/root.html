@@ -20,7 +20,7 @@ eleventyComputed:
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icon-180.png">
   {%- for link in preloadFonts -%}
-    <link rel="preload" href="{{ link.href }}" as="font" type="{% if link.type %}{{ link.type }}{% else %}font/woff2{% endif %}" crossorigin>
+    <link rel="preload" href="{{ link.href }}" as="font" type="{{ link.type if link.type else "font/woff2" }}" crossorigin>
   {%- endfor -%}
   {%- for link in site.externalLinks -%}
     <link rel="me" href="{{ link.href }}">
