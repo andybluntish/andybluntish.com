@@ -3,6 +3,7 @@ title: Colophon
 eleventyNavigation:
   key: Colophon
   order: 99
+  header: omit
 mainClass: "wrapper-narrow"
 ---
 

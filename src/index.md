@@ -2,7 +2,6 @@
 eleventyNavigation:
   key: About
   order: 1
-  header: true
 mainClass: "wrapper-narrow"
 ---
 
