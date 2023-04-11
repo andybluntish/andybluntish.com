@@ -44,7 +44,7 @@ mainClass: "wrapper"
           <abbr-ebc webc:if="batch.ebc !== '-'"></abbr-ebc>
         </td>
         <td>
-          <time :datetime="batch.machineBrewDate" :title="batch.prettyBrewDate" @raw="batch.shortBrewDate"></time>
+          <time :datetime="machineDate(batch.brewDate)" :title="humanDate(batch.brewDate)" @raw="shortDate(batch.brewDate)"></time>
         </td>
       </tr>
     </tbody>

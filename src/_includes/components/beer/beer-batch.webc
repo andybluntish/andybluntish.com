@@ -2,7 +2,7 @@
   <header class="flow">
     <h1 @raw="batch.name"></h1>
     <p @raw="batch.style"></p>
-    <time :datetime="batch.machineBrewDate" @raw="batch.prettyBrewDate"></time>
+    <time :datetime="machineDate(batch.brewDate)" @raw="humanDate(batch.brewDate)"></time>
   </header>
 
   <dl>
