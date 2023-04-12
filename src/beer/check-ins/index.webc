@@ -1,0 +1,82 @@
+---
+title: Check-ins
+description: Retappd
+pagination:
+  data: checkins
+  size: 20
+eleventyNavigation:
+  key: Check-ins
+  parent: Beer
+  order: 2
+mainClass: "wrapper"
+---
+
+<article class="flow">
+  <header class="flow">
+    <h1 @raw="title"></h1>
+    <p @raw="description"></p>
+  </header>
+
+  <ol>
+    <li webc:for="item of pagination.items">
+      <article :id="item.checkin.id">
+        <p>
+          Drinking a
+          <template webc:nokeep @raw="item.beer.name"></template>
+
+          <template webc:nokeep webc:if="item.brewery">
+            by
+            <template webc:nokeep @raw="item.brewery.name"></template>
+          </template>
+
+          <template webc:nokeep webc:if="item.venue">
+            at
+            <template webc:nokeep @raw="item.venue.name"></template>
+          </template>
+        </p>
+
+        <div class="score">
+          <meter min="0" max="5" :value="item.checkin.rating">
+            <template webc:nokeep @raw="item.checkin.rating"></template> out of 5
+          </meter>
+
+          <p webc:if="item.checkin.format" class="format" @raw="item.checkin.format"></p>
+        </div>
+
+        <ul class="badges" webc:if="item.checkin.badges">
+          <li webc:for="badge of item.checkin.badges" @raw="badge.name"></li>
+        </ul>
+
+        <div webc:if="item.checkin.flavours">
+          <h2>Flavours</h2>
+          <ul>
+            <li webc:for="flavour of item.checkin.flavours" @raw="flavour"></li>
+          </ul>
+        </div>
+
+        <footer>
+          <time :datetime="machineDate(item.checkin.date)" @raw="humanDate(item.checkin.date)"></time>
+        </footer>
+      </article>
+    </li>
+  </ol>
+
+  <nav>
+    <template webc:nokeep webc:if="pagination.href.previous">
+      <a :href="pagination.href.previous">Previous</a>
+    </template>
+    <template webc:nokeep webc:else>
+      Previous
+    </template>
+
+    <template webc:nokeep webc:if="pagination.href.next">
+      <a :href="pagination.href.next">Next</a>
+    </template>
+    <template webc:nokeep webc:else>
+      Next
+    </template>
+  </nav>
+</article>
+
+<style>
+</style>
