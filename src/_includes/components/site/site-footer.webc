@@ -21,6 +21,12 @@
     word-break: keep-all;
   }
 
+  a {
+    font-weight: inherit;
+    text-decoration-thickness: inherit;
+    text-decoration-color: inherit;
+  }
+
   /* override navigation styles */
   nav > ul {
     justify-content: center;
