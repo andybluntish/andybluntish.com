@@ -16,7 +16,6 @@
 <style webc:scoped>
   :host {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: var(--step-0);
   }
@@ -30,6 +29,17 @@
     text-transform: uppercase;
     font-stretch: var(--font-stretch-max);
     text-decoration: none;
+  }
+
+  nav > ul {
+    margin-bottom: var(--step-0);
+    text-align: end;
+  }
+
+  nav ul ul {
+    position: absolute;
+    right: var(--step-0);
+    font-size: var(--step--1);
   }
 
   li.active > a {
