@@ -6,13 +6,19 @@
       {% if entry.header != "omit" or not header %}
 
         {% set active = false %}
-        {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
+        {% set current = false %}
+
+        {% if entry.url === page.url %}
           {% set active = true %}
+          {% set current = true %}
         {% endif %}
 
-        {% set current = false %}
-        {% if (entry.url === page.url) %}
-          {% set current = true %}
+        {% if entry.children.length %}
+          {% for child in entry.children %}
+            {% if child.url === page.url %}
+              {% set active = true %}
+            {% endif %}
+          {% endfor %}
         {% endif %}
 
         <li{% if active %} class="active"{% endif %}>
