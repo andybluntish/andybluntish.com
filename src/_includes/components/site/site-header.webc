@@ -24,6 +24,7 @@
   a {
     text-transform: uppercase;
     font-stretch: var(--font-stretch-max);
+    text-decoration: none;
   }
 
   svg {
