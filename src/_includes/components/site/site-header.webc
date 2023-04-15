@@ -27,6 +27,10 @@
     text-decoration: none;
   }
 
+  li.active > a {
+    color: var(--accent);
+  }
+
   svg {
     display: block;
   }
