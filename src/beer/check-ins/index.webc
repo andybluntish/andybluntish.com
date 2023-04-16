@@ -1,6 +1,6 @@
 ---
 title: Check-ins
-description: Retappd
+description: Beer is for fun
 pagination:
   data: checkins
   size: 20
@@ -14,7 +14,6 @@ mainClass: "wrapper"
 <article class="flow">
   <header class="flow">
     <h1 @raw="title"></h1>
-    <p @raw="description"></p>
   </header>
 
   <ol>
