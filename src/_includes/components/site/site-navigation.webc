@@ -8,7 +8,7 @@
         {% set active = false %}
         {% set current = false %}
 
-        {% if entry.url === page.url %}
+        {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
           {% set active = true %}
           {% set current = true %}
         {% endif %}
