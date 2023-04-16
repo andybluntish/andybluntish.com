@@ -43,6 +43,11 @@
     font-size: var(--step--1);
   }
 
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .meta {
     font-weight: var(--font-weight-light);
   }
@@ -53,11 +58,6 @@
 
   .brewery {
     font-size: var(--step-0);
-  }
-
-  .row {
-    display: flex;
-    justify-content: space-between;
   }
 
   .flavour-profile ul {
