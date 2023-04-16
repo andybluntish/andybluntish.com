@@ -7,9 +7,10 @@
     "lint": "eslint .",
     "format": "eslint --fix .",
     "clean": "rm -r dist > /dev/null 2>&1",
-    "start": "eleventy --serve --incremental",
+    "start": "eleventy --serve",
     "start:prod": "yarn clean && yarn build && python -m http.server -d ./dist",
-    "subset-fonts": "./scripts/subset_fonts.sh"
+    "subset-fonts": "./scripts/subset_fonts.sh",
+    "update-checkin-data": "./scripts/update_checkin_data.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,11 @@
   "engines": {
     "node": ">=16"
   },
+  "bin": {
+    "update-checkin-data": "./scripts/update_checkin_data.js"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-webc": "^0.10.0",
