@@ -23,19 +23,19 @@ mainClass: "wrapper"
     </li>
   </ol>
 
-  <nav>
+  <nav class="pagination">
     <template webc:nokeep webc:if="pagination.href.previous">
-      <a :href="pagination.href.previous">Previous</a>
+      <a :href="pagination.href.previous">Newer</a>
     </template>
     <template webc:nokeep webc:else>
-      Previous
+      &nbsp;
     </template>
 
     <template webc:nokeep webc:if="pagination.href.next">
-      <a :href="pagination.href.next">Next</a>
+      <a :href="pagination.href.next">Older</a>
     </template>
     <template webc:nokeep webc:else>
-      Next
+      &nbsp;
     </template>
   </nav>
 </article>
@@ -50,5 +50,11 @@ mainClass: "wrapper"
     margin-block-start: var(--step-2);
     padding-block-start: var(--step-2);
     border-block-start: 1px solid var(--border);
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: var(--step-5);
   }
 </style>
