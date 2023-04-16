@@ -1,0 +1,3 @@
+<meter webc:root="override" min="0" max="5" :value="rating" low="3" high="4" optimum="4.5">
+  <template webc:nokeep @raw="rating"></template> out of 5
+</meter>
