@@ -55,7 +55,7 @@
         ]
       },
       "beer": {
-        "name": "Hefeweizen"
+        "name": "Hefe"
       },
       "brewery": {
         "name": "Lobethal Bierhaus"
@@ -300,10 +300,10 @@
         ]
       },
       "beer": {
-        "name": "Safe Space"
+        "name": "Enchanted Delirium"
       },
       "brewery": {
-        "name": "Little Bang Brewing Co"
+        "name": "The Uraidla Brewery"
       }
     },
     {
@@ -5598,7 +5598,7 @@
         ]
       },
       "beer": {
-        "name": "Someday Sour Blood Orange"
+        "name": "Red Hoppy Ale"
       },
       "brewery": {
         "name": "Brick Lane Brewing Co."
@@ -6174,10 +6174,10 @@
         ]
       },
       "beer": {
-        "name": "Pink Lemon Ale"
+        "name": "Wizards Wrath"
       },
       "brewery": {
-        "name": "Mismatch Brewing Company"
+        "name": "The Uraidla Brewery"
       }
     },
     {
@@ -6396,10 +6396,10 @@
         ]
       },
       "beer": {
-        "name": "Bunawunda Blonde"
+        "name": "Just ‘Cause You Feel It - Hāpi Sessions Vol 7: Green Cheek"
       },
       "brewery": {
-        "name": "Greenock Brewers"
+        "name": "Garage Project"
       }
     },
     {
@@ -6433,10 +6433,10 @@
         ]
       },
       "beer": {
-        "name": "Hazy IPA"
+        "name": "Fat Man Red Suit Big Sack"
       },
       "brewery": {
-        "name": "Coopers"
+        "name": "Bridge Road Brewers"
       }
     },
     {
@@ -6787,10 +6787,10 @@
         ]
       },
       "beer": {
-        "name": "NEeD - IPA Vol.1 - Hazy Double"
+        "name": "Jungle Juice"
       },
       "brewery": {
-        "name": "Bridge Road Brewers"
+        "name": "Dainton Beer"
       }
     },
     {
@@ -7083,10 +7083,10 @@
         ]
       },
       "beer": {
-        "name": "Split Batch No.1 - Mosaic IPA"
+        "name": "Hazy IPA"
       },
       "brewery": {
-        "name": "Pike’s Beer Company"
+        "name": "Balter Brewing Company"
       }
     },
     {
@@ -7758,10 +7758,10 @@
         ]
       },
       "beer": {
-        "name": "Biggie Juice"
+        "name": "The Zeppelin"
       },
       "brewery": {
-        "name": "Feral Brewing Company"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -8470,10 +8470,10 @@
         ]
       },
       "beer": {
-        "name": "Strong Pale Ale"
+        "name": "Pernicious Weed"
       },
       "brewery": {
-        "name": "Pirate Life Brewing"
+        "name": "Garage Project"
       }
     },
     {
@@ -10393,10 +10393,10 @@
         ]
       },
       "beer": {
-        "name": "Hazy Bling"
+        "name": "Afterlife"
       },
       "brewery": {
-        "name": "Bridge Road Brewers"
+        "name": "The Uraidla Brewery"
       }
     },
     {
@@ -12398,10 +12398,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Peanut Butter Chocolate Milkshake"
+        "name": "DAZY"
       },
       "brewery": {
-        "name": "Barossa Valley Brewing"
+        "name": "Balter Brewing Company"
       }
     },
     {
@@ -13234,7 +13234,7 @@
         ]
       },
       "beer": {
-        "name": "Lucifer's Lifeblood"
+        "name": "Horned God"
       },
       "brewery": {
         "name": "The Uraidla Brewery"
@@ -13546,10 +13546,10 @@
         ]
       },
       "beer": {
-        "name": "Bridgey Brew"
+        "name": "G.O.A.T."
       },
       "brewery": {
-        "name": "Bridgewater Inn"
+        "name": "Black Hops Brewing"
       }
     },
     {
@@ -13595,10 +13595,10 @@
         ]
       },
       "beer": {
-        "name": "Unfiltered NZ Lager"
+        "name": "The Hazing By Wattsy - Brewers Series #3"
       },
       "brewery": {
-        "name": "Mismatch Brewing Company"
+        "name": "Big Shed Brewing Concern"
       }
     },
     {
@@ -14162,10 +14162,10 @@
         ]
       },
       "beer": {
-        "name": "Raspberry Wheat"
+        "name": "The Matriarch"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "Co-Conspirators Brewing Company"
       }
     },
     {
@@ -15099,10 +15099,10 @@
         ]
       },
       "beer": {
-        "name": "3/4 IPA"
+        "name": "Trail Pale Ale"
       },
       "brewery": {
-        "name": "Sample Brew"
+        "name": "Capital Brewing Co"
       }
     },
     {
@@ -15244,10 +15244,10 @@
         ]
       },
       "beer": {
-        "name": "The Sesh"
+        "name": "Crankshaft"
       },
       "brewery": {
-        "name": "Stockade Brew Co"
+        "name": "BentSpoke Brewing Co"
       }
     },
     {
@@ -15303,10 +15303,10 @@
         ]
       },
       "beer": {
-        "name": "Tingleberry Gose"
+        "name": "CVBC Red IPA"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Clare Valley Brewing Co."
       }
     },
     {
@@ -15811,7 +15811,7 @@
         ]
       },
       "beer": {
-        "name": "Old Ones"
+        "name": "Third Eye"
       },
       "brewery": {
         "name": "The Uraidla Brewery"
@@ -16428,10 +16428,10 @@
         ]
       },
       "beer": {
-        "name": "Stiegl-Goldbräu / Stiegl Gold"
+        "name": "Ottakringer Helles"
       },
       "brewery": {
-        "name": "Stieglbrauerei zu Salzburg"
+        "name": "Ottakringer Brauerei"
       }
     },
     {
@@ -16675,10 +16675,10 @@
         ]
       },
       "beer": {
-        "name": "Fourpure Citrus IPA"
+        "name": "Sonic Prayer"
       },
       "brewery": {
-        "name": "Fourpure Brewing Co"
+        "name": "Modus Brewing"
       }
     },
     {
@@ -16702,10 +16702,10 @@
         ]
       },
       "beer": {
-        "name": "Fourpure Citrus IPA"
+        "name": "Afterlife"
       },
       "brewery": {
-        "name": "Fourpure Brewing Co"
+        "name": "The Uraidla Brewery"
       }
     },
     {
@@ -16768,10 +16768,10 @@
         ]
       },
       "beer": {
-        "name": "Big Red"
+        "name": "Jazzy Red Ale"
       },
       "brewery": {
-        "name": "Pirate Life Brewing"
+        "name": "Watsacowie Brewing Co"
       }
     },
     {
@@ -16886,7 +16886,7 @@
         ]
       },
       "beer": {
-        "name": "Boozy Fruit"
+        "name": "F-Yeah APA"
       },
       "brewery": {
         "name": "Big Shed Brewing Concern"
@@ -18430,10 +18430,10 @@
         ]
       },
       "beer": {
-        "name": "Ice Is Back With A Brand New Invention"
+        "name": "Hatch Pot"
       },
       "brewery": {
-        "name": "Burnley Brewing"
+        "name": "Stomping Ground Brewing Co."
       }
     },
     {
@@ -18775,7 +18775,7 @@
         ]
       },
       "beer": {
-        "name": "VinAle Red (2017)"
+        "name": "Squid Rising"
       },
       "brewery": {
         "name": "Mornington Peninsula Brewery"
@@ -19384,10 +19384,10 @@
         ]
       },
       "beer": {
-        "name": "'55' Pale Ale"
+        "name": "Gipps St."
       },
       "brewery": {
-        "name": "Riverside Brewing Company"
+        "name": "Stomping Ground Brewing Co."
       }
     },
     {
@@ -19692,7 +19692,7 @@
         ]
       },
       "beer": {
-        "name": "Hop Stomper"
+        "name": "Gipps St."
       },
       "brewery": {
         "name": "Stomping Ground Brewing Co."
@@ -19936,10 +19936,10 @@
         ]
       },
       "beer": {
-        "name": "3/92 Black IPA"
+        "name": "Fat Man Red Suit Big Sack"
       },
       "brewery": {
-        "name": "The Suburban Brew"
+        "name": "Bridge Road Brewers"
       }
     },
     {
@@ -20486,10 +20486,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Paper Umbrella"
+        "name": "Mount Tennent Pale Ale"
       },
       "brewery": {
-        "name": "Shenanigans Brewing Co."
+        "name": "Pact Beer Co."
       }
     },
     {
@@ -20792,10 +20792,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Red Pelt"
+        "name": "CVBC Red Ale"
       },
       "brewery": {
-        "name": "Fox Hat Brewing"
+        "name": "Clare Valley Brewing Co."
       }
     },
     {
@@ -20824,10 +20824,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Phat Mongrel"
+        "name": "Undercover Fashion Police"
       },
       "brewery": {
-        "name": "Fox Hat Brewing"
+        "name": "Little Bang Brewing Co"
       }
     },
     {
@@ -20889,10 +20889,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Archie's Red Ale"
+        "name": "India Red Ale"
       },
       "brewery": {
-        "name": "Mismatch Brewing Company"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -21905,10 +21905,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Citrus East Coast IPA"
+        "name": "Cosmic Chaos"
       },
       "brewery": {
-        "name": "AIBA"
+        "name": "8 Wired"
       }
     },
     {
@@ -21932,10 +21932,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Citrus East Coast IPA"
+        "name": "Hunt For Red Velvet"
       },
       "brewery": {
-        "name": "AIBA"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -22676,10 +22676,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Crate Digger Pale Ale"
+        "name": "IPA"
       },
       "brewery": {
-        "name": "Nowhereman Brewing Co"
+        "name": "Balter Brewing Company"
       }
     },
     {
@@ -22698,10 +22698,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Crate Digger Pale Ale"
+        "name": "Pilsner"
       },
       "brewery": {
-        "name": "Nowhereman Brewing Co"
+        "name": "Balter Brewing Company"
       }
     },
     {
@@ -23142,10 +23142,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Buckethead IPA"
+        "name": "(512) IPA"
       },
       "brewery": {
-        "name": "Thirsty Planet Brewing Company"
+        "name": "(512) Brewing Company"
       }
     },
     {
@@ -23451,10 +23451,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sidecar Orange Pale Ale"
+        "name": "Belgian White"
       },
       "brewery": {
-        "name": "Sierra Nevada Brewing Co."
+        "name": "Blue Moon Brewing Company"
       }
     },
     {
@@ -23592,10 +23592,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Stone Go To IPA"
+        "name": "Duel"
       },
       "brewery": {
-        "name": "Stone Brewing"
+        "name": "Stockade Brew Co"
       }
     },
     {
@@ -23741,7 +23741,7 @@
         "name": "Pale Ale"
       },
       "brewery": {
-        "name": "True South"
+        "name": "Sierra Nevada Brewing Co."
       }
     },
     {
@@ -23825,10 +23825,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dead Guy Ale"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Rogue Ales"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -24505,10 +24505,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Fanta Pants"
+        "name": "Summer Hop Ale"
       },
       "brewery": {
-        "name": "Feral Brewing Company"
+        "name": "Young Henrys"
       }
     },
     {
@@ -24521,10 +24521,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Fanta Pants"
+        "name": "Fixation IPA"
       },
       "brewery": {
-        "name": "Feral Brewing Company"
+        "name": "Fixation Brewing Co"
       }
     },
     {
@@ -24889,10 +24889,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bring Out The Gimp Mocha Stout"
+        "name": "Archie's Red Ale"
       },
       "brewery": {
-        "name": "Clare Valley Brewing Co."
+        "name": "Mismatch Brewing Company"
       }
     },
     {
@@ -24911,10 +24911,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bring Out The Gimp Mocha Stout"
+        "name": "Californicator IPA"
       },
       "brewery": {
-        "name": "Clare Valley Brewing Co."
+        "name": "Big Shed Brewing Concern"
       }
     },
     {
@@ -24927,10 +24927,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bring Out The Gimp Mocha Stout"
+        "name": "Frankenbrown"
       },
       "brewery": {
-        "name": "Clare Valley Brewing Co."
+        "name": "Big Shed Brewing Concern"
       }
     },
     {
@@ -24943,10 +24943,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bring Out The Gimp Mocha Stout"
+        "name": "Koshihikari Echigo Beer (こしひかり越後ビール)"
       },
       "brewery": {
-        "name": "Clare Valley Brewing Co."
+        "name": "Echigo Beer Co., Ltd."
       }
     },
     {
@@ -24965,10 +24965,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bring Out The Gimp Mocha Stout"
+        "name": "Halo Pilsner"
       },
       "brewery": {
-        "name": "Clare Valley Brewing Co."
+        "name": "Liberty Brewing"
       }
     },
     {
@@ -25041,10 +25041,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Ginger Joe (4%)"
+        "name": "Natural Lager"
       },
       "brewery": {
-        "name": "Stone's (Accolade Wines)"
+        "name": "Young Henrys"
       }
     },
     {
@@ -25057,10 +25057,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Ginger Joe (4%)"
+        "name": "Pale"
       },
       "brewery": {
-        "name": "Stone's (Accolade Wines)"
+        "name": "The Grifter Brewing Co."
       }
     },
     {
@@ -25127,10 +25127,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keep On Truckin"
+        "name": "Pale"
       },
       "brewery": {
-        "name": "BrewCult"
+        "name": "The Grifter Brewing Co."
       }
     },
     {
@@ -25143,10 +25143,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keep On Truckin"
+        "name": "Newtowner"
       },
       "brewery": {
-        "name": "BrewCult"
+        "name": "Young Henrys"
       }
     },
     {
@@ -25450,7 +25450,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Cold Drip War"
+        "name": "Old Mate"
       },
       "brewery": {
         "name": "Moon Dog Craft Brewery"
@@ -25547,7 +25547,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Taco Cerveza"
+        "name": "Golden Ale"
       },
       "brewery": {
         "name": "Two Birds Brewing"
@@ -25563,10 +25563,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Taco Cerveza"
+        "name": "Temptress"
       },
       "brewery": {
-        "name": "Two Birds Brewing"
+        "name": "Holgate Brewhouse"
       }
     },
     {
@@ -25639,10 +25639,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Quiet Deeds Vanilla Porter"
+        "name": "EXP #010 Purple Haze"
       },
       "brewery": {
-        "name": "Deeds Brewing"
+        "name": "Vale Brewing"
       }
     },
     {
@@ -26205,10 +26205,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "S'more Than A Feeling"
+        "name": "Real Ale"
       },
       "brewery": {
-        "name": "4 Hearts Brewing"
+        "name": "Young Henrys"
       }
     },
     {
@@ -26221,10 +26221,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "S'more Than A Feeling"
+        "name": "Fixation IPA"
       },
       "brewery": {
-        "name": "4 Hearts Brewing"
+        "name": "Fixation Brewing Co"
       }
     },
     {
@@ -26447,10 +26447,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Belgo - Aussie Pale Ale"
+        "name": "Challenger"
       },
       "brewery": {
-        "name": "Artisan Brewing"
+        "name": "Mash Brewing"
       }
     },
     {
@@ -26711,10 +26711,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Big Love Suburban Red"
+        "name": "Original"
       },
       "brewery": {
-        "name": "Boatrocker Brewers & Distillers"
+        "name": "G. Menabrea & Figli"
       }
     },
     {
@@ -26861,7 +26861,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Black Ale"
+        "name": "India Red Ale"
       },
       "brewery": {
         "name": "Prancing Pony Brewery"
@@ -27000,10 +27000,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Imperial Stout (2017 and prior)"
+        "name": "Cthulhu On The Moon"
       },
       "brewery": {
-        "name": "E.B.P"
+        "name": "KAIJU! Beer"
       }
     },
     {
@@ -27048,10 +27048,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "King Kong"
+        "name": "Real Ale"
       },
       "brewery": {
-        "name": "Clare Valley Brewing Co."
+        "name": "Young Henrys"
       }
     },
     {
@@ -27080,7 +27080,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Quiet Deeds Session Ale"
+        "name": "Quiet Deeds Vanilla Porter"
       },
       "brewery": {
         "name": "Deeds Brewing"
@@ -27278,10 +27278,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rust Bucket"
+        "name": "Black Ale"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -27294,10 +27294,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rust Bucket"
+        "name": "India Red Ale"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -27310,10 +27310,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rust Bucket"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -27326,10 +27326,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rust Bucket"
+        "name": "Amber Ale"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -27342,10 +27342,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rust Bucket"
+        "name": "Hopwork Orange"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -27358,10 +27358,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rust Bucket"
+        "name": "Sunshine Ale"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -27438,7 +27438,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "12 Paws"
+        "name": "Kölsch"
       },
       "brewery": {
         "name": "Smiling Samoyed"
@@ -27460,10 +27460,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "12 Paws"
+        "name": "The Fiend"
       },
       "brewery": {
-        "name": "Smiling Samoyed"
+        "name": "Hop Nation Brewing Co"
       }
     },
     {
@@ -27476,10 +27476,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "12 Paws"
+        "name": "Red Eye Rye"
       },
       "brewery": {
-        "name": "Smiling Samoyed"
+        "name": "Dainton Beer"
       }
     },
     {
@@ -27514,7 +27514,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Bomb IPA"
+        "name": "Big Love Suburban Red"
       },
       "brewery": {
         "name": "Boatrocker Brewers & Distillers"
@@ -27600,10 +27600,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Jukebox Hero IPA"
+        "name": "First Bounce Pale Ale"
       },
       "brewery": {
-        "name": "Moon Dog Craft Brewery"
+        "name": "Hawthorn Brewing Co."
       }
     },
     {
@@ -27664,10 +27664,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Point The Way"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Golden Road Brewing"
+        "name": "Sierra Nevada Brewing Co."
       }
     },
     {
@@ -27707,10 +27707,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Stout"
+        "name": "Get Up Offa That Brown"
       },
       "brewery": {
-        "name": "Sierra Nevada Brewing Co."
+        "name": "Golden Road Brewing"
       }
     },
     {
@@ -27798,10 +27798,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "13 Pale Ale"
+        "name": "IIPA"
       },
       "brewery": {
-        "name": "Malt Fiction"
+        "name": "Pirate Life Brewing"
       }
     },
     {
@@ -27820,10 +27820,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "13 Pale Ale"
+        "name": "Archie's Red Ale"
       },
       "brewery": {
-        "name": "Malt Fiction"
+        "name": "Mismatch Brewing Company"
       }
     },
     {
@@ -27836,10 +27836,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "13 Pale Ale"
+        "name": "India Red Ale"
       },
       "brewery": {
-        "name": "Malt Fiction"
+        "name": "Prancing Pony Brewery"
       }
     },
     {
@@ -27874,10 +27874,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "I Can't Believe It's Not Bacon"
+        "name": "Hop Hunter"
       },
       "brewery": {
-        "name": "Barossa Valley Brewing"
+        "name": "Sierra Nevada Brewing Co."
       }
     },
     {
@@ -27912,10 +27912,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Heaven"
+        "name": "Koshihikari Echigo Beer (こしひかり越後ビール)"
       },
       "brewery": {
-        "name": "Barossa Valley Brewing"
+        "name": "Echigo Beer Co., Ltd."
       }
     },
     {
@@ -27992,10 +27992,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hopsmith IPA"
+        "name": "Cockies Ocean Road Pale Ale"
       },
       "brewery": {
-        "name": "Akasha Brewing Company"
+        "name": "Barrabool Hills Brewing Co."
       }
     },
     {
@@ -28046,10 +28046,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Whale Ale"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Murray's Brewing Co"
+        "name": "Epic Brewing Company"
       }
     },
     {
@@ -28062,10 +28062,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Whale Ale"
+        "name": "Tall Poppy"
       },
       "brewery": {
-        "name": "Murray's Brewing Co"
+        "name": "8 Wired"
       }
     },
     {
@@ -28240,10 +28240,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Stab In The Dark"
+        "name": "Betelgeuse"
       },
       "brewery": {
-        "name": "Wicked Elf Beer"
+        "name": "KAIJU! Beer"
       }
     },
     {
@@ -28612,10 +28612,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Wabbit Saison"
+        "name": "HazElla"
       },
       "brewery": {
-        "name": "4 Hearts Brewing"
+        "name": "2 Brothers Brewery"
       }
     },
     {
@@ -28736,10 +28736,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Pedlars Pale"
+        "name": "Scotch Ale"
       },
       "brewery": {
-        "name": "Barrow Boys Brewing"
+        "name": "Red Hill Brewery"
       }
     },
     {
@@ -29172,10 +29172,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Beazle Brew (2015)"
+        "name": "Aftermath"
       },
       "brewery": {
-        "name": "Nail Brewing Australia"
+        "name": "KAIJU! Beer"
       }
     },
     {
@@ -29204,10 +29204,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Garagista"
+        "name": "Hop Hog"
       },
       "brewery": {
-        "name": "Garage Project"
+        "name": "Feral Brewing Company"
       }
     },
     {
@@ -29324,10 +29324,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Pacific Ale"
+        "name": "Stone IPA"
       },
       "brewery": {
-        "name": "Stone & Wood"
+        "name": "Stone Brewing"
       }
     },
     {
@@ -29378,10 +29378,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Elemental Porter Ale"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Renaissance Brewing Company"
+        "name": "Coopers"
       }
     },
     {
@@ -29626,10 +29626,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "The Premium Malt's"
+        "name": "Sapporo Premium Beer"
       },
       "brewery": {
-        "name": "Suntory Beer Limited"
+        "name": "Sapporo Breweries"
       }
     },
     {
@@ -29642,10 +29642,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "The Premium Malt's"
+        "name": "Sapporo Premium Beer"
       },
       "brewery": {
-        "name": "Suntory Beer Limited"
+        "name": "Sapporo Breweries"
       }
     },
     {
@@ -29664,10 +29664,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "The Premium Malt's"
+        "name": "Ichiban (Ichiban Shibori) (一番搾り)"
       },
       "brewery": {
-        "name": "Suntory Beer Limited"
+        "name": "Kirin Brewery Company"
       }
     },
     {
@@ -29778,10 +29778,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Reserve Lager"
+        "name": "ESB"
       },
       "brewery": {
-        "name": "Sherlock Holmes Pub"
+        "name": "Hargreaves Hill"
       }
     },
     {
@@ -29794,10 +29794,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Reserve Lager"
+        "name": "Stormy Lager"
       },
       "brewery": {
-        "name": "Sherlock Holmes Pub"
+        "name": "Barrow Boys Brewing"
       }
     },
     {
@@ -29832,10 +29832,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Guinness Draught"
+        "name": "Red Eye Rye"
       },
       "brewery": {
-        "name": "Guinness"
+        "name": "Dainton Beer"
       }
     },
     {
@@ -29880,7 +29880,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Golden Ale"
+        "name": "First Bounce Pale Ale"
       },
       "brewery": {
         "name": "Hawthorn Brewing Co."
@@ -30031,10 +30031,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bulls Eye"
+        "name": "Tall Poppy"
       },
       "brewery": {
-        "name": "Clare Valley Brewing Co."
+        "name": "8 Wired"
       }
     },
     {
@@ -30107,10 +30107,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Prescription 12"
+        "name": "Canis Major IIPA"
       },
       "brewery": {
-        "name": "Doctor's Orders Brewing"
+        "name": "Barossa Valley Brewing"
       }
     },
     {
@@ -30183,10 +30183,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "RIPL"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Wheaty Brewing Corps"
+        "name": "Coopers"
       }
     },
     {
@@ -30205,10 +30205,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "RIPL"
+        "name": "Yenda Pale Ale"
       },
       "brewery": {
-        "name": "Wheaty Brewing Corps"
+        "name": "Australian Beer Co."
       }
     },
     {
@@ -30248,10 +30248,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Früh Kölsch"
+        "name": "Venusian Pale Ale"
       },
       "brewery": {
-        "name": "Cölner Hofbräu Früh"
+        "name": "Garage Project"
       }
     },
     {
@@ -30270,10 +30270,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Früh Kölsch"
+        "name": "Jukebox Hero IPA"
       },
       "brewery": {
-        "name": "Cölner Hofbräu Früh"
+        "name": "Moon Dog Craft Brewery"
       }
     },
     {
@@ -30324,7 +30324,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Summer Ale"
+        "name": "Pale Ale"
       },
       "brewery": {
         "name": "True South"
@@ -30362,10 +30362,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "The Empress"
+        "name": "Brooklyn Lager"
       },
       "brewery": {
-        "name": "Holgate Brewhouse"
+        "name": "Brooklyn Brewery"
       }
     },
     {
@@ -30406,10 +30406,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Wooly Nelson"
+        "name": "Furphy"
       },
       "brewery": {
-        "name": "Red Duck"
+        "name": "Little Creatures Brewing"
       }
     },
     {
@@ -30459,10 +30459,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Amber Ale"
+        "name": "Hop Hog"
       },
       "brewery": {
-        "name": "Hawthorn Brewing Co."
+        "name": "Feral Brewing Company"
       }
     },
     {
@@ -30491,10 +30491,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "ESB"
+        "name": "Big Love Suburban Pale"
       },
       "brewery": {
-        "name": "Holgate Brewhouse"
+        "name": "Boatrocker Brewers & Distillers"
       }
     },
     {
@@ -30507,10 +30507,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "ESB"
+        "name": "Hop Hog"
       },
       "brewery": {
-        "name": "Holgate Brewhouse"
+        "name": "Feral Brewing Company"
       }
     },
     {
@@ -30523,10 +30523,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "ESB"
+        "name": "Copy Cat"
       },
       "brewery": {
-        "name": "Holgate Brewhouse"
+        "name": "Mash Brewing"
       }
     },
     {
@@ -30571,10 +30571,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Orion Premium Draft"
+        "name": "Hopped Out Red"
       },
       "brewery": {
-        "name": "Orion Breweries, Ltd."
+        "name": "KAIJU! Beer"
       }
     },
     {
@@ -30593,10 +30593,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Orion Premium Draft"
+        "name": "Super Charger APA"
       },
       "brewery": {
-        "name": "Orion Breweries, Ltd."
+        "name": "Panhead Custom Ales"
       }
     },
     {
@@ -30641,10 +30641,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Pale Ale"
+        "name": "Bantam Session India Pale Ale"
       },
       "brewery": {
-        "name": "Hargreaves Hill"
+        "name": "Two Birds Brewing"
       }
     },
     {
@@ -30657,10 +30657,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Pale Ale"
+        "name": "Grizz"
       },
       "brewery": {
-        "name": "Hargreaves Hill"
+        "name": "2 Brothers Brewery"
       }
     },
     {
@@ -30721,10 +30721,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "In-Breed: The Delmont"
+        "name": "Nail Red Ale"
       },
       "brewery": {
-        "name": "Mountain Goat Beer"
+        "name": "Nail Brewing Australia"
       }
     },
     {
@@ -30813,10 +30813,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Velvet Glove"
+        "name": "Invasion"
       },
       "brewery": {
-        "name": "Iron Fist Brewing Co."
+        "name": "Black Market Brewing Co."
       }
     },
     {
@@ -30867,10 +30867,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Paulaner Hefe-Weißbier / Hefe-Weizen / Weissbier"
+        "name": "Spaten München / Münchner Hell / Premium Lager"
       },
       "brewery": {
-        "name": "Paulaner Brauerei"
+        "name": "Spaten-Franziskaner-Löwenbräu-Gruppe"
       }
     },
     {
@@ -30961,7 +30961,7 @@
         "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Atomic"
+        "name": "4 Pines Brewing Company"
       }
     },
     {
@@ -31028,10 +31028,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Heineken"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Heineken"
+        "name": "True South"
       }
     },
     {
@@ -31044,10 +31044,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Heineken"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Heineken"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -31140,10 +31140,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Chainbreaker White IPA"
+        "name": "Dark"
       },
       "brewery": {
-        "name": "Deschutes Brewery"
+        "name": "3 Ravens Brewery"
       }
     },
     {
@@ -31188,10 +31188,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "#004"
+        "name": "Kwencher Australian Pale Ale"
       },
       "brewery": {
-        "name": "Exit Brewing"
+        "name": "The Beltz Group"
       }
     },
     {
@@ -31391,7 +31391,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Golden Ale"
+        "name": "Celtic Red Ale"
       },
       "brewery": {
         "name": "Bridge Road Brewers"
@@ -31407,7 +31407,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Golden Ale"
+        "name": "Beechworth Pale Ale"
       },
       "brewery": {
         "name": "Bridge Road Brewers"
@@ -31429,10 +31429,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Golden Ale"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Bridge Road Brewers"
+        "name": "Sierra Nevada Brewing Co."
       }
     },
     {
@@ -31611,7 +31611,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bright Lager"
+        "name": "Blowhard Pale Ale"
       },
       "brewery": {
         "name": "Bright Brewery"
@@ -31687,7 +31687,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "India Pale Ale"
+        "name": "Hightail Ale"
       },
       "brewery": {
         "name": "Mountain Goat Beer"
@@ -31719,10 +31719,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dark Knight"
+        "name": "First Bounce Pale Ale"
       },
       "brewery": {
-        "name": "Murray's Brewing Co"
+        "name": "Hawthorn Brewing Co."
       }
     },
     {
@@ -31832,7 +31832,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "IPA"
+        "name": "Pale"
       },
       "brewery": {
         "name": "Mornington Peninsula Brewery"
@@ -31912,7 +31912,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Oatmeal Nitro Stout"
+        "name": "IPA"
       },
       "brewery": {
         "name": "Mornington Peninsula Brewery"
@@ -31928,7 +31928,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Oatmeal Nitro Stout"
+        "name": "Pale"
       },
       "brewery": {
         "name": "Mornington Peninsula Brewery"
@@ -31982,7 +31982,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Porter"
+        "name": "Brown"
       },
       "brewery": {
         "name": "Mornington Peninsula Brewery"
@@ -32030,7 +32030,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Imperial IPA"
+        "name": "IPA"
       },
       "brewery": {
         "name": "Mornington Peninsula Brewery"
@@ -32046,10 +32046,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Imperial IPA"
+        "name": "Scotch Ale"
       },
       "brewery": {
-        "name": "Mornington Peninsula Brewery"
+        "name": "Red Hill Brewery"
       }
     },
     {
@@ -32078,10 +32078,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Pure Blonde Ultra Low Carb"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "True South"
       }
     },
     {
@@ -32110,7 +32110,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Scotch Ale"
+        "name": "Pale Ale"
       },
       "brewery": {
         "name": "True South"
@@ -32126,7 +32126,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Scotch Ale"
+        "name": "Red Truck Lager"
       },
       "brewery": {
         "name": "True South"
@@ -32142,7 +32142,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Scotch Ale"
+        "name": "Summer Ale"
       },
       "brewery": {
         "name": "True South"
@@ -32218,10 +32218,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "LA 31 Noire"
+        "name": "Anonymous IPA"
       },
       "brewery": {
-        "name": "Bayou Teche Brewing"
+        "name": "Covington Brewhouse"
       }
     },
     {
@@ -32234,10 +32234,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "LA 31 Noire"
+        "name": "South Coast"
       },
       "brewery": {
-        "name": "Bayou Teche Brewing"
+        "name": "Parish Brewing Co."
       }
     },
     {
@@ -32384,10 +32384,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Smoked Rye Ale"
+        "name": "Metamorphosis IPA"
       },
       "brewery": {
-        "name": "Cavalier Brewing"
+        "name": "KAIJU! Beer"
       }
     },
     {
@@ -32512,10 +32512,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Anytime Pale Ale"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Temple Brewing Co."
+        "name": "4 Pines Brewing Company"
       }
     },
     {
@@ -32528,10 +32528,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Anytime Pale Ale"
+        "name": "Beechworth Pale Ale"
       },
       "brewery": {
-        "name": "Temple Brewing Co."
+        "name": "Bridge Road Brewers"
       }
     },
     {
@@ -32630,10 +32630,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "James Squire One Fifty Lashes"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Malt Shovel Brewery"
+        "name": "4 Pines Brewing Company"
       }
     },
     {
@@ -32722,7 +32722,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Midnight Cowboy Project"
+        "name": "Hopinator"
       },
       "brewery": {
         "name": "Holgate Brewhouse"
@@ -32754,7 +32754,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Double Trouble"
+        "name": "Temptress"
       },
       "brewery": {
         "name": "Holgate Brewhouse"
@@ -32770,7 +32770,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Double Trouble"
+        "name": "American IPA (ex Road Trip)"
       },
       "brewery": {
         "name": "Holgate Brewhouse"
@@ -32786,7 +32786,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Double Trouble"
+        "name": "ESB"
       },
       "brewery": {
         "name": "Holgate Brewhouse"
@@ -32802,7 +32802,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Double Trouble"
+        "name": "Mt. Macedon Pale Ale"
       },
       "brewery": {
         "name": "Holgate Brewhouse"
@@ -32840,10 +32840,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Pilsner"
+        "name": "Hop Hog"
       },
       "brewery": {
-        "name": "Holgate Brewhouse"
+        "name": "Feral Brewing Company"
       }
     },
     {
@@ -32878,10 +32878,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Burleigh Black Giraffe"
+        "name": "Mt. Macedon Pale Ale"
       },
       "brewery": {
-        "name": "Burleigh Brewing Co."
+        "name": "Holgate Brewhouse"
       }
     },
     {
@@ -32996,10 +32996,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hassle Hop"
+        "name": "Pernicious Weed"
       },
       "brewery": {
-        "name": "Burleigh Brewing Co."
+        "name": "Garage Project"
       }
     },
     {
@@ -33012,10 +33012,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hassle Hop"
+        "name": "'77' India Pale Ale"
       },
       "brewery": {
-        "name": "Burleigh Brewing Co."
+        "name": "Riverside Brewing Company"
       }
     },
     {
@@ -33584,10 +33584,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Ned’s Red"
+        "name": "Battle Of The Bulge"
       },
       "brewery": {
-        "name": "Van Dieman Brewing"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -33762,7 +33762,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Purple Haze"
+        "name": "Restoration Pale Ale"
       },
       "brewery": {
         "name": "Abita Brewing Company"
@@ -33870,10 +33870,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Burleigh FIGJAM"
+        "name": "Modelo Negra"
       },
       "brewery": {
-        "name": "Burleigh Brewing Co."
+        "name": "Grupo Modelo"
       }
     },
     {
@@ -33908,10 +33908,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "American Pale Ale"
+        "name": "Hop Bomb IPA"
       },
       "brewery": {
-        "name": "Kooinda Brewing Company"
+        "name": "Boatrocker Brewers & Distillers"
       }
     },
     {
@@ -33994,10 +33994,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "EXP #005 IPL"
+        "name": "Love Tap Lager"
       },
       "brewery": {
-        "name": "Vale Brewing"
+        "name": "Moon Dog Craft Brewery"
       }
     },
     {
@@ -34086,10 +34086,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rodenbach Classic"
+        "name": "American IPA (ex Road Trip)"
       },
       "brewery": {
-        "name": "Brouwerij Rodenbach"
+        "name": "Holgate Brewhouse"
       }
     },
     {
@@ -34134,10 +34134,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "HEL"
+        "name": "American IPA (ex Road Trip)"
       },
       "brewery": {
-        "name": "Ekim Brewing Co."
+        "name": "Holgate Brewhouse"
       }
     },
     {
@@ -34150,10 +34150,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "HEL"
+        "name": "American Pale Ale"
       },
       "brewery": {
-        "name": "Ekim Brewing Co."
+        "name": "Black Heart Brewery"
       }
     },
     {
@@ -34166,10 +34166,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "HEL"
+        "name": "Red Dirt Red Ale"
       },
       "brewery": {
-        "name": "Ekim Brewing Co."
+        "name": "Mrs Parmas"
       }
     },
     {
@@ -34182,10 +34182,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "HEL"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Ekim Brewing Co."
+        "name": "4 Pines Brewing Company"
       }
     },
     {
@@ -34198,10 +34198,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "HEL"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Ekim Brewing Co."
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -34230,10 +34230,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Morland Old Speckled Hen"
+        "name": "Whale Ale"
       },
       "brewery": {
-        "name": "Greene King"
+        "name": "Murray's Brewing Co"
       }
     },
     {
@@ -34246,10 +34246,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Morland Old Speckled Hen"
+        "name": "Full Steam"
       },
       "brewery": {
-        "name": "Greene King"
+        "name": "Thunder Road Brewing Company"
       }
     },
     {
@@ -34278,10 +34278,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Single-Take Session Ale"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Baird Brewing Company"
+        "name": "Coopers"
       }
     },
     {
@@ -34332,10 +34332,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Jaipur"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Thornbridge Brewery"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -34364,10 +34364,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "55"
+        "name": "Nail Golden"
       },
       "brewery": {
-        "name": "3 Ravens Brewery"
+        "name": "Nail Brewing Australia"
       }
     },
     {
@@ -34402,10 +34402,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Addiction"
+        "name": "Pacific Ale"
       },
       "brewery": {
-        "name": "E.B.P"
+        "name": "Stone & Wood"
       }
     },
     {
@@ -34440,10 +34440,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Guldenberg"
+        "name": "James Squire Hop Thief (2012 - prior)"
       },
       "brewery": {
-        "name": "Brouwerij De Ranke"
+        "name": "Malt Shovel Brewery"
       }
     },
     {
@@ -34456,10 +34456,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Guldenberg"
+        "name": "First Bounce Pale Ale"
       },
       "brewery": {
-        "name": "Brouwerij De Ranke"
+        "name": "Hawthorn Brewing Co."
       }
     },
     {
@@ -34526,10 +34526,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Nastro Azzurro"
+        "name": "Hop Hog"
       },
       "brewery": {
-        "name": "Birra Peroni"
+        "name": "Feral Brewing Company"
       }
     },
     {
@@ -34542,10 +34542,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Nastro Azzurro"
+        "name": "Sly Fox"
       },
       "brewery": {
-        "name": "Birra Peroni"
+        "name": "Feral Brewing Company"
       }
     },
     {
@@ -34558,10 +34558,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Nastro Azzurro"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Birra Peroni"
+        "name": "Coopers"
       }
     },
     {
@@ -34574,10 +34574,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Nastro Azzurro"
+        "name": "Bling India Pale Ale"
       },
       "brewery": {
-        "name": "Birra Peroni"
+        "name": "Bridge Road Brewers"
       }
     },
     {
@@ -34590,10 +34590,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Nastro Azzurro"
+        "name": "Hopped Out Red"
       },
       "brewery": {
-        "name": "Birra Peroni"
+        "name": "KAIJU! Beer"
       }
     },
     {
@@ -34799,10 +34799,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "TriplIPA"
+        "name": "Hard Deck"
       },
       "brewery": {
-        "name": "OpperBacco"
+        "name": "7 cent Brewery"
       }
     },
     {
@@ -34831,10 +34831,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rare Breed: India Red Ale"
+        "name": "Imperial Amber"
       },
       "brewery": {
-        "name": "Mountain Goat Beer"
+        "name": "Mornington Peninsula Brewery"
       }
     },
     {
@@ -34847,10 +34847,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Rare Breed: India Red Ale"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Mountain Goat Beer"
+        "name": "4 Pines Brewing Company"
       }
     },
     {
@@ -34890,10 +34890,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Grand Cru"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Brooklyn Brewery"
+        "name": "Coopers"
       }
     },
     {
@@ -34922,10 +34922,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "8-Ball Rye IPA"
+        "name": "Torpedo Extra IPA"
       },
       "brewery": {
-        "name": "Beavertown"
+        "name": "Sierra Nevada Brewing Co."
       }
     },
     {
@@ -34970,7 +34970,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Thomas Cooper's Selection: Artisan Reserve"
+        "name": "Thomas Cooper's Selection: Celebration Ale"
       },
       "brewery": {
         "name": "Coopers"
@@ -35008,10 +35008,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "VALE Ale"
+        "name": "Tall Poppy"
       },
       "brewery": {
-        "name": "Vale Brewing"
+        "name": "8 Wired"
       }
     },
     {
@@ -35072,10 +35072,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Howard Hughes Belgian American Pale"
+        "name": "55"
       },
       "brewery": {
-        "name": "Cigar City Brewing®"
+        "name": "3 Ravens Brewery"
       }
     },
     {
@@ -35088,10 +35088,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Howard Hughes Belgian American Pale"
+        "name": "Challenger"
       },
       "brewery": {
-        "name": "Cigar City Brewing®"
+        "name": "Mash Brewing"
       }
     },
     {
@@ -35120,10 +35120,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hoppy Amber"
+        "name": "James Squire Stow Away"
       },
       "brewery": {
-        "name": "Red Duck"
+        "name": "Malt Shovel Brewery"
       }
     },
     {
@@ -35228,10 +35228,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Yokohama XPA"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Sankt Gallen Brewery"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -35244,10 +35244,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Yokohama XPA"
+        "name": "The Premium Malt's"
       },
       "brewery": {
-        "name": "Sankt Gallen Brewery"
+        "name": "Suntory Beer Limited"
       }
     },
     {
@@ -35282,10 +35282,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Yebisu (Premium)"
+        "name": "Ichiban Shibori Stout (一番搾り スタウト)"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Kirin Brewery Company"
       }
     },
     {
@@ -35346,7 +35346,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Asahi Dry Black"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
         "name": "Asahi Breweries"
@@ -35378,10 +35378,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Weihenstephaner Hefeweissbier"
+        "name": "Lager"
       },
       "brewery": {
-        "name": "Bayerische Staatsbrauerei Weihenstephan"
+        "name": "Kirin Brewery Company"
       }
     },
     {
@@ -35394,10 +35394,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Weihenstephaner Hefeweissbier"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Bayerische Staatsbrauerei Weihenstephan"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -35432,10 +35432,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Birra Moretti L'Autentica / Ricetta Originale"
+        "name": "Summer Ale"
       },
       "brewery": {
-        "name": "Birra Moretti"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -35448,10 +35448,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Birra Moretti L'Autentica / Ricetta Originale"
+        "name": "Steam Ale"
       },
       "brewery": {
-        "name": "Birra Moretti"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -35470,10 +35470,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Birra Moretti L'Autentica / Ricetta Originale"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Birra Moretti"
+        "name": "Coopers"
       }
     },
     {
@@ -35502,10 +35502,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Maibock"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "4 Pines Brewing Company"
       }
     },
     {
@@ -35524,10 +35524,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Maibock"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "4 Pines Brewing Company"
       }
     },
     {
@@ -35540,10 +35540,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Maibock"
+        "name": "Alpha Pale Ale"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -35562,10 +35562,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Maibock"
+        "name": "Hop Zone Session IPA"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "BrewCult"
       }
     },
     {
@@ -35578,10 +35578,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Maibock"
+        "name": "James Squire One Fifty Lashes"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "Malt Shovel Brewery"
       }
     },
     {
@@ -35594,10 +35594,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Maibock"
+        "name": "Steam Ale"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -35648,10 +35648,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Beerlao Lager"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Lao Brewery Co., Ltd"
+        "name": "Little Creatures Brewing"
       }
     },
     {
@@ -35712,7 +35712,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "VALE Dark"
+        "name": "VALE IPA"
       },
       "brewery": {
         "name": "Vale Brewing"
@@ -35728,7 +35728,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "VALE Dark"
+        "name": "VALE Ale"
       },
       "brewery": {
         "name": "Vale Brewing"
@@ -35744,7 +35744,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "VALE Dark"
+        "name": "VALE Ale"
       },
       "brewery": {
         "name": "Vale Brewing"
@@ -35792,7 +35792,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Christmas Ale"
+        "name": "Maibock"
       },
       "brewery": {
         "name": "Goodieson Brewery"
@@ -35862,10 +35862,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Pale Ale"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Goodieson Brewery"
+        "name": "Coopers"
       }
     },
     {
@@ -35916,10 +35916,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Bohemian Philsner"
+        "name": "M.I.A I.P.A"
       },
       "brewery": {
-        "name": "Lobethal Bierhaus"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -35992,10 +35992,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dr Tim's Traditional Ale"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Coopers"
+        "name": "West End Brewery"
       }
     },
     {
@@ -36046,10 +36046,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Red Tail"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Beard and Brau Farmhouse Brewery"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -36073,10 +36073,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Red Tail"
+        "name": "Orion Premium Draft"
       },
       "brewery": {
-        "name": "Beard and Brau Farmhouse Brewery"
+        "name": "Orion Breweries, Ltd."
       }
     },
     {
@@ -36165,10 +36165,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Thunderweizen Ale"
+        "name": "Challenger"
       },
       "brewery": {
-        "name": "Lightning Brewery"
+        "name": "Mash Brewing"
       }
     },
     {
@@ -36229,10 +36229,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Beard Beer"
+        "name": "Stone Levitation Amber Ale"
       },
       "brewery": {
-        "name": "Rogue Ales"
+        "name": "Stone Brewing"
       }
     },
     {
@@ -36267,10 +36267,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Saison Extra"
+        "name": "90 Minute Imperial IPA"
       },
       "brewery": {
-        "name": "Brouwerij West"
+        "name": "Dogfish Head Craft Brewery"
       }
     },
     {
@@ -36283,10 +36283,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Saison Extra"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Brouwerij West"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -36315,10 +36315,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hud-a-wa' Strong"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Yeastie Boys"
+        "name": "Coopers"
       }
     },
     {
@@ -36369,10 +36369,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Zombie"
+        "name": "Alpha Pale Ale"
       },
       "brewery": {
-        "name": "Epic Brewing Company"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -36385,10 +36385,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Zombie"
+        "name": "Itchy Green Pants (I.G.P)"
       },
       "brewery": {
-        "name": "Epic Brewing Company"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -36412,10 +36412,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Zombie"
+        "name": "Itchy Green Pants (I.G.P)"
       },
       "brewery": {
-        "name": "Epic Brewing Company"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -36428,10 +36428,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Zombie"
+        "name": "Ruby Tuesday"
       },
       "brewery": {
-        "name": "Epic Brewing Company"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -36444,10 +36444,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Zombie"
+        "name": "Monteith's Pacific Pale Ale"
       },
       "brewery": {
-        "name": "Epic Brewing Company"
+        "name": "Monteith's Brewing Co."
       }
     },
     {
@@ -36460,10 +36460,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Zombie"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Epic Brewing Company"
+        "name": "Sample Brew"
       }
     },
     {
@@ -36631,10 +36631,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hitachino Nest White Ale"
+        "name": "Erdinger Weißbier / Hefe-Weizen"
       },
       "brewery": {
-        "name": "Kiuchi Brewery"
+        "name": "Erdinger Weissbräu"
       }
     },
     {
@@ -36647,10 +36647,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hitachino Nest White Ale"
+        "name": "Dos Equis Lager Especial"
       },
       "brewery": {
-        "name": "Kiuchi Brewery"
+        "name": "Cervecería Cuauhtémoc Moctezuma S.A. de C.V."
       }
     },
     {
@@ -36663,10 +36663,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hitachino Nest White Ale"
+        "name": "Monteith's Pacific Pale Ale"
       },
       "brewery": {
-        "name": "Kiuchi Brewery"
+        "name": "Monteith's Brewing Co."
       }
     },
     {
@@ -36727,10 +36727,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Lick Pier Ginger Beer"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "East 9th Brewing Co."
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -36743,10 +36743,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Lick Pier Ginger Beer"
+        "name": "IPA (India Pale Ale)"
       },
       "brewery": {
-        "name": "East 9th Brewing Co."
+        "name": "Little Creatures Brewing"
       }
     },
     {
@@ -36759,10 +36759,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Lick Pier Ginger Beer"
+        "name": "Brooklyn Lager"
       },
       "brewery": {
-        "name": "East 9th Brewing Co."
+        "name": "Brooklyn Brewery"
       }
     },
     {
@@ -36775,10 +36775,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Lick Pier Ginger Beer"
+        "name": "Stubborn Russian"
       },
       "brewery": {
-        "name": "East 9th Brewing Co."
+        "name": "Bright Brewery"
       }
     },
     {
@@ -36791,10 +36791,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Lick Pier Ginger Beer"
+        "name": "Stubborn Russian"
       },
       "brewery": {
-        "name": "East 9th Brewing Co."
+        "name": "Bright Brewery"
       }
     },
     {
@@ -36845,10 +36845,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Fat Yak"
+        "name": "Pacific Ale"
       },
       "brewery": {
-        "name": "Matilda Bay Brewing Company"
+        "name": "Stone & Wood"
       }
     },
     {
@@ -36861,10 +36861,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Fat Yak"
+        "name": "Scotch Ale"
       },
       "brewery": {
-        "name": "Matilda Bay Brewing Company"
+        "name": "Red Hill Brewery"
       }
     },
     {
@@ -36893,10 +36893,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Stefano's Pilsner"
+        "name": "Brunswick Bitter"
       },
       "brewery": {
-        "name": "Mildura Brewery"
+        "name": "Thunder Road Brewing Company"
       }
     },
     {
@@ -36909,10 +36909,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Stefano's Pilsner"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Mildura Brewery"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -36963,10 +36963,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -36985,10 +36985,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37007,10 +37007,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37023,10 +37023,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37039,10 +37039,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37061,10 +37061,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37077,10 +37077,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37093,10 +37093,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37109,10 +37109,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Coopers"
       }
     },
     {
@@ -37125,10 +37125,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "333 Premium Export"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Sabeco"
       }
     },
     {
@@ -37141,10 +37141,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "333 Premium Export"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Sabeco"
       }
     },
     {
@@ -37157,10 +37157,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Whale Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Murray's Brewing Co"
       }
     },
     {
@@ -37173,10 +37173,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Tijuana Güera"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Consorcio Cervecero de Baja California"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -37205,10 +37205,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Alpha Queen Pale Ale"
+        "name": "Hop Hog"
       },
       "brewery": {
-        "name": "Boatrocker Brewers & Distillers"
+        "name": "Feral Brewing Company"
       }
     },
     {
@@ -37221,10 +37221,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Alpha Queen Pale Ale"
+        "name": "Grizz"
       },
       "brewery": {
-        "name": "Boatrocker Brewers & Distillers"
+        "name": "2 Brothers Brewery"
       }
     },
     {
@@ -37243,10 +37243,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Alpha Queen Pale Ale"
+        "name": "James Squire One Fifty Lashes"
       },
       "brewery": {
-        "name": "Boatrocker Brewers & Distillers"
+        "name": "Malt Shovel Brewery"
       }
     },
     {
@@ -37259,10 +37259,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Alpha Queen Pale Ale"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Boatrocker Brewers & Distillers"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -37297,10 +37297,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Extra Dry (TED)"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Tooheys Brewing"
+        "name": "Coopers"
       }
     },
     {
@@ -37313,10 +37313,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Extra Dry (TED)"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Tooheys Brewing"
+        "name": "Coopers"
       }
     },
     {
@@ -37329,10 +37329,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Extra Dry (TED)"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Tooheys Brewing"
+        "name": "Coopers"
       }
     },
     {
@@ -37351,10 +37351,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Extra Dry (TED)"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Tooheys Brewing"
+        "name": "Coopers"
       }
     },
     {
@@ -37415,10 +37415,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Super Dry"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Hahn Brewing"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -37469,10 +37469,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dundee India Pale Ale"
+        "name": "Pure Blonde Ultra Low Carb"
       },
       "brewery": {
-        "name": "Dundee Brewing Co"
+        "name": "Carlton & United Breweries"
       }
     },
     {
@@ -37485,10 +37485,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dundee India Pale Ale"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Dundee Brewing Co"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -37501,10 +37501,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dundee India Pale Ale"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Dundee Brewing Co"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -37517,10 +37517,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dundee India Pale Ale"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Dundee Brewing Co"
+        "name": "James Boag's"
       }
     },
     {
@@ -37533,10 +37533,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dundee India Pale Ale"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Dundee Brewing Co"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -37549,10 +37549,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Dundee India Pale Ale"
+        "name": "Steam Ale"
       },
       "brewery": {
-        "name": "Dundee Brewing Co"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -37597,10 +37597,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Lia Fail"
+        "name": "Pale"
       },
       "brewery": {
-        "name": "Inveralmond Brewery"
+        "name": "Mornington Peninsula Brewery"
       }
     },
     {
@@ -37613,10 +37613,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Lia Fail"
+        "name": "Pacific Ale"
       },
       "brewery": {
-        "name": "Inveralmond Brewery"
+        "name": "Stone & Wood"
       }
     },
     {
@@ -37661,10 +37661,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Coopers"
       }
     },
     {
@@ -37677,10 +37677,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -37693,10 +37693,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Doss Blockos Pale Lager"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "East 9th Brewing Co."
       }
     },
     {
@@ -37709,10 +37709,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Doss Blockos Pale Lager"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "East 9th Brewing Co."
       }
     },
     {
@@ -37725,10 +37725,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Sparkling Ale"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Coopers"
       }
     },
     {
@@ -37741,10 +37741,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "James Boag's"
       }
     },
     {
@@ -37757,10 +37757,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Steam Ale"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -37779,10 +37779,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Pacific Ale"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Stone & Wood"
       }
     },
     {
@@ -37795,10 +37795,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "James Boag's"
       }
     },
     {
@@ -37811,10 +37811,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -37827,10 +37827,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Pale"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "E.B.P"
       }
     },
     {
@@ -37843,10 +37843,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "IPA"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Mornington Peninsula Brewery"
       }
     },
     {
@@ -37859,10 +37859,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Sapporo Hokkaido Nama-Shibori (北海道生搾り)"
+        "name": "Blowhard Pale Ale"
       },
       "brewery": {
-        "name": "Sapporo Breweries"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -37891,10 +37891,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Fainters Dubbel"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -37913,10 +37913,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -37935,7 +37935,7 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Pure Blonde Ultra Low Carb"
       },
       "brewery": {
         "name": "Carlton & United Breweries"
@@ -37951,10 +37951,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Nastro Azzurro"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Birra Peroni"
       }
     },
     {
@@ -37978,10 +37978,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Stubborn Russian"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -37994,10 +37994,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Fainters Dubbel"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -38010,10 +38010,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Hellfire Amber"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -38026,10 +38026,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Blowhard Pale Ale"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -38042,10 +38042,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Carlton Draught"
+        "name": "Razor Witbier"
       },
       "brewery": {
-        "name": "Carlton & United Breweries"
+        "name": "Bright Brewery"
       }
     },
     {
@@ -38074,10 +38074,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Hop Harvest"
+        "name": "Heineken"
       },
       "brewery": {
-        "name": "Bright Brewery"
+        "name": "Heineken"
       }
     },
     {
@@ -38122,10 +38122,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "Singha"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Boon Rawd Brewery"
       }
     },
     {
@@ -38138,10 +38138,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -38160,10 +38160,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Coopers"
       }
     },
     {
@@ -38176,10 +38176,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -38198,10 +38198,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "Carlton Draught"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Carlton & United Breweries"
       }
     },
     {
@@ -38220,10 +38220,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -38236,10 +38236,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "VALE Ale"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Vale Brewing"
       }
     },
     {
@@ -38252,10 +38252,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Corona Extra"
+        "name": "Hightail Ale"
       },
       "brewery": {
-        "name": "Grupo Modelo"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -38290,10 +38290,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Dos Equis Lager Especial"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Cervecería Cuauhtémoc Moctezuma S.A. de C.V."
       }
     },
     {
@@ -38306,10 +38306,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "James Boag's"
       }
     },
     {
@@ -38322,10 +38322,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Brunswick Bitter"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Thunder Road Brewing Company"
       }
     },
     {
@@ -38344,10 +38344,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -38360,10 +38360,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -38382,10 +38382,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Nastro Azzurro"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Birra Peroni"
       }
     },
     {
@@ -38398,10 +38398,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -38414,10 +38414,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Draught"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "James Boag's"
       }
     },
     {
@@ -38436,10 +38436,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Original Pale Ale"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Coopers"
       }
     },
     {
@@ -38452,10 +38452,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Asahi Super Dry"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Asahi Breweries"
       }
     },
     {
@@ -38468,10 +38468,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Pale Ale"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Little Creatures Brewing"
       }
     },
     {
@@ -38484,10 +38484,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Corona Extra"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Grupo Modelo"
       }
     },
     {
@@ -38500,10 +38500,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -38516,10 +38516,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Keepers Lager"
+        "name": "Steam Ale"
       },
       "brewery": {
-        "name": "Cricketers Arms"
+        "name": "Mountain Goat Beer"
       }
     },
     {
@@ -38548,10 +38548,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Cavalier Black Coffee IPA"
+        "name": "Fat Yak"
       },
       "brewery": {
-        "name": "Cavalier Brewing"
+        "name": "Matilda Bay Brewing Company"
       }
     },
     {
@@ -38564,10 +38564,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Cavalier Black Coffee IPA"
+        "name": "Mallee Bull"
       },
       "brewery": {
-        "name": "Cavalier Brewing"
+        "name": "Mildura Brewery"
       }
     },
     {
@@ -38591,10 +38591,10 @@
         "flavours": null
       },
       "beer": {
-        "name": "Cavalier Black Coffee IPA"
+        "name": "Pacific Ale"
       },
       "brewery": {
-        "name": "Cavalier Brewing"
+        "name": "Stone & Wood"
       }
     }
   ]
