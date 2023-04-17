@@ -10,19 +10,20 @@
 
         {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
           {% set active = true %}
-          {% set current = true %}
+          {% set current = "page" %}
         {% endif %}
 
         {% if entry.children.length %}
           {% for child in entry.children %}
-            {% if child.url === page.url %}
+            {% if page.url.startsWith(child.url) %}
               {% set active = true %}
+              {% set current = "location" %}
             {% endif %}
           {% endfor %}
         {% endif %}
 
         <li{% if active %} class="active"{% endif %}>
-          <a href="{{ entry.url }}"{% if current %} aria-current="page"{% endif %}>
+          <a href="{{ entry.url }}"{% if current %} aria-current="{{ current }}"{% endif %}>
             {{ entry.title }}
           </a>
 
