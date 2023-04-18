@@ -14,5 +14,6 @@ module.exports = {
     preloadFonts: (data) => {
       return fontPreloadMap[data.batch.slug] || fontPreloadDefault;
     },
+    bodyClass: (data) => `batch-${data.batch.slug}`,
   },
 };
