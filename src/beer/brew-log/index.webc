@@ -2,9 +2,8 @@
 title: Brew log
 description: A log of all the brews that I remembered to log.
 eleventyNavigation:
-  key: Brew log
-  parent: Beer
-  order: 1
+  key: Beer
+  order: 2
 mainClass: "wrapper"
 ---
 

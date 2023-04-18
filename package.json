@@ -9,8 +9,7 @@
     "clean": "rm -r dist > /dev/null 2>&1",
     "start": "eleventy --serve",
     "start:prod": "yarn clean && yarn build && python -m http.server -d ./dist",
-    "subset-fonts": "./scripts/subset_fonts.sh",
-    "update-checkin-data": "./scripts/update_checkin_data.js"
+    "subset-fonts": "./scripts/subset_fonts.sh"
   },
   "repository": {
     "type": "git",
