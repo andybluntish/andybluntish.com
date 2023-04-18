@@ -19,5 +19,16 @@
 
 body {
   font-family: silkscreen, system-ui, -apple-system, sans-serif;
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
+}
+
+.batch-short-stack > header {
+  font-size: var(--step-1);
+}
+
+.batch-short-stack > footer {
+  background: var(--accent);
+  color: hsla(0, 0%, 100%, 0.85);
+  box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.2) inset;
+  border-block-start: 2px solid black;
 }
