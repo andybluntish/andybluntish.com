@@ -1,11 +1,11 @@
 <slot name="header">
-  <site-header :class="headerClass"></site-header>
+  <site-header :class="$data.headerClass"></site-header>
 </slot>
 
-<main class="flow" :class="mainClass">
+<main class="flow" :class="$data.mainClass">
   <slot></slot>
 </main>
 
 <slot name="footer">
-  <site-footer :class="footerClass"></site-footer>
+  <site-footer :class="$data.footerClass"></site-footer>
 </slot>
