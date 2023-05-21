@@ -1,6 +1,6 @@
 <nav webc:root="override">
   <template webc:type="11ty" 11ty:type="njk">
-    {% set entries = collections.all | eleventyNavigation %}
+    {% set entries = $data.collections.all | eleventyNavigation %}
 
     {% macro renderNavListItem(entry) -%}
       {% if entry.header != "omit" or not header %}
@@ -8,14 +8,14 @@
         {% set active = false %}
         {% set current = false %}
 
-        {% if (entry.url == '/' and entry.url === page.url) or (entry.url != '/' and page.url.startsWith(entry.url)) %}
+        {% if (entry.url == '/' and entry.url === $data.page.url) or (entry.url != '/' and $data.page.url.startsWith(entry.url)) %}
           {% set active = true %}
           {% set current = "page" %}
         {% endif %}
 
         {% if entry.children.length %}
           {% for child in entry.children %}
-            {% if page.url.startsWith(child.url) %}
+            {% if $data.page.url.startsWith(child.url) %}
               {% set active = true %}
               {% set current = "location" %}
             {% endif %}
