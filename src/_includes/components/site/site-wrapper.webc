@@ -1,5 +1,5 @@
 <slot name="header">
-  <site-header :class="$data.headerClass"></site-header>
+  <site-header :@site-title="siteTitle" :class="$data.headerClass"></site-header>
 </slot>
 
 <main class="flow" :class="$data.mainClass">

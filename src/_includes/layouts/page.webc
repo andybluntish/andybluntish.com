@@ -5,6 +5,6 @@ mainClass: ""
 footerClass: ""
 ---
 
-<site-wrapper>
+<site-wrapper :@site-title="site.host">
   <template webc:nokeep @raw="content"></template>
 </site-wrapper>
