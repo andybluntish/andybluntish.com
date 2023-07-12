@@ -1,10 +1,14 @@
 ---
 layout: layouts/root.html
-headerClass: ""
-mainClass: ""
-footerClass: ""
+headerClass: "my-header"
+mainClass: "my-main"
+footerClass: "my-footer"
 ---
 
-<site-wrapper :@site-title="site.host">
+<site-wrapper
+  :@site-title="site.host"
+  :@author-name="site.author.name"
+  :@copyright-year="site.copyrightYear"
+>
   <template webc:nokeep @raw="content"></template>
 </site-wrapper>

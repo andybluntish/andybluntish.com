@@ -7,5 +7,9 @@
 </main>
 
 <slot name="footer">
-  <site-footer :class="$data.footerClass"></site-footer>
+  <site-footer
+    :@author-name="authorName"
+    :@copyright-year="copyrightYear"
+    :class="$data.footerClass"
+  ></site-footer>
 </slot>
