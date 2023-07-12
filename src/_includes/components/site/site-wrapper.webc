@@ -1,11 +1,18 @@
 <slot name="header">
-  <site-header :class="$data.headerClass"></site-header>
+  <site-header
+    :@site-title="siteTitle"
+    :@header-class="headerClass"
+  ></site-header>
 </slot>
 
-<main class="flow" :class="$data.mainClass">
+<main class="flow" :class="mainClass">
   <slot></slot>
 </main>
 
 <slot name="footer">
-  <site-footer :class="$data.footerClass"></site-footer>
+  <site-footer
+    :@author-name="authorName"
+    :@copyright-year="copyrightYear"
+    :@footer-class="footerClass"
+  ></site-footer>
 </slot>

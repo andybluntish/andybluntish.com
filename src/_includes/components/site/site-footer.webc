@@ -1,7 +1,7 @@
-<footer webc:root="override">
+<footer webc:root="override" :class="footerClass">
   <p>
-    &copy; <template webc:nokeep @raw="$data.site.copyrightYear"></template>
-    <template @raw="$data.site.author.name" webc:nokeep></template>
+    &copy; <template webc:nokeep @raw="copyrightYear"></template>
+    <template @raw="authorName" webc:nokeep></template>
   </p>
 
   <site-navigation></site-navigation>
