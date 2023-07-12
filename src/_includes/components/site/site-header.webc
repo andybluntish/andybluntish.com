@@ -1,4 +1,4 @@
-<header webc:root="override">
+<header webc:root="override" :class="headerClass">
   <a href="/" rel="home">
     <svg viewBox="0 0 64 64" width="32" height="32" fill="currentColor" role="img" aria-labelledby="logo-title">
       <title id="logo-title" @raw="siteTitle"></title>

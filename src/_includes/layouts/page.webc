@@ -1,11 +1,14 @@
 ---
 layout: layouts/root.html
-headerClass: "my-header"
-mainClass: "my-main"
-footerClass: "my-footer"
+headerClass: ""
+mainClass: ""
+footerClass: ""
 ---
 
 <site-wrapper
+  :@header-class="headerClass"
+  :@main-class="mainClass"
+  :@footer-class="footerClass"
   :@site-title="site.host"
   :@author-name="site.author.name"
   :@copyright-year="site.copyrightYear"
