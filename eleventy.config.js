@@ -24,7 +24,7 @@ module.exports = (eleventyConfig) => {
       breaks: true,
       linkify: true,
       typographer: true,
-    })
+    }),
   );
 
   // Plugins
