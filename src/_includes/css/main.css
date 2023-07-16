@@ -172,14 +172,14 @@ body > footer a {
  ******************************************************************************/
 
 table {
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
 }
 
 th,
 td {
   text-align: start;
-  padding: var(--step--2);
+  padding: var(--size--2);
   padding-inline-start: 0;
 }
 
@@ -194,10 +194,6 @@ thead {
 
 tbody tr {
   border-block-end: 1px solid var(--border);
-}
-
-tbody tr:last-child {
-  border: none;
 }
 
 /*******************************************************************************
