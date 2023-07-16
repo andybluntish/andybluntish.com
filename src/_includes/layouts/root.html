@@ -18,7 +18,6 @@
   {%- endfor -%}
   {% set css %}
     {% include "css/variables.css" ignore missing %}
-    {% include "css/reset.css" ignore missing %}
     {% include "css/main.css" ignore missing %}
     {% include "css/pages/" + pageStylesheet + ".css" ignore missing %}
     {{ page.url | webcGetCss | safe }}
