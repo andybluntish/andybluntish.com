@@ -17,7 +17,6 @@ h1,
 h2,
 h3 {
   font-weight: var(--font-weight-bold);
-  font-stretch: var(--font-stretch-max);
   line-height: 1.1;
   max-width: 28ch;
 }
@@ -42,7 +41,6 @@ strong,
 b {
   font-size: inherit;
   font-weight: var(--font-weight-bold);
-  font-stretch: var(--font-stretch-max);
 }
 
 ol,
