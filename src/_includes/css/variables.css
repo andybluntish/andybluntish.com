@@ -31,19 +31,3 @@
 
   --font-stretch-max: 125%;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Colours */
-    --foreground: #eee;
-    --background: #111;
-    --accent: #f84;
-    --border: #222;
-
-    /* Font weights */
-    --font-weight-light: 200;
-    --font-weight-normal: 300;
-    --font-weight-bold: 600;
-    --font-weight-max: 800;
-  }
-}
