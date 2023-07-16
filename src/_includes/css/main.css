@@ -97,20 +97,26 @@ body {
   grid-template-rows: auto 1fr auto;
   gap: var(--step-4);
   min-height: 100dvh;
+  max-width: 75rem;
+  margin-inline: auto;
 }
 
 main {
   align-self: center;
-  padding-inline: var(--step-0);
+  padding-inline: var(--step--1);
 }
 
-.wrapper,
-.wrapper-narrow {
-  margin-inline: auto;
+@media (min-width: 32rem) {
+  main {
+    padding-inline: var(--page-left-gutter);
+  }
+}
+
+.wrapper {
   max-width: 60rem;
 }
 .wrapper-narrow {
-  max-width: 40rem;
+  max-width: 48rem;
 }
 
 /*******************************************************************************
