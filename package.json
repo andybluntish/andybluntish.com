@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "format": "eslint --fix .",
     "clean": "rm -r dist > /dev/null 2>&1",
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --incremental",
     "start:prod": "yarn clean && yarn build && python -m http.server -d ./dist",
     "subset-fonts": "./scripts/subset_fonts.sh"
   },
