@@ -34,7 +34,7 @@ h3 {
 
 h1 {
   font-size: var(--step-4);
-  font-weight: var(--font-weight-max);
+  font-weight: var(--font-weight-black);
   max-width: 20ch;
 }
 

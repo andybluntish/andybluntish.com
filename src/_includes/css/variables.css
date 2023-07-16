@@ -24,10 +24,11 @@
   --font-stack: "Mona Sans", ui-sans-serif, system-ui, sans-serif;
 
   /* Font weights */
-  --font-weight-light: 250;
+  --font-weight-light: 300;
   --font-weight-normal: 400;
+  --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
-  --font-weight-max: 900;
+  --font-weight-black: 900;
 
   --font-stretch-max: 125%;
 }
