@@ -14,8 +14,15 @@
   --step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
   --step-5: clamp(3.05rem, calc(2.47rem + 2.93vw), 4.74rem);
 
+  --size--2: 0.6rem;
+  --size--1: 0.8rem;
+  --size-0: 1rem;
+  --size-1: 1.25rem;
+
+  --size-4: 2.5rem;
+
   /* Page left gutter */
-  --page-left-gutter: calc(var(--step--1) + 24px + var(--step--1));
+  --page-left-gutter: calc(var(--size--1) + 24px + var(--size--1));
 
   /* Colours */
   --foreground: #111;
