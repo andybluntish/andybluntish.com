@@ -20,6 +20,9 @@
   --accent: #d14600;
   --border: #d1d6e0;
 
+  /* Font stack */
+  --font-stack: "Mona Sans", ui-sans-serif, system-ui, sans-serif;
+
   /* Font weights */
   --font-weight-light: 250;
   --font-weight-normal: 400;

@@ -15,7 +15,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Mona Sans", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-stack);
   font-size: var(--step-0);
   font-weight: var(--font-weight-normal);
   line-height: 1.6;
