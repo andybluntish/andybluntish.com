@@ -1,5 +1,5 @@
 <article webc:root="override">
-  <header class="flow">
+  <header>
     <h1 @raw="batch.name"></h1>
     <p @raw="batch.style"></p>
     <time :datetime="machineDate(batch.brewDate)" @raw="humanDate(batch.brewDate)"></time>

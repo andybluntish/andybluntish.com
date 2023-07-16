@@ -20,7 +20,7 @@ footerClass: ""
   <site-navigation @header="true"></site-navigation>
 </header>
 
-<main class="flow" :class="mainClass">
+<main :class="mainClass">
   <template webc:nokeep @raw="content"></template>
 </main>
 
