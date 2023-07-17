@@ -200,6 +200,10 @@ body > footer p {
   margin-block-end: var(--size--2);
 }
 
+body > footer span {
+  font-weight: var(--font-weight-bold);
+}
+
 body > footer a {
   font-weight: inherit;
   text-decoration-thickness: inherit;
