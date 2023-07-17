@@ -248,8 +248,8 @@ tbody tr {
  * Article
  ******************************************************************************/
 
-article > :is(header, footer) p {
-  font-weight: var(--font-weight-light);
+article > header p:first-of-type {
+  font-weight: var(--font-weight-bold);
 }
 
 /*******************************************************************************

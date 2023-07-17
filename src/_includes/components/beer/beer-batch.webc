@@ -54,7 +54,6 @@
 <style webc:scoped>
   :host header p {
     margin: 0;
-    font-weight: var(--font-weight-bold);
   }
 
   dl {
