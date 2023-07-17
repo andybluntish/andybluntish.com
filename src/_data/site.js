@@ -5,21 +5,6 @@ module.exports = function () {
     username: "andybluntish",
   };
 
-  const externalLinks = [
-    {
-      title: "Mastodon",
-      href: `https://mastodon.online/@${author.username}`,
-    },
-    {
-      title: "GitHub",
-      href: `https://github.com/${author.username}/`,
-    },
-    {
-      title: "CodePen",
-      href: `https://codepen.io/${author.username}/`,
-    },
-  ];
-
   const host = "andybluntish.com";
 
   return {
@@ -29,6 +14,5 @@ module.exports = function () {
     host,
     baseUrl: `https://${host}`,
     copyrightYear: new Date().getFullYear(),
-    externalLinks,
   };
 };
