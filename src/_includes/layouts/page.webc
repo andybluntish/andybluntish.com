@@ -17,7 +17,9 @@ footerClass: ""
     </svg>
   </a>
 
-  <site-navigation @header="true"></site-navigation>
+  <nav>
+    <navigation-links></navigation-links>
+  </nav>
 </header>
 
 <main :class="mainClass">
