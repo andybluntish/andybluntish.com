@@ -152,10 +152,6 @@ body > header a {
   text-decoration: none;
 }
 
-body > header ul {
-  margin: 0;
-}
-
 body > header [aria-current] {
   color: var(--accent);
 }
