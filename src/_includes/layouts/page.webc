@@ -17,7 +17,7 @@ footerClass: ""
     </svg>
   </a>
 
-  <nav>
+  <nav aria-label="Main">
     <navigation-links></navigation-links>
   </nav>
 </header>
