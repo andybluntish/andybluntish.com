@@ -65,31 +65,31 @@
     margin-block-start: var(--size-0);
   }
 
-  *:where(dt, dd):nth-child(-n+2) {
+  :where(dt, dd):nth-child(-n+2) {
     grid-column: 1 / span 1;
   }
 
-  *:where(dt, dd):nth-child(n+3) {
+  :where(dt, dd):nth-child(n+3) {
     grid-column: 2 / span 1;
   }
 
-  *:where(dt, dd):nth-child(n+5) {
+  :where(dt, dd):nth-child(n+5) {
     grid-column: 3 / span 1;
   }
 
-  *:where(dt, dd):nth-child(n+7) {
+  :where(dt, dd):nth-child(n+7) {
     grid-column: 1 / span 1;
   }
 
-  *:where(dt, dd):nth-child(n+9) {
+  :where(dt, dd):nth-child(n+9) {
     grid-column: 2 / span 1;
   }
 
-  *:where(dt, dd):nth-child(n+11) {
+  :where(dt, dd):nth-child(n+11) {
     grid-column: 3 / span 1;
   }
 
-  *:where(dt, dd):nth-child(n+13) {
+  :where(dt, dd):nth-child(n+13) {
     grid-column: 1 / span 3;
   }
 
@@ -101,7 +101,7 @@
       max-width: 32rem;
     }
 
-    *:where(dt, dd):nth-child(n) {
+    :where(dt, dd):nth-child(n) {
       grid-column: auto / auto;
     }
   }
@@ -122,11 +122,11 @@
       grid-template-rows: 1fr;
     }
 
-    article:has(img) *:where(header, dl) {
+    article:has(img) :where(header, dl) {
       grid-column: 1 / span 1;
     }
 
-    article:has(img) *:where(img) {
+    article:has(img) :where(img) {
       grid-column: 2;
       grid-row: 1 / span 2;
     }
