@@ -4,43 +4,39 @@
 
 :root {
   /* Sizes */
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --step--2: clamp(0.63rem, calc(0.64rem + -0.01vw), 0.64rem);
-  --step--1: clamp(0.80rem, calc(0.78rem + 0.08vw), 0.84rem);
-  --step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
-  --step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.50rem);
-  --step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2.00rem);
-  --step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
-  --step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
-  --step-5: clamp(3.05rem, calc(2.47rem + 2.93vw), 4.74rem);
+  --size--2: 0.5rem;
+  --size--1: 0.8rem;
+  --size-0: 1rem;
+  --size-1: 1.25rem;
+  --size-2: 1.5rem;
+  --size-3: 2rem;
+  --size-4: 4rem;
+
+  /* Page */
+  --page-max-width: 75rem;
+  --page-content-max-width: 60rem;
+  --page-content-narrow-max-width: 48rem;
+  --page-left-gutter: calc(var(--size--1) + 28px + var(--size--1));
 
   /* Colours */
   --foreground: #111;
   --background: #fefefe;
   --accent: #d14600;
-  --border: #d1d6e0;
+  --border: #ececec;
+
+  /* Font stack */
+  --font-stack: ui-sans-serif, system-ui, sans-serif;
 
   /* Font weights */
-  --font-weight-light: 250;
+  /* --font-weight-light: 300; */
   --font-weight-normal: 400;
+  /* --font-weight-semi-bold: 600; */
   --font-weight-bold: 700;
-  --font-weight-max: 900;
+  --font-weight-black: 900;
 
-  --font-stretch-max: 125%;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Colours */
-    --foreground: #eee;
-    --background: #111;
-    --accent: #f84;
-    --border: #222;
-
-    /* Font weights */
-    --font-weight-light: 200;
-    --font-weight-normal: 300;
-    --font-weight-bold: 600;
-    --font-weight-max: 800;
-  }
+  /* Letter spacing */
+  --letter-spacing--1: -0.0025em;
+  --letter-spacing-0: -0.011em;
+  --letter-spacing-2: -0.019em;
+  --letter-spacing-4: -0.022em;
 }

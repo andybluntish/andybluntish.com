@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "format": "eslint --fix .",
     "clean": "rm -r dist > /dev/null 2>&1",
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --incremental",
     "start:prod": "yarn clean && yarn build && python -m http.server -d ./dist",
     "subset-fonts": "./scripts/subset_fonts.sh"
   },
@@ -34,7 +34,7 @@
     "cheerio": "^1.0.0-rc.12",
     "clean-css": "^5.3.2",
     "dotenv": "^16.3.1",
-    "eslint": "^8.44.0",
+    "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.0",

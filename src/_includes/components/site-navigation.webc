@@ -45,8 +45,9 @@
 <style webc:scoped>
   ul {
     display: flex;
-    gap: 0 var(--step-0);
+    gap: 0 var(--size--1);
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 </style>

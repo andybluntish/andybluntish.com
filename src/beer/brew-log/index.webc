@@ -1,14 +1,13 @@
 ---
 title: Brew log
-description: A log of all the brews that I remembered to log.
+description: A log of all the brews I remembered to log.
 eleventyNavigation:
   key: Beer
   order: 2
-mainClass: "wrapper"
 ---
 
-<article class="flow">
-  <header class="flow">
+<article>
+  <header>
     <h1 @raw="title"></h1>
     <p @raw="description"></p>
   </header>
@@ -49,18 +48,12 @@ mainClass: "wrapper"
     </tbody>
   </table>
 
-  <footer>
-    <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
-  </footer>
+  <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
 </article>
 
 <style>
   *:where(th, td):nth-child(n+3) {
     text-align: end;
-  }
-
-  td:nth-child(2) {
-    font-weight: var(--font-weight-light);
   }
 
   td abbr {

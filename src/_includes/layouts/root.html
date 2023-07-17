@@ -1,8 +1,3 @@
----
-eleventyComputed:
-  preloadFonts:
-   - href: "/fonts/Mona-Sans-subset.woff2"
----
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,21 +8,16 @@ eleventyComputed:
   <meta name="description" content="{{ [description, site.description] | select() | first }}">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="copyright" content="Copyright (c) 2006–{{ site.copyrightYear }} {{ site.author.name }}">
-  <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png">
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/img/icon-180.png">
-  {%- for link in preloadFonts -%}
-    <link rel="preload" href="{{ link.href }}" as="font" type="{{ link.type if link.type else "font/woff2" }}" crossorigin>
-  {%- endfor -%}
   {%- for link in site.externalLinks -%}
     <link rel="me" href="{{ link.href }}">
   {%- endfor -%}
   {% set css %}
     {% include "css/variables.css" ignore missing %}
-    {% include "css/reset.css" ignore missing %}
     {% include "css/main.css" ignore missing %}
     {% include "css/pages/" + pageStylesheet + ".css" ignore missing %}
     {{ page.url | webcGetCss | safe }}
