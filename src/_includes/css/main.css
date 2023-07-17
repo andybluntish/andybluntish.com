@@ -59,7 +59,7 @@ blockquote,
 pre,
 table,
 figure {
-  margin: 0 0 var(--size-0);
+  margin: 0 0 var(--size-1);
 }
 
 h1,
