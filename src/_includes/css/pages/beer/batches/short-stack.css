@@ -23,7 +23,7 @@ body {
 }
 
 .batch-short-stack > header {
-  font-size: var(--step-1);
+  font-size: var(--size-1);
 }
 
 .batch-short-stack > footer {
