@@ -13,5 +13,4 @@ function subset_font() {
 yarn clean
 yarn build
 
-subset_font "Silkscreen-Regular.ttf" "silkscreen"
-subset_font "Silkscreen-Bold.ttf" "silkscreen"
+# subset_font "Mona-Sans.woff2" "Mona Sans"
