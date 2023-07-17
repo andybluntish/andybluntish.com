@@ -17,7 +17,9 @@ footerClass: ""
     </svg>
   </a>
 
-  <site-navigation @header="true"></site-navigation>
+  <nav aria-label="Main">
+    <navigation-links></navigation-links>
+  </nav>
 </header>
 
 <main :class="mainClass">
@@ -28,7 +30,7 @@ footerClass: ""
   <p>
     &copy; <template webc:nokeep @raw="$data.site.copyrightYear"></template>
     <template @raw="$data.site.author.name" webc:nokeep></template>
+    <span aria-hidden="true">•</span>
+    <a href="/colophon">Colophon</a>
   </p>
-
-  <site-navigation></site-navigation>
 </footer>
