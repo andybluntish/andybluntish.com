@@ -22,7 +22,10 @@
   --size-3: 2rem;
   --size-4: 3rem;
 
-  /* Page left gutter */
+  /* Page */
+  --page-max-width: 75rem;
+  --page-content-max-width: 60rem;
+  --page-content-narrow-max-width: 48rem;
   --page-left-gutter: calc(var(--size--1) + 24px + var(--size--1));
 
   /* Colours */

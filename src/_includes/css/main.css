@@ -130,9 +130,8 @@ body {
   gap: var(--size-4);
   min-height: 100vh;
   min-height: 100dvh;
-  max-width: 75rem;
-  margin: 0;
-  margin-inline: auto;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
 }
 
 /*******************************************************************************
@@ -169,6 +168,7 @@ body > header svg {
 main {
   align-self: center;
   padding-inline: var(--size--1);
+  max-width: var(--page-content-max-width);
 }
 
 @media (min-width: 32rem) {
@@ -186,7 +186,7 @@ main {
 }
 
 .wrapper-narrow {
-  max-width: 48rem;
+  max-width: var(--page-content-narrow-max-width);
 }
 
 /*******************************************************************************
