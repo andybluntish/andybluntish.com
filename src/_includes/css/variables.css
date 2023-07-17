@@ -16,7 +16,7 @@
   --page-max-width: 75rem;
   --page-content-max-width: 60rem;
   --page-content-narrow-max-width: 48rem;
-  --page-left-gutter: calc(var(--size--1) + 24px + var(--size--1));
+  --page-left-gutter: calc(var(--size--1) + 28px + var(--size--1));
 
   /* Colours */
   --foreground: #111;
