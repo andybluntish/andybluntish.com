@@ -118,7 +118,7 @@ a:focus {
   color: var(--accent);
 }
 
-:focus-visible {
+*:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 0.1rem;
 }
@@ -176,7 +176,7 @@ main {
   }
 }
 
-:is(main, article, footer, dl) > *:last-child {
+*:is(main, article, footer, dl) > *:last-child {
   margin-block-end: 0;
 }
 
