@@ -4,7 +4,6 @@ description: A log of all the brews that I remembered to log.
 eleventyNavigation:
   key: Beer
   order: 2
-mainClass: "wrapper"
 ---
 
 <article>
