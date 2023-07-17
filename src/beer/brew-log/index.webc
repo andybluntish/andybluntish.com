@@ -56,10 +56,6 @@ eleventyNavigation:
     text-align: end;
   }
 
-  td:nth-child(2) {
-    font-weight: var(--font-weight-light);
-  }
-
   td abbr {
     display: none;
   }
