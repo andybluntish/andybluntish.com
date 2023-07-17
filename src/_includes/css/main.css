@@ -40,6 +40,7 @@ body {
   font-size: var(--size-0);
   font-weight: var(--font-weight-normal);
   line-height: 1.5;
+  letter-spacing: var(--letter-spacing-0);
   text-rendering: optimizeSpeed;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -64,7 +65,7 @@ figure {
 h1,
 h2,
 h3 {
-  font-size: var(--size-0);
+  font-size: inherit;
   font-weight: var(--font-weight-bold);
   line-height: 1.1;
   max-width: 28ch;
@@ -74,11 +75,13 @@ h3 {
 h1 {
   font-size: var(--size-4);
   font-weight: var(--font-weight-black);
+  letter-spacing: var(--letter-spacing-4);
   max-width: 20ch;
 }
 
 h2 {
   font-size: var(--size-2);
+  letter-spacing: var(--letter-spacing-2);
 }
 
 th,
@@ -191,6 +194,7 @@ main {
 
 body > footer {
   font-size: var(--size--1);
+  letter-spacing: var(--letter-spacing--1);
   padding-inline: var(--size--1);
   padding-inline-start: var(--size--1);
 }

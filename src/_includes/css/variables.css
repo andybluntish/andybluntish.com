@@ -33,4 +33,10 @@
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
   --font-weight-black: 900;
+
+  /* Letter spacing */
+  --letter-spacing--1: -0.0025em;
+  --letter-spacing-0: -0.011em;
+  --letter-spacing-2: -0.019em;
+  --letter-spacing-4: -0.022em;
 }
