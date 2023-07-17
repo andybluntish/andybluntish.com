@@ -48,9 +48,7 @@ eleventyNavigation:
     </tbody>
   </table>
 
-  <footer>
-    <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
-  </footer>
+  <p>Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
 </article>
 
 <style>
