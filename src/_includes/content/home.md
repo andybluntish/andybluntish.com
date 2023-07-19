@@ -1,4 +1,4 @@
-G’day, my name is [Andy]({{ page.url }}) 👋
+G’day, my name is [Andy](/) 👋
 
 I’m a software engineer from Australia. I love using the web to build things that make people’s lives easier. I enjoy pragmatic, user-friendly design, and believe in a responsibly delivered, accessible experience for everyone.
 
