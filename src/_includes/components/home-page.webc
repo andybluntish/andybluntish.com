@@ -1,0 +1,30 @@
+<div webc:root="override">
+  <div>
+    <template webc:type="11ty" 11ty:type="njk,md">
+      {% include "content/home.md" ignore missing %}
+    </template>
+  </div>
+  <img src="/img/me.png" alt="Pixelated, black and white, sketch portrait of Andy" width="323">
+</div>
+
+<style webc:scoped>
+  :host {
+    display: grid;
+    align-items: center;
+    gap: var(--size-3)
+  }
+
+  img {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    margin: auto;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  @media (min-width: 42rem) {
+    :host {
+      grid-template-columns: auto auto;
+    }
+  }
+</style>
