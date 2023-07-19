@@ -4,7 +4,7 @@
       {% include "content/home.md" ignore missing %}
     </template>
   </div>
-  <img src="/img/me.png" alt="Pixelated, black and white, sketch portrait of Andy" width="323">
+  <img src="/img/me.png" alt="Pixelated, black and white, sketch portrait of Andy" width="323" height="419">
 </div>
 
 <style webc:scoped>
