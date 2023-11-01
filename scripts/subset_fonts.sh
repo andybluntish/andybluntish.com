@@ -10,7 +10,7 @@ function subset_font() {
   glyphhanger dist/**/*.html --subset="fonts/${font_file}" --family="${font_family}" --formats="woff2" --output="src/fonts/"
 }
 
-yarn clean
-yarn build
+pnpm run clean
+pnpm run build
 
 # subset_font "Mona-Sans.woff2" "Mona Sans"
