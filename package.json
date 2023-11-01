@@ -3,7 +3,7 @@
   "version": "15.0.0",
   "scripts": {
     "build": "BUILD_ENV=production eleventy",
-    "test": "jest",
+    "test": "node --test ./tests/",
     "lint": "eslint .",
     "format": "eslint --fix .",
     "clean": "rm -r dist > /dev/null 2>&1",
@@ -39,7 +39,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.1",
     "html-minifier": "^4.0.0",
-    "jest": "^29.7.0",
     "markdown-it": "^13.0.2",
     "prettier": "^3.0.3",
     "purgecss": "^5.0.0"
