@@ -40,6 +40,11 @@ module.exports = (eleventyConfig) => {
 
   // After build
   eleventyConfig.on("eleventy.after", async ({ results }) => {
+    if (process.env.BUILD_ENV !== "production") {
+      // skip minification in development
+      return;
+    }
+
     for (const result of results) {
       const { content, outputPath } = result;
       const minified = await minify(content, outputPath);
