@@ -42,7 +42,7 @@ eleventyNavigation:
           <abbr-ebc webc:if="batch.ebc !== '-'"></abbr-ebc>
         </td>
         <td>
-          <time :datetime="machineDate(batch.brewDate)" :title="humanDate(batch.brewDate)" @raw="shortDate(batch.brewDate)"></time>
+          <time :@date="batch.brewDate" @style="short-date"></time>
         </td>
       </tr>
     </tbody>

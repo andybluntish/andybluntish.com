@@ -2,7 +2,7 @@
   <header>
     <h1 @raw="batch.name"></h1>
     <p @raw="batch.style"></p>
-    <time :datetime="machineDate(batch.brewDate)" @raw="humanDate(batch.brewDate)"></time>
+    <time :@date="batch.brewDate" @style="human-date"></time>
   </header>
 
   <dl>

@@ -3,9 +3,6 @@ const markdownIt = require("markdown-it");
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventyUpgradeHelp = require("@11ty/eleventy-upgrade-help");
 const minify = require("./lib/minify.js");
-const machineDate = require("./lib/filters/machine-date.js");
-const shortDate = require("./lib/filters/short-date.js");
-const humanDate = require("./lib/filters/human-date.js");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { writeFileSync } = require("fs");
@@ -35,11 +32,6 @@ module.exports = (eleventyConfig) => {
     components: "src/_includes/components/**/*.webc",
   });
 
-  // Filters
-  eleventyConfig.addFilter("machineDate", machineDate);
-  eleventyConfig.addFilter("shortDate", shortDate);
-  eleventyConfig.addFilter("humanDate", humanDate);
-
   // Static files
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/fonts");
@@ -48,6 +40,11 @@ module.exports = (eleventyConfig) => {
 
   // After build
   eleventyConfig.on("eleventy.after", async ({ results }) => {
+    if (process.env.BUILD_ENV !== "production") {
+      // skip minification in development
+      return;
+    }
+
     for (const result of results) {
       const { content, outputPath } = result;
       const minified = await minify(content, outputPath);
