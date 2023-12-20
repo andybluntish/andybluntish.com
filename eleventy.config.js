@@ -1,17 +1,20 @@
-const dotenv = require("dotenv");
-const markdownIt = require("markdown-it");
-const eleventyNavigation = require("@11ty/eleventy-navigation");
-const eleventyUpgradeHelp = require("@11ty/eleventy-upgrade-help");
-const minify = require("./lib/minify.js");
-const pluginWebc = require("@11ty/eleventy-plugin-webc");
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const { writeFileSync } = require("fs");
+import dotenv from "dotenv";
+
+import markdownIt from "markdown-it";
+import eleventyNavigation from "@11ty/eleventy-navigation";
+import eleventyUpgradeHelp from "@11ty/eleventy-upgrade-help";
+
+import minify from "./lib/minify.js";
+
+import pluginWebc from "@11ty/eleventy-plugin-webc";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
+import { writeFileSync } from "fs";
 
 if (process.env.BUILD_ENV !== "production") {
   dotenv.config();
 }
 
-module.exports = (eleventyConfig) => {
+export default async function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   eleventyConfig.setLibrary(
@@ -58,4 +61,4 @@ module.exports = (eleventyConfig) => {
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
   };
-};
+}

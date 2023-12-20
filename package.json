@@ -1,6 +1,7 @@
 {
   "name": "andybluntish.com",
   "version": "15.0.0",
+  "type": "module",
   "scripts": {
     "build": "BUILD_ENV=production eleventy",
     "test": "node --test ./tests/",

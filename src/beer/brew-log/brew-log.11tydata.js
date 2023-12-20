@@ -1,7 +1,7 @@
-const Batch = require("../../../lib/beer/batch.js");
+import Batch from "../../../lib/beer/batch.js";
 
-module.exports = async function () {
+export default async function () {
   const batches = await Batch.fetchAll();
 
   return { batches };
-};
+}
