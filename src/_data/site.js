@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function () {
   const author = {
     name: "Andy Stanford-Bluntish",
     email: "andybluntish@gmail.com",
@@ -15,4 +15,4 @@ module.exports = function () {
     baseUrl: `https://${host}`,
     copyrightYear: new Date().getFullYear(),
   };
-};
+}

@@ -1,1 +1,1 @@
-module.exports = "layouts/page.webc";
+export default "layouts/page.webc";

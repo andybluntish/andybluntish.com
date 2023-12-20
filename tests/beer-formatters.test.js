@@ -1,6 +1,6 @@
-const { describe, it } = require("node:test");
-const assert = require("node:assert/strict");
-const formatters = require("../lib/beer/formatters");
+import { describe, it } from "node:test";
+import assert from "node:assert/strict";
+import * as formatters from "../lib/beer/formatters.js";
 
 describe("uniq", () => {
   const { uniq } = formatters;

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   env: {
     node: true,
     es2021: true,
@@ -14,6 +14,7 @@ module.exports = {
   ],
   rules: {
     "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "node/no-unpublished-import": false,
   },
   overrides: [
     {
