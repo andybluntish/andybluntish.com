@@ -14,6 +14,7 @@ module.exports = {
   ],
   rules: {
     "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "node/no-unpublished-import": false,
   },
   overrides: [
     {
