@@ -1,3 +1,5 @@
+import { execSync } from "child_process";
+
 export default function () {
   const author = {
     name: "Andy Stanford-Bluntish",
@@ -6,6 +8,7 @@ export default function () {
   };
 
   const host = "andybluntish.com";
+  const gitSha = execSync("git rev-parse --short HEAD").toString().trim();
 
   return {
     title: author.name,
@@ -14,5 +17,6 @@ export default function () {
     host,
     baseUrl: `https://${host}`,
     copyrightYear: new Date().getFullYear(),
+    gitSha,
   };
 }
