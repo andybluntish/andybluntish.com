@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@11ty/eleventy':
-    specifier: 3.0.0-alpha.2
-    version: 3.0.0-alpha.2
+    specifier: 3.0.0-alpha.4
+    version: 3.0.0-alpha.4
   '@11ty/eleventy-fetch':
     specifier: ^4.0.0
     version: 4.0.0
@@ -146,8 +146,8 @@ packages:
       normalize-path: 3.0.0
     dev: true
 
-  /@11ty/eleventy@3.0.0-alpha.2:
-    resolution: {integrity: sha512-zX5CD8gMZH64xqSadqkDSTXlA/GbdlK7pcJjXQbYXmJNgONgBxvoEoZLG1Z6H1IOAlYiPD/Sw3sEGAfnb7tBtQ==}
+  /@11ty/eleventy@3.0.0-alpha.4:
+    resolution: {integrity: sha512-2PIEQ9HfLu6Yx8aCNixzkWXAS1z39ZNXRg+IY4jbZC7uTVo7R70vieS6hzR3uQ879dRoq+VSj0T+rG62tkuD5g==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
