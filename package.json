@@ -44,6 +44,6 @@
     "html-minifier": "^4.0.0",
     "markdown-it": "^14.1.0",
     "prettier": "^3.2.5",
-    "purgecss": "^5.0.0"
+    "purgecss": "^6.0.0"
   }
 }
