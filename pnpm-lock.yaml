@@ -9,8 +9,8 @@ devDependencies:
     specifier: 3.0.0-alpha.4
     version: 3.0.0-alpha.4
   '@11ty/eleventy-fetch':
-    specifier: ^4.0.0
-    version: 4.0.0
+    specifier: ^4.0.1
+    version: 4.0.1
   '@11ty/eleventy-navigation':
     specifier: ^0.3.5
     version: 0.3.5
@@ -93,8 +93,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@11ty/eleventy-fetch@4.0.0:
-    resolution: {integrity: sha512-wGAd0r+8DUWr22fK5r07dOKuNY6ltA7hX+sJzngGZL1yJmuUVdM/xPQZ+iq0BFgf/ZeRdpVEzf2D0cpVZUuiTg==}
+  /@11ty/eleventy-fetch@4.0.1:
+    resolution: {integrity: sha512-yIiLM5ziBmg86i4TlXpBdcIygJHvh/GgPJyAiFOckO9H4y9cQDM8eIcJCUQ4Mum0NEVui/OjhEut2R08xw0vlQ==}
     engines: {node: '>=14'}
     dependencies:
       debug: 4.3.4
