@@ -28,3 +28,6 @@ prod: clean build
 
 subset_fonts:
 	"${ROOT_DIR}/scripts/subset_fonts.sh"
+
+deploy:
+	"${ROOT_DIR}/scripts/deploy.sh"
