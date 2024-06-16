@@ -3,14 +3,7 @@
   "version": "15.0.0",
   "type": "module",
   "scripts": {
-    "build": "BUILD_ENV=production eleventy",
-    "test": "node --test ./tests/",
-    "lint": "eslint .",
-    "format": "eslint --fix .",
-    "clean": "rm -r dist > /dev/null 2>&1",
-    "start": "eleventy --serve --incremental",
-    "start:prod": "pnpm run clean && pnpm run build && python -m http.server -d ./dist",
-    "subset-fonts": "./scripts/subset_fonts.sh"
+    "build": "make build"
   },
   "repository": {
     "type": "git",
