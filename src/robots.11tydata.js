@@ -91,12 +91,7 @@ export default async function () {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          agent_types: [
-            "AI Assistant",
-            "AI Data Scraper",
-            "AI Search Crawler",
-            "Undocumented AI Agent",
-          ],
+          agent_types: ["AI Data Scraper", "Undocumented AI Agent"],
           disallow: "/",
         }),
       },
