@@ -1,7 +1,0 @@
----
-eleventyNavigation:
-  key: About
-  order: 1
----
-
-<home-page></home-page>

@@ -1,0 +1,30 @@
+---
+layout: layouts/page.webc
+---
+<div>
+  <template webc:nokeep @raw="content"></template>
+</div>
+
+<img src="/img/me.png" alt="Pixelated, black and white, sketch portrait of Andy" width="323" height="419">
+
+<style>
+  main {
+    display: grid;
+    align-items: center;
+    gap: var(--size-3)
+  }
+
+  @media (min-width: 42rem) {
+    main {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  main > img {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    margin: auto;
+    width: 100%;
+    max-width: 250px;
+  }
+</style>
