@@ -2,12 +2,11 @@ import dotenv from "dotenv";
 
 import markdownIt from "markdown-it";
 import eleventyNavigation from "@11ty/eleventy-navigation";
-
-import minify from "./lib/minify.js";
-
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import { writeFileSync } from "fs";
+import minify from "./lib/minify.js";
+import siteData from "./src/_data/site.js";
 
 if (process.env.BUILD_ENV !== "production") {
   dotenv.config();
@@ -31,6 +30,11 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigation);
   eleventyConfig.addPlugin(pluginWebc, {
     components: "src/_includes/components/**/*.webc",
+  });
+
+  // Functions
+  eleventyConfig.addJavaScriptFunction("absoluteURL", (path) => {
+    return `${siteData.baseUrl}${path}`;
   });
 
   // Static files
