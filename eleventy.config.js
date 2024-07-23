@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 
 import markdownIt from "markdown-it";
 import eleventyNavigation from "@11ty/eleventy-navigation";
-import eleventyUpgradeHelp from "@11ty/eleventy-upgrade-help";
 
 import minify from "./lib/minify.js";
 
@@ -30,7 +29,6 @@ export default async function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigation);
-  eleventyConfig.addPlugin(eleventyUpgradeHelp);
   eleventyConfig.addPlugin(pluginWebc, {
     components: "src/_includes/components/**/*.webc",
   });
