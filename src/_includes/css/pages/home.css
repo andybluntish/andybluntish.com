@@ -1,0 +1,19 @@
+.home main {
+  display: grid;
+  align-items: center;
+  gap: var(--size-3)
+}
+
+@media (min-width: 42rem) {
+  .home main {
+    grid-template-columns: auto auto;
+  }
+}
+
+.home main > img {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  margin: auto;
+  width: 100%;
+  max-width: 250px;
+}
