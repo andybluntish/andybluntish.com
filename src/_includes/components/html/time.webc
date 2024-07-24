@@ -18,7 +18,7 @@
   }
 
   function displayStyle(date, style) {
-    switch(style) {
+    switch (style) {
       case 'short-date':
         return shortDate(date);
       case 'human-date':

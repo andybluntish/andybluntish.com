@@ -1,6 +1,7 @@
 import { execSync } from "child_process";
 
-const now = new Date(); const host = "andybluntish.com";
+const now = new Date();
+const host = "andybluntish.com";
 const gitSha = execSync("git rev-parse --short HEAD").toString().trim();
 const author = {
   name: "Andy Stanford-Bluntish",
