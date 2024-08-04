@@ -20,7 +20,7 @@
     "update-checkin-data": "./scripts/update_checkin_data.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.17",
+    "@11ty/eleventy": "3.0.0-beta.1",
     "@11ty/eleventy-fetch": "^4.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
