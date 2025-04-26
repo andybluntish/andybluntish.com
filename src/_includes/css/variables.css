@@ -3,20 +3,16 @@
  ******************************************************************************/
 
 :root {
-  /* Sizes */
-  --size--2: 0.5rem;
-  --size--1: 0.8rem;
-  --size-0: 1rem;
-  --size-1: 1.25rem;
-  --size-2: 1.5rem;
-  --size-3: 2rem;
-  --size-4: 4rem;
+  /* Typography */
+  --font-size: 1rem;
+  --font-size-xxs: 0.6875rem;
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.875rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.25rem;
 
-  /* Page */
-  --page-max-width: 75rem;
-  --page-content-max-width: 60rem;
-  --page-content-narrow-max-width: 48rem;
-  --page-left-gutter: calc(var(--size--1) + 28px + var(--size--1));
+  --font-stack: ui-sans-serif, system-ui, sans-serif;
 
   /* Colours */
   --foreground: #111;
@@ -24,19 +20,11 @@
   --accent: #d14600;
   --border: #ececec;
 
-  /* Font stack */
-  --font-stack: ui-sans-serif, system-ui, sans-serif;
-
-  /* Font weights */
-  /* --font-weight-light: 300; */
-  --font-weight-normal: 400;
-  /* --font-weight-semi-bold: 600; */
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
-
-  /* Letter spacing */
-  --letter-spacing--1: -0.0025em;
-  --letter-spacing-0: -0.011em;
-  --letter-spacing-2: -0.019em;
-  --letter-spacing-4: -0.022em;
+  /* Space */
+  --space: 1rem;
+  --space-xs: calc(var(--space) * 0.25);
+  --space-s: calc(var(--space) * 0.5);
+  --space-l: calc(var(--space) * 1.5);
+  --space-xl: calc(var(--space) * 2.25);
+  --space-xxl: calc(var(--space) * 4.5);
 }

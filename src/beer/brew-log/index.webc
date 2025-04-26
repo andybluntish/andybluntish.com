@@ -60,6 +60,11 @@ eleventyNavigation:
     display: none;
   }
 
+  table+p:last-of-type {
+    font-size: var(--font-size-s);
+    font-style: italic;
+  }
+
   @media (max-width: 40rem) {
     thead {
       display: none;

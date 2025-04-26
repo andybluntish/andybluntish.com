@@ -1,8 +1,5 @@
 ---
-headerClass: ""
 bodyClass: ""
-mainClass: ""
-footerClass: ""
 ---
 <!doctype html>
 <html lang="en">
@@ -29,11 +26,13 @@ footerClass: ""
 
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/utils.css">
+  <link rel="stylesheet" href="../css/global-overrides.css">
   <style webc:keep @raw="getBundle('css')"></style>
 </head>
 
 <body :class="bodyClass">
-  <header :class="headerClass">
+  <header>
     <a href="/" rel="home">
       <svg viewBox="0 0 64 64" width="28" height="28" fill="currentColor" role="img" aria-labelledby="logo-title">
         <title id="logo-title" @raw="site.host"></title>
@@ -59,9 +58,9 @@ footerClass: ""
     </nav>
   </header>
 
-  <main :class="mainClass" @raw="content"></main>
+  <main @raw="content"></main>
 
-  <footer :class="footerClass">
+  <footer>
     <p>
       &copy; <template webc:nokeep @raw="site.copyright.year"></template>
       <template @raw="site.author.name" webc:nokeep></template>

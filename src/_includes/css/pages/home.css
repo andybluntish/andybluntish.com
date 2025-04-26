@@ -1,19 +1,21 @@
-.home main {
-  display: grid;
-  align-items: center;
-  gap: var(--size-3)
-}
+.home {
+  main {
+    display: grid;
+    align-items: center;
+    align-self: center;
+    gap: var(--space-xl);
+    max-width: 60rem;
 
-@media (min-width: 42rem) {
-  .home main {
-    grid-template-columns: auto auto;
+    @media (min-width: 42rem) {
+      grid-template-columns: auto auto;
+    }
+
+    &>img {
+      image-rendering: crisp-edges;
+      image-rendering: pixelated;
+      margin: auto;
+      width: 100%;
+      max-width: 250px;
+    }
   }
-}
-
-.home main > img {
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  margin: auto;
-  width: 100%;
-  max-width: 250px;
 }

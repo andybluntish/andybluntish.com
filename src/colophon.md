@@ -1,6 +1,5 @@
 ---
 title: Colophon
-mainClass: "wrapper-narrow"
 ---
 
 # {{title}}

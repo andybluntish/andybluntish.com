@@ -1,0 +1,28 @@
+/*******************************************************************************
+ * Global Overrides
+ ******************************************************************************/
+
+/* Focus */
+*:focus-visible {
+  outline: 0.25ex solid var(--accent);
+  outline-offset: 0.1rem;
+  text-decoration: none;
+}
+
+/* Remove last-child margin */
+*:is(main, article, footer, dl)>*:last-child {
+  margin-block-end: 0;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
