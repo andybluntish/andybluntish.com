@@ -16,9 +16,8 @@ export default {
   host,
   baseUrl: `https://${host}`,
   copyright: {
-    date: now,
+    year: now.getFullYear(),
     message: `Copyright (c) 2006–${now.getFullYear()} ${author.name}`,
   },
-  year: new Date().getFullYear(),
   gitSha,
 };

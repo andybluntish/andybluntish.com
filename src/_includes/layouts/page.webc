@@ -63,7 +63,7 @@ footerClass: ""
 
   <footer :class="footerClass">
     <p>
-      &copy; <template webc:nokeep @raw="site.copyright.date.getFullYear()"></template>
+      &copy; <template webc:nokeep @raw="site.copyright.year"></template>
       <template @raw="site.author.name" webc:nokeep></template>
       <span aria-hidden="true">•</span>
       <a href="/colophon">Colophon</a>
