@@ -161,6 +161,14 @@ body>header svg {
   display: block;
 }
 
+body>header nav ul {
+  display: flex;
+  gap: 0 var(--size--1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 /*******************************************************************************
  * Main Content
  ******************************************************************************/
