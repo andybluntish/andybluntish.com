@@ -1,7 +1,17 @@
 import EleventyFetch from "@11ty/eleventy-fetch";
 
 const fallbackRobots = `
-# Dark Visitors Robots.txt
+# AI Data Scraper
+# https://darkvisitors.com/agents/ai2bot
+
+User-agent: AI2Bot
+Disallow: /
+
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/anthropic-ai
+
+User-agent: anthropic-ai
+Disallow: /
 
 # AI Data Scraper
 # https://darkvisitors.com/agents/applebot-extended
@@ -21,10 +31,28 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/claude-web
+
+User-agent: Claude-Web
+Disallow: /
+
 # AI Data Scraper
 # https://darkvisitors.com/agents/claudebot
 
 User-agent: ClaudeBot
+Disallow: /
+
+# Undocumented AI Agent
+# https://darkvisitors.com/agents/cohere-ai
+
+User-agent: cohere-ai
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/cohere-training-data-crawler
+
+User-agent: cohere-training-data-crawler
 Disallow: /
 
 # AI Data Scraper
@@ -52,27 +80,39 @@ User-agent: GPTBot
 Disallow: /
 
 # AI Data Scraper
+# https://darkvisitors.com/agents/kangaroo-bot
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+# AI Data Scraper
+# https://darkvisitors.com/agents/meta-externalagent
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# AI Data Scraper
 # https://darkvisitors.com/agents/omgili
 
 User-agent: omgili
 Disallow: /
 
-# Undocumented AI Agent
-# https://darkvisitors.com/agents/anthropic-ai
+# AI Data Scraper
+# https://darkvisitors.com/agents/pangubot
 
-User-agent: anthropic-ai
+User-agent: PanguBot
 Disallow: /
 
-# Undocumented AI Agent
-# https://darkvisitors.com/agents/claude-web
+# AI Data Scraper
+# https://darkvisitors.com/agents/timpibot
 
-User-agent: Claude-Web
+User-agent: Timpibot
 Disallow: /
 
-# Undocumented AI Agent
-# https://darkvisitors.com/agents/cohere-ai
+# AI Data Scraper
+# https://darkvisitors.com/agents/webzio-extended
 
-User-agent: cohere-ai
+User-agent: Webzio-Extended
 Disallow: /
 `;
 
