@@ -10,7 +10,7 @@ pagination:
   size: 10
 ---
 
-<ol reversed>
+<ol reversed class="brew-log">
   <li webc:for="batch of pagination.items">
     <beer-batch :@batch="batch"></beer-batch>
   </li>
@@ -21,8 +21,14 @@ pagination:
 <pagination-links :@pagination="pagination"></pagination-links>
 
 <style>
-  ol+p:last-of-type {
-    font-size: var(--font-size-s);
-    font-style: italic;
+  .brew-log {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &+p:last-of-type {
+      font-size: var(--font-size-s);
+      font-style: italic;
+    }
   }
 </style>
