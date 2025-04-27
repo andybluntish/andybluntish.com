@@ -14,10 +14,7 @@
   "private": true,
   "homepage": "https://andybluntish.com",
   "engines": {
-    "node": ">=20"
-  },
-  "bin": {
-    "update-checkin-data": "./scripts/update_checkin_data.js"
+    "node": ">=22"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0",
