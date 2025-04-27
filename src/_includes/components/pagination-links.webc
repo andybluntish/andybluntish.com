@@ -1,0 +1,31 @@
+<nav webc:root="override" aria-label="Pagination">
+  <a webc:if="pagination.href.previous" :href="pagination.href.previous" class="previous">Previous</a>
+  <a webc:if="pagination.href.next" :href="pagination.href.next" class="next">Next</a>
+</nav>
+
+<style webc:scoped>
+  :host {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: var(--space);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a.previous {
+    justify-self: start;
+
+    &::before {
+      content: "←" / ""
+    }
+  }
+
+  a.next {
+    justify-self: end;
+
+    &::after {
+      content: "→" / ""
+    }
+  }
+</style>
