@@ -1,1 +1,1 @@
-export default "layouts/page.webc";
+export default "layouts/base.webc";
