@@ -1,0 +1,7 @@
+---
+layout: layouts/base.webc
+---
+
+<h1 @raw="title"></h1>
+
+<template webc:nokeep @raw="content"></template>
