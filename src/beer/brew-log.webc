@@ -1,0 +1,28 @@
+---
+title: Brew log
+description: A log of all the brews I remembered to log.
+layout: layouts/page.webc
+eleventyNavigation:
+  key: Beer
+  order: 2
+pagination:
+  data: batches
+  size: 10
+---
+
+<ol reversed>
+  <li webc:for="batch of pagination.items">
+    <beer-batch :@batch="batch"></beer-batch>
+  </li>
+</ol>
+
+<p webc:if="page.url == pagination.href.last">Details of previous batches back to 2005 have been lost to time and poor record-keeping.</p>
+
+<pagination-links :@pagination="pagination"></pagination-links>
+
+<style>
+  ol+p:last-of-type {
+    font-size: var(--font-size-s);
+    font-style: italic;
+  }
+</style>
