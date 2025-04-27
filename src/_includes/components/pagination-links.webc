@@ -14,6 +14,7 @@
   }
 
   a.previous {
+    grid-column-start: 1;
     justify-self: start;
 
     &::before {
@@ -22,6 +23,7 @@
   }
 
   a.next {
+    grid-column-start: 2;
     justify-self: end;
 
     &::after {
