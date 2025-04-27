@@ -85,30 +85,25 @@ h4 {
 p,
 ul,
 ol,
-dl,
-dt,
-dd,
-blockquote,
-pre,
-table,
-figure {
+dl {
   margin: 0 0 var(--space);
 }
 
 /* Lists */
-/* th, */
-dt {
-  font-size: inherit;
-  font-weight: 700;
-}
-
-dt {
-  margin-block-end: 0;
-}
-
 ol,
 ul {
   padding-inline-start: var(--space-l);
+}
+
+dt,
+dd {
+  margin-inline: 0;
+}
+
+dt {
+  font-size: inherit;
+  font-weight: 700;
+  margin-block-end: 0;
 }
 
 /* Media */
