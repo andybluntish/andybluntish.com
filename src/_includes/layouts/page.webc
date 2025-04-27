@@ -24,7 +24,8 @@ bodyClass: ""
   <link rel="me" href="https://codepen.io/andybluntish">
   <link rel="me" href="https://mastodon.online/@andybluntish">
 
-  <link rel="stylesheet" href="../css/main.css">
+  <link webc:bucket="common" rel="stylesheet" href="../css/main.css">
+  <style webc:keep @raw="getBundle('css', 'common')"></style>
   <style webc:keep @raw="getBundle('css')"></style>
 </head>
 
