@@ -6,13 +6,19 @@
   </header>
 
   <dl>
-    <dt><abbr-abv></abbr-abv></dt>
+    <dt>
+      <abbr title="Alcohol by volume">ABV</abbr>
+    </dt>
     <dd @raw="batch.abv"></dd>
 
-    <dt><abbr-ibu></abbr-ibu></dt>
+    <dt>
+      <abbr title="International Bittering Units">IBU</abbr>
+    </dt>
     <dd @raw="batch.ibu"></dd>
 
-    <dt><abbr-ebc></abbr-ebc></dt>
+    <dt>
+      <abbr title="European Brewery Convention">EBC</abbr>
+    </dt>
     <dd @raw="batch.ebc"></dd>
 
     <template webc:nokeep webc:if="batch.brewMethod">
@@ -21,12 +27,16 @@
     </template>
 
     <template webc:nokeep webc:if="batch.og">
-      <dt><abbr-og></abbr-og></dt>
+      <dt>
+        <abbr title="Original Gravity">OG</abbr>
+      </dt>
       <dd @raw="batch.og"></dd>
     </template>
 
     <template webc:nokeep webc:if="batch.fg">
-      <dt><abbr-fg></abbr-fg></dt>
+      <dt>
+        <abbr title="Final Gravity">FG</abbr>
+      </dt>
       <dd @raw="batch.fg"></dd>
     </template>
 
