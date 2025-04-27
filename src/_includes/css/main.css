@@ -274,36 +274,6 @@ body>footer {
 }
 
 /*******************************************************************************
- * Tables
- ******************************************************************************/
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--font-size-s);
-}
-
-th,
-td {
-  text-align: start;
-  padding: var(--space-s);
-  padding-inline-start: 0;
-}
-
-th:last-child,
-td:last-child {
-  padding-inline-end: 0;
-}
-
-thead {
-  border-block-end: 2px solid var(--border);
-}
-
-tbody tr {
-  border-block-end: 1px solid var(--border);
-}
-
-/*******************************************************************************
  * Article
  ******************************************************************************/
 
