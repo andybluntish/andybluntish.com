@@ -138,9 +138,8 @@
   @media (min-width: 32rem) {
     dl {
       display: grid;
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: auto auto 1fr;
       grid-template-rows: repeat(6, auto);
-      max-width: 32rem;
 
       :where(dt, dd):nth-child(n) {
         grid-column: auto / auto;
