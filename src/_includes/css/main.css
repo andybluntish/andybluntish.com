@@ -1,4 +1,35 @@
 /*******************************************************************************
+ * Variables
+ ******************************************************************************/
+
+:root {
+  /* Typography */
+  --font-size: 1rem;
+  --font-size-xxs: 0.6875rem;
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.875rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.25rem;
+
+  --font-stack: ui-sans-serif, system-ui, sans-serif;
+
+  /* Colours */
+  --foreground: #111;
+  --background: #fefefe;
+  --accent: #d14600;
+  --border: #ececec;
+
+  /* Space */
+  --space: 1rem;
+  --space-xs: calc(var(--space) * 0.25);
+  --space-s: calc(var(--space) * 0.5);
+  --space-l: calc(var(--space) * 1.5);
+  --space-xl: calc(var(--space) * 2.25);
+  --space-xxl: calc(var(--space) * 4.5);
+}
+
+/*******************************************************************************
  * Base
  ******************************************************************************/
 
@@ -194,6 +225,43 @@ body>footer {
     font-weight: unset;
     text-decoration-thickness: unset;
     text-decoration-color: unset;
+  }
+}
+
+/*******************************************************************************
+ * Utils
+ ******************************************************************************/
+
+[hidden] {
+  display: none;
+}
+
+/*******************************************************************************
+ * Global Overrides
+ ******************************************************************************/
+
+/* Focus */
+*:focus-visible {
+  outline: 0.25ex solid var(--accent);
+  outline-offset: 0.1rem;
+  text-decoration: none;
+}
+
+/* Remove last-child margin */
+*:is(main, article, footer, dl)>*:last-child {
+  margin-block-end: 0;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

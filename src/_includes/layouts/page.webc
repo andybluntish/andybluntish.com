@@ -24,10 +24,7 @@ bodyClass: ""
   <link rel="me" href="https://codepen.io/andybluntish">
   <link rel="me" href="https://mastodon.online/@andybluntish">
 
-  <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/utils.css">
-  <link rel="stylesheet" href="../css/global-overrides.css">
   <style webc:keep @raw="getBundle('css')"></style>
 </head>
 
