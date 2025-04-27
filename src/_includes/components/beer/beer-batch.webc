@@ -1,4 +1,4 @@
-<article webc:root="override">
+<article webc:root="override" :@style="`border-color: ${batch.colour}`">
   <header>
     <div class="batch-name">
       <h1 @raw="batch.name"></h1>
@@ -64,6 +64,20 @@
 </article>
 
 <style webc:scoped>
+  :host {
+    --brew-border-width: 0.5ex;
+    --brew-border-spacing: calc(var(--space) - var(--brew-border-width));
+    border-inline-start: var(--brew-border-width) solid;
+    padding-inline-start: var(--brew-border-spacing);
+    margin-inline-start: calc(-1 * var(--brew-border-width) - var(--brew-border-spacing));
+    margin-block-end: var(--space-xl);
+
+    @media (min-width: 32rem) {
+      --brew-border-width: 0.5ex;
+      --brew-border-spacing: var(--space);
+    }
+  }
+
   header {
     margin-block-end: var(--space);
 
