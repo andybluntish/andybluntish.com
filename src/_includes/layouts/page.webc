@@ -5,7 +5,7 @@ layout: layouts/base.webc
 <article>
   <header>
     <h1 @raw="title"></h1>
-    <p webc:if="description" @raw="description"></p>
+    <p class="description" webc:if="description" @raw="description"></p>
   </header>
 
   <template webc:nokeep @raw="content"></template>

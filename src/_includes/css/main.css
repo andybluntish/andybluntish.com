@@ -312,7 +312,12 @@ tbody tr {
  * Article
  ******************************************************************************/
 
-article>header p:first-of-type {
+article>header h1:has(+.description) {
+  margin-block-end: var(--space-s);
+}
+
+article>header h1+.description {
   font-weight: 300;
   font-style: italic;
+  margin-block-end: var(--space-l);
 }
