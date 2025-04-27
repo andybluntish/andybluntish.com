@@ -313,5 +313,6 @@ tbody tr {
  ******************************************************************************/
 
 article>header p:first-of-type {
-  font-weight: 700;
+  font-weight: 300;
+  font-style: italic;
 }
