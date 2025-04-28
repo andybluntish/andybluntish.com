@@ -4,7 +4,10 @@
       <h1 @raw="batch.name"></h1>
       <span webc:if="batch.name != batch.style" @raw="batch.style"></span>
     </div>
-    <time :@date="batch.brewDate" @style="human-date"></time>
+    <p class="batch-info">
+      Batch #<template webc:nokeep @raw="batch.batchNo"></template>,
+      <time :@date="batch.brewDate" @style="human-date"></time>
+    </p>
   </header>
 
   <dl>
@@ -94,7 +97,7 @@
       }
     }
 
-    time {
+    .batch-info {
       font-weight: 300;
       font-size: var(--font-size-s);
     }
