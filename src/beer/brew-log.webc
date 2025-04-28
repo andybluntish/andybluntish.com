@@ -21,6 +21,10 @@ pagination:
 <pagination-links :@pagination="pagination"></pagination-links>
 
 <style>
+  body>main {
+    max-width: unset;
+  }
+
   .brew-log {
     margin: 0;
     padding: 0;
@@ -29,6 +33,17 @@ pagination:
     &+p:last-of-type {
       font-size: var(--font-size-s);
       font-style: italic;
+      margin-block-start: var(--space-xl);
+    }
+
+    @media (min-width: 48rem) {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: var(--space-xl);
+    }
+
+    ~nav {
+      margin-block-start: var(--space-xl);
     }
   }
 </style>

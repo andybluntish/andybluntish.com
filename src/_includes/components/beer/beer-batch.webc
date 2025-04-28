@@ -75,6 +75,10 @@
       --brew-border-width: 0.5ex;
       --brew-border-spacing: var(--space);
     }
+
+    @media (min-width: 48rem) {
+      margin-block-end: 0
+    }
   }
 
   header {
@@ -137,10 +141,8 @@
     :where(dt, dd):nth-child(n+13) {
       grid-column: 1 / span 3;
     }
-  }
 
-  @media (min-width: 32rem) {
-    dl {
+    @media (min-width: 32rem) {
       display: grid;
       grid-template-columns: auto auto 1fr;
       grid-template-rows: repeat(6, auto);
