@@ -57,7 +57,5 @@ bodyClass: ""
       </ul>
     </nav>
   </footer>
-
-  <script webc:keep :src="getBundleFileUrl('js')"></script>
 </body>
 </html>
