@@ -20,8 +20,10 @@ format:
 build:
 	BUILD_ENV=production pnpm eleventy
 
-start:
+dev:
 	pnpm eleventy --serve --incremental
+
+start: dev
 
 prod: clean build
 	python -m http.server --directory "${ROOT_DIR}/dist"
