@@ -15,10 +15,10 @@
   --font-stack: ui-sans-serif, system-ui, sans-serif;
 
   /* Colours */
-  --foreground: #111;
-  --background: #fefefe;
-  --accent: #d14600;
-  --border: #ececec;
+  --foreground: hsl(28, 5%, 16%);
+  --background: hsl(28, 5%, 98%);
+  --accent: hsl(20, 100%, 40%);
+  --border: hsl(28, 5%, 90%);
 
   /* Space */
   --space: 1rem;
@@ -28,6 +28,15 @@
   --space-xl: calc(var(--space) * 2.25);
   --space-xxl: calc(var(--space) * 4.5);
 }
+
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --foreground: hsl(210, 15%, 85%); */
+/*     --background: hsl(210, 20%, 8%); */
+/*     --accent: hsl(28, 80%, 60%); */
+/*     --border: hsl(28, 5%, 16%); */
+/*   } */
+/* } */
 
 /*******************************************************************************
  * Base
