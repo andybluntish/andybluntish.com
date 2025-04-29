@@ -64,7 +64,7 @@
 
 <style webc:scoped>
   :host {
-    --brew-border-width: 0.5ex;
+    --brew-border-width: 0.6ex;
     --brew-border-spacing: calc(var(--space) - var(--brew-border-width));
     border-inline-start: var(--brew-border-width) solid;
     padding-inline-start: var(--brew-border-spacing);
@@ -72,7 +72,6 @@
     margin-block-end: var(--space-xl);
 
     @media (min-width: 32rem) {
-      --brew-border-width: 0.5ex;
       --brew-border-spacing: var(--space);
     }
 
