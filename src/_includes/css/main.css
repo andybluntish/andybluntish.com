@@ -268,11 +268,6 @@ body>footer {
   text-decoration: none;
 }
 
-/* Remove last-child margin */
-*:is(main, article, footer, dl)>*:last-child {
-  margin-block-end: 0;
-}
-
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
 
