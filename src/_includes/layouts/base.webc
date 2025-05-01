@@ -54,5 +54,7 @@
       </ul>
     </nav>
   </footer>
+
+  <script webc:keep @raw="getBundle('js')"></script>
 </body>
 </html>
