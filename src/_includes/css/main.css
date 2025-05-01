@@ -14,12 +14,6 @@
 
   --font-stack: ui-sans-serif, system-ui, sans-serif;
 
-  /* Colours */
-  --foreground: hsl(28, 5%, 16%);
-  --background: hsl(28, 5%, 99%);
-  --accent: hsl(20, 100%, 40%);
-  --border: hsl(28, 5%, 90%);
-
   /* Space */
   --space: 1rem;
   --space-xs: calc(var(--space) * 0.25);
@@ -27,14 +21,30 @@
   --space-l: calc(var(--space) * 1.5);
   --space-xl: calc(var(--space) * 2.25);
   --space-xxl: calc(var(--space) * 4.5);
+
+  /* Colours */
+  --light-foreground: hsl(28, 5%, 16%);
+  --light-background: hsl(28, 5%, 99%);
+  --light-accent: hsl(20, 100%, 40%);
+  --light-border: hsl(28, 5%, 90%);
+
+  --dark-foreground: hsl(210, 15%, 85%);
+  --dark-background: hsl(210, 20%, 8%);
+  --dark-accent: hsl(28, 80%, 60%);
+  --dark-border: hsl(28, 5%, 16%);
+
+  --foreground: var(--light-foreground);
+  --background: var(--light-background);
+  --border: var(--light-border);
+  --accent: var(--light-accent);
 }
 
 /* @media (prefers-color-scheme: dark) { */
 /*   :root { */
-/*     --foreground: hsl(210, 15%, 85%); */
-/*     --background: hsl(210, 20%, 8%); */
-/*     --accent: hsl(28, 80%, 60%); */
-/*     --border: hsl(28, 5%, 16%); */
+/*     --foreground: var(--dark-foreground); */
+/*     --background: var(--dark-background); */
+/*     --border: var(--dark-border); */
+/*     --accent: var(--dark-accent); */
 /*   } */
 /* } */
 
