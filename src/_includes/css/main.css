@@ -143,7 +143,7 @@ a {
   font-weight: 700;
   text-decoration-color: var(--accent);
   text-decoration-thickness: 0.25ex;
-  text-underline-offset: 0.2ex;
+  text-underline-offset: 0.3ex;
 
   &:hover,
   &:focus {
