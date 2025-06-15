@@ -12,3 +12,5 @@ The recipes and batches in the [Brew Log](/beer/brew-log/) are designed and trac
 The tippity-taps happen inside [Neovim](https://neovim.io/) and [Ghostty](https://ghostty.org/). If you care, my [dotfiles](https://github.com/andybluntish/dotfiles) are on GitHub—but note this is _not_ an endorsement for their use.
 
 The purdy pictures are made purely for my own amusement with [Blender](https://www.blender.org/) and the [Affinity suite](https://affinity.serif.com/). You'll likely never see them. The jangly sounds are made with my old Telecaster and Eastman T386. You'll likely never hear them.
+
+Made with <span role="img" aria-label="red heart">❤️</span> in the land down under.
