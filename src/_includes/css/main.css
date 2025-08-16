@@ -144,11 +144,11 @@ a {
   text-decoration-color: var(--accent);
   text-decoration-thickness: 0.25ex;
   text-underline-offset: 0.3ex;
+}
 
-  &:hover,
-  &:focus {
-    color: var(--accent);
-  }
+a:hover,
+a:focus {
+  color: var(--accent);
 }
 
 /* Body */
