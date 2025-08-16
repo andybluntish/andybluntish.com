@@ -13,4 +13,4 @@ The tippity-taps happen inside [Neovim](https://neovim.io/) and [Ghostty](https:
 
 The purdy pictures are made purely for my own amusement with [Blender](https://www.blender.org/) and the [Affinity suite](https://affinity.serif.com/). You'll likely never see them. The jangly sounds are made with my old Telecaster and Eastman T386. You'll likely never hear them.
 
-Made with <span role="img" aria-label="red heart">❤️</span> in the land down under.
+Made with <span role="img" aria-label="orange heart">🧡</span> in the land down under.
