@@ -1,6 +1,6 @@
 <nav webc:root="override" aria-label="Pagination">
-  <a webc:if="pagination.href.previous" :href="pagination.href.previous" class="previous">Previous</a>
-  <a webc:if="pagination.href.next" :href="pagination.href.next" class="next">Next</a>
+  <a webc:if="pagination.href.previous" :href="pagination.href.previous" class="newer">Newer</a>
+  <a webc:if="pagination.href.next" :href="pagination.href.next" class="older">Older</a>
 </nav>
 
 <style webc:scoped>
@@ -13,7 +13,7 @@
     list-style: none;
   }
 
-  a.previous {
+  a.newer {
     grid-column-start: 1;
     justify-self: start;
 
@@ -22,7 +22,7 @@
     }
   }
 
-  a.next {
+  a.older {
     grid-column-start: 2;
     justify-self: end;
 
