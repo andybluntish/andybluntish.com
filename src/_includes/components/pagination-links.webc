@@ -6,7 +6,7 @@
 <style webc:scoped>
   :host {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space);
     margin: 0;
     padding: 0;

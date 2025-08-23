@@ -15,21 +15,21 @@ eleventyNavigation:
 <style>
   body>main {
     display: grid;
-    align-items: center;
-    align-self: center;
+    grid-template-rows: auto 1fr;
     gap: var(--space-xl);
-    max-width: 60rem;
-
-    @media (min-width: 42rem) {
+    @media (min-width: 32rem) {
+      padding-block-start: calc(var(--space-xxl) - 0.3rem);
+    }
+    @media (min-width: 48rem) {
       grid-template-columns: auto auto;
     }
 
     &>img {
       image-rendering: crisp-edges;
       image-rendering: pixelated;
-      margin: auto;
+      margin: 0 auto;
       width: 100%;
-      max-width: 250px;
+      max-width: 180px;
     }
   }
 </style>

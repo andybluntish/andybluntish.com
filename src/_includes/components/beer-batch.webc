@@ -64,16 +64,12 @@
 
 <style webc:scoped>
   :host {
-    --brew-border-width: 0.6ex;
-    --brew-border-spacing: calc(var(--space) - var(--brew-border-width));
+    --brew-border-width: 0.5ex;
+    --brew-border-spacing: calc(var(--space-s) + var(--space-xs) - var(--brew-border-width));
     border-inline-start: var(--brew-border-width) solid;
     padding-inline-start: var(--brew-border-spacing);
     margin-inline-start: calc(-1 * var(--brew-border-width) - var(--brew-border-spacing));
     margin-block-end: var(--space-xl);
-
-    @media (min-width: 32rem) {
-      --brew-border-spacing: var(--space);
-    }
 
     @media (min-width: 48rem) {
       margin-block-end: 0
