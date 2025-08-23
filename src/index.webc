@@ -17,19 +17,20 @@ eleventyNavigation:
     display: grid;
     grid-template-rows: auto 1fr;
     gap: var(--space-xl);
+
     @media (min-width: 32rem) {
       padding-block-start: calc(var(--space-xxl) - 0.3rem);
     }
+
     @media (min-width: 48rem) {
       grid-template-columns: auto auto;
     }
 
-    &>img {
+    img {
       image-rendering: crisp-edges;
       image-rendering: pixelated;
-      margin: 0 auto;
-      width: 100%;
       max-width: 180px;
+      margin: 0 auto;
     }
   }
 </style>
