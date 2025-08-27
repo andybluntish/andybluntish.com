@@ -23,20 +23,9 @@
   --space-xxl: calc(var(--space) * 4.5);
 
   /* Colours */
-  --light-foreground: hsl(28, 5%, 16%);
-  --light-background: hsl(28, 5%, 99%);
-  --light-accent: hsl(20, 100%, 40%);
-  --light-border: hsl(28, 5%, 90%);
-
-  --dark-foreground: hsl(210, 15%, 85%);
-  --dark-background: hsl(210, 20%, 8%);
-  --dark-accent: hsl(28, 80%, 60%);
-  --dark-border: hsl(28, 5%, 16%);
-
-  --foreground: var(--light-foreground);
-  --background: var(--light-background);
-  --border: var(--light-border);
-  --accent: var(--light-accent);
+  --foreground: #222;
+  --background: #fafafa;
+  --accent: hsl(20, 100%, 40%);
 
   /* Logo size */
   --logo-size: 28px;
@@ -44,10 +33,9 @@
 
 /* @media (prefers-color-scheme: dark) { */
 /*   :root { */
-/*     --foreground: var(--dark-foreground); */
-/*     --background: var(--dark-background); */
-/*     --border: var(--dark-border); */
-/*     --accent: var(--dark-accent); */
+/*     --foreground: #ddd; */
+/*     --background: #111; */
+/*     --accent: hsl(24, 85%, 60%); */
 /*   } */
 /* } */
 
