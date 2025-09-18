@@ -12,16 +12,16 @@ test:
 	node --test "${ROOT_DIR}/tests/"
 
 lint:
-	pnpm eslint "${ROOT_DIR}"
+	npx eslint "${ROOT_DIR}"
 
 format:
-	pnpm eslint --fix "${ROOT_DIR}"
+	npx eslint --fix "${ROOT_DIR}"
 
 build:
-	BUILD_ENV=production pnpm eleventy
+	BUILD_ENV=production npx eleventy
 
 dev:
-	pnpm eleventy --serve --incremental
+	npx eleventy --serve --incremental
 
 start: dev
 
