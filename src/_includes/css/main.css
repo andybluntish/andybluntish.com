@@ -141,6 +141,48 @@ a:focus {
   color: var(--accent);
 }
 
+/* Marks */
+del {
+  opacity: 0.61;
+}
+
+ins {
+  text-decoration: none;
+  font-style: italic;
+}
+
+ins,
+del {
+
+  &::before,
+  &::after {
+    position: absolute;
+    clip-path: inset(100%);
+  }
+}
+
+
+ins {
+  &::before {
+    content: " [insert start] ";
+  }
+
+  &::after {
+    content: " [insert end] ";
+  }
+}
+
+del {
+  &::before {
+    content: " [delete start] ";
+  }
+
+  &::after {
+    content: " [delete end] ";
+  }
+}
+
+
 /*******************************************************************************
  * Body
  ******************************************************************************/
