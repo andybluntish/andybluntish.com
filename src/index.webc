@@ -4,33 +4,26 @@ eleventyNavigation:
   order: 1
 ---
 
-<div>
-  <template webc:type="11ty" 11ty:type="njk,md">
-    {% include "content/home.md" %}
-  </template>
-</div>
+<template webc:type="11ty" 11ty:type="njk,md">
+  {% include "content/home.md" %}
+</template>
 
 <img src="/img/me.png" alt="Pixelated, black and white, sketch portrait of Andy" width="323" height="419">
 
 <style>
   body>main {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    gap: var(--space-xl);
+    max-width: 34rem;
 
     @media (min-width: 32rem) {
       padding-block-start: calc(var(--space-xxl) - 0.3rem);
     }
 
-    @media (min-width: 48rem) {
-      grid-template-columns: auto auto;
-    }
-
     img {
+      display: block;
+      max-width: 200px;
+      margin: var(--space-xl) auto 0;
       image-rendering: crisp-edges;
       image-rendering: pixelated;
-      max-width: 180px;
-      margin: 0 auto;
     }
   }
 </style>
