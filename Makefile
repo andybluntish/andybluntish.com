@@ -1,4 +1,4 @@
-.PHONY: list clean test lint format build start prod subset_fonts
+.PHONY: list clean test lint format build start prod
 
 ROOT_DIR := $(realpath .)
 
@@ -27,9 +27,6 @@ start: dev
 
 prod: clean build
 	python -m http.server --directory "${ROOT_DIR}/dist"
-
-subset_fonts:
-	"${ROOT_DIR}/scripts/subset_fonts.sh"
 
 deploy:
 	"${ROOT_DIR}/scripts/deploy.sh"
