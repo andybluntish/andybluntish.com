@@ -27,6 +27,3 @@ start: dev
 
 prod: clean build
 	python -m http.server --directory "${ROOT_DIR}/dist"
-
-deploy:
-	"${ROOT_DIR}/scripts/deploy.sh"
