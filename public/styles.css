@@ -1,0 +1,287 @@
+@layer config, base, layout, theme, utilities;
+
+/*******************************************************************************
+ * Config
+ ******************************************************************************/
+
+@layer config {
+  :root {
+    /* Colours */
+    --foreground-light: #222;
+    --foreground-dark: #ddd;
+
+    --background-light: #fafafa;
+    --background-dark: #111;
+
+    --ui-accent: hsl(22, 95%, 50%);
+    --text-accent-light: hsl(20, 100%, 40%);
+    --text-accent-dark: hsl(24, 85%, 60%);
+
+    --foreground: var(--foreground-light);
+    --background: var(--background-light);
+    --text-accent: var(--text-accent-light);
+
+    /* Typography */
+    --font-family: monospace;
+    --font-size: 1rem;
+    --font-size-xxs: 0.6875rem;
+    --font-size-xs: 0.75rem;
+    --font-size-s: 0.875rem;
+    --font-size-l: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2.25rem;
+
+    /* Space */
+    --space: 1rem;
+    --space-xs: calc(var(--space) * 0.25);
+    --space-s: calc(var(--space) * 0.5);
+    --space-l: calc(var(--space) * 1.5);
+    --space-xl: calc(var(--space) * 2.25);
+    --space-xxl: calc(var(--space) * 4.5);
+
+    /* Logo size */
+    --logo-size: 28px;
+  }
+}
+
+/*******************************************************************************
+ * Base
+ ******************************************************************************/
+
+@layer base {
+
+  /* Spacing */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  ol,
+  ul {
+    margin: 0 0 var(--space);
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font: 100% / 1.1 var(--font-family);
+    max-inline-size: 28ch;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  h1 {
+    font-size: var(--font-size-xxl);
+    max-inline-size: 20ch;
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-l);
+  }
+
+  h4 {
+    font-size: var(--font-size);
+  }
+
+  /* Lists */
+  ol,
+  ul {
+    padding-inline-start: var(--space-l);
+  }
+
+  /* Media */
+  svg {
+    display: block;
+  }
+
+  img {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  /* Links */
+  a {
+    color: currentColor;
+    font-weight: bold;
+    text-decoration-color: var(--ui-accent);
+    text-decoration-thickness: 0.3ex;
+    text-underline-offset: 0.2ex;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--text-accent);
+  }
+
+  /* Marks */
+  ins {
+    text-decoration: none;
+    font-style: italic;
+  }
+
+  del {
+    opacity: 0.61;
+  }
+
+  ins,
+  del {
+
+    &::before,
+    &::after {
+      position: absolute;
+      clip-path: inset(100%);
+    }
+  }
+
+  ins {
+    &::before {
+      content: " [insert start] ";
+    }
+
+    &::after {
+      content: " [insert end] ";
+    }
+  }
+
+  del {
+    &::before {
+      content: " [delete start] ";
+    }
+
+    &::after {
+      content: " [delete end] ";
+    }
+  }
+}
+
+/*******************************************************************************
+ * Layout
+ ******************************************************************************/
+
+@layer layout {
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-block-size: 100dvh;
+    margin: 0;
+
+    &>main>.content,
+    &>footer {
+      box-sizing: border-box;
+      padding: var(--space);
+    }
+
+    &>footer {
+      margin-block-start: var(--space);
+
+      p {
+        margin: 0;
+
+        &+p {
+          margin-block-start: var(--space-s);
+        }
+      }
+    }
+  }
+}
+
+/*******************************************************************************
+ * Theme
+ ******************************************************************************/
+
+@layer theme {
+  :root {
+    font-size: 12px;
+    background: var(--ui-accent);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground: var(--foreground-dark);
+      --background: var(--background-dark);
+      --text-accent: var(--text-accent-dark);
+    }
+  }
+
+  body {
+    text-rendering: optimizeSpeed;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    color: var(--foreground);
+    background: var(--background);
+    font: var(--font-size) / 1.5 var(--font-family);
+
+    &>header {
+      border-block-start: 4px solid var(--ui-accent);
+    }
+
+    &>main {
+      display: grid;
+      place-items: center;
+
+      &>.content {
+        max-inline-size: 444px;
+      }
+    }
+
+    &>footer {
+      color: var(--foreground-dark);
+      background: var(--background-dark);
+
+      p {
+        font-size: var(--font-size-s);
+      }
+
+      a {
+        font-weight: normal;
+        text-decoration: underline;
+      }
+
+      a:hover,
+      a:focus {
+        color: var(--text-accent-dark);
+      }
+    }
+  }
+}
+
+/*******************************************************************************
+ * Utilities
+ ******************************************************************************/
+
+@layer utilities {
+  *:focus-visible {
+    outline: 0.25ex solid var(--text-accent-light);
+    outline-offset: 0.1rem;
+    text-decoration: none;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* main>img { */
+/*   max-inline-size: 200px; */
+/* } */
