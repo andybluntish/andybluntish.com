@@ -169,7 +169,7 @@
 @layer layout {
   body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto;
     min-block-size: 100dvh;
     margin: 0;
 
