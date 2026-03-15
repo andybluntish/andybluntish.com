@@ -220,10 +220,6 @@
     background: var(--background);
     font: var(--font-size) / 1.5 var(--font-family);
 
-    &>header {
-      border-block-start: 4px solid var(--ui-accent);
-    }
-
     &>main {
       display: grid;
       place-items: center;
