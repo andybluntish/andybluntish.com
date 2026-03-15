@@ -230,7 +230,14 @@
 
       &>.content {
         max-inline-size: 444px;
+
+        img {
+          display: block;
+          max-inline-size: 80px;
+          margin: var(--space-xl) auto 0;
+        }
       }
+
     }
 
     &>footer {
@@ -281,7 +288,3 @@
     }
   }
 }
-
-/* main>img { */
-/*   max-inline-size: 200px; */
-/* } */
