@@ -5,9 +5,6 @@
   "lang": "en",
   "dir": "ltr",
   "start_url": "/",
-  "display": "minimal-ui",
-  "theme_color": "#f08842",
-  "background_color": "#fefefe",
   "icons": [
     {
       "src": "/img/favicon.png",
