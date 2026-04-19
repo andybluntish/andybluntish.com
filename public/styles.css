@@ -116,6 +116,7 @@
 
 			&>.content {
 				max-inline-size: 444px;
+				text-shadow: 0 0 0.6rem var(--background);
 			}
 		}
 	}
