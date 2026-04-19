@@ -12,10 +12,10 @@
 		--text-accent-light: hsl(20, 100%, 40%);
 		--text-accent-dark: hsl(24, 85%, 60%);
 
-		--foreground: var(--foreground-light);
-		--background: var(--background-light);
-		--text-accent: var(--text-accent-light);
-		--outline: var(--text-accent-light);
+		--foreground: var(--foreground-dark);
+		--background: var(--background-dark);
+		--text-accent: var(--text-accent-dark);
+		--outline: var(--text-accent-dark);
 
 		--font-family: monospace;
 		--font-size: 1rem;
@@ -99,15 +99,6 @@
 @layer theme {
 	:root {
 		font-size: 12px;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--foreground: var(--foreground-dark);
-			--background: var(--background-dark);
-			--text-accent: var(--text-accent-dark);
-			--outline: var(--text-accent-dark);
-		}
 	}
 
 	body {
