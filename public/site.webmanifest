@@ -1,0 +1,14 @@
+{
+  "name": "Andy Stanford-Bluntish’s website",
+  "short_name": "andybluntish",
+  "description": "I like to make things.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+	"icons": [
+		{ "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },
+		{ "src": "/img/icon-192.png", "type": "image/png", "sizes": "192x192" },
+		{ "src": "/img/icon-512.png", "type": "image/png", "sizes": "512x512" },
+		{ "src": "/img/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+	]
+}
